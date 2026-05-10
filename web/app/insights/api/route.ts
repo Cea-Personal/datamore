@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getPayload } from 'payload';
 import config from '@/payload.config';
-import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,5 +18,4 @@ export async function GET() {
     console.error('Error fetching insights:', error);
     return NextResponse.json([]);
   }
-}
 }
