@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #111318;
+            color: #e2e2e8;
+        }
+        .bento-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid #1e293b;
+            transition: all 0.3s ease;
+        }
+        .bento-card:hover {
+            border-color: #adc6ff;
+            box-shadow: 0 0 20px rgba(173, 198, 255, 0.1);
+        }
+        .ai-gradient {
+            background: linear-gradient(135deg, #4cd7f6 0%, #a078ff 100%);
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#00424e",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-dim": "#111318",
+                        "surface": "#111318",
+                        "on-secondary": "#003640",
+                        "primary-container": "#4d8eff",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#333539",
+                        "on-tertiary": "#3c0091",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#340080",
+                        "surface-container-highest": "#333539",
+                        "primary": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed-variant": "#5516be",
+                        "on-primary": "#002e6a",
+                        "tertiary-fixed": "#e9ddff",
+                        "outline-variant": "#424754",
+                        "tertiary-container": "#a078ff",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-background": "#e2e2e8",
+                        "on-secondary-fixed": "#001f26",
+                        "inverse-surface": "#e2e2e8",
+                        "on-primary-container": "#00285d",
+                        "secondary-fixed-dim": "#4cd7f6",
+                        "tertiary": "#d0bcff",
+                        "surface-bright": "#37393e",
+                        "outline": "#8c909f",
+                        "secondary": "#4cd7f6",
+                        "secondary-container": "#03b5d3",
+                        "on-secondary-fixed-variant": "#004e5c",
+                        "inverse-on-surface": "#2f3035",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#005ac2",
+                        "background": "#111318",
+                        "tertiary-fixed-dim": "#d0bcff",
+                        "surface-container-high": "#282a2e",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-low": "#1a1c20",
+                        "surface-container-lowest": "#0c0e12",
+                        "surface-container": "#1e2024",
+                        "on-surface": "#e2e2e8",
+                        "surface-tint": "#adc6ff",
+                        "secondary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#23005c",
+                        "on-error": "#690005"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "margin-tablet": "32px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Space Grotesk"],
+                        "body-sm": ["Inter"],
+                        "headline-xl": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg-mobile": ["Space Grotesk"],
+                        "headline-lg": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 dark:bg-surface/60 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_0_20px_rgba(173,198,255,0.05)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="menu">menu</span>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface">DATAMORE</span>
+</div>
+<nav class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Services</a>
+<a class="text-primary font-bold" href="#">Our Work</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold transition-all active:opacity-80 active:scale-95">Book</button>
+</div>
+</header>
+<main class="pt-24 pb-margin-desktop px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Header Section -->
+<section class="mb-margin-tablet">
+<h1 class="font-display-lg text-display-lg mb-4">Insights &amp; Strategy</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                Advanced analysis on the future of generative intelligence, decentralized data architectures, and enterprise AI scaling.
+            </p>
+</section>
+<!-- Featured Article (Bento Style) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-margin-desktop">
+<div class="lg:col-span-8 group relative overflow-hidden rounded-xl bento-card aspect-[16/9] lg:aspect-auto min-h-[400px] flex flex-col justify-end p-gutter">
+<img alt="" class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="A high-fidelity digital rendering of a neural network glowing with electric blue and purple light against a deep slate background. The intricate nodes and connections are sharp and precise, suggesting advanced artificial intelligence processing. The scene is cinematic and futuristic, utilizing soft light-refraction and a subtle glassmorphic atmosphere to emphasize technical excellence and computational power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAesR2N9fgP3etoUfuj38WUFdVGiWm4WkpfuEe9euqWeY5Uom6S08l2x1GYGWdyWtaYUjxr349av_CYHiA7Kq-wU8f4Cx5ktODitGBd-6Rf3wrYHmdtUm4q8rbDIlnjgiH-uXmdhY2-U9wOuEveRFM6PYD7orLLAcpq4zBwqlDHcBAFT1ak8j8VF2feZxJWhBMw-zs0wen0fqnUaWIng6ML08pzQG3X2tPHYeFe85h9pNH3yxaCfXpaciEbcbcq8cAQHVpCNIbpuKp7"/>
+<div class="relative z-10">
+<div class="flex gap-2 mb-4">
+<span class="ai-gradient px-3 py-1 rounded-full text-white font-label-md text-label-md">AI STRATEGY</span>
+<span class="bg-surface-variant/50 border border-outline-variant/30 px-3 py-1 rounded-full text-on-surface-variant font-label-md text-label-md uppercase">Featured</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl mb-4 group-hover:text-primary transition-colors">The LLM Orchestration Layer: Beyond the Chatbot</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 line-clamp-2">
+                        Why the next generation of enterprise value lies not in the models themselves, but in the sophisticated architecture that governs their multi-agent interactions.
+                    </p>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-md text-label-md uppercase">Oct 24, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<span class="font-label-md text-label-md uppercase">12 Min Read</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Featured Items -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 bento-card p-gutter rounded-xl flex flex-col justify-center">
+<span class="text-secondary font-label-md text-label-md mb-2 uppercase tracking-widest">Trending Insight</span>
+<h3 class="font-headline-md text-headline-md mb-4">Vector Database Benchmarking 2024</h3>
+<a class="flex items-center gap-2 text-primary font-bold group" href="#">
+                        Read Analysis
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="flex-1 bento-card p-gutter rounded-xl flex flex-col justify-center relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[120px]" data-icon="database">database</span>
+</div>
+<span class="text-tertiary font-label-md text-label-md mb-2 uppercase tracking-widest">Data Ethics</span>
+<h3 class="font-headline-md text-headline-md mb-4">Privacy-Preserving Computation in Finance</h3>
+<a class="flex items-center gap-2 text-primary font-bold group" href="#">
+                        Case Study
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Technical Deep Dives Grid -->
+<section>
+<div class="flex items-baseline justify-between mb-8 border-b border-outline-variant/20 pb-4">
+<h2 class="font-headline-lg text-headline-lg">Technical Deep Dives</h2>
+<div class="flex gap-4">
+<button class="text-primary font-label-md text-label-md uppercase border-b-2 border-primary pb-1">All</button>
+<button class="text-on-surface-variant font-label-md text-label-md uppercase hover:text-primary transition-colors pb-1">AI/ML</button>
+<button class="text-on-surface-variant font-label-md text-label-md uppercase hover:text-primary transition-colors pb-1">Infrastructure</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bento-card rounded-xl overflow-hidden group">
+<div class="aspect-video relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A macro photograph of high-tech circuit boards with glowing cyan light trails tracing data paths. The focus is sharp on the intricate hardware details, while the background falls into a soft bokeh of electrical pulses. The overall color palette is a deep blue and slate grey, accented with vibrant electric cyan light to represent high-performance computing and cybersecurity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGvr6l6tq1VVTTuy_QeC76OsodvCl_qnFAJRprS5wnN9Wy10G7gOODwg7iBVM5rtUsSH_IQQ2sMo7ogOL9sAgtANmpSGl5JEMa2byaznJZg8NL62NWEZWn3QhdHAlu1P1oUryINLa_-9_FKPG-9juccsnKQameTTLKubT31mbJnyqTpUxvVOa7kLoRCj8Dy6qfnzEMswE2Vo1JwVMpYvQRLjRVvgCRNNgNbhYJiRxuqZqxAgDL3Wy4bveyDTkJ2R-qi3pvaqG-FcaP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-secondary border border-secondary/30 px-2 py-0.5 rounded mb-4 inline-block uppercase">Architecture</span>
+<h4 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Optimizing GPU Clusters for Training Large Transformers</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-6">
+                            An exhaustive look at interconnect bandwidth limitations and thermal management strategies in modern data centers.
+                        </p>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">8 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bento-card rounded-xl overflow-hidden group">
+<div class="aspect-video relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A conceptual 3D render of a massive server farm with rows of tall black pillars glowing with soft white status lights. The floor is a reflective dark glass surface that mirrors the cold blue and white illumination. The mood is vast, silent, and highly professional, depicting a world-class data infrastructure in a minimalist dark-mode style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtXvpC9FMyW1yR9CDjyHREjMoqlILKkTIeJlRlde12c2G2sL5TgaNn06yWB2DtVW3-AUHUBZ1MFzj0Kbv7fHhMAWGHvHCRli6bDqlf7ri9ATZMRUW3r0wztznR63guSoPXG8sjZCcXkliqOroV0zfSiQtXHJBrZFbjDY3vo4JRil48PhnZYdsAXmKDkdVzEMak-Dt9fQSKKcyS3QDny0XGgz7yZRRCpwHDMI1fkBQ38ZdE9DXfEpQabnNy9I4E6IifCzEmwm8ma41"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div class="p-6">
+<span class="ai-gradient text-white px-2 py-0.5 rounded font-label-md text-label-md mb-4 inline-block uppercase">Agentic AI</span>
+<h4 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Recursive Reasoners: Self-Correcting LLM Pipelines</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-6">
+                            Moving beyond zero-shot prompts into recursive chains that verify their own outputs against external ground-truth datasets.
+                        </p>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">15 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bento-card rounded-xl overflow-hidden group">
+<div class="aspect-video relative">
+<img alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A complex geometric pattern of glass prisms refracting light into a spectrum of blues, teals, and purples. The sharp angles and transparent layers create a sense of depth and multi-dimensional analysis. The lighting is focused and technical, emphasizing the clarity and precision of data through a high-end glassmorphic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFwHNjksmbpnLQPtLBe3K3u5Hr_vYocOP2SL2tHUk-KUf_T3l4FQOebOTkMDozr1IPjVz17UWXsRydKET1i6PA88u0qIdk43DzlLBzYTYrcbReiDYlJIQ7csIgiYUTBAdX7NfpJdRGBLzjRISI6k9DTUG6d6fNC43uPDIOVb6QjCxFJ8SXq_RfqQINI71TuydCa8XLJU7d08-ixe1NYZKbJyzPO55oDLJ8iEJQlP70H6_hA_bDRjWNpOVyZI29Nif2pEZRvHg5XhPg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-60"></div>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-tertiary border border-tertiary/30 px-2 py-0.5 rounded mb-4 inline-block uppercase">Data Ops</span>
+<h4 class="font-headline-md text-headline-md mb-3 group-hover:text-primary transition-colors">Semantic Data Fabric: The End of Traditional ETL?</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-3 mb-6">
+                            How semantic mapping layers are enabling real-time data discovery across heterogeneous enterprise systems without duplication.
+                        </p>
+<div class="flex justify-between items-center">
+<span class="font-label-md text-label-md text-on-surface-variant">10 min read</span>
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary" data-icon="north_east">north_east</span>
+</div>
+</div>
+</div>
+<!-- Card 4 (Horizontal Span) -->
+<div class="bento-card rounded-xl overflow-hidden md:col-span-2 group flex flex-col md:flex-row">
+<div class="md:w-1/2 relative overflow-hidden">
+<img alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An abstract visualization of blockchain nodes and decentralized networks. Glowing lines connect points in a dark 3D space, forming a resilient web structure. The color palette is composed of deep indigo and vivid cyan, with a sense of infinite expansion. The style is modern, dark-mode, and focused on the technical elegance of decentralized systems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbxjlkTqIGxWfbDUjlOz1K476035jgNqo-Mf_h5HTnhgw58surqLTGW1IIMp5SY7shDM4qbziVtNzR2AzFSg649CdyxuM1RAV3CHWV1keg9gtneZMPYNESjZkf84PN8dv4mK6Gtsoz0df8hFDa1ClpclKPrlowiU-IrMUndU-9cPDVIATktVe72TqtIAzj8KmoxZOLBop4fwcbLCNYiumEsPJaZUU91ACPWkDTWrlrx2FVtpskV3OcXaTWjV8nAq2gnX48-P5Uidyq"/>
+</div>
+<div class="md:w-1/2 p-gutter flex flex-col justify-center">
+<span class="font-label-md text-label-md text-primary border border-primary/30 px-2 py-0.5 rounded mb-4 inline-block self-start uppercase">Strategy</span>
+<h4 class="font-headline-lg text-headline-lg mb-4 group-hover:text-primary transition-colors">The 2025 AI Readiness Framework</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            A comprehensive guide for CTOs to audit infrastructure, talent, and data governance before deploying production-grade AI.
+                        </p>
+<button class="bg-surface-variant text-on-surface font-bold px-6 py-3 rounded-xl border border-outline-variant hover:bg-primary hover:text-on-primary transition-all self-start flex items-center gap-2">
+                            Download PDF <span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+</div>
+<!-- Card 5 (Small Accent) -->
+<div class="bento-card rounded-xl p-6 flex flex-col justify-between border-l-4 border-l-primary">
+<div>
+<span class="material-symbols-outlined text-primary mb-4" data-icon="lightbulb">lightbulb</span>
+<h4 class="font-headline-md text-headline-md mb-2">Quick Take</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                            "The bottleneck for AI adoption isn't model performance—it's the reliability of the underlying data pipelines."
+                        </p>
+</div>
+<div class="pt-4 mt-4 border-t border-outline-variant/20 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-container"></div>
+<span class="font-label-md text-label-md">Dr. Sarah Chen, CTO</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="mt-margin-desktop bento-card rounded-xl p-margin-tablet relative overflow-hidden text-center">
+<div class="absolute inset-0 ai-gradient opacity-5 pointer-events-none"></div>
+<div class="relative z-10 max-w-xl mx-auto">
+<span class="material-symbols-outlined text-primary text-5xl mb-4" data-icon="mail">mail</span>
+<h2 class="font-headline-xl text-headline-xl mb-4">Stay at the Cutting Edge</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                    Get bi-weekly technical deep dives and strategic analysis delivered directly to your inbox. No fluff, just data.
+                </p>
+<form class="flex flex-col md:flex-row gap-4">
+<input class="flex-1 bg-surface-container-low border border-outline-variant rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Enter your enterprise email" type="email"/>
+<button class="bg-primary text-on-primary font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_15px_rgba(173,198,255,0.4)] transition-all">Subscribe Now</button>
+</form>
+<p class="font-label-md text-label-md text-on-surface-variant mt-4 opacity-60">Join 12,000+ technical leaders from companies like OpenAI, Anthropic, and NVIDIA.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="relative w-full rounded-t-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col gap-gutter px-margin-mobile py-margin-tablet max-w-container-max mx-auto md:flex-row md:justify-between">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-on-surface font-black">DATAMORE</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+                    Architecting the future of enterprise intelligence through data-driven consultancy and technical excellence.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase">Services</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">AI Implementation</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Data Strategy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase">Company</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase">Legal</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-label-md text-primary uppercase">Social</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">LinkedIn</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-secondary transition-colors" href="#">Twitter (X)</a>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-margin-mobile max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-sm text-body-sm text-on-surface-variant opacity-60">© 2024 Datamore Technology Consultancy. All rights reserved.</span>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="rss_feed">rss_feed</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer" data-icon="share">share</span>
+</div>
+</div>
+</footer>
+</body></html>

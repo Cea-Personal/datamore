@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#00424e",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#111318",
+                    "surface": "#111318",
+                    "on-secondary": "#003640",
+                    "primary-container": "#4d8eff",
+                    "error": "#ffb4ab",
+                    "surface-variant": "#333539",
+                    "on-tertiary": "#3c0091",
+                    "error-container": "#93000a",
+                    "on-tertiary-container": "#340080",
+                    "surface-container-highest": "#333539",
+                    "primary": "#adc6ff",
+                    "on-primary-fixed-variant": "#004395",
+                    "on-tertiary-fixed-variant": "#5516be",
+                    "on-primary": "#002e6a",
+                    "tertiary-fixed": "#e9ddff",
+                    "outline-variant": "#424754",
+                    "tertiary-container": "#a078ff",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-background": "#e2e2e8",
+                    "on-secondary-fixed": "#001f26",
+                    "inverse-surface": "#e2e2e8",
+                    "on-primary-container": "#00285d",
+                    "secondary-fixed-dim": "#4cd7f6",
+                    "tertiary": "#d0bcff",
+                    "surface-bright": "#37393e",
+                    "outline": "#8c909f",
+                    "secondary": "#4cd7f6",
+                    "secondary-container": "#03b5d3",
+                    "on-secondary-fixed-variant": "#004e5c",
+                    "inverse-on-surface": "#2f3035",
+                    "on-error-container": "#ffdad6",
+                    "inverse-primary": "#005ac2",
+                    "background": "#111318",
+                    "tertiary-fixed-dim": "#d0bcff",
+                    "surface-container-high": "#282a2e",
+                    "on-surface-variant": "#c2c6d6",
+                    "on-primary-fixed": "#001a42",
+                    "surface-container-low": "#1a1c20",
+                    "surface-container-lowest": "#0c0e12",
+                    "surface-container": "#1e2024",
+                    "on-surface": "#e2e2e8",
+                    "surface-tint": "#adc6ff",
+                    "secondary-fixed": "#acedff",
+                    "on-tertiary-fixed": "#23005c",
+                    "on-error": "#690005"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "margin-tablet": "32px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "margin-desktop": "64px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Space Grotesk"],
+                    "body-sm": ["Inter"],
+                    "headline-xl": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg-mobile": ["Space Grotesk"],
+                    "headline-lg": ["Space Grotesk"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #111318;
+            color: #e2e2e8;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid #1e293b;
+        }
+        .ai-gradient-text {
+            background: linear-gradient(90deg, #4cd7f6, #d0bcff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .ai-border {
+            border-image: linear-gradient(to right, #4cd7f6, #d0bcff) 1;
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar Shell -->
+<nav class="bg-surface/60 dark:bg-surface/60 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-outline-variant/30 shadow-[0_0_20px_rgba(173,198,255,0.05)]">
+<div class="flex justify-between items-center px-margin-mobile max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary">menu</span>
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface dark:text-on-surface">DATAMORE</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-variant/50 transition-colors px-3 py-1 rounded" href="#">Home</a>
+<a class="text-primary dark:text-primary font-bold transition-colors px-3 py-1 rounded" href="#">Our Work</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-variant/50 transition-colors px-3 py-1 rounded" href="#">Services</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold hover:opacity-80 transition-all active:scale-95">Book</button>
+</div>
+</div>
+</nav>
+<main class="pt-24 pb-margin-desktop">
+<!-- Hero: Title & Industry -->
+<section class="px-margin-mobile max-w-container-max mx-auto mb-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-end">
+<div class="md:col-span-8">
+<span class="font-label-md text-label-md text-secondary tracking-widest uppercase mb-4 block">FinTech Architecture</span>
+<h1 class="font-display-lg text-display-lg leading-tight mb-6">
+                        Real-Time Fraud Detection for Global Payment Gateways
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                        How we architected a high-concurrency AI processing layer that reduced fraudulent transactions by 42% while maintaining sub-50ms latency.
+                    </p>
+</div>
+<div class="md:col-span-4 flex flex-col gap-4 border-l border-outline-variant/30 pl-8">
+<div>
+<p class="font-label-md text-label-md text-outline">CLIENT</p>
+<p class="font-headline-md text-headline-md">NexuStream Financial</p>
+</div>
+<div>
+<p class="font-label-md text-label-md text-outline">DURATION</p>
+<p class="font-headline-md text-headline-md">6 Months</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hero Visualization -->
+<section class="px-margin-mobile max-w-container-max mx-auto mb-margin-desktop">
+<div class="glass-card rounded-xl overflow-hidden relative aspect-[21/9] flex items-center justify-center">
+<img alt="System Dashboard" class="w-full h-full object-cover opacity-60" data-alt="A sophisticated dark-themed data analytics dashboard displaying complex financial metrics with glowing cyan and violet line graphs. The interface features high-density information architecture with glassmorphic widgets and semi-transparent panels. Subtle light refraction effects play across the digital surface, highlighting key transaction patterns against a deep obsidian background. The overall aesthetic is professional, technical, and future-forward." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnZR4NqemDVZZAs8DGV0cMQn59JotxHoglW_Y6hqH9_Cwe_S1mMb3NfUlvdS6sFbmpYJwf9DjNe4-o2qGOfbXTtMDo9Tffd9Yxwm3HhODpspeqRnjToc_iw9SxRZDv__8j3bQ8eoJwq4KVYsQi67hGdB_X_P0F4yUyGLtdk-9DJg8ymrDkUiU7_3LmKT3P2ZmSpuerHe7W2YrqP2wT6RI3wXa6ieREFALGeJKtzp6e7r6EKEgNX71M-WlSexpQwjru52rP0PuMSIZs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-8 left-8">
+<div class="bg-surface/80 backdrop-blur-md p-6 rounded-lg border border-outline-variant/30 max-w-md">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-label-md text-label-md text-on-surface">LIVE MONITORING</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Centralized AI Command Center managing over 1.2M transactions per hour with neural anomaly detection.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid: The Challenge & Impact -->
+<section class="px-margin-mobile max-w-container-max mx-auto mb-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- The Challenge -->
+<div class="md:col-span-2 glass-card p-12 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-error text-3xl">warning</span>
+<h2 class="font-headline-xl text-headline-xl">The Challenge</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                            NexuStream faced a critical scaling bottleneck. Their legacy rule-based engines were unable to detect sophisticated polymorphic fraud patterns, leading to millions in annual losses and a high rate of false positives that frustrated legitimate users.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md">Inability to process more than 500 transactions per second.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md">Manual review queues taking upwards of 4 hours per flagged case.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md">Static thresholds failing to adapt to evolving cyber-threat vectors.</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Stats Card -->
+<div class="glass-card p-8 rounded-xl bg-primary-container/10 border-primary/20 flex flex-col justify-center gap-8">
+<div class="text-center">
+<p class="font-display-lg text-display-lg text-primary mb-0">$12M</p>
+<p class="font-label-md text-label-md text-on-surface-variant">RECOVERED REVENUE</p>
+</div>
+<div class="h-px bg-outline-variant/30 w-full"></div>
+<div class="text-center">
+<p class="font-display-lg text-display-lg text-secondary mb-0">89%</p>
+<p class="font-label-md text-label-md text-on-surface-variant">AUTO-CLEARANCE RATE</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Architecture (Asymmetric Layout) -->
+<section class="px-margin-mobile max-w-container-max mx-auto mb-margin-desktop">
+<div class="mb-gutter text-center">
+<h2 class="font-headline-xl text-headline-xl ai-gradient-text inline-block">Technical Architecture &amp; AI Integration</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">A multi-layered neural processing pipeline built for sub-millisecond precision.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Architecture Card -->
+<div class="lg:col-span-4 glass-card p-8 rounded-xl border-l-4 border-l-secondary">
+<span class="material-symbols-outlined text-secondary text-4xl mb-4">hub</span>
+<h3 class="font-headline-md text-headline-md mb-4">Ingestion Layer</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        High-throughput Kafka clusters handling raw event streams from globally distributed edge locations. We implemented a custom schema registry to ensure data integrity before normalization.
+                    </p>
+</div>
+<div class="lg:col-span-4 glass-card p-8 rounded-xl border-t-4 border-t-tertiary">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">psychology</span>
+<h3 class="font-headline-md text-headline-md mb-4">Neural Scoring</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        PyTorch-based Transformer models analyzing sequential behavior patterns. The model evaluates 150+ features including geolocational velocity and device fingerprinting in real-time.
+                    </p>
+</div>
+<div class="lg:col-span-4 glass-card p-8 rounded-xl border-r-4 border-r-primary">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">dynamic_form</span>
+<h3 class="font-headline-md text-headline-md mb-4">Adaptive Policy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        A dynamic decision engine that adjusts thresholds based on global threat levels and regional compliance requirements, allowing for zero-downtime policy updates.
+                    </p>
+</div>
+<!-- Large Visual Logic Card -->
+<div class="lg:col-span-12 glass-card p-1 rounded-xl overflow-hidden mt-gutter">
+<div class="bg-surface-container-low p-12 flex flex-col lg:flex-row items-center gap-margin-tablet">
+<div class="lg:w-1/2">
+<h3 class="font-headline-lg text-headline-lg mb-6">The "Intelligent Shield" Implementation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                                Our core innovation was the implementation of a "Shadow Mode" evaluation system. This allowed NexuStream to test new AI models against live production traffic without affecting transactions, ensuring 99.99% reliability during migrations.
+                            </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container p-4 rounded border border-outline-variant/30">
+<p class="font-label-md text-label-md text-primary mb-1">LATENCY</p>
+<p class="font-headline-md text-headline-md">42ms avg.</p>
+</div>
+<div class="bg-surface-container p-4 rounded border border-outline-variant/30">
+<p class="font-label-md text-label-md text-secondary mb-1">PRECISION</p>
+<p class="font-headline-md text-headline-md">0.984 AUC</p>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 w-full h-80 bg-surface-container-highest rounded-lg relative overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-40 group-hover:opacity-60" data-alt="A clean, high-tech server room with rows of sleek data cabinets illuminated by vibrant electric blue neon lights. The floor reflects the technological glow, creating a deep sense of digital immersion. Cables are neatly organized, suggesting meticulous enterprise management. The atmospheric lighting transition from cool blues to soft purples evokes a sense of advanced machine learning and AI processing. The shot is wide-angle and cinematic, emphasizing scale and technical precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeR9e5iDK5d6N54PLmCVyCwjnJad328am91x98HMTkBAKTRiFJ_MvjGk2Sf6r2gj_0UTNMWK0cbblkrMbEbXo1OdfFOapo1QiqEWov0ZT60Zfc58s7gF-H5gCyWu-ekVGQjolLI1ByslVmQQ5KzVJ8EztcXB_Ol2h1tXA-1fIEvgp6kFQuxwJGmr7AzlTbD3344I75U9iXbjSEnKmieDBJzpom1PWCstoBnyUH1L8_6bRIYRuMZMiDJLInRpQnxL8d0_oZAZNGOmyc"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-primary animate-pulse">settings_input_component</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Results Section -->
+<section class="px-margin-mobile max-w-container-max mx-auto mb-margin-desktop py-margin-desktop bg-surface-container-lowest rounded-3xl border border-outline-variant/20">
+<div class="max-w-4xl mx-auto text-center px-margin-mobile">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h2 class="font-display-lg text-display-lg mb-8">Measurable Business Impact</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-margin-tablet">
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-secondary">-42%</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Fraud Loss Reduction</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-primary">+15%</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Checkout Conversion</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-display-lg text-display-lg text-tertiary">5x</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Scale Capacity</p>
+</div>
+</div>
+<div class="mt-16 p-8 glass-card rounded-2xl text-left border-l-4 border-l-primary">
+<p class="font-headline-md text-headline-md italic mb-6">
+                        "The architecture Datamore delivered didn't just solve our security problem—it transformed our speed-to-market for new payment products. We can now deploy custom fraud policies in minutes instead of weeks."
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-outline-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface">person</span>
+</div>
+<div>
+<p class="font-body-md text-body-md font-bold">Marcus Thorne</p>
+<p class="font-label-md text-label-md text-on-surface-variant">CTO, NexuStream Financial</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Projects Footer -->
+<section class="px-margin-mobile max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-gutter">
+<div>
+<h2 class="font-headline-xl text-headline-xl">Related Case Studies</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Explore more of our data-driven success stories.</p>
+</div>
+<button class="hidden md:block text-primary font-bold hover:underline">View All Projects</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Related 1 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-primary/50 transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of a sleek laptop screen displaying a high-contrast data visualization dashboard with bright yellow and teal accents. The background is a dimly lit, modern workspace with soft bokeh from distant city lights through a window. The style is professional and minimalist, focusing on the clarity of the interface and the precision of the data points. Deep shadows and vibrant highlights create a cinematic, tech-focused mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS0saltst9OvbacaMpBjz1HfDeVRm1g0yZd73YWEtNJBUKYk_cS32YHfVewJBi6Joc_mbhyoVTW_h2mzHu3eDtUd1lCPRAp913cgp6D8ZV-dZehztDbs48kyWLnDogFSf-4qK8lfAZl4Jk1BYUiUvIBWW6spV_iJexyrc5CtImQ5jcNaMFszHJnlEUWE_IMP1pKZtnZ4-QF0PfaewUf7Kx59fkIZZtHB9-E5TA-eW51nXatGu3p4kL3EvjmMiqCDwKkLSGAIKSeZuV"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-outline">HEALTHCARE</span>
+<h4 class="font-headline-md text-headline-md mt-2 mb-4">Predictive Patient Diagnostics</h4>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Related 2 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-secondary/50 transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A futuristic abstract visualization of a neural network, with glowing filaments of light in shades of cyan and electric blue connecting nodes in a three-dimensional dark space. The aesthetic is clean and high-fidelity, resembling advanced AI architecture or cosmic structures. Background elements are softly blurred to provide a sense of immense depth. The lighting is low-key, allowing the vibrant pathways of light to stand out as symbols of high-speed data transfer and intelligence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh1V4t7P8oJjPakIo54MghBUHfNJCIPif4Syg1jIv_xiG4N641q2O3g7tIYtyydQwVMDYPjFw3b7gA5F405Gkgc5c_bhplMBu_WzFfkhulUW-5v7HyvNGx57Wa6FRNTvp0S5g8yuGmK_KY7b_ciH3vN33FrAJ5RhEIGWh3yxy8Xyx8msd4Y3vuD6MPsp7ZJpZhbHRsOzw2UY5H9fiU5y6nxjSlUg8uWtw3Czz_BNgmlMASUizQAqE6Ibt_snmOUhnxWD3rUxSHUr6Y"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-outline">SUPPLY CHAIN</span>
+<h4 class="font-headline-md text-headline-md mt-2 mb-4">Autonomous Logistics Optimization</h4>
+<span class="material-symbols-outlined text-secondary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Related 3 -->
+<div class="glass-card rounded-xl overflow-hidden group cursor-pointer hover:border-tertiary/50 transition-all">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A detailed, technical shot of a glowing motherboard with intricate copper traces illuminated by emerald and deep blue LED lights. The composition is close-up and sharp, emphasizing the hardware and physical infrastructure of modern computing. The atmosphere is quiet and focused, suggesting security and solid engineering. The lighting creates a sense of hidden energy flowing through the circuitry, fitting an enterprise-level cybersecurity or data infrastructure theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFjRXVqfq_8Q7MmOYcl-KtACMmacirrk-QeQzArG5AvVY6YMxhM0NnxDcjFzq0G2qiYe1EnAn9pYK9ffTC3NdZsQ2naJBagIlfjASQIjIRUHPwcL7l-acwzeYuEkjOKdo-_cTPGyY-bBbPmC-YWGDQSD0IuZxRIkgqmvYHMlmb6dEnwOPvCI8BVOaZUa6ZNVzPGL4CLTzWsCEdlbEOqFRxq0S0iIXM4UJgrgYjIn5ZwjKFqWqIyrEdj_CVanYG6AJ07yjiqGWXN9Gl"/>
+</div>
+<div class="p-6">
+<span class="font-label-md text-label-md text-outline">RETAIL</span>
+<h4 class="font-headline-md text-headline-md mt-2 mb-4">Hyper-Personalized Recommendation Engine</h4>
+<span class="material-symbols-outlined text-tertiary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="relative w-full rounded-t-xl bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="flex flex-col gap-gutter px-margin-mobile py-margin-tablet max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">DATAMORE</span>
+<div class="flex flex-wrap gap-8">
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Services</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Case Studies</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Careers</a>
+<a class="text-on-surface-variant font-body-sm text-body-sm hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="h-px bg-outline-variant/10 w-full"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">© 2024 Datamore Technology Consultancy. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

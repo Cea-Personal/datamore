@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #111318;
+  --surface: #111318;
+  --surface-container-lowest: #0c0e12;
+  --surface-container-low: #1a1c20;
+  --surface-container: #1e2024;
+  --surface-container-high: #282a2e;
+  --on-surface: #e2e2e8;
+  --on-surface-variant: #c2c6d6;
+  --primary: #adc6ff;
+  --secondary: #4cd7f6;
+  --tertiary: #d0bcff;
+  --outline: #8c909f;
+  --outline-variant: #424754;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-outline: var(--outline);
+  --color-outline-variant: var(--outline-variant);
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--on-surface);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+/* Custom utilities */
+@utility container-max {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@utility margin-mobile {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@utility margin-tablet {
+  margin-left: 32px;
+  margin-right: 32px;
+}
+
+@utility margin-desktop {
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+@utility glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid #1E293B;
+}
+
+@utility ai-gradient-text {
+  background: linear-gradient(135deg, #4cd7f6 0%, #a078ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility ai-gradient {
+  background: linear-gradient(135deg, #4cd7f6 0%, #a078ff 100%);
+}
+
+@utility ai-border {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, #4cd7f6 0%, #a078ff 100%) 1;
+}
+
+@utility gradient-border-top {
+  position: relative;
+}
+
+.gradient-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, #4cd7f6 0%, #a078ff 100%);
+}
+
+@utility line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@utility line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
