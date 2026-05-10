@@ -5,25 +5,6 @@ import { getPayload } from 'payload';
 import config from '@/payload.config';
 import type { Insight } from '@/payload-types';
 
-// Generate static params for all insights (for static generation)
-export async function generateStaticParams() {
-  try {
-    const payload = await getPayload({ config });
-    const insights = await payload.find({
-      collection: 'insights',
-      limit: 100,
-      sort: '-publishedAt',
-    });
-
-    return insights.docs.map((insight) => ({
-      slug: insight.slug,
-    }));
-  } catch (error) {
-    console.error('Error generating static params:', error);
-    return [];
-  }
-}
-
 // Fetch single insight by slug
 async function getInsight(slug: string): Promise<Insight | null> {
   try {

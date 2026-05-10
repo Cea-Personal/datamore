@@ -1,6 +1,9 @@
 import PageLayout from "@/components/PageLayout";
 import Link from "next/link";
 
+export const dynamic = 'force-dynamic';
+export const dynamicParams = true;
+
 export default function Home() {
   return (
     <PageLayout>
