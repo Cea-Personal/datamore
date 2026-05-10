@@ -9,6 +9,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: dirname,
   },
+  output: 'standalone',
 };
 
 export default nextConfig;

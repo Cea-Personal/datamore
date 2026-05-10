@@ -5,6 +5,8 @@ import { getPayload } from 'payload';
 import config from '@/payload.config';
 import type { Insight } from '@/payload-types';
 
+export const dynamic = 'force-dynamic';
+
 // Fetch single insight by slug
 async function getInsight(slug: string): Promise<Insight | null> {
   try {

@@ -1,26 +1,23 @@
 import { NextResponse } from 'next/server';
 import { getPayload } from 'payload';
 import config from '@/payload.config';
+import { NextResponse } from 'next/server';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
     const payload = await getPayload({ config });
-    
     const insights = await payload.find({
       collection: 'insights',
-      sort: '-publishedAt',
       limit: 100,
-      depth: 1,
+      sort: '-publishedAt',
     });
 
     return NextResponse.json(insights.docs);
   } catch (error) {
     console.error('Error fetching insights:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch insights' },
-      { status: 500 }
-    );
+    return NextResponse.json([]);
   }
+}
 }
