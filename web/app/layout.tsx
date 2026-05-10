@@ -28,7 +28,26 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background text-on-surface">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght@20..48,100..700&display=swap"
+        />
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .material-symbols-outlined {
+              font-variant: normal !important;
+              font-variant-ligatures: common-ligatures !important;
+              -webkit-font-variant-ligatures: common-ligatures !important;
+              font-feature-settings: "liga" !important;
+            }
+          `
+        }} />
+      </head>
+      <body
+        className="min-h-full flex flex-col bg-background text-on-surface"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

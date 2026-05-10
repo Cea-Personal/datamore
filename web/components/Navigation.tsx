@@ -2,9 +2,11 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { useState } from 'react';
 
 export default function Navigation() {
   const pathname = usePathname();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isActive = (path: string) => pathname === path;
 
@@ -14,47 +16,131 @@ export default function Navigation() {
         <Link href="/" className="text-on-surface font-display font-bold text-xl tracking-wider">
           DATAMORE
         </Link>
-        <div className="hidden md:flex gap-8">
-          <Link
-            href="/"
-            className={`text-sm font-medium tracking-wide transition-colors ${
-              isActive('/') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/services"
-            className={`text-sm font-medium tracking-wide transition-colors ${
-              isActive('/services') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            Services
-          </Link>
-          <Link
-            href="/work"
-            className={`text-sm font-medium tracking-wide transition-colors ${
-              pathname.startsWith('/work') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-            }`}
-          >
-            Our Work
-          </Link>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6">
+          <div className="flex gap-6">
+            <Link
+              href="/"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/services') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Services
+            </Link>
+            <Link
+              href="/work"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                pathname.startsWith('/work') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Projects
+            </Link>
+            <Link
+              href="/insights"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                pathname.startsWith('/insights') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Insights
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/contact') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Contact
+            </Link>
+          </div>
           <Link
             href="/contact"
-            className={`text-sm font-medium tracking-wide transition-colors ${
-              isActive('/contact') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-            }`}
+            className="bg-primary text-on-surface px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
           >
-            Contact
+            Book
           </Link>
         </div>
-        <Link
-          href="/contact"
-          className="bg-primary text-on-surface px-6 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
-        >
-          Book
-        </Link>
+
+        {/* Mobile Navigation */}
+        <div className="flex md:hidden items-center gap-4">
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-on-surface-variant hover:text-on-surface p-2"
+            aria-label="Toggle menu"
+          >
+            <span className="material-symbols-outlined text-2xl">
+              {mobileMenuOpen ? 'close' : 'menu'}
+            </span>
+          </button>
+          <Link
+            href="/contact"
+            className="bg-primary text-on-surface px-4 py-2 rounded-full text-sm font-medium hover:opacity-90 transition-opacity"
+          >
+            Book
+          </Link>
+        </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      {mobileMenuOpen && (
+        <div className="md:hidden bg-surface-container border-b border-outline-variant/30">
+          <div className="flex flex-col py-4 px-margin-mobile gap-2">
+            <Link
+              href="/"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+            <Link
+              href="/services"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/services') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Services
+            </Link>
+            <Link
+              href="/work"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                pathname.startsWith('/work') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link
+              href="/insights"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                pathname.startsWith('/insights') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Insights
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                isActive('/contact') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
