@@ -9,9 +9,6 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: dirname,
   },
-  devIndicators: {
-    buildActivity: false,
-  },
 };
 
 export default nextConfig;
