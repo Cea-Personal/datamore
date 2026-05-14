@@ -31,12 +31,13 @@ export default function Contact() {
     },
   ];
 
-  const services = [
-    { icon: 'psychology', label: 'LLM Ops' },
-    { icon: 'cloud_sync', label: 'Migration' },
-    { icon: 'security', label: 'Security' },
-    { icon: 'monitoring', label: 'Analytics' },
-  ];
+   const services = [
+     { icon: 'code', label: 'Software' },
+     { icon: 'psychology', label: 'LLM Ops' },
+     { icon: 'cloud_sync', label: 'Migration' },
+     { icon: 'security', label: 'Security' },
+     { icon: 'monitoring', label: 'Analytics' },
+   ];
 
   const timeSlots = [
     '09:00 AM',

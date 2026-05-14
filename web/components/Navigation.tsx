@@ -37,12 +37,20 @@ export default function Navigation() {
               Services
             </Link>
             <Link
-              href="/work"
+              href="/products"
               className={`text-sm font-medium tracking-wide transition-colors ${
-                pathname.startsWith('/work') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+                pathname.startsWith('/products') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              Projects
+              Products
+            </Link>
+            <Link
+              href="/use-cases"
+              className={`text-sm font-medium tracking-wide transition-colors ${
+                pathname.startsWith('/use-cases') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              }`}
+            >
+              Use Cases
             </Link>
             <Link
               href="/insights"
@@ -97,47 +105,56 @@ export default function Navigation() {
               href="/"
               className={`text-sm font-medium tracking-wide transition-colors ${
                 isActive('/') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <Link
-              href="/services"
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                isActive('/services') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              href="/work"
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                pathname.startsWith('/work') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="/insights"
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                pathname.startsWith('/insights') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Insights
-            </Link>
-            <Link
-              href="/contact"
-              className={`text-sm font-medium tracking-wide transition-colors ${
-                isActive('/contact') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
+             <Link
+               href="/services"
+               className={`text-sm font-medium tracking-wide transition-colors ${
+                 isActive('/services') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
+             >
+               Services
+             </Link>
+             <Link
+               href="/products"
+               className={`text-sm font-medium tracking-wide transition-colors ${
+                 pathname.startsWith('/products') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
+             >
+               Products
+             </Link>
+             <Link
+               href="/use-cases"
+               className={`text-sm font-medium tracking-wide transition-colors ${
+                 pathname.startsWith('/use-cases') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
+             >
+               Use Cases
+             </Link>
+             <Link
+               href="/insights"
+               className={`text-sm font-medium tracking-wide transition-colors ${
+                 pathname.startsWith('/insights') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
+             >
+               Insights
+             </Link>
+             <Link
+               href="/contact"
+               className={`text-sm font-medium tracking-wide transition-colors ${
+                 isActive('/contact') ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+               }`}
+               onClick={() => setMobileMenuOpen(false)}
+             >
+               Contact
+             </Link>
           </div>
         </div>
       )}

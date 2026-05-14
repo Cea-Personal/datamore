@@ -71,7 +71,7 @@ export default function Services() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {/* AI & Machine Learning - Large Bento */}
-          <div className="md:col-span-8 glass-card p-gutter rounded-xl ai-gradient-border relative overflow-hidden group">
+          <div className="md:col-span-6 glass-card p-gutter rounded-xl ai-gradient-border relative overflow-hidden group">
             <div className="relative z-10">
               <div className="flex justify-between items-start mb-12">
                 <div className="p-4 bg-tertiary/10 rounded-xl">
@@ -118,54 +118,52 @@ export default function Services() {
             <div className="absolute -right-20 -top-20 w-80 h-80 bg-tertiary/10 blur-[100px] rounded-full group-hover:bg-tertiary/20 transition-all duration-700" />
           </div>
 
-          {/* Software Development - Slim Bento */}
-          <div className="md:col-span-4 glass-card p-gutter rounded-xl group">
-            <div className="mb-12">
-              <div className="p-4 bg-primary/10 rounded-xl w-fit">
-                <span
-                  className="material-symbols-outlined text-primary scale-150"
-                  data-icon="code"
-                >
-                  code
+          {/* Software Engineering - Large Bento */}
+          <div className="md:col-span-6 glass-card p-gutter rounded-xl ai-gradient-border relative overflow-hidden group">
+            <div className="relative z-10">
+              <div className="flex justify-between items-start mb-12">
+                <div className="p-4 bg-primary/10 rounded-xl">
+                  <span
+                    className="material-symbols-outlined text-primary scale-150"
+                    data-icon="code"
+                  >
+                    code
+                  </span>
+                </div>
+                <span className="text-primary font-label-md tracking-widest px-3 py-1 bg-primary/5 rounded-full border border-primary/20">
+                  SOFTWARE
                 </span>
               </div>
+              <h4 className="font-headline-lg text-headline-lg mb-4">
+                Software Engineering
+              </h4>
+              <p className="text-on-surface-variant max-w-lg mb-8">
+                Bespoke enterprise applications built with React, Go, and Rust for peak
+                performance. Cloud-native architectures, microservices, and legacy
+                modernization across frontend and backend systems.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="p-4 bg-surface-container rounded-lg border border-outline-variant/20">
+                  <p className="text-primary font-bold mb-1">Frontend</p>
+                  <p className="text-body-sm text-on-surface-variant">
+                    React, Next.js, TypeScript
+                  </p>
+                </div>
+                <div className="p-4 bg-surface-container rounded-lg border border-outline-variant/20">
+                  <p className="text-primary font-bold mb-1">Backend</p>
+                  <p className="text-body-sm text-on-surface-variant">
+                    Go, Rust, Node.js, Python
+                  </p>
+                </div>
+                <div className="p-4 bg-surface-container rounded-lg border border-outline-variant/20">
+                  <p className="text-primary font-bold mb-1">Architecture</p>
+                  <p className="text-body-sm text-on-surface-variant">
+                    Microservices, Event-Driven
+                  </p>
+                </div>
+              </div>
             </div>
-            <h4 className="font-headline-md text-headline-md mb-4">
-              Software Engineering
-            </h4>
-            <p className="text-on-surface-variant text-body-sm mb-6">
-              Bespoke enterprise applications built with React, Go, and Rust for peak
-              performance.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-body-sm text-on-surface">
-                <span
-                  className="material-symbols-outlined text-primary"
-                  data-icon="check_circle"
-                >
-                  check_circle
-                </span>
-                Cloud Native Architectures
-              </li>
-              <li className="flex items-center gap-3 text-body-sm text-on-surface">
-                <span
-                  className="material-symbols-outlined text-primary"
-                  data-icon="check_circle"
-                >
-                  check_circle
-                </span>
-                Microservices Design
-              </li>
-              <li className="flex items-center gap-3 text-body-sm text-on-surface">
-                <span
-                  className="material-symbols-outlined text-primary"
-                  data-icon="check_circle"
-                >
-                  check_circle
-                </span>
-                Legacy Modernization
-              </li>
-            </ul>
+            <div className="absolute -right-20 -top-20 w-80 h-80 bg-primary/10 blur-[100px] rounded-full group-hover:bg-primary/20 transition-all duration-700" />
           </div>
 
           {/* Data Engineering - Square Bento */}

@@ -10,9 +10,10 @@ export default function Footer() {
             <h4 className="font-display font-bold text-on-surface mb-4">Services</h4>
             <ul className="space-y-2 text-sm text-on-surface-variant">
               <li><Link href="/services" className="hover:text-primary transition-colors">AI & Automation</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Data & Analytics</Link></li>
               <li><Link href="/services" className="hover:text-primary transition-colors">Technology Advisory</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Data Platforms & Analytics</Link></li>
-              <li><Link href="/services" className="hover:text-primary transition-colors">Governance & Managed Services</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Software Development</Link></li>
+              <li><Link href="/services" className="hover:text-primary transition-colors">Managed Services</Link></li>
             </ul>
           </div>
 
