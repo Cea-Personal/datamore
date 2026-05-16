@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary-fixed": "#001f26",
+                    "on-surface-variant": "#45464d",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#acedff",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-high": "#dce9ff",
+                    "surface-container": "#e5eeff",
+                    "on-surface": "#0b1c30",
+                    "surface-bright": "#f8f9ff",
+                    "on-primary-fixed": "#131b2e",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed-dim": "#4cd7f6",
+                    "on-secondary-container": "#fefcff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-surface": "#213145",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-tertiary-container": "#0090a9",
+                    "surface-container-low": "#eff4ff",
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface": "#f8f9ff",
+                    "secondary": "#0058be",
+                    "on-secondary-fixed": "#001a42",
+                    "surface-container-highest": "#d3e4fe",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7c839b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "primary": "#000000",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#001f26",
+                    "outline-variant": "#c6c6cd",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "primary-container": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "display-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "caption": ["Inter"],
+                    "headline-lg": ["Space Grotesk"],
+                    "display-lg-mobile": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .ambient-shadow-card {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .ambient-shadow-card:hover {
+            box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        .glassy-button {
+            background: linear-gradient(135deg, #0058be, #004395);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<nav class="bg-surface dark:bg-primary-container shadow-sm sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">Datamore</div>
+<div class="hidden md:flex items-center gap-base">
+<a class="text-on-surface-variant dark:text-on-primary-container font-body-md text-body-md hover:text-secondary transition-colors duration-200 px-4" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-body-md text-body-md hover:text-secondary transition-colors duration-200 px-4" href="#">Services</a>
+<a class="text-secondary border-b-2 border-secondary pb-1 font-body-md text-body-md px-4" href="#">Success Stories</a>
+<a class="text-on-surface-variant dark:text-on-primary-container font-body-md text-body-md hover:text-secondary transition-colors duration-200 px-4" href="#">Insights</a>
+</div>
+<button class="glassy-button text-on-secondary px-6 py-2 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">Contact Us</button>
+</div>
+</nav>
+<header class="pt-20 pb-16 px-margin-desktop max-w-container-max mx-auto text-center">
+<span class="bg-tertiary-container text-tertiary-fixed-dim px-4 py-1 rounded-full font-label-md text-label-md inline-block mb-6 uppercase tracking-wider">Our Impact</span>
+<h1 class="font-display-lg text-display-lg mb-6 text-primary">Strategic Transformations Enabled by Data</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Explore how Datamore partners with global leaders in fintech, NGOs, and enterprise sectors to solve complex challenges through AI strategy and engineering.</p>
+</header>
+<main class="px-margin-desktop max-w-container-max mx-auto pb-32">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-8 group">
+<div class="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col md:flex-row">
+<div class="md:w-1/2 relative overflow-hidden">
+<img alt="Financial Analytics" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A highly detailed dashboard showing complex financial analytics on multiple sleek monitors in a high-tech corporate office. The lighting is low-key with cool blue accents reflecting off polished glass surfaces. The visual style is professional and sophisticated, emphasizing technical rigor and data-driven clarity through a midnight navy and cyan palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyD67EvyfN4FJbWZRRuHPVDYrYz6EIZyNi92teVnEb67g3DzVpP43aHkPZ5TRjC8sN8UF6iLQwEEJhze9E1ZIdTkvtppjXDB5Da7MUuNlqbiaCLRC__Cubbvaa583E2npOSbSZIJDkY0W0gdA8qwCf-I4iXZ7-DnU-0-Ad6w_NSUgt7KJiPaIrCLSG0v-9AwbhtGTO-TN7Fm8k60rkHsdGq7yuKutBHLyJHy8Yfx1JGixZ6x9D_177V3KaZM8SBs3aMFSLx2SZpFDd"/>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<span class="text-secondary font-label-md text-label-md mb-3">Financial Services</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4 leading-tight">Optimizing Liquidity Risk for Tier-1 Fintech</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Implementing a real-time risk mitigation engine that reduced capital overhead by 14% while ensuring 99.9% compliance accuracy across four jurisdictions.</p>
+<a class="inline-flex items-center text-secondary font-label-md text-label-md hover:underline" href="#">
+                            Read Full Story <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group">
+<div class="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col">
+<div class="h-64 relative overflow-hidden">
+<img alt="Logistics Data" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A conceptual data visualization showing glowing digital nodes and connecting lines over a map of global logistics routes. The mood is energetic and precise, featuring a clean white background with electric blue and midnight navy accents. Soft ambient tinted shadows create depth, reflecting a premium technical edge in a light-mode corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoNgHDlqyIqARKOlKBNK9RQcjLYLIPDyOSKOY1L7S2jYPC5fDt0JPfMW5RMnq06ow4caMoGwzSSBcVdD5-hCIT6dyWz5C4tl_yn_Mu7mihoEXJx0yzWgl3v3reAITI3jj5msb_habC9LFUAuldFlTwkvjWdH39bXwoUMlc9_jAD0n9ezt3b6ZtVidBWcCGXtiCJvyyNKHPII_xjVbMsZ76eReWWbgm8ZuHCY0kfd2XkDIjiFxk6krw1RMFxyT9dEkzAfHIJxiOxAWA"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3">Retail &amp; Logistics</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Supply Chain Predictive Modeling</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">A custom AI solution for inventory forecasting, reducing stockouts by 22% during peak holiday demand for a major retail chain.</p>
+<a class="mt-auto inline-flex items-center text-secondary font-label-md text-label-md hover:underline" href="#">
+                            Read Full Story <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group">
+<div class="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col">
+<div class="h-64 relative overflow-hidden">
+<img alt="NGO Research" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A minimalist laboratory setting where researchers are looking at data visualizations of biological structures on large high-resolution tablets. The lighting is clinical yet warm, with a clean and airy feeling. The color palette emphasizes soft cyan and bright whites, signifying transparency and strategic clarity in scientific data processing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7JdOSM_vXV-o0pZCKgyPfcY8bh6DnKUKLncgNTO4pKvU7zpbQvrZTE-WvXHidfdl-wTzA34B88i_CUV3nr9H25OOEQfwth640tydVU-HE89xro6JqiI6f2F6BRLAIDXPrMWY13VMeeHBDPVpchW9QWT2xqJGj4l6HPBQ4JF7Id0yg8ukp6Npk70HsWZU7I9jVnpnp8MKYoIOtX7FqIp9Lf7Zmt_2EFiVe6j6POrgv260GyEfqqBr9iHmcMCTAY-cxsixa2Djk6p8D"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3">NGOs</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Data-Driven Philanthropy Impact</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Analyzing decade-long health outcomes to optimize global grant distribution, increasing resource efficiency by 30% for medical research.</p>
+<a class="mt-auto inline-flex items-center text-secondary font-label-md text-label-md hover:underline" href="#">
+                            Read Full Story <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group">
+<div class="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col">
+<div class="h-64 relative overflow-hidden">
+<img alt="AI Automation" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A server room corridor with glowing blue LED indicator lights and fiber optic cables neatly arranged in a modern data center. The lighting is dark and moody, punctuated by vibrant electric blue highlights. The image conveys technical rigor and enterprise-grade reliability, using deep navy tones to signify the calm authority of advanced computing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq9F_6-1pD2ClmU--1y4UbquI3TOcwBzDkuioEbteLbGWHSDdIH7DcHcg11iLbFF63LaNSi_7OLTw1czAG8cL5AAu3UawjNrWDr_5W6Bnjf6cHbLpAhSiWcphwNGQ2e6I2b_D-EeLvZ4sTh_lo3IIauvXqQKKamlwu-lYPrChBz0-okYPKwYX25OBZellD-g75sPbdhrUojHJ5rBfc1vvwkPUah33bjtawoqSJjchhc3br2mh9Ug2FsU6vRgRreJA7ibDL59Y2kVfn"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3">AI Automation</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Enterprise Knowledge Retrieval</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Built a RAG-based internal engine for a legal conglomerate, automating 65% of discovery phase documentation analysis.</p>
+<a class="mt-auto inline-flex items-center text-secondary font-label-md text-label-md hover:underline" href="#">
+                            Read Full Story <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 group">
+<div class="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col">
+<div class="h-64 relative overflow-hidden">
+<img alt="SME Solutions" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A modern collaborative office space with glass walls and minimalist furniture, featuring technical data drawings on whiteboards in the background. The scene is bathed in natural daylight from large windows, creating a bright and agile atmosphere. The aesthetic is corporate modern with a focus on strategic clarity and transparent communication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvky4mRjkAWfaqdQrnWvCJQL0FTNWsF7sOk_VZIBPLOyOJYeH2YFotNmTsBJ_TZD3HDdrZHRuRLtC28hqyUTRgq7j0GgJuh0q8xAske4xxbVgJT_Aj2NtBHMwr30lLAk4Ugm1s-xcUQp4vTH-wSLQ5Viya8jHvlWTrNEx0XLrABgUEJq6m4dymCtj2_VVBfjvLmzTEvuXo4Wc1j68ubenZYt5FNrWdscFYgY1OU-xttNN-zMQ5hR_iVFGI72jvHdVgmpVMFo2-0lA4"/>
+</div>
+<div class="p-8 flex flex-col flex-grow">
+<span class="text-secondary font-label-md text-label-md mb-3">SMEs</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Scaling Data Maturity for Growth</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-6">Guiding a series-B startup from fragmented spreadsheets to a centralized Snowflake-based data warehouse in under 90 days.</p>
+<a class="mt-auto inline-flex items-center text-secondary font-label-md text-label-md hover:underline" href="#">
+                            Read Full Story <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<section class="bg-primary-container py-24 mb-0">
+<div class="max-w-container-max mx-auto px-margin-desktop text-center">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-6">Ready to write your success story?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-10">Our consultants are ready to audit your current data architecture and identify high-leverage AI opportunities.</p>
+<div class="flex flex-col sm:flex-row gap-gutter justify-center">
+<button class="glassy-button text-on-secondary px-8 py-4 rounded-lg font-label-md text-label-md">Book a Strategic Session</button>
+<button class="border border-outline-variant text-on-primary hover:bg-on-primary-fixed-variant transition-colors px-8 py-4 rounded-lg font-label-md text-label-md">Download Case Study PDF</button>
+</div>
+</div>
+</section>
+<footer class="bg-primary-container dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md font-bold text-on-primary-container dark:text-on-surface mb-6">Datamore</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 max-w-xs">Technical rigor meets strategic clarity. Enterprise-grade AI and data solutions for the modern era.</p>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-label-md text-on-primary-container mb-4">Expertise</h4>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">AI Strategy</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Data Engineering</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-label-md text-on-primary-container mb-4">Company</h4>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-tertiary-fixed-dim" href="#">Success Stories</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Insights</a>
+<a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-label-md text-label-md text-on-primary-container mb-4">Newsletter</h4>
+<div class="flex gap-2">
+<input class="bg-transparent border border-outline-variant rounded-lg px-4 py-2 text-on-primary-container w-full focus:ring-2 focus:ring-tertiary-fixed-dim focus:outline-none" placeholder="Enter your email" type="email"/>
+<button class="bg-surface-container text-on-surface px-4 py-2 rounded-lg font-label-md text-label-md hover:bg-surface-bright transition-colors">Subscribe</button>
+</div>
+</div>
+<div class="col-span-full pt-16 text-center border-t border-on-primary-container/10">
+<p class="font-body-md text-body-md text-on-primary-container opacity-60">© 2024 Datamore. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
