@@ -17,7 +17,7 @@ export default function CareersHero({ data }: { data: CareersHeroData }) {
         <span className="inline-block px-4 py-1 rounded-full bg-surface-container-high text-secondary text-label-md mb-6">
           Careers at Datamore
         </span>
-        <h1 className="text-display-lg text-primary mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: data.title }}>
+        <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-6 leading-tight" dangerouslySetInnerHTML={{ __html: data.title }}>
         </h1>
         <p className="text-body-lg text-on-surface-variant max-w-lg mb-10">
           {data.subtitle}
