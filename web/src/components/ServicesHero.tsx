@@ -18,7 +18,7 @@ export default function ServicesHero({ data }: { data: ServicesHeroData }) {
           <span className="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant text-label-md rounded-full mb-6">
             Enterprise Solutions
           </span>
-          <h1 className="text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
           <p className="text-body-lg text-on-surface-variant max-w-xl">
             {data.subtitle}

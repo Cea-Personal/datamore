@@ -11,7 +11,7 @@ export default function SuccessStoriesHero({ data }: { data: HeroData }) {
       <span className="bg-tertiary-container text-tertiary-fixed-dim px-4 py-1 rounded-full text-label-md inline-block mb-6 uppercase tracking-wider">
         Our Impact
       </span>
-      <h1 className="text-display-lg mb-6 text-primary">{data.title}</h1>
+      <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-primary">{data.title}</h1>
       <p className="text-body-lg text-on-surface-variant max-w-3xl mx-auto">
         {data.subtitle}
       </p>

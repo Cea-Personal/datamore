@@ -26,7 +26,7 @@ export default function InsightsHero({ data }: { data: InsightsHeroData }) {
             </span>
             <span className="text-on-surface-variant text-caption">{data.readTime}</span>
           </div>
-          <h1 className="text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
           <p className="text-body-lg text-on-surface-variant mb-8 max-w-2xl">
             {data.subtitle}
