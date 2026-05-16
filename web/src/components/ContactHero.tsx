@@ -9,10 +9,10 @@ export default function ContactHero() {
         {/* Left Column: Branding & Info */}
         <div className="md:col-span-5 flex flex-col gap-12">
           <div className="space-y-6">
-            <h1 className="font-display-lg text-display-lg text-primary leading-tight">
+            <h1 className="text-display-lg text-primary leading-tight">
               Let’s Build More Value From Your Data
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+            <p className="text-body-lg text-on-surface-variant max-w-md">
               Transforming complex financial and non-profit data into actionable strategic insights through enterprise-grade AI.
             </p>
           </div>
@@ -24,8 +24,8 @@ export default function ContactHero() {
                   <span className="material-symbols-outlined">mail</span>
                 </div>
                 <div>
-                  <p className="font-caption text-caption text-outline">Email us at</p>
-                  <p className="font-body-md text-body-md font-semibold">partnerships@datamore.ai</p>
+                  <p className="text-caption text-outline">Email us at</p>
+                  <p className="text-body-md font-semibold">partnerships@datamore.ai</p>
                 </div>
               </div>
               

@@ -12,8 +12,8 @@ export default function InsightsFilter({ data }: { data: { buttons: FilterButton
           <button
             key={index}
             className={button.variant === 'primary'
-              ? 'bg-primary text-on-primary px-4 py-2 rounded-full font-label-md text-label-md'
-              : 'bg-surface-container-low text-on-surface-variant px-4 py-2 rounded-full font-label-md text-label-md hover:bg-surface-container-high transition-colors'}
+              ? 'bg-primary text-on-primary px-4 py-2 rounded-full text-label-md'
+              : 'bg-surface-container-low text-on-surface-variant px-4 py-2 rounded-full text-label-md hover:bg-surface-container-high transition-colors'}
           >
             {button.label}
           </button>
@@ -22,7 +22,7 @@ export default function InsightsFilter({ data }: { data: { buttons: FilterButton
       <div className="relative min-w-[300px]">
         <span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
         <input
-          className="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all font-body-md"
+          className="w-full pl-10 pr-4 py-2 border border-outline-variant rounded-lg bg-transparent focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary transition-all text-body-md"
           placeholder={data.placeholder}
           type="text"
         />

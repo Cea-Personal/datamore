@@ -74,7 +74,7 @@ export default function InsightDetail({
               <span className="material-symbols-outlined text-[16px]">chevron_right</span>
               <span className="text-caption font-caption">Artificial Intelligence</span>
             </nav>
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: title }}>
+            <h1 className="text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: title }}>
             </h1>
             <div className="flex items-center space-x-4">
               {author.imageUrl && (
@@ -90,8 +90,8 @@ export default function InsightDetail({
                  </div>
               )}
               <div>
-                <p className="font-label-md text-label-md text-on-surface">{author.name}</p>
-                <p className="font-caption text-caption text-on-surface-variant">
+                <p className="text-label-md text-on-surface">{author.name}</p>
+                <p className="text-caption text-on-surface-variant">
                   {author.title} • {author.date}
                 </p>
               </div>
@@ -123,15 +123,15 @@ export default function InsightDetail({
                     className={section.variant === 'caption'
                       ? 'font-caption text-on-surface-variant italic'
                       : section.variant === 'first-letter'
-                        ? 'font-body-lg text-body-lg text-on-surface leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-secondary'
-                        : 'font-body-lg text-body-lg text-on-surface leading-relaxed'}
+                        ? 'text-body-lg text-on-surface leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-secondary'
+                        : 'text-body-lg text-on-surface leading-relaxed'}
                   >
                     {section.content}
                   </p>
                 );
               case 'heading':
                 return (
-                  <h2 key={index} className="font-headline-lg text-headline-lg text-on-surface mt-12">
+                  <h2 key={index} className="text-headline-lg text-on-surface mt-12">
                     {section.content}
                   </h2>
                 );
@@ -139,7 +139,7 @@ export default function InsightDetail({
                 return (
                   <div key={index} className="my-12 p-8 bg-surface-container-low rounded-xl border border-outline-variant ambient-shadow">
                     <div className="flex items-center justify-between mb-8">
-                      <h3 className="font-headline-md text-headline-md">{section.title}</h3>
+                      <h3 className="text-headline-md">{section.title}</h3>
                       <span className={`bg-${section.data?.[0]?.color || 'tertiary-fixed'} text-on-${section.data?.[0]?.color || 'tertiary-fixed'} px-3 py-1 rounded-full text-caption font-label-md uppercase tracking-wider`}>
                         Technical Data
                       </span>
@@ -175,7 +175,7 @@ export default function InsightDetail({
           
           {socialShare && (
             <div className="flex items-center space-x-4 pt-12 border-t border-outline-variant">
-              <span className="font-label-md text-label-md text-on-surface">Share Article:</span>
+              <span className="text-label-md text-on-surface">Share Article:</span>
               <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
                 <span className="material-symbols-outlined text-[20px]">share</span>
               </button>
@@ -194,15 +194,15 @@ export default function InsightDetail({
           {/* Subscribe Widget */}
           <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
             <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4">mail</span>
-            <h4 className="font-headline-md text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
-            <p className="font-body-md text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
+            <h4 className="text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
+            <p className="text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
             <div className="space-y-4">
               <input
                 className="w-full bg-transparent border border-on-primary-container rounded-lg px-4 py-3 text-on-primary-fixed placeholder:opacity-50 focus:ring-2 focus:ring-tertiary-cyan focus:outline-none transition-all"
                 placeholder="Email address"
                 type="email"
               />
-              <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-md text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
+              <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
                 Subscribe Now
               </button>
             </div>
@@ -211,7 +211,7 @@ export default function InsightDetail({
           {/* Related Articles */}
           {relatedArticles.length > 0 && (
             <>
-              <h4 className="font-label-md text-label-md text-secondary uppercase tracking-widest mb-6">Related Articles</h4>
+              <h4 className="text-label-md text-secondary uppercase tracking-widest mb-6">Related Articles</h4>
               <div className="space-y-6">
                 {relatedArticles.map((article, index) => (
                   <a
@@ -229,7 +229,7 @@ export default function InsightDetail({
                         />
                       </div>
                       <div className="flex flex-col justify-center">
-                        <h5 className="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
+                        <h5 className="text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
                           {article.title}
                         </h5>
                         <span className="text-caption font-caption text-on-surface-variant mt-1">{article.readTime}</span>
@@ -246,14 +246,14 @@ export default function InsightDetail({
       {/* Ready to Scale CTA */}
       <section className="bg-surface-container-highest py-24 px-margin-desktop text-center">
         <div className="max-w-3xl mx-auto space-y-8">
-          <h2 className="font-display-lg text-display-lg-mobile md:text-headline-lg text-on-surface">{cta.title}</h2>
-          <p className="font-body-lg text-body-lg text-on-surface-variant">{cta.subtitle}</p>
+          <h2 className="text-display-lg-mobile md:text-headline-lg text-on-surface">{cta.title}</h2>
+          <p className="text-body-lg text-on-surface-variant">{cta.subtitle}</p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <button className="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-secondary-container transition-all">
+            <button className="bg-primary text-on-primary px-10 py-4 rounded-lg text-label-md flex items-center gap-2 hover:bg-secondary-container transition-all">
               {cta.primaryButton.label}
               <span className="material-symbols-outlined">{cta.primaryButton.icon}</span>
             </button>
-            <button className="bg-transparent border border-outline text-on-surface px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-all">
+            <button className="bg-transparent border border-outline text-on-surface px-10 py-4 rounded-lg text-label-md hover:bg-surface-variant transition-all">
               {cta.secondaryButton.label}
             </button>
           </div>

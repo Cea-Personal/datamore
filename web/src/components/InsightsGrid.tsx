@@ -23,21 +23,21 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-4 left-4">
-              <span className={`bg-secondary/90 backdrop-blur-md text-on-secondary px-3 py-1 rounded-md font-label-md text-label-md`}>
+              <span className={`bg-secondary/90 backdrop-blur-md text-on-secondary px-3 py-1 rounded-md text-label-md`}>
                 {article.category}
               </span>
             </div>
           </div>
           <div className="p-6 flex flex-col flex-grow">
-            <div className="text-on-surface-variant font-caption text-caption mb-2 flex justify-between">
+            <div className="text-on-surface-variant text-caption mb-2 flex justify-between">
               <span>{article.date}</span>
               <span>{article.readTime}</span>
             </div>
-            <h3 className="font-headline-md text-headline-md text-primary mb-3">{article.title}</h3>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-6 flex-grow">
+            <h3 className="text-headline-md text-primary mb-3">{article.title}</h3>
+            <p className="text-body-md text-on-surface-variant mb-6 flex-grow">
               {article.description}
             </p>
-            <a href="#" className="text-secondary font-label-md text-label-md flex items-center gap-1 group-hover:underline">
+            <a href="#" className="text-secondary text-label-md flex items-center gap-1 group-hover:underline">
               Read more <span className="material-symbols-outlined text-sm">chevron_right</span>
             </a>
           </div>

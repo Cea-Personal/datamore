@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.className} ${spaceGrotesk.className}`}>
       <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24..48,-100..700,0..1,-25..3" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>
       <body className="bg-background text-on-background font-body-md overflow-x-hidden">
         <Navbar />

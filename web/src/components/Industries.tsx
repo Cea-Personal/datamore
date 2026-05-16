@@ -20,14 +20,14 @@ export default function Industries({ data }: { data: IndustriesData }) {
     <section className="px-margin-mobile md:px-margin-desktop py-24 max-w-container-max mx-auto">
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
         <div>
-          <h2 className="font-headline-lg text-headline-lg text-primary mb-4">{data.title}</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-lg">{data.subtitle}</p>
+          <h2 className="text-headline-lg text-primary mb-4">{data.title}</h2>
+          <p className="text-body-md text-on-surface-variant max-w-lg">{data.subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {data.tags.map((tag, index) => (
             <span
               key={index}
-              className="px-4 py-2 bg-surface-container-low rounded-full font-label-md text-label-md text-on-secondary-fixed-variant"
+              className="px-4 py-2 bg-surface-container-low rounded-full text-label-md text-on-secondary-fixed-variant"
             >
               {tag}
             </span>
@@ -44,8 +44,8 @@ export default function Industries({ data }: { data: IndustriesData }) {
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
             </div>
-            <h5 className="font-headline-md text-headline-md text-primary mb-2">{card.title}</h5>
-            <p className="font-caption text-caption text-on-surface-variant">{card.description}</p>
+            <h5 className="text-headline-md text-primary mb-2">{card.title}</h5>
+            <p className="text-caption text-on-surface-variant">{card.description}</p>
           </div>
         ))}
       </div>

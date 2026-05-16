@@ -15,12 +15,12 @@ export default function ServicesHero({ data }: { data: ServicesHeroData }) {
     <section className="px-margin-desktop py-20 max-w-container-max mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-7">
-          <span className="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant font-label-md text-label-md rounded-full mb-6">
+          <span className="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant text-label-md rounded-full mb-6">
             Enterprise Solutions
           </span>
-          <h1 className="font-display-lg text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          <h1 className="text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          <p className="text-body-lg text-on-surface-variant max-w-xl">
             {data.subtitle}
           </p>
         </div>

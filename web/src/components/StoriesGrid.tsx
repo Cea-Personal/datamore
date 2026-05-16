@@ -39,18 +39,18 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     />
                   </div>
                   <div className="md:w-1/2 p-8 flex flex-col justify-center">
-                    <span className="text-secondary font-label-md text-label-md mb-3">
+                    <span className="text-secondary text-label-md mb-3">
                       {story.sector}
                     </span>
-                    <h3 className="font-headline-lg text-headline-lg text-primary mb-4 leading-tight">
+                    <h3 className="text-headline-lg text-primary mb-4 leading-tight">
                       {story.title}
                     </h3>
-                    <p className="text-on-surface-variant font-body-md text-body-md mb-6">
+                    <p className="text-on-surface-variant text-body-md mb-6">
                       {story.summary}
                     </p>
                     <Link
                       href={`/success-stories/${story.slug}`}
-                      className="inline-flex items-center text-secondary font-label-md text-label-md hover:underline"
+                      className="inline-flex items-center text-secondary text-label-md hover:underline"
                     >
                       Read Full Story <span className="material-symbols-outlined ml-2">arrow_forward</span>
                     </Link>
@@ -67,18 +67,18 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     />
                   </div>
                   <div className="p-8 flex flex-col flex-grow">
-                    <span className="text-secondary font-label-md text-label-md mb-3">
+                    <span className="text-secondary text-label-md mb-3">
                       {story.sector}
                     </span>
-                    <h3 className="font-headline-md text-headline-md text-primary mb-4">
+                    <h3 className="text-headline-md text-primary mb-4">
                       {story.title}
                     </h3>
-                    <p className="text-on-surface-variant font-body-md text-body-md mb-6">
+                    <p className="text-on-surface-variant text-body-md mb-6">
                       {story.summary}
                     </p>
                     <Link
                       href={`/success-stories/${story.slug}`}
-                      className="mt-auto inline-flex items-center text-secondary font-label-md text-label-md hover:underline"
+                      className="mt-auto inline-flex items-center text-secondary text-label-md hover:underline"
                     >
                       Read Full Story <span className="material-symbols-outlined ml-2">arrow_forward</span>
                     </Link>

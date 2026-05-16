@@ -27,9 +27,9 @@ export default function Hero({ data }: { data: HeroData }) {
       <header className="relative px-margin-mobile md:px-margin-desktop py-16 md:py-32 max-w-container-max mx-auto overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-7">
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+            <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
             </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+            <p className="text-body-lg text-on-surface-variant mb-10 max-w-xl">
               {data.subtitle}
             </p>
             <div className="flex flex-wrap gap-4">
@@ -38,8 +38,8 @@ export default function Hero({ data }: { data: HeroData }) {
                   key={index}
                   href={button.url}
                   className={button.variant === 'primary'
-                    ? 'glassy-button text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md'
-                    : 'border border-outline-variant hover:border-secondary transition-colors text-primary px-8 py-4 rounded-lg font-label-md text-label-md'}
+                     ? 'glassy-button text-on-primary px-8 py-4 rounded-lg text-label-md'
+                    : 'border border-outline-variant hover:border-secondary transition-colors text-primary px-8 py-4 rounded-lg text-label-md'}
                 >
                   {button.label}
                 </Link>
@@ -64,8 +64,8 @@ export default function Hero({ data }: { data: HeroData }) {
                     {data.badge.icon}
                   </span>
                   <div>
-                    <div className="font-label-md text-label-md text-primary">{data.badge.label}</div>
-                    <div className="font-caption text-caption text-on-surface-variant">{data.badge.caption}</div>
+                    <div className="text-label-md text-primary">{data.badge.label}</div>
+                    <div className="text-caption text-on-surface-variant">{data.badge.caption}</div>
                   </div>
                 </div>
               </div>

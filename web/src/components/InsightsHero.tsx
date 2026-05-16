@@ -21,17 +21,17 @@ export default function InsightsHero({ data }: { data: InsightsHeroData }) {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-7">
           <div className="flex items-center gap-2 mb-4">
-            <span className={`bg-${data.badge.color} text-on-${data.badge.color} px-3 py-1 rounded-full font-label-md text-label-md`}>
+            <span className={`bg-${data.badge.color} text-on-${data.badge.color} px-3 py-1 rounded-full text-label-md`}>
               {data.badge.label}
             </span>
-            <span className="text-on-surface-variant font-caption text-caption">{data.readTime}</span>
+            <span className="text-on-surface-variant text-caption">{data.readTime}</span>
           </div>
-          <h1 className="font-display-lg text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          <h1 className="text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+          <p className="text-body-lg text-on-surface-variant mb-8 max-w-2xl">
             {data.subtitle}
           </p>
-          <button className="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 interactive-shadow transition-all group">
+          <button className="bg-secondary text-on-secondary px-8 py-4 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group">
             Read Full Article
             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
