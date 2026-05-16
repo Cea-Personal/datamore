@@ -1,8 +1,8 @@
 // app/careers/page.tsx
-import CareersData from '@/src/data/careers.json'
-import CareersHero from '@/src/components/CareersHero'
-import PositionsList from '@/src/components/PositionsList'
-import CareersCTA from '@/src/components/CareersCTA'
+import CareersData from '@/data/careers.json'
+import CareersHero from '@/components/CareersHero'
+import PositionsList from '@/components/PositionsList'
+import CareersCTA from '@/components/CTA'
 
 export default function CareersPage() {
   return (

@@ -1,5 +1,45 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+/* Custom styles from samples */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
 
-/* Custom styles if needed */
+.ambient-shadow {
+  box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.interactive-shadow:hover {
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.glassy-button {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, #0058be 0%, #004395 100%);
+}
+
+.glass-edge {
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.tinted-shadow {
+  box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+/* Additional custom classes from various samples */
+.ambient-shadow-card {
+  box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.ambient-shadow-card:hover {
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid #E2E8F0;
+}
+
+.ambient-shadow-hover:hover {
+  box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+}

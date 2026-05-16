@@ -1,44 +1,32 @@
-// src/components/CTA.tsx
-import Link from 'next/link'
-
-interface CTAProps {
+// src/components/ReadyToScaleCTA.tsx
+interface ReadyToScaleCTAData {
   title: string
   subtitle: string
   primaryButton: {
     label: string
     url: string
-    className?: string
   }
   secondaryButton: {
     label: string
     url: string
-    className?: string
   }
 }
 
-export default function CTA({ title, subtitle, primaryButton, secondaryButton }: CTAProps) {
+export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData }) {
   return (
-    <section className="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">
-          {title}
-        </h2>
-        <p className="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">
-          {subtitle}
+    <section className="bg-surface-container-low py-24">
+      <div className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+        <h2 className="font-headline-lg text-headline-lg text-primary mb-6">{data.title}</h2>
+        <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl mx-auto">
+          {data.subtitle}
         </p>
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Link
-            href={primaryButton.url}
-            className={`${primaryButton.className} text-on-primary px-10 py-5 rounded-lg font-label-md text-label-md hover:brightness-110 shadow-xl transition-all`}
-          >
-            {primaryButton.label}
-          </Link>
-          <Link
-            href={secondaryButton.url}
-            className={`${secondaryButton.className} px-10 py-5 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all`}
-          >
-            {secondaryButton.label}
-          </Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href={data.primaryButton.url} className="glassy-button text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">
+            {data.primaryButton.label}
+          </a>
+          <a href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg font-label-md text-label-md">
+            {data.secondaryButton.label}
+          </a>
         </div>
       </div>
     </section>

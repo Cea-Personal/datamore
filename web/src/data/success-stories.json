@@ -1,4 +1,3 @@
-// src/data/success-stories.json
 {
   "hero": {
     "title": "Strategic Transformations Enabled by Data",
@@ -15,8 +14,8 @@
       },
       "summary": "Implementing a real-time risk mitigation engine that reduced capital overhead by 14% while ensuring 99.9% compliance accuracy across four jurisdictions.",
       "metrics": [
-        { value: "14%", label: "Capital Overhead Reduction" },
-        { value: "99.9%", label: "Compliance Accuracy" }
+        { "value": "14%", "label": "Capital Overhead Reduction" },
+        { "value": "99.9%", "label": "Compliance Accuracy" }
       ]
     },
     {
@@ -29,7 +28,7 @@
       },
       "summary": "A custom AI solution for inventory forecasting, reducing stockouts by 22% during peak holiday demand for a major retail chain.",
       "metrics": [
-        { value: "22%", label: "Stockout Reduction" }
+        { "value": "22%", "label": "Stockout Reduction" }
       ]
     },
     {
@@ -42,8 +41,8 @@
       },
       "summary": "Analyzing decade-long health outcomes to optimize global grant distribution, increasing resource efficiency by 30% for medical research.",
       "metrics": [
-        { value: "30%", label: "Resource Efficiency Increase" }
-      ]
+        { "value": "30%", "label": "Resource Efficiency Increase" }
+      ] 
     },
     {
       "slug": "enterprise-knowledge-retrieval",
@@ -55,7 +54,7 @@
       },
       "summary": "Built a RAG-based internal engine for a legal conglomerate, automating 65% of discovery phase documentation analysis.",
       "metrics": [
-        { value: "65%", label: "Discovery Phase Automation" }
+        { "value": "65%", "label": "Discovery Phase Automation" }
       ]
     },
     {
@@ -68,7 +67,7 @@
       },
       "summary": "Guiding a series-B startup from fragmented spreadsheets to a centralized Snowflake-based data warehouse in under 90 days.",
       "metrics": [
-        { value: "90 days", label: "Implementation Time" }
+        { "value": "90 days", "label": "Implementation Time" }
       ]
     }
   ],

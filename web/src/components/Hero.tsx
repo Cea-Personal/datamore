@@ -26,7 +26,7 @@ export default function Hero({ data }: { data: HeroData }) {
       <header className="relative px-margin-mobile md:px-margin-desktop py-16 md:py-32 max-w-container-max mx-auto overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
           <div className="md:col-span-7">
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6 dangerouslySetInnerHTML={{ __html: data.title }}"/>
+            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-6">{data.title}</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
               {data.subtitle}
             </p>

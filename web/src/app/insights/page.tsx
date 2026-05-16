@@ -1,10 +1,10 @@
 // app/insights/page.tsx
-import InsightsData from '@/src/data/insights.json'
-import InsightsHero from '@/src/components/InsightsHero'
-import InsightsFilter from '@/src/components/InsightsFilter'
-import InsightsGrid from '@/src/components/InsightsGrid'
-import InsightsSidebar from '@/src/components/InsightsSidebar'
-import GlobalCTA from '@/src/components/GlobalCTA'
+import InsightsData from '@/data/insights.json'
+import InsightsHero from '@/components/InsightsHero'
+import InsightsFilter from '@/components/InsightsFilter'
+import InsightsGrid from '@/components/InsightsGrid'
+import InsightsSidebar from '@/components/InsightsSidebar'
+import GlobalCTA from '@/components/CTA'
 
 export default function InsightsPage() {
   return (

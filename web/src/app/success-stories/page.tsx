@@ -2,7 +2,7 @@
 import SuccessStoriesData from '@/data/success-stories.json'
 import SuccessStoriesHero from '@/components/SuccessStoriesHero'
 import StoriesGrid from '@/components/StoriesGrid'
-import SuccessStoriesCTA from '@/components/ReadyToScaleCTA'
+import SuccessStoriesCTA from '@/components/CTA'
 
 export default function SuccessStoriesPage() {
   return (

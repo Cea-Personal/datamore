@@ -1,6 +1,6 @@
 // app/services/ai-llm-automation/page.tsx
-import ServiceDetail from '@/src/components/ServiceDetail'
-import { getPayloadClient } from '@/src/payload-client'
+import ServiceDetail from '@/components/ServiceDetail'
+import { getPayloadClient } from '@/payload-client'
 
 export const dynamic = 'force-dynamic'
 

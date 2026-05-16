@@ -33,7 +33,7 @@ export default function ServiceCategories({ data }: { data: ServiceCategory[] })
             return (
               <div
                 key={index}
-                className={`${colSpan} ${isLargeCard ? 'bg-surface-container-lowest p-10 rounded-3xl ambient-shadow-card border border-outline-variant/30 flex flex-col justify-between group' : 'bg-primary-container p-8 rounded-3xl flex flex-col text-on-primary group hover:bg-on-primary-fixed-variant transition-colors duration-300'}`
+                className={`${colSpan} ${isLargeCard ? 'bg-surface-container-lowest p-10 rounded-3xl ambient-shadow-card border border-outline-variant/30 flex flex-col justify-between group' : 'bg-primary-container p-8 rounded-3xl flex flex-col text-on-primary group hover:bg-on-primary-fixed-variant transition-colors duration-300'}`}
               >
                 {isLargeCard ? (
                   <>

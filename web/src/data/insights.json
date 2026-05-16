@@ -1,4 +1,4 @@
-// src/data/insights.json
+
 {
   "hero": {
     "title": "The Future of AI Automation in Enterprise Fintech",
@@ -15,11 +15,11 @@
   },
   "filter": {
     "buttons": [
-      { label: "All Insights", variant: "primary" },
-      { label: "Data Strategy", variant: "outline" },
-      { label: "AI & ML", variant: "outline" },
-      { label: "Engineering", variant: "outline" },
-      { label: "Case Studies", variant: "outline" }
+      { "label": "All Insights", "variant": "primary" },
+      { "label": "Data Strategy", "variant": "outline" },
+      { "label": "AI & ML", "variant": "outline" },
+      { "label": "Engineering", "variant": "outline" },
+      { "label": "Case Studies", "variant": "outline" }
     ],
     "placeholder": "Search insights..."
   },
@@ -81,11 +81,11 @@
   ],
   "sidebar": {
     "categories": [
-      { label: "Data Strategy", count: 12 },
-      { label: "AI & Machine Learning", count: 24 },
-      { label: "Data Engineering", count: 18 },
-      { label: "Case Studies", count: 9 },
-      { label: "Cloud Architecture", count: 7 }
+      { "label": "Data Strategy", "count": 12 },
+      { "label": "AI & Machine Learning", "count": 24 },
+      { "label": "Data Engineering", "count": 18 },
+      { "label": "Case Studies", "count": 9 },
+      { "label": "Cloud Architecture", "count": 7 }
     ],
     "editorsChoice": [
       {

@@ -6,7 +6,7 @@ import HowWeDoIt from '@/components/HowWeDoIt'
 import Impact from '@/components/Impact'
 import Industries from '@/components/Industries'
 import FeaturedSuccessStory from '@/components/FeaturedSuccessStory'
-import ReadyToScaleCTA from '@/components/ReadyToScaleCTA'
+import ReadyToScaleCTA from '@/components/CTA'
 
 export default function Home() {
   return (
