@@ -10,7 +10,7 @@ import ReadyToScaleCTA from '@/components/CTA'
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Hero data={LandingData.hero} />
       <WhatWeDo data={LandingData.whatWeDo} />
       <HowWeDoIt data={LandingData.howWeDoIt} />
@@ -18,6 +18,6 @@ export default function Home() {
       <Industries data={LandingData.industries} />
       <FeaturedSuccessStory data={LandingData.featuredSuccessStory} />
       <ReadyToScaleCTA data={LandingData.cta} />
-    </>
+    </div>
   )
 }

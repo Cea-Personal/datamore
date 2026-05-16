@@ -1,13 +1,12 @@
 {
   "hero": {
-    "title": "More Value<br>From Your Data",
+    "title": "More Value&nbsp;<div>From Your Data</div>",
     "subtitle": "Datamore helps organizations build modern data systems, automate reporting, and unlock AI-powered insights for better decision-making.",
     "buttons": [
       {
         "label": "Request a Consultation",
         "variant": "primary",
         "url": "/contact"
-
       },
       {
         "label": "Explore Services",
@@ -52,7 +51,7 @@
         "description": "Leveraging machine learning to automate complex reporting and predict future market trends.",
         "link": {
           "label": "Learn more",
-          "url": "/services/ai-automation"
+          "url": "/services/ai-llm-automation"
         }
       }
     ]
@@ -173,13 +172,13 @@
   "cta": {
     "title": "Ready to scale your impact with data?",
     "subtitle": "Join forward-thinking organizations using precision intelligence to drive growth and efficiency.",
-     "primaryButton": {
-        "label": "Book a Strategy Session",
-        "url": "/contact"
-      },
-      "secondaryButton": {
-        "label": "View Case Studies",
-        "url": "/success-stories"
-      }
+    "primaryButton": {
+      "label": "Book a Strategy Session",
+      "url": "/contact"
+    },
+    "secondaryButton": {
+      "label": "View Case Studies",
+      "url": "/success-stories"
+    }
   }
 }

@@ -1,4 +1,6 @@
 // src/components/ReadyToScaleCTA.tsx
+import Link from 'next/link'
+
 interface ReadyToScaleCTAData {
   title: string
   subtitle: string
@@ -21,12 +23,12 @@ export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData })
           {data.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href={data.primaryButton.url} className="glassy-button text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">
+          <Link href={data.primaryButton.url} className="glassy-button text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">
             {data.primaryButton.label}
-          </a>
-          <a href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg font-label-md text-label-md">
+          </Link>
+          <Link href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg font-label-md text-label-md">
             {data.secondaryButton.label}
-          </a>
+          </Link>
         </div>
       </div>
     </section>

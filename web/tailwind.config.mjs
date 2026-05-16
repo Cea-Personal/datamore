@@ -2,7 +2,12 @@
 export default {
   darkMode: "class",
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}"
+
+  "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+
+  "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+
+
   ],
   theme: {
     extend: {
@@ -56,6 +61,7 @@ export default {
       },
       borderRadius: {
         "DEFAULT": "0.5rem",
+        "sm": "0.25rem",
         "lg": "0.5rem",
         "xl": "0.75rem",
         "full": "9999px"

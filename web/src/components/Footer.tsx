@@ -8,15 +8,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
           <div className="md:col-span-4">
             <div className="flex items-center mb-6">
-              {/* Datamore Logo as D */}
-              <div className="flex items-center space-x-2">
-                <span className="text-2xl font-bold text-white">
-                  D
-                </span>
-                <span className="ml-2 font-headline-md text-headline-md font-bold text-white">
-                  atamore
-                </span>
-              </div>
+              <img alt="Datamore Logo" className="h-6 w-auto brightness-0 invert opacity-90" src="https://lh3.googleusercontent.com/aida/ADBb0ugacJ5dMBxRkXdS03XhMkj7gCoE2d8i3qE97MysiBXpfy12t-0cBr3M8ucg6o4UFJvO6ij3JphzzoMQ15EbS6qpL8FFPJTKpOyJ8o6-7P5wq6oXPHX1hVDRbNu69eyquWaKXie39JN0_qCBZ0sjUv7Ca8eIeod0XNpJpjDxrCJ3v0r1QhM5w3taJX-SYr4tgr8ketyFPlRRUvlNT6j0GorWu5r3QtqKCKMEvbUXqdHE_gx-O8kLeUA8icMt" />
+              <span className="ml-2 font-headline-md text-headline-md font-bold text-white">Datamore</span>
             </div>
             <p className="font-body-md text-body-md opacity-80 max-w-xs leading-relaxed">
               Empowering decision-makers with rigorous data engineering and strategic AI automation.

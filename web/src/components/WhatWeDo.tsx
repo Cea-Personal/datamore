@@ -25,7 +25,7 @@ export default function WhatWeDo({ data }: { data: WhatWeDoData }) {
         {data.cards.map((card, index) => (
           <div
             key={index}
-            className="bg-white p-8 rounded-xl ambient-shadow border border-surface-container-low interactive-shadow transition-all group"
+            className={`bg-white p-8 rounded-xl ambient-shadow border border-surface-container-low interactive-shadow transition-all group ${index === 1 ? 'md:scale-105 z-10 bg-surface-container-lowest' : ''}`}
           >
             <div className="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6 text-secondary">
               <span className="material-symbols-outlined">{card.icon}</span>
