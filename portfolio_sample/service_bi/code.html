@@ -1,0 +1,335 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Business Intelligence &amp; Analytics | Datamore</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-container": "#7c839b",
+                        "on-secondary": "#ffffff",
+                        "outline": "#76777d",
+                        "primary-fixed-dim": "#bec6e0",
+                        "on-surface": "#0b1c30",
+                        "secondary-container": "#2170e4",
+                        "on-background": "#0b1c30",
+                        "inverse-on-surface": "#eaf1ff",
+                        "surface-dim": "#cbdbf5",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface": "#f8f9ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-variant": "#d3e4fe",
+                        "secondary": "#0058be",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed": "#001a42",
+                        "inverse-surface": "#213145",
+                        "surface-container": "#e5eeff",
+                        "on-tertiary-container": "#0090a9",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "inverse-primary": "#bec6e0",
+                        "on-secondary-container": "#fefcff",
+                        "surface-container-highest": "#d3e4fe",
+                        "surface-bright": "#f8f9ff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-container-low": "#eff4ff",
+                        "surface-tint": "#565e74",
+                        "secondary-fixed": "#d8e2ff",
+                        "on-surface-variant": "#45464d",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "on-tertiary-fixed": "#001f26",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "tertiary-fixed": "#acedff",
+                        "primary": "#000000",
+                        "primary-fixed": "#dae2fd",
+                        "surface-container-high": "#dce9ff",
+                        "primary-container": "#131b2e",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#001f26"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "display-lg": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Space Grotesk"],
+                        "display-lg-mobile": ["Space Grotesk"],
+                        "headline-md": ["Space Grotesk"],
+                        "caption": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tinted-shadow {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .interactive-shadow:hover {
+            box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        .glass-edge {
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar -->
+<nav class="bg-surface sticky top-0 z-50 shadow-sm flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto docked full-width">
+<div class="font-headline-md text-headline-md font-bold text-primary">Datamore</div>
+<div class="hidden md:flex space-x-8">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-body-md text-body-md" href="#">Services</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-200" href="#">Success Stories</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-200" href="#">Insights</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-secondary transition-colors duration-200" href="#">Careers</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Book</button>
+</nav>
+<!-- Hero Section -->
+<header class="relative overflow-hidden pt-20 pb-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-secondary mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span>
+<span class="font-label-md text-label-md">Business Intelligence</span>
+</div>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8 text-on-surface">
+                Transforming Raw Data into <span class="text-secondary">Strategic Narratives</span>.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-2xl">
+                Move beyond simple reporting. We engineer high-precision BI ecosystems that synthesize fragmented data into cohesive, actionable strategic pathways for global fintechs and enterprise NGOs.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 rounded-lg font-label-md text-label-md hover:brightness-110 shadow-lg transition-all">Start Strategy Session</button>
+<button class="glass-edge px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all">View Methodology</button>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="aspect-square rounded-2xl bg-surface-container-high overflow-hidden tinted-shadow">
+<img class="w-full h-full object-cover" data-alt="A sophisticated 3D visualization of a complex data network in a clean, high-key studio environment. Glowing nodes in electric blue connect via thin silver filaments against a minimalist white background. The lighting is crisp and professional, reflecting a corporate modern aesthetic with technical precision. The image feels airy, spacious, and authoritative." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCIeZmedR4RnbuDLYo2rcSTeI6fFLiqzF-A3zHIZrWqfC34SR_SASPX8uLzTINjskIVOa5ODB6exKMlEHA6w9qE7HINE4wQTfMPL8YKu3eXHtqg90dmfP6FZeBlM3ewVrmzjMbKidPubUveaIWGBHyyfhL76LIt2kG5SXNoMMBWmmq4a86A8BecReN2eigjcdPSbwH0RkUHFZ_OYxAsF1hfklCZXODrh8tlRuuka8e4YIUeeRmkLXObj2RNChuC-PX-8LFZ5xvRwGi">
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl tinted-shadow glass-edge hidden lg:block">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-secondary">94%</div>
+<div class="font-caption text-caption text-on-surface-variant">Accuracy Rate</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Core Offerings - Bento Grid -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto bg-surface-container-low rounded-[2rem] my-10">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Core Offerings</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">Enterprise-grade analytics built on the foundation of technical rigor and transparency.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+<!-- Predictive Modeling -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-2xl tinted-shadow interactive-shadow transition-all group flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="model_training">model_training</span>
+<h3 class="font-headline-md text-headline-md mb-4">Predictive Modeling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Utilizing advanced machine learning algorithms to forecast market shifts, risk vectors, and growth opportunities before they materialize.</p>
+</div>
+<div class="mt-8 flex items-center text-secondary font-label-md text-label-md cursor-pointer group-hover:gap-2 transition-all">
+                Explore Technical Specs <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</div>
+</div>
+<!-- Executive Reporting -->
+<div class="bg-surface-container-lowest p-10 rounded-2xl tinted-shadow interactive-shadow transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="leaderboard">leaderboard</span>
+<h3 class="font-headline-md text-headline-md mb-4">Executive Reporting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Bespoke C-Suite narratives that strip away noise to reveal the critical KPIs driving your strategy.</p>
+</div>
+<!-- Customer 360 -->
+<div class="bg-surface-container-lowest p-10 rounded-2xl tinted-shadow interactive-shadow transition-all group">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="group_work">group_work</span>
+<h3 class="font-headline-md text-headline-md mb-4">Customer 360</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Consolidating disparate touchpoints into a unified intelligence layer for behavioral analysis.</p>
+</div>
+<!-- Operational Analytics -->
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-2xl tinted-shadow interactive-shadow transition-all group flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="settings_suggest">settings_suggest</span>
+<h3 class="font-headline-md text-headline-md mb-4">Operational Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time optimization of internal workflows and supply chain efficiency through granular data monitoring.</p>
+</div>
+<div class="w-full md:w-1/3 aspect-video bg-surface-container rounded-xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist macro shot of a sleek motherboard with circuits glowing in a soft cyan light. The focus is sharp on a central processor, symbolizing operational efficiency and technical precision. The color palette is composed of cool grays, deep blues, and vibrant cyan accents, creating a high-tech and reliable atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9LWbFEOAKj3pVCA6dR6VYHCtlHIcvNSZdV-VIkCIVnpBjho3kVIKDx9-A127tevqlQLaWm5B8_kk2DPxIXrkLEcETxBRzOC5ryY9JsrlNpK8Ic232Cw2AUABzRdR_-c6dC1a25EmdkVFZd0DkU5tp3Y8WumA0cC8BYc6hS8vxG3BolYDRtVE_hH3w1vdB15JkZUpG-GHPVVwALR5iLq0TDr9pp193ZQWwt_RlX7Pxsna0ir8huy2hTaoaf_kGCioRQU-Cw-2i96qY">
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Dashboards Feature -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Interactive Dashboards: <br><span class="text-secondary">Precision in Motion</span></h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="query_stats">query_stats</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Real-Time Drill-Down</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">From global trends to individual transaction details in two clicks. Our dashboards maintain high-speed performance even with petabyte-scale datasets.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="sync_alt">sync_alt</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Cross-Functional Integration</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Bridge the gap between Finance, Marketing, and Operations with a single source of truth that updates dynamically as your business moves.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md mb-1">Role-Based Granularity</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Strict governance models ensure that data visibility is perfectly aligned with organizational hierarchy and compliance mandates.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2 relative">
+<div class="glass-edge p-4 rounded-3xl bg-surface-container-lowest tinted-shadow">
+<img class="rounded-2xl w-full h-full object-cover" data-alt="A futuristic and extremely clean user interface design showing high-fidelity data dashboards. The UI features elegant line charts in shades of cyan and electric blue, minimalist progress bars, and subtle dark-tinted shadows. The overall aesthetic is one of calm authority, with plenty of white space and precise geometric shapes that signify technical clarity and modern enterprise software." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDP-p2rhD34ZHlhJel-j-mJDGIakA8EGZn2CxN87fQOv4hsyJas5mZi7FHHKLjxenG7xpolihYdWrZFLq1m0w-uFMDpXrlRbzpcLsHZ7eVJxygrOu5_R8dmvdVA4_lGdRepFdPhDY9yCOXr_I3ZRWZl4VgC_Ad3DNMRMqE8e8yRDvgnTNt8KYSgidOVGaTYJcKe_osUHAjDNN6pfIGqGupbrEzbjQp5mfxKa2LlnqAlHmTeh7MvaKuH3UIrhelnCWoZ6jUd8hiK0tVv">
+</div>
+<!-- Precision Label -->
+<div class="absolute top-10 -right-4 bg-tertiary text-on-tertiary px-4 py-2 rounded-lg font-label-md text-label-md rotate-3 shadow-lg">
+                Real-time Sync Active
+            </div>
+</div>
+</div>
+</section>
+<!-- Datamore Impact Metrics -->
+<section class="py-24 bg-primary-container text-on-primary-container overflow-hidden">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4 text-surface">The Datamore Impact</h2>
+<p class="font-body-md text-body-md opacity-70">Measuring the tangible shift from intuition to intelligence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="p-8 border-l border-outline-variant/30">
+<div class="font-display-lg text-display-lg mb-2 text-surface">40%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider mb-2">Faster Time-to-Insight</div>
+<p class="font-body-md text-body-md opacity-60">Reduction in manual data preparation through automated ETL pipelines.</p>
+</div>
+<div class="p-8 border-l border-outline-variant/30">
+<div class="font-display-lg text-display-lg mb-2 text-surface">22%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider mb-2">Data-Driven Growth</div>
+<p class="font-body-md text-body-md opacity-60">Average increase in customer lifetime value for our retail fintech partners.</p>
+</div>
+<div class="p-8 border-l border-outline-variant/30">
+<div class="font-display-lg text-display-lg mb-2 text-surface">100%</div>
+<div class="font-label-md text-label-md uppercase tracking-wider mb-2">Data Integrity</div>
+<p class="font-body-md text-body-md opacity-60">Audit-ready reporting structures that meet stringent NGO transparency standards.</p>
+</div>
+<div class="p-8 border-l border-outline-variant/30">
+<div class="font-display-lg text-display-lg mb-2 text-surface">15M+</div>
+<div class="font-label-md text-label-md uppercase tracking-wider mb-2">Events Processed</div>
+<p class="font-body-md text-body-md opacity-60">Daily data points processed through our real-time streaming infrastructure.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Ready to scale your impact with data?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Join the ranks of data-forward organizations using Datamore to turn complexity into competitive advantage.</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-secondary text-on-secondary px-10 py-5 rounded-lg font-label-md text-label-md hover:brightness-110 shadow-xl transition-all">Book a Strategy Session</button>
+<button class="glass-edge px-10 py-5 rounded-lg font-label-md text-label-md hover:bg-surface-container transition-all">View Case Studies</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary-container text-on-primary-container pt-20 pb-10 border-t border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md font-bold text-on-primary-container mb-6">Datamore</div>
+<p class="font-body-md text-body-md opacity-70 mb-8 max-w-xs">Pioneering technical rigor in data consultancy for the next generation of global leaders.</p>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-md text-label-md mb-6">Services</h5>
+<ul class="space-y-4 opacity-80 font-body-md text-body-md">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">AI Strategy</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Data Engineering</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Business Intelligence</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-md text-label-md mb-6">Navigation</h5>
+<ul class="space-y-4 opacity-80 font-body-md text-body-md">
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Success Stories</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Insights</a></li>
+<li><a class="hover:text-tertiary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h5 class="font-label-md text-label-md mb-6">Newsletter</h5>
+<div class="flex gap-2">
+<input class="bg-surface/10 border-outline-variant/30 rounded-lg px-4 py-2 w-full text-surface focus:ring-secondary focus:border-secondary outline-none" placeholder="Email Address" type="email">
+<button class="bg-secondary text-on-secondary px-4 py-2 rounded-lg font-label-md">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-20 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-body-md text-body-md opacity-60">© 2024 Datamore. All rights reserved.</div>
+<div class="flex gap-8 opacity-60 font-body-md text-body-md">
+<a class="hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+<a class="hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

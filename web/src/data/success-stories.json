@@ -1,0 +1,85 @@
+// src/data/success-stories.json
+{
+  "hero": {
+    "title": "Strategic Transformations Enabled by Data",
+    "subtitle": "Explore how Datamore partners with global leaders in fintech, NGOs, and enterprise sectors to solve complex challenges through AI strategy and engineering."
+  },
+  "stories": [
+    {
+      "slug": "optimizing-liquidity-risk-for-tier-1-fintech",
+      "title": "Optimizing Liquidity Risk for Tier-1 Fintech",
+      "sector": "Financial Services",
+      "image": {
+        "alt": "Financial Analytics",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyD67EvyfN4FJbWZRRuHPVDYrYz6EIZyNi92teVnEb67g3DzVpP43aHkPZ5TRjC8sN8UF6iLQwEEJhze9E1ZIdTkvtppjXDB5Da7MUuNlqbiaCLRC__Cubbvaa583E2npOSbSZIJDkY0W0gdA8qwCf-I4iXZ7-DnU-0-Ad6w_NSUgt7KJiPaIrCLSG0v-9AwbhtGTO-TN7Fm8k60rkHsdGq7yuKutBHLyJHy8Yfx1JGixZ6x9D_177V3KaZM8SBs3aMFSLx2SZpFDd"
+      },
+      "summary": "Implementing a real-time risk mitigation engine that reduced capital overhead by 14% while ensuring 99.9% compliance accuracy across four jurisdictions.",
+      "metrics": [
+        { value: "14%", label: "Capital Overhead Reduction" },
+        { value: "99.9%", label: "Compliance Accuracy" }
+      ]
+    },
+    {
+      "slug": "supply-chain-predictive-modeling",
+      "title": "Supply Chain Predictive Modeling",
+      "sector": "Retail & Logistics",
+      "image": {
+        "alt": "Logistics Data",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDoNgHDlqyIqARKOlKBNK9RQcjLYLIPDyOSKOY1L7S2jYPC5fDt0JPfMW5RMnq06ow4caMoGwzSSBcVdD5-hCIT6dyWz5C4tl_yn_Mu7mihoEXJx0yzWgl3v3reAITI3jj5msb_habC9LFUAuldFlTwkvjWdH39bXwoUMlc9_jAD0n9ezt3b6ZtVidBWcCGXtiCJvyyNKHPII_xjVbMsZ76eReWWbgm8ZuHCY0kfd2XkDIjiFxk6krw1RMFxyT9dEkzAfHIJxiOxAWA"
+      },
+      "summary": "A custom AI solution for inventory forecasting, reducing stockouts by 22% during peak holiday demand for a major retail chain.",
+      "metrics": [
+        { value: "22%", label: "Stockout Reduction" }
+      ]
+    },
+    {
+      "slug": "data-driven-philanthropy-impact",
+      "title": "Data-Driven Philanthropy Impact",
+      "sector": "NGOs",
+      "image": {
+        "alt": "NGO Research",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7JdOSM_vXV-o0pZCKgyPfcY8bh6DnKUKLncgNTO4pKvU7zpbQvrZTE-WvXHidfdl-wTzA34B88i_CUV3nr9H25OOEQfwth640tydVU-HE89xro6JqiI6f2F6BRLAIDXPrMWY13VMeeHBDPVpchW9QWT2xqJGj4l6HPBQ4JF7Id0yg8ukp6Npk70HsWZU7I9jVnpnp8MKYoIOtX7FqIp9Lf7Zmt_2EFiVe6j6POrgv260GyEfqqBr9iHmcMCTAY-cxsixa2Djk6p8D"
+      },
+      "summary": "Analyzing decade-long health outcomes to optimize global grant distribution, increasing resource efficiency by 30% for medical research.",
+      "metrics": [
+        { value: "30%", label: "Resource Efficiency Increase" }
+      ]
+    },
+    {
+      "slug": "enterprise-knowledge-retrieval",
+      "title": "Enterprise Knowledge Retrieval",
+      "sector": "AI Automation",
+      "image": {
+        "alt": "AI Automation",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq9F_6-1pD2ClmU--1y4UbquI3TOcwBzDkuioEbteLbGWHSDdIH7DcHcg11iLbFF63LaNSi_7OLTw1czAG8cL5AAu3UawjNrWDr_5W6Bnjf6cHbLpAhSiWcphwNGQ2e6I2b_D-EeLvZ4sTh_lo3IIauvXqQKKamlwu-lYPrChBz0-okYPKwYX25OBZellD-g75sPbdhrUojHJ5rBfc1vvwkPUah33bjtawoqSJjchhc3br2mh9Ug2FsU6vRgRreJA7ibDL59Y2kVfn"
+      },
+      "summary": "Built a RAG-based internal engine for a legal conglomerate, automating 65% of discovery phase documentation analysis.",
+      "metrics": [
+        { value: "65%", label: "Discovery Phase Automation" }
+      ]
+    },
+    {
+      "slug": "scaling-data-maturity-for-growth",
+      "title": "Scaling Data Maturity for Growth",
+      "sector": "SMEs",
+      "image": {
+        "alt": "SME Solutions",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvky4mRjkAWfaqdQrnWvCJQL0FTNWsF7sOk_VZIBPLOyOJYeH2YFotNmTsBJ_TZD3HDdrZHRuRLtC28hqyUTRgq7j0GgJuh0q8xAske4xxbVgJT_Aj2NtBHMwr30lLAk4Ugm1s-xcUQp4vTH-wSLQ5Viya8jHvlWTrNEx0XLrABgUEJq6m4dymCtj2_VVBfjvLmzTEvuXo4Wc1j68ubenZYt5FNrWdscFYgY1OU-xttNN-zMQ5hR_iVFGI72jvHdVgmpVMFo2-0lA4"
+      },
+      "summary": "Guiding a series-B startup from fragmented spreadsheets to a centralized Snowflake-based data warehouse in under 90 days.",
+      "metrics": [
+        { value: "90 days", label: "Implementation Time" }
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to scale your impact with data?",
+    "subtitle": "Our consultants are ready to audit your current data architecture and identify high-leverage AI opportunities.",
+    "primaryButton": {
+      "label": "Book a Strategy Session"
+    },
+    "secondaryButton": {
+      "label": "View Case Studies"
+    }
+  }
+}

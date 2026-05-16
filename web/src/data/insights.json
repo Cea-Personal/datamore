@@ -1,0 +1,128 @@
+// src/data/insights.json
+{
+  "hero": {
+    "title": "The Future of AI Automation in Enterprise Fintech",
+    "subtitle": "Exploring how machine learning models are revolutionizing risk assessment and automated compliance for global financial institutions. A deep dive into the technical rigor behind transparent AI.",
+    "readTime": "12 min read",
+    "badge": {
+      "label": "Featured Analysis",
+      "color": "tertiary-fixed"
+    },
+    "image": {
+      "alt": "Featured Article",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ_Vn36LGGHSB2SfBKMknZPPd82nR9ulQvtF8kwcgDuZCU20Ny-jEfQNlmsaVePzhZEQM2G429lHy--fc_dwX3l58iLXhrw-lvaozZsvuyq_6ksLVyYyNbZv27tn1Hz1UbBjQEtRpSDkSO2EWGgJbrGD8G5whdGHW07PeJCDuCksBpHmn9lkx245UMq0UkLFv0EDfg-dBPGwYSGo8fkn4enKQ6gyuYB8lVG4H4uct6wm6M6wxDyzGiv_PWPK8_rciRTElQdOQy_IvD"
+    }
+  },
+  "filter": {
+    "buttons": [
+      { label: "All Insights", variant: "primary" },
+      { label: "Data Strategy", variant: "outline" },
+      { label: "AI & ML", variant: "outline" },
+      { label: "Engineering", variant: "outline" },
+      { label: "Case Studies", variant: "outline" }
+    ],
+    "placeholder": "Search insights..."
+  },
+  "articles": [
+    {
+      "slug": "optimizing-data-pipelines-for-high-frequency-trading",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ3d_SOZi3PROaTuqD66jWLGG9R40LNaJiIfZsaeVlefHsbcZwXGgqH2uCuBmteD0Cn422ICoBmzTzGovs9iJ_FJbHnj38pDYxHFXVBOIepaM56adwt6g-bmKqTI4GRJ4GlfKFV6hpaVYKEcOVx8FKU4JU6T6PUEmMAUR0nMRcDkWp1mAmaffJXB1LiU0sNeFJb34bJWyWN9PWQnri3cp-VtAHVKqwsHxL9hmxCoFK7ZeALwP0tvDiYDuPifZ4oG69tgYESNBlXNPM",
+      "category": "Engineering",
+      "date": "Mar 12, 2024",
+      "readTime": "8 min read",
+      "title": "Optimizing Data Pipelines for High-Frequency Trading",
+      "description": "How we reduced latency by 40% using custom ETL architectures and real-time stream processing."
+    },
+    {
+      "slug": "ethics-and-transparency-in-financial-llms",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkCwACNCfMWy9hHriICkI99UejO80_mE4x-TI6CwiJxDm16IiYAQWXZp7sYEHho_1fC-FLjZrUzk-AsWvR6UMR6MAXft-L8sbim1NGYoSMk036tx36HZp8CToivfCwRYiSXZQevZrzXRyRSEs5t92RDrkRySErJq6t1MAZwFx1Q4g7omgiahemePLIgM5jARxBILe3htyZyZzBJ-QvLuI7DZ28jV65Vg1_S442SHyEssjmg6viwS_bqwRsgkJMNj_4x5unyJAhYVwQ",
+      "category": "AI & ML",
+      "date": "Mar 08, 2024",
+      "readTime": "15 min read",
+      "title": "Ethics and Transparency in Financial LLMs",
+      "description": "Addressing the 'black box' problem in AI-driven credit scoring through explainable models."
+    },
+    {
+      "slug": "scaling-ngo-impact-with-data-strategy",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuBjHSVcCS4IyLaFItaw0wpSQtK8A1fiQG0C5fGROPNeznhFvzS5U9EG9d9-5mabXKnTGz9RwGHb3QWq9gH6ez9Yu9rJ-1kDFvKZeP6Ey3zwfXiYqf8OSbrr1mLNoNhU2FuJtewJkz4_6dgpN3hg5OUKZTdRfIJAaGDsbxNmmUW1-mt3lDvHbeeOYkfdEneRlck5NBw1MCDtwm8sqlsQ27MLBBmDL1uFNiY4sL-5qrNeEI-vGAkE6xvPcRmV9_TD0nBkXwKj48lCvUXr",
+      "category": "Case Studies",
+      "date": "Feb 28, 2024",
+      "readTime": "10 min read",
+      "title": "Scaling NGO Impact with Data Strategy",
+      "description": "How Datamore helped a global non-profit optimize resource allocation using predictive analytics."
+    },
+    {
+      "slug": "the-rise-of-semantic-layers-in-bi",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuDHN-k0Jg3txo8gTtGs6IfbqmwusdF_vzH9QmknAMqw_Tmn-hAM0-eJDrcETGCthXWs420du3tWRdEHfD97iMgX5suH9c5JRUIhWMwf9fXVYWXwbbLLCGfd31zkVnPJggIpT78t5S9wwRKgZnBZugCIReyqS3SEOsymKdJQIc86JKaqs8JzD3RC4_hY839hOnbp0Yq5lMQQO24CSBxcZmWRwo8K3ESc2Pw1nTbfPBOvc_jBtAYEnPvyQzvUYjB7k-x1uz73Fw19dNfu",
+      "category": "Data Strategy",
+      "date": "Feb 22, 2024",
+      "readTime": "6 min read",
+      "title": "The Rise of Semantic Layers in BI",
+      "description": "Why defining a single source of truth is the most critical step in your 2024 BI roadmap."
+    },
+    {
+      "slug": "modernizing-legacy-data-for-global-banks",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuB-sfMaYHQwRfsoyTE0ezzmO-VKVJaEpDBRobq62R2C3aSx6V5CykKDH_yrG9D289_DqtxZs_hMzC7rDNCPS-w_BGlCxWzKnB4ikJ3uZCzHlTmVnv9-GqGBHMZxBCwx-A6OSPdZRqclkkHQEl9nPBUkafJl9TFlqCg0n4FrPqQG6SKMeTHFUxzFegWl3H-oOjnrx-ohglLdTePOgi9tIdGabcZe12dIx2-qU-2B-ghGCVbczKY2ZUQN5twnxRerfUn_PtyBwz8j2vSK",
+      "category": "Case Studies",
+      "date": "Feb 15, 2024",
+      "readTime": "12 min read",
+      "title": "Modernizing Legacy Data for Global Banks",
+      "description": "A technical review of migrating monolithic data to scalable cloud-native architectures."
+    },
+    {
+      "slug": "ai-driven-fraud-detection-strategies",
+      "thumbnail": "https://lh3.googleusercontent.com/aida-public/AB6AXuAmiz_fBevzhvNm9eZ9_nXsD_cdezmatiwK3IIVLAimvCiwqbhC1ll8LK_Oqzd6vESMqMiwK6x8pntbiqGAz8MfagcOtRciraQMSSoZNHATmbH-m1mW6WEevbvMszcPUGVkMswLbNAOWeEDWrCZv1ds_iOCTzPikDhOMMH1Rj7XpXKBKS6tKkzAZYoVAFCPlrg8IeT4kML1tglDxgB-mW_-5Gm_foxGTle7uk3TE9_i0mb1auOqeROx5AAl2xeKV99yxOKUTTIPI6Nj",
+      "category": "AI & ML",
+      "date": "Feb 05, 2024",
+      "readTime": "9 min read",
+      "title": "AI-Driven Fraud Detection Strategies",
+      "description": "Leveraging unsupervised learning to identify patterns in retail banking ecosystems."
+    }
+  ],
+  "sidebar": {
+    "categories": [
+      { label: "Data Strategy", count: 12 },
+      { label: "AI & Machine Learning", count: 24 },
+      { label: "Data Engineering", count: 18 },
+      { label: "Case Studies", count: 9 },
+      { label: "Cloud Architecture", count: 7 }
+    ],
+    "editorsChoice": [
+      {
+        "category": "DATA STRATEGY",
+        "title": "The ROI of Explainable AI in European Banking",
+        "readTime": "8 min read • Jan 24, 2024"
+      },
+      {
+        "category": "ENGINEERING",
+        "title": "Building Resilient Data Meshes for Scale",
+        "readTime": "14 min read • Jan 12, 2024"
+      },
+      {
+        "category": "AI & ML",
+        "title": "Synthetic Data: The Future of Privacy-First ML",
+        "readTime": "10 min read • Dec 18, 2023"
+      }
+    ],
+    "quarterlyReport": {
+      "title": "Quarterly Report",
+      "description": "Our state of Enterprise AI report for 2024 is now available for download.",
+      "action": {
+        "label": "Download PDF",
+        "icon": "download"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to scale your impact with data?",
+    "subtitle": "Partner with Datamore to transform your organization through technical excellence and strategic AI innovation.",
+    "primaryButton": {
+      "label": "Book a Strategy Session",
+      "variant": "secondary"
+    },
+    "secondaryButton": {
+      "label": "View Case Studies",
+      "variant": "outline"
+    }
+  }
+}

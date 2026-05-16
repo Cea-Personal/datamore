@@ -1,0 +1,265 @@
+// src/components/InsightDetail.tsx
+import Link from 'next/link'
+import Image from 'next/image'
+
+interface AuthorInfo {
+  name: string
+  title: string
+  date: string
+  imageUrl?: string
+}
+
+interface HeroImage {
+  alt: string
+  url: string
+}
+
+interface ROIData {
+  label: string
+  value: string
+  color: string
+}
+
+interface Section {
+  type: 'text' | 'heading' | 'roi-chart'
+  content: string
+  title?: string
+  data?: ROIData[]
+  variant?: string
+}
+
+interface RelatedArticle {
+  title: string
+  readTime: string
+  imageUrl: string
+}
+
+interface CTA {
+  title: string
+  subtitle: string
+  primaryButton: {
+    label: string
+    icon: string
+  }
+  secondaryButton: {
+    label: string
+  }
+}
+
+export default function InsightDetail({
+  title,
+  author,
+  heroImage,
+  sections,
+  socialShare = false,
+  relatedArticles = [],
+  cta
+}: {
+  title: string
+  author: AuthorInfo
+  heroImage: HeroImage
+  sections: Section[]
+  socialShare?: boolean
+  relatedArticles?: RelatedArticle[]
+  cta: CTA
+}) {
+  return (
+    <>
+      {/* Hero Section */}
+      <header className="pt-32 pb-20 px-margin-desktop max-w-container-max mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+          <div className="lg:col-span-7">
+            <nav className="mb-6 flex items-center space-x-2 text-on-surface-variant opacity-70">
+              <span className="text-caption font-caption">Insights</span>
+              <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+              <span className="text-caption font-caption">Artificial Intelligence</span>
+            </nav>
+            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: title }}>
+            </h1>
+            <div className="flex items-center space-x-4">
+              {author.imageUrl && (
+                <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+                  <Image
+                    alt={`${author.name} headshot`}
+                    src={author.imageUrl}
+                    className="w-full h-full object-cover"
+                    priority
+                  />
+                </div>
+              )}
+              <div>
+                <p className="font-label-md text-label-md text-on-surface">{author.name}</p>
+                <p className="font-caption text-caption text-on-surface-variant">
+                  {author.title} • {author.date}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="lg:col-span-5 relative">
+            <div className="rounded-xl overflow-hidden ambient-shadow glass-edge h-[400px]">
+              <Image
+                alt={heroImage.alt}
+                src={heroImage.url}
+                className="w-full h-full object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content Area */}
+      <main className="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-32">
+        {/* Article Body */}
+        <article className="lg:col-span-8 space-y-8 pr-0 lg:pr-12">
+          {sections.map((section, index) => {
+            switch (section.type) {
+              case 'text':
+                return (
+                  <p
+                    key={index}
+                    className={section.variant === 'caption'
+                      ? 'font-caption text-on-surface-variant italic'
+                      : section.variant === 'first-letter'
+                        ? 'font-body-lg text-body-lg text-on-surface leading-relaxed first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-secondary'
+                        : 'font-body-lg text-body-lg text-on-surface leading-relaxed'}
+                  >
+                    {section.content}
+                  </p>
+                );
+              case 'heading':
+                return (
+                  <h2 key={index} className="font-headline-lg text-headline-lg text-on-surface mt-12">
+                    {section.content}
+                  </h2>
+                );
+              case 'roi-chart':
+                return (
+                  <div key={index} className="my-12 p-8 bg-surface-container-low rounded-xl border border-outline-variant ambient-shadow">
+                    <div className="flex items-center justify-between mb-8">
+                      <h3 className="font-headline-md text-headline-md">{section.title}</h3>
+                      <span className={`bg-${section.data?.[0]?.color || 'tertiary-fixed'} text-on-${section.data?.[0]?.color || 'tertiary-fixed'} px-3 py-1 rounded-full text-caption font-label-md uppercase tracking-wider`}>
+                        Technical Data
+                      </span>
+                    </div>
+                    {/* ROI Chart Placeholder Representation */}
+                    <div className="space-y-6">
+                      {section.data?.map((item, idx) => (
+                        <div key={idx} className="space-y-2">
+                          <div className="flex justify-between text-caption font-label-md">
+                            <span>{item.label}</span>
+                            <span className="text-secondary">{item.value}</span>
+                          </div>
+                          <div className="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
+                            <div
+                              className="h-full bg-gradient-to-r from-tertiary-fixed-dim to-secondary"
+                              style={{ width: item.value.includes('%') ? item.value : '0%' }}
+                              className="rounded-full"
+                            ></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {section.data && section.data.length > 0 && (
+                      <p className="mt-8 text-caption text-on-surface-variant italic">
+                        Source: Datamore Internal Benchmark Study 2024. Data represents average performance gains across 12 enterprise fintech deployments.
+                      </p>
+                    )}
+                  </div>
+                );
+              default:
+                return null;
+            }
+          })}
+          
+          {socialShare && (
+            <div className="flex items-center space-x-4 pt-12 border-t border-outline-variant">
+              <span className="font-label-md text-label-md text-on-surface">Share Article:</span>
+              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
+                <span className="material-symbols-outlined text-[20px]">share</span>
+              </button>
+              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
+                <span className="material-symbols-outlined text-[20px]">link</span>
+              </button>
+              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
+                <span className="material-symbols-outlined text-[20px]">mail</span>
+              </button>
+            </div>
+          )}
+        </article>
+
+        {/* Sidebar */}
+        <aside className="lg:col-span-4 space-y-12">
+          {/* Subscribe Widget */}
+          <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
+            <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4" style="font-variation-settings: 'FILL' 1;">mail</span>
+            <h4 className="font-headline-md text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
+            <p className="font-body-md text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
+            <div className="space-y-4">
+              <input
+                className="w-full bg-transparent border border-on-primary-container rounded-lg px-4 py-3 text-on-primary-fixed placeholder:opacity-50 focus:ring-2 focus:ring-tertiary-cyan focus:outline-none transition-all"
+                placeholder="Email address"
+                type="email"
+              />
+              <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg font-label-md text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
+                Subscribe Now
+              </button>
+            </div>
+          </div>
+          
+          {/* Related Articles */}
+          {relatedArticles.length > 0 && (
+            <>
+              <h4 className="font-label-md text-label-md text-secondary uppercase tracking-widest mb-6">Related Articles</h4>
+              <div className="space-y-6">
+                {relatedArticles.map((article, index) => (
+                  <a
+                    key={index}
+                    href="#"
+                    className="group block"
+                  >
+                    <div className="flex gap-4">
+                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-variant">
+                        <Image
+                          alt={article.title}
+                          src={article.imageUrl}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                          priority
+                        />
+                      </div>
+                      <div className="flex flex-col justify-center">
+                        <h5 className="font-label-md text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
+                          {article.title}
+                        </h5>
+                        <span className="text-caption font-caption text-on-surface-variant mt-1">{article.readTime}</span>
+                      </div>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </>
+          )}
+        </aside>
+      </main>
+
+      {/* Ready to Scale CTA */}
+      <section className="bg-surface-container-highest py-24 px-margin-desktop text-center">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <h2 className="font-display-lg text-display-lg-mobile md:text-headline-lg text-on-surface">{cta.title}</h2>
+          <p className="font-body-lg text-body-lg text-on-surface-variant">{cta.subtitle}</p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+            <button className="bg-primary text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md flex items-center gap-2 hover:bg-secondary-container transition-all">
+              {cta.primaryButton.label}
+              <span className="material-symbols-outlined">{cta.primaryButton.icon}</span>
+            </button>
+            <button className="bg-transparent border border-outline text-on-surface px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-all">
+              {cta.secondaryButton.label}
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer - Imported from layout */}
+    </>
+  )
+}

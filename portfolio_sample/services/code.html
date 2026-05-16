@@ -1,0 +1,358 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#3f465c",
+                    "inverse-primary": "#bec6e0",
+                    "on-tertiary-fixed": "#001f26",
+                    "on-surface-variant": "#45464d",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#acedff",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface-container-high": "#dce9ff",
+                    "surface-container": "#e5eeff",
+                    "on-surface": "#0b1c30",
+                    "surface-bright": "#f8f9ff",
+                    "on-primary-fixed": "#131b2e",
+                    "primary-fixed-dim": "#bec6e0",
+                    "tertiary-fixed-dim": "#4cd7f6",
+                    "on-secondary-container": "#fefcff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-surface": "#213145",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "on-tertiary-container": "#0090a9",
+                    "surface-container-low": "#eff4ff",
+                    "on-secondary-fixed-variant": "#004395",
+                    "surface": "#f8f9ff",
+                    "secondary": "#0058be",
+                    "on-secondary-fixed": "#001a42",
+                    "surface-container-highest": "#d3e4fe",
+                    "error": "#ba1a1a",
+                    "on-primary-container": "#7c839b",
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#565e74",
+                    "primary": "#000000",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary-container": "#001f26",
+                    "outline-variant": "#c6c6cd",
+                    "outline": "#76777d",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#0b1c30",
+                    "primary-container": "#131b2e",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "display-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"],
+                    "caption": ["Inter"],
+                    "headline-lg": ["Space Grotesk"],
+                    "display-lg-mobile": ["Space Grotesk"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow-card {
+            box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05);
+        }
+        .ambient-shadow-card:hover {
+            box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08);
+        }
+        .glass-edge {
+            box-shadow: inset 0 1px 0 0 rgba(191, 219, 254, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface dark:bg-primary-container docked full-width top-0 shadow-sm z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">
+                Datamore
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1" href="#">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-200" href="#">Success Stories</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-200" href="#">Insights</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors duration-200" href="#">Careers</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-label-md text-label-md glass-edge hover:opacity-90 active:scale-95 transition-all">
+                Book
+            </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7">
+<span class="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant font-label-md text-label-md rounded-full mb-6">
+                        Enterprise Solutions
+                    </span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">
+                        Architecting the Future <br>of <span class="text-secondary">Precision Data.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Our specialized core services bridge the gap between complex infrastructure and strategic growth, delivering clarity to the world's most data-intensive organizations.
+                    </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-square bg-surface-container rounded-3xl overflow-hidden ambient-shadow-card">
+<img alt="Technical Infrastructure" class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-alt="A macro photograph of high-end server architecture with glowing blue lights and intricate circuit details. The lighting is cold and precise, reflecting a high-tech corporate environment. The composition focuses on depth and technical complexity, using a palette of midnight navy, electric blue, and metallic silvers to convey reliability and advanced engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0tm_Lz2ykagfyg8nCywLPwyGsZf9CKBw6dK0AprsV1j4StB_hfkDy1lxD5bWx0OdBLPlWrohdFCDe_CYlamv3BYRef_lXPoJv4sN53GML8NuDiHhPxuiqSfKT5n53bCQbI0ot2_ak2Cf7UmN8rJ3QMuJw-Sz0SKWa36lTXa5_9tHfNFcJ3dDZKUzknSoip8xKDFjP9wqOUujmzb2zSc27u9yK9cT7UFJXk72Ut6FiQP2t8vr8WFqCAH_kvV94wkiFUMF3XyTPNY2F">
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section - Large Feature Cards & Bento Mix -->
+<section class="px-margin-desktop py-24 bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Core Service Areas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">End-to-end data excellence for fintech and NGOs.</p>
+</div>
+<div class="flex gap-4">
+<div class="h-[2px] w-24 bg-outline-variant mb-3"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- 1. Data Engineering & Infrastructure (Large Feature) -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-3xl ambient-shadow-card border border-outline-variant/30 flex flex-col justify-between group">
+<div class="flex justify-between items-start">
+<div class="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl">
+<span class="material-symbols-outlined text-on-secondary-container text-4xl">database</span>
+</div>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest">Foundational</span>
+</div>
+<div class="mt-12">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-4">Data Engineering &amp; Infrastructure</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8">
+                                Building resilient pipelines and cloud-native architectures that handle petabyte-scale loads with zero-latency integrity. We turn fragmented silos into unified, high-performance engines.
+                            </p>
+<div class="grid grid-cols-2 gap-6 border-t border-outline-variant pt-8">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-md text-label-md">ETL/ELT Architecture</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-md text-label-md">Cloud Migration (AWS/Azure)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-md text-label-md">Data Lakehouse Design</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span>
+<span class="font-label-md text-label-md">Real-time Streaming (Kafka)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 2. Business Intelligence (Side Card) -->
+<div class="md:col-span-4 bg-primary-container p-8 rounded-3xl flex flex-col text-on-primary group hover:bg-on-primary-fixed-variant transition-colors duration-300">
+<div class="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-xl mb-8">
+<span class="material-symbols-outlined text-on-tertiary-fixed text-2xl">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4">Business Intelligence &amp; Analytics</h3>
+<p class="font-body-md text-body-md opacity-80 mb-8 flex-grow">
+                            Transforming raw metrics into strategic narratives. We deploy customized dashboards that provide "at-a-glance" operational truth.
+                        </p>
+<ul class="space-y-4 mb-8">
+<li class="flex justify-between items-center border-b border-on-primary-container pb-2">
+<span class="font-label-md text-label-md">Predictive Modeling</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-sm">arrow_forward</span>
+</li>
+<li class="flex justify-between items-center border-b border-on-primary-container pb-2">
+<span class="font-label-md text-label-md">Executive Reporting</span>
+<span class="material-symbols-outlined text-tertiary-fixed text-sm">arrow_forward</span>
+</li>
+</ul>
+<button class="w-full py-3 bg-surface-container-lowest text-primary rounded-xl font-label-md text-label-md hover:bg-secondary-fixed transition-colors">
+                            Explore Analytics
+                        </button>
+</div>
+<!-- 3. AI & LLM Automation (Interactive Card) -->
+<div class="md:col-span-4 bg-surface-container-highest p-8 rounded-3xl ambient-shadow-card flex flex-col border border-outline-variant/50">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-primary flex items-center justify-center rounded-xl">
+<span class="material-symbols-outlined text-on-primary text-2xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">AI &amp; LLM Automation</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Deploying private, secure Large Language Models tailored to your institutional knowledge and regulatory requirements.
+                        </p>
+<div class="bg-surface-container-lowest rounded-2xl p-4 space-y-3">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface hover:bg-secondary-container hover:text-on-secondary-container transition-all cursor-pointer">
+<span class="font-label-md text-label-md">Custom RAG Pipelines</span>
+<span class="material-symbols-outlined text-sm">add</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface hover:bg-secondary-container hover:text-on-secondary-container transition-all cursor-pointer">
+<span class="font-label-md text-label-md">Agentic Workflows</span>
+<span class="material-symbols-outlined text-sm">add</span>
+</div>
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface hover:bg-secondary-container hover:text-on-secondary-container transition-all cursor-pointer">
+<span class="font-label-md text-label-md">Automated Compliance</span>
+<span class="material-symbols-outlined text-sm">add</span>
+</div>
+</div>
+</div>
+<!-- 4. Data Strategy (Bento Wide) -->
+<div class="md:col-span-5 bg-white p-8 rounded-3xl ambient-shadow-card border border-outline-variant/30 relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Data Strategy &amp; Advisory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Aligning technical debt with long-term capital goals through rigorous audit and roadmapping.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface">Data Governance</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface">ROI Mapping</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface">Capability Maturity</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full font-label-md text-label-md text-on-surface">Regulatory Advisory</span>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+</div>
+<!-- 5. Managed Services (Bento Tall) -->
+<div class="md:col-span-3 bg-secondary-container p-8 rounded-3xl flex flex-col justify-between text-on-secondary-container">
+<div>
+<span class="material-symbols-outlined text-4xl mb-6">support_agent</span>
+<h3 class="font-headline-md text-headline-md mb-4">Managed Data Services</h3>
+<p class="font-body-md text-body-md opacity-90">
+                                24/7 technical oversight. We manage the complexity so your internal teams can focus on core innovation.
+                            </p>
+</div>
+<div class="mt-8">
+<div class="flex -space-x-2 mb-4">
+<div class="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">JD</div>
+<div class="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">AS</div>
+<div class="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">MK</div>
+</div>
+<p class="font-caption text-caption uppercase tracking-wider opacity-70">Dedicated Support Squads</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Outcome Section -->
+<section class="px-margin-desktop py-24 max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Datamore Impact</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">Calculated precision in every deployment, ensuring technical rigor meets executive demand.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 border-l-2 border-secondary">
+<div class="font-display-lg text-display-lg text-secondary mb-2">40%</div>
+<h4 class="font-headline-md text-headline-md mb-2">Efficiency Gain</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Average reduction in data latency for fintech trading platforms.</p>
+</div>
+<div class="p-8 border-l-2 border-secondary">
+<div class="font-display-lg text-display-lg text-secondary mb-2">Zero</div>
+<h4 class="font-headline-md text-headline-md mb-2">Data Integrity Gaps</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Across 150+ successfully deployed production pipelines.</p>
+</div>
+<div class="p-8 border-l-2 border-secondary">
+<div class="font-display-lg text-display-lg text-secondary mb-2">24/7</div>
+<h4 class="font-headline-md text-headline-md mb-2">Active Monitoring</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Global infrastructure oversight with automated incident response.</p>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="px-margin-desktop py-20 bg-primary-container">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-on-primary mb-4">Ready to scale your impact with data?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container">Schedule a technical discovery session with our lead architects today.</p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 bg-secondary text-on-secondary rounded-xl font-label-md text-label-md glass-edge hover:opacity-95 transition-all">Book a Strategy Session</button>
+<button class="px-8 py-4 border border-on-primary-container text-on-primary rounded-xl font-label-md text-label-md hover:bg-on-primary-fixed-variant transition-all">View Case Studies</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-20 max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md font-bold text-on-primary-container dark:text-on-surface mb-6">Datamore</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80 max-w-xs">
+                    Precision-engineered data solutions for the world's most demanding financial and social impact institutions.
+                </p>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-md text-label-md text-on-primary-container mb-6 uppercase tracking-widest">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Services</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Success Stories</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Insights</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-md text-label-md text-on-primary-container mb-6 uppercase tracking-widest">Company</h5>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">About Us</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container opacity-80 hover:text-tertiary-fixed transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="md:col-span-4">
+<h5 class="font-label-md text-label-md text-on-primary-container mb-6 uppercase tracking-widest">Connect</h5>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-primary-container text-xl">language</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-on-primary-container flex items-center justify-center hover:bg-secondary transition-all cursor-pointer">
+<span class="material-symbols-outlined text-on-primary-container text-xl">mail</span>
+</div>
+</div>
+<p class="mt-8 font-caption text-caption text-on-primary-container opacity-60">
+                    © 2024 Datamore. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

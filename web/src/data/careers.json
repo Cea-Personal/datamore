@@ -1,0 +1,79 @@
+// src/data/careers.json
+{
+  "hero": {
+    "title": "Join Our Team",
+    "subtitle": "We're looking for passionate individuals to help us empower decision-makers with rigorous data engineering and strategic AI automation.",
+    "image": {
+      "alt": "Team collaborating",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA0tm_Lz2ykagfyg8nCywLPwyGsZf9CKBw6dK0AprsV1j4StB_hfkDy1lxD5bWx0OdBLPlWrohdFCDe_CYlamv3BYRef_lXPoJv4sN53GML8NuDiHhPxuiqSfKT5n53bCQbI0ot2_ak2Cf7UmN8rJ3QMuJw-Sz0SKWa36lTXa5_9tHfNFcJ3dDZKUzknSoip8xKDFjP9wqOUujmzb2zSc27u9yK9cT7UFJXk72Ut6FiQP2t8vr8WFqCAH_kvV94wkiFUMF3XyTPNY2F"
+    }
+  },
+  "positions": [
+    {
+      "title": "Senior Data Engineer",
+      "location": "Remote",
+      "type": "Full-time",
+      "description": "We are seeking a Senior Data Engineer to design, build, and maintain scalable data pipelines and infrastructure.",
+      "requirements": [
+        "5+ years of experience in data engineering",
+        "Proficiency in SQL, Python, and cloud platforms (AWS/Azure/GCP)",
+        "Experience with ETL/ELT tools and data modeling",
+        "Strong problem-solving skills and attention to detail"
+      ],
+      "responsibilities": [
+        "Design and implement data pipelines for structured and unstructured data",
+        "Optimize data storage and retrieval for performance and cost",
+        "Collaborate with data scientists and analysts to understand data needs",
+        "Ensure data quality, security, and compliance"
+      ]
+    },
+    {
+      "title": "AI/ML Engineer",
+      "location": "New York, NY",
+      "type": "Full-time",
+      "description": "We are looking for an AI/ML Engineer to develop and deploy machine learning models for our clients.",
+      "requirements": [
+        "3+ years of experience in machine learning or AI",
+        "Proficiency in Python, TensorFlow/PyTorch, and MLops",
+        "Experience with NLP, computer vision, or predictive modeling",
+        "Strong mathematical and statistical background"
+      ],
+      "responsibilities": [
+        "Develop and train machine learning models for client projects",
+        "Deploy models to production and monitor performance",
+        "Collaborate with data engineers to integrate models into pipelines",
+        "Stay updated with the latest advancements in AI/ML"
+      ]
+    },
+    {
+      "title": "Technical Writer",
+      "location": "Remote",
+      "type": "Contract",
+      "description": "We are seeking a Technical Writer to create clear and comprehensive documentation for our solutions.",
+      "requirements": [
+        "Experience in technical writing for software or data products",
+        "Ability to explain complex technical concepts in simple terms",
+        "Proficiency in Markdown, HTML, and documentation tools",
+        "Strong research and communication skills"
+      ],
+      "responsibilities": [
+        "Create user guides, API documentation, and technical tutorials",
+        "Work with engineers to understand product features",
+        "Ensure documentation is accurate, up-to-date, and easy to follow",
+        "Maintain documentation standards and style guides"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Ready to join our team?",
+    "subtitle": "Explore our open positions and apply today.",
+    "primaryButton": {
+      "label": "View All Positions",
+      "url": "#"
+    },
+    "secondaryButton": {
+      "label": "Learn About Our Culture",
+      "url": "#"
+    }
+  }
+}
