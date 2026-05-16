@@ -1,0 +1,49 @@
+{
+  "heroTitle": "Architecting the Backbone of <span class=\"text-secondary\">Intelligence.</span>",
+  "heroSubtitle": "We build high-performance data pipelines and resilient infrastructure that transform chaotic data streams into precise, actionable assets for the world's most demanding fintechs and NGOs.",
+  "primaryButtonLabel": "Start Engineering Consultation",
+  "secondaryButtonLabel": "",
+  "offerings": [
+    {
+      "icon": "dynamic_feed",
+      "title": "ETL/ELT Architecture",
+      "description": "Custom-built extraction frameworks that handle heterogeneous data sources with zero-loss integrity, optimized for downstream AI readiness."
+    },
+    {
+      "icon": "bolt",
+      "title": "Real-time Streaming",
+      "description": "Low-latency event processing using Kafka and Flink for mission-critical real-time decisioning."
+    },
+    {
+      "icon": "cloud_sync",
+      "title": "Cloud Migration",
+      "description": "Seamless transition of legacy workloads to AWS or Azure with zero downtime and optimized OpEx."
+    },
+    {
+      "icon": "layers",
+      "title": "Data Lakehouse Design",
+      "description": "Merging the flexibility of data lakes with the governance of warehouses using Delta Lake and Iceberg."
+    }
+  ],
+  "impactMetrics": [
+    {
+      "value": "99.9%",
+      "label": "Pipeline Uptime",
+      "description": "Redundant architectures and automated self-healing clusters."
+    },
+    {
+      "value": "60%",
+      "label": "Reduction in ETL Latency",
+      "description": "Proprietary partitioning logic and optimized compute allocation."
+    },
+    {
+      "value": "45%",
+      "label": "Cloud Cost Optimization",
+      "description": "Aggressive resource monitoring and spot instance orchestration."
+    }
+  ],
+  "ctaTitle": "Ready to scale your impact with data?",
+  "ctaSubtitle": "Stop fighting your infrastructure. Let our engineers build the foundation your AI and Analytics teams deserve.",
+  "primaryCTALabel": "Book a Strategy Session",
+  "secondaryCTALabel": "View Case Studies"
+}

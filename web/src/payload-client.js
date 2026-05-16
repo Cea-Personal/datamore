@@ -1,6 +1,6 @@
 // src/payload-client.js
 import { getPayload } from 'payload'
-import config from '../../payload.config'
+import config from '../payload.config'
 
 let _payload
 

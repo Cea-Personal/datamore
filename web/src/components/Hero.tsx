@@ -7,7 +7,7 @@ interface HeroData {
   subtitle: string
   buttons: Array<{
     label: string
-    variant: 'primary' | 'secondary'
+    variant: string
   }>
   image: {
     alt: string

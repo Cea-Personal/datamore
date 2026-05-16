@@ -143,7 +143,7 @@ export default function ServiceDetail({
       <section className="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 items-center">
           <div className="lg:w-1/2">
-            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6">Interactive Dashboards: <br><span className="text-secondary">Precision in Motion</span></h2>
+            <h2 className="font-headline-lg text-headline-lg text-on-surface mb-6">Interactive Dashboards: <br /><span className="text-secondary">Precision in Motion</span></h2>
             <div className="space-y-8">
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-12 h-12 bg-secondary-container/10 rounded-lg flex items-center justify-center text-secondary">

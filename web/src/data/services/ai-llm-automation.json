@@ -1,0 +1,44 @@
+{
+  "heroTitle": "Architecting the Future with <span class=\"text-secondary\">Generative AI</span>.",
+  "heroSubtitle": "We transform complex enterprise data into autonomous intelligence engines. Deploying custom LLM architectures that drive strategy, compliance, and growth with mathematical precision.",
+  "primaryButtonLabel": "Explore Capabilities",
+  "secondaryButtonLabel": "View Case Studies",
+  "offerings": [
+    {
+      "icon": "database",
+      "title": "Custom RAG Pipelines",
+      "description": "Augment LLMs with your private enterprise knowledge base. We build Retrieval-Augmented Generation systems that eliminate hallucinations and ensure factual consistency."
+    },
+    {
+      "icon": "hub",
+      "title": "Agentic Workflows",
+      "description": "Moving beyond chat. We design AI agents capable of reasoning, planning, and executing multi-step tasks across your existing software stack."
+    },
+    {
+      "icon": "gavel",
+      "title": "Automated Compliance",
+      "description": "AI-driven auditing for fintech and legal frameworks. Automate policy checks and regulatory reporting with 99.9% verifiable accuracy."
+    },
+    {
+      "icon": "model_training",
+      "title": "Fine-tuned LLMs",
+      "description": "When general models aren't enough. We fine-tune open-source models (Llama 3, Mistral) on your domain-specific language for superior performance at lower costs."
+    }
+  ],
+  "impactMetrics": [
+    {
+      "value": "85%",
+      "label": "Automation Efficiency",
+      "description": "Average reduction in manual document processing time for our fintech clients using Agentic Workflows."
+    },
+    {
+      "value": "60%",
+      "label": "Cost Reduction",
+      "description": "Reduction in operational costs associated with specialized data analysis and compliance reporting."
+    }
+  ],
+  "ctaTitle": "Ready to scale your impact with data?",
+  "ctaSubtitle": "Join the leading enterprises leveraging Datamore to build the next generation of autonomous intelligence.",
+  "primaryCTALabel": "Book a Strategy Session",
+  "secondaryCTALabel": "View Case Studies"
+}

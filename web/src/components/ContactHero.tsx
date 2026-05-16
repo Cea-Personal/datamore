@@ -1,5 +1,6 @@
 // src/components/ContactHero.tsx
 import Image from 'next/image'
+import ContactForm from './ContactForm'
 
 export default function ContactHero() {
   return (

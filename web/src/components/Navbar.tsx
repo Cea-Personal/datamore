@@ -3,8 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { SiDatamore } from 'react-icons/si'
-import { BsBookmarkStar } from 'react-icons/bs'
 
 export default function Navbar() {
   const pathname = usePathname()

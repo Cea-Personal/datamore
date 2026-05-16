@@ -2,9 +2,9 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
 
-import { Insights } from './collections/Insights'
-import { SuccessStories } from './collections/SuccessStories'
-import { Services } from './collections/Services'
+import { Insights } from './src/payload/collections/Insights'
+import { SuccessStories } from './src/payload/collections/SuccessStories'
+import { Services } from './src/payload/collections/Services'
 
 const filename = fileURLToPath(import.meta.url)
 const dirnameValue = dirname(filename)

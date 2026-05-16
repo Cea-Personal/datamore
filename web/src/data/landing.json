@@ -5,11 +5,14 @@
     "buttons": [
       {
         "label": "Request a Consultation",
-        "variant": "primary"
+        "variant": "primary",
+        "url": "/contact"
+
       },
       {
         "label": "Explore Services",
-        "variant": "secondary"
+        "variant": "secondary",
+        "url": "/services"
       }
     ],
     "image": {
@@ -31,7 +34,7 @@
         "description": "Building robust, scalable pipelines that ensure your data is clean, secure, and ready for analysis.",
         "link": {
           "label": "Learn more",
-          "url": "#"
+          "url": "/services/data-engineering"
         }
       },
       {
@@ -40,7 +43,7 @@
         "description": "Transforming raw numbers into intuitive dashboards and strategic insights that drive business growth.",
         "link": {
           "label": "Learn more",
-          "url": "#"
+          "url": "/services/bi"
         }
       },
       {
@@ -49,7 +52,7 @@
         "description": "Leveraging machine learning to automate complex reporting and predict future market trends.",
         "link": {
           "label": "Learn more",
-          "url": "#"
+          "url": "/services/ai-automation"
         }
       }
     ]

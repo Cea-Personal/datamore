@@ -154,9 +154,8 @@ export default function InsightDetail({
                           </div>
                           <div className="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
                             <div
-                              className="h-full bg-gradient-to-r from-tertiary-fixed-dim to-secondary"
+                              className="h-full bg-gradient-to-r from-tertiary-fixed-dim to-secondary rounded-full"
                               style={{ width: item.value.includes('%') ? item.value : '0%' }}
-                              className="rounded-full"
                             ></div>
                           </div>
                         </div>
@@ -194,7 +193,7 @@ export default function InsightDetail({
         <aside className="lg:col-span-4 space-y-12">
           {/* Subscribe Widget */}
           <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
-            <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4" style="font-variation-settings: 'FILL' 1;">mail</span>
+            <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4">mail</span>
             <h4 className="font-headline-md text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
             <p className="font-body-md text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
             <div className="space-y-4">

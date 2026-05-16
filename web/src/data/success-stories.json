@@ -75,10 +75,12 @@
     "title": "Ready to scale your impact with data?",
     "subtitle": "Our consultants are ready to audit your current data architecture and identify high-leverage AI opportunities.",
     "primaryButton": {
-      "label": "Book a Strategy Session"
+      "label": "Book a Strategy Session",
+      "url": "/contact"
     },
     "secondaryButton": {
-      "label": "View Case Studies"
+      "label": "View Case Studies",
+      "url": "/success-stories"
     }
   }
 }

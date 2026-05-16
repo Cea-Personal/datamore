@@ -9,18 +9,6 @@ interface ServiceImpactData {
   title: string
   subtitle: string
   metrics: ImpactMetric[]
-  cta: {
-    title: string
-    subtitle: string
-    primaryButton: {
-      label: string
-      url: string
-    }
-    secondaryButton: {
-      label: string
-      url: string
-    }
-  }
 }
 
 export default function ServiceImpact({ data }: { data: ServiceImpactData }) {

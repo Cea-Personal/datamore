@@ -45,7 +45,7 @@ export default function InsightsSidebar({ data }: { data: { categories: Category
       <div className="mt-12">
         <h4 className="font-headline-md text-headline-md text-primary mb-6 flex items-center gap-2">
           <span className="material-symbols-outlined text-secondary">verified</span>
-          Editor's Choice
+          Editor&apos;s Choice
         </h4>
         <div className="space-y-6">
           {data.editorsChoice.map((item, index) => (

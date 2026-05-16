@@ -118,11 +118,11 @@
     "subtitle": "Partner with Datamore to transform your organization through technical excellence and strategic AI innovation.",
     "primaryButton": {
       "label": "Book a Strategy Session",
-      "variant": "secondary"
+      "url": "/contact"
     },
     "secondaryButton": {
       "label": "View Case Studies",
-      "variant": "outline"
+      "url": "/"
     }
   }
 }

@@ -1,7 +1,3 @@
-// src/components/Industries.tsx
-interface IndustryTag {
-  label: string
-}
 
 interface IndustryCard {
   title: string
@@ -15,7 +11,7 @@ interface IndustryCard {
 interface IndustriesData {
   title: string
   subtitle: string
-  tags: IndustryTag[]
+  tags: string[]
   cards: IndustryCard[]
 }
 
@@ -33,7 +29,7 @@ export default function Industries({ data }: { data: IndustriesData }) {
               key={index}
               className="px-4 py-2 bg-surface-container-low rounded-full font-label-md text-label-md text-on-secondary-fixed-variant"
             >
-              {tag.label}
+              {tag}
             </span>
           ))}
         </div>

@@ -25,7 +25,7 @@ export default function ContactForm() {
         </div>
         <div className="md:col-span-2 flex flex-col gap-2">
           <label className="font-label-md text-label-md text-on-surface">How can we help?</label>
-          <textarea className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" placeholder="Briefly describe your data challenges or project goals..." rows="4" />
+          <textarea className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" placeholder="Briefly describe your data challenges or project goals..." rows={4} />
         </div>
         <div className="md:col-span-2 pt-4">
           <button className="w-full btn-gradient text-on-primary py-4 rounded-lg font-label-md text-label-md shadow-premium shadow-interactive active:scale-95 transition-all flex items-center justify-center gap-2" type="submit">

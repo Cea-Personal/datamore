@@ -1,7 +1,7 @@
 // src/components/InsightsFilter.tsx
 interface FilterButton {
   label: string
-  variant: 'primary' | 'outline'
+  variant: string
 }
 
 export default function InsightsFilter({ data }: { data: { buttons: FilterButton[]; placeholder: string } }) {
