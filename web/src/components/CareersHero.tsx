@@ -31,15 +31,17 @@ export default function CareersHero({ data }: { data: CareersHeroData }) {
           </a>
         </div>
       </div>
-      <div className="relative h-[450px] md:h-[500px] rounded-2xl overflow-hidden ambient-shadow">
-        <Image
-          alt={data.image.alt}
-          src={data.image.url}
-          className="w-full h-full object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
-      </div>
+       <div className="relative h-[450px] md:h-[500px] rounded-2xl overflow-hidden ambient-shadow">
+         <Image
+           alt={data.image.alt}
+           src={data.image.url}
+           className="w-full h-full object-cover"
+           width={800}
+           height={500}
+           priority
+         />
+         <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+       </div>
     </section>
   )
 }

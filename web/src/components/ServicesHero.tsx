@@ -25,14 +25,16 @@ export default function ServicesHero({ data }: { data: ServicesHeroData }) {
           </p>
         </div>
         <div className="md:col-span-5 relative">
-          <div className="aspect-square bg-surface-container rounded-3xl overflow-hidden ambient-shadow-card">
-            <Image
-              alt={data.image.alt}
-              src={data.image.url}
-              className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
-              priority
-            />
-          </div>
+            <div className="aspect-square bg-surface-container rounded-3xl overflow-hidden ambient-shadow-card">
+              <Image
+                alt={data.image.alt}
+                src={data.image.url}
+                className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
+                width={800}
+                height={800}
+                priority
+              />
+            </div>
         </div>
       </div>
     </section>

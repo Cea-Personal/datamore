@@ -1,4 +1,5 @@
 // src/components/Navbar.tsx
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
@@ -22,28 +23,28 @@ export default function Navbar() {
             </span>
           </div>
         </div>
-        <div className="hidden md:flex gap-gutter items-center">
+      <div className="hidden md:flex gap-gutter items-center">
           <Link 
             href="/services" 
-            className={`${pathname === '/services' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
+            className={`${pathname} === '/services' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
           >
             Services
           </Link>
           <Link 
             href="/success-stories" 
-            className={`${pathname === '/success-stories' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
+            className={`${pathname} === '/success-stories' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
           >
             Success Stories
           </Link>
           <Link 
             href="/insights" 
-            className={`${pathname === '/insights' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
+            className={`${pathname} === '/insights' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
           >
             Insights
           </Link>
           <Link 
             href="/careers" 
-            className={`${pathname === '/careers' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
+            className={`${pathname} === '/careers' ? 'font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1' : 'font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'`}
           >
             Careers
           </Link>
@@ -52,6 +53,6 @@ export default function Navbar() {
           Book
         </Link>
       </div>
-    </nav>
+  </nav>
   )
 }

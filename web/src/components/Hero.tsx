@@ -50,6 +50,8 @@ export default function Hero({ data }: { data: HeroData }) {
                 alt={data.image.alt}
                 src={data.image.url}
                 className="w-full h-full object-cover rounded-xl"
+                width={800}
+                height={800}
                 priority
               />
             </div>

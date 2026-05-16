@@ -170,15 +170,13 @@
   "cta": {
     "title": "Ready to scale your impact with data?",
     "subtitle": "Join forward-thinking organizations using precision intelligence to drive growth and efficiency.",
-    "buttons": [
-      {
+     "primaryButton": {
         "label": "Book a Strategy Session",
-        "variant": "primary"
+        "url": "/contact"
       },
-      {
+      "secondaryButton": {
         "label": "View Case Studies",
-        "variant": "secondary"
+        "url": "/success-stories"
       }
-    ]
   }
 }

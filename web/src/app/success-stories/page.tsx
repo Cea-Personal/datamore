@@ -1,8 +1,8 @@
 // app/success-stories/page.tsx
-import SuccessStoriesData from '@/src/data/success-stories.json'
-import SuccessStoriesHero from '@/src/components/SuccessStoriesHero'
-import StoriesGrid from '@/src/components/StoriesGrid'
-import SuccessStoriesCTA from '@/src/components/SuccessStoriesCTA'
+import SuccessStoriesData from '@/data/success-stories.json'
+import SuccessStoriesHero from '@/components/SuccessStoriesHero'
+import StoriesGrid from '@/components/StoriesGrid'
+import SuccessStoriesCTA from '@/components/ReadyToScaleCTA'
 
 export default function SuccessStoriesPage() {
   return (

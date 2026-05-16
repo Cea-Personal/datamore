@@ -78,14 +78,16 @@ export default function InsightDetail({
             </h1>
             <div className="flex items-center space-x-4">
               {author.imageUrl && (
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
-                  <Image
-                    alt={`${author.name} headshot`}
-                    src={author.imageUrl}
-                    className="w-full h-full object-cover"
-                    priority
-                  />
-                </div>
+             <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
+                   <Image
+                     alt={`${author.name} headshot`}
+                     src={author.imageUrl}
+                     className="w-full h-full object-cover"
+                     width={120}
+                     height={120}
+                     priority
+                   />
+                 </div>
               )}
               <div>
                 <p className="font-label-md text-label-md text-on-surface">{author.name}</p>

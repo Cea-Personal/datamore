@@ -36,14 +36,16 @@ export default function InsightsHero({ data }: { data: InsightsHeroData }) {
             <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
           </button>
         </div>
-        <div className="md:col-span-5 relative aspect-[4/3] rounded-xl overflow-hidden ambient-shadow">
-          <Image
-            alt={data.image.alt}
-            src={data.image.url}
-            className="w-full h-full object-cover"
-            priority
-          />
-        </div>
+            <div className="md:col-span-5 relative aspect-[4/3] rounded-xl overflow-hidden ambient-shadow">
+              <Image
+                alt={data.image.alt}
+                src={data.image.url}
+                className="w-full h-full object-cover"
+                width={800}
+                height={600}
+                priority
+              />
+            </div>
       </div>
     </section>
   )

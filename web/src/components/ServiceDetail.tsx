@@ -73,14 +73,16 @@ export default function ServiceDetail({
             </div>
           </div>
           <div className="md:col-span-5 relative mt-12 md:mt-0">
-            <div className="aspect-square rounded-2xl bg-surface-container-high overflow-hidden tinted-shadow">
-              <Image
-                alt={imageAlt}
-                src={imageUrl}
-                className="w-full h-full object-cover"
-                priority
-              />
-            </div>
+             <div className="aspect-square rounded-2xl bg-surface-container-high overflow-hidden tinted-shadow">
+               <Image
+                 alt={imageAlt}
+                 src={imageUrl}
+                 className="w-full h-full object-cover"
+                 width={800}
+                 height={600}
+                 priority
+               />
+             </div>
             {/* Decorative element */}
             <div className="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl tinted-shadow glass-edge hidden lg:block">
               <div className="flex items-center gap-4">
