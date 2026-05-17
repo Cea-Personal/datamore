@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Build the Future of Intelligence",
+    "title": "Build the Future <br> of <span class=\"text-secondary\"> Intelligence </span>",
     "subtitle": "Join an elite cohort of data engineers and AI specialists dedicated to solving complex challenges for fintech giants and humanitarian NGOs.",
     "image": {
       "alt": "A sophisticated technical monitoring environment with a large screen displaying AI-driven data analysis.",

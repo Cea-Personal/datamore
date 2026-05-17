@@ -10,7 +10,7 @@ export default function ContactHero() {
         <div className="md:col-span-5 flex flex-col gap-12">
           <div className="space-y-6">
 <h1 className="text-display-lg-mobile md:text-display-lg text-primary leading-tight">
-              Let's Build More Value From Your Data
+              Build More Value <br/>From <span className="text-secondary">Your Data</span>
             </h1>
             <p className="text-body-lg text-on-surface-variant max-w-md">
               Transforming complex financial and non-profit data into actionable strategic insights through enterprise-grade AI.
