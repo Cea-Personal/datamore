@@ -1,15 +1,29 @@
-// src/components/Footer.tsx
+'use client'
+
 import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Footer() {
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      console.log('Subscribing email:', email)
+      setSubscribed(true)
+      setEmail('')
+    }
+  }
+
   return (
     <footer className="bg-primary-container text-on-primary-container border-t border-outline-variant">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-20 pb-10">
         <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
           <div className="md:col-span-3">
             <Link href="/" className="flex items-center mb-6">
-              <img alt="Datamore Logo" className="h-6 w-auto brightness-0 invert opacity-90" src="https://lh3.googleusercontent.com/aida/ADBb0ugacJ5dMBxRkXdS03XhMkj7gCoE2d8i3qE97MysiBXpfy12t-0cBr3M8ucg6o4UFJvO6ij3JphzzoMQ15EbS6qpL8FFPJTKpOyJ8o6-7P5wq6oXPHX1hVDRbNu69eyquWaKXie39JN0_qCBZ0sjUv7Ca8eIeod0XNpJpjDxrCJ3v0r1QhM5w3taJX-SYr4tgr8ketyFPlRRUvlNT6j0GorWu5r3QtqKCKMEvbUXqdHE_gx-O8kLeUA8icMt" />
-              <span className="-ml-1 text-headline-md font-bold text-white">atamore</span>
+              <img alt="Datamore Logo" className="h-6 w-auto brightness-0 invert opacity-90" src="/logo.svg" />
+              <span className="-ml-0.5 text-headline-md font-bold text-white">atamore</span>
             </Link>
             <p className="text-body-md opacity-80 max-w-xs leading-relaxed">
               Empowering decision-makers with rigorous data engineering and strategic AI automation.
@@ -82,16 +96,23 @@ export default function Footer() {
           </div>
           <div className="md:col-span-3">
             <h6 className="text-label-md mb-6 text-white uppercase tracking-wider">Stay Updated</h6>
-            <div className="flex gap-2">
+            {subscribed ? (
+              <p className="text-body-md text-tertiary-fixed font-label-md">Thanks for subscribing!</p>
+            ) : (
+            <form onSubmit={handleSubscribe} className="flex gap-2">
               <input
                 className="bg-white/5 border border-white/20 rounded-lg px-4 py-3 flex-grow focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
                 placeholder="Email address"
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
               <button className="bg-secondary text-white px-6 py-3 rounded-lg text-label-md hover:bg-secondary/90 transition-colors">
                 Join
               </button>
-            </div>
+            </form>
+            )}
           </div>
         </div>
         <div className="pt-12 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6">

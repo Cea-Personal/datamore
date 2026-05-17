@@ -1,7 +1,7 @@
-// src/components/InsightDetail.tsx
 'use client'
 
 import Image from 'next/image'
+import { useState } from 'react'
 import type { InsightData } from '@/types/insight'
 import GlobalCTA from '@/components/CTA'
 
@@ -14,6 +14,18 @@ export default function InsightDetail({
   relatedArticles = [],
   cta
 }: InsightData) {
+  const [email, setEmail] = useState('')
+  const [subscribed, setSubscribed] = useState(false)
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      console.log('Subscribing email:', email)
+      setSubscribed(true)
+      setEmail('')
+    }
+  }
+
   return (
     <>
       {/* Hero Section */}
@@ -154,61 +166,68 @@ export default function InsightDetail({
            )}
         </article>
 
-        {/* Sidebar */}
-        <aside className="lg:col-span-4 space-y-12">
-          {/* Subscribe Widget */}
-          <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
-            <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4">mail</span>
-            <h4 className="text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
-            <p className="text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
-            <div className="space-y-4">
-              <input
-                className="w-full bg-transparent border border-on-primary-container rounded-lg px-4 py-3 text-on-primary-fixed placeholder:opacity-50 focus:ring-2 focus:ring-tertiary-cyan focus:outline-none transition-all"
-                placeholder="Email address"
-                type="email"
-              />
-              <button className="w-full bg-secondary text-on-secondary py-3 rounded-lg text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
-                Subscribe Now
-              </button>
+{/* Sidebar */}
+          <aside className="lg:col-span-4 space-y-12">
+            {/* Subscribe Widget */}
+            <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
+              <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4">mail</span>
+              <h4 className="text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
+              <p className="text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
+              {subscribed ? (
+                <p className="text-body-md text-tertiary-fixed font-label-md">Thanks for subscribing!</p>
+              ) : (
+                <form onSubmit={handleSubscribe} className="space-y-4">
+                  <input
+                    className="w-full bg-transparent border border-on-primary-container rounded-lg px-4 py-3 text-on-primary-fixed placeholder:opacity-50 focus:ring-2 focus:ring-tertiary-cyan focus:outline-none transition-all"
+                    placeholder="Email address"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <button type="submit" className="w-full bg-secondary text-on-secondary py-3 rounded-lg text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
+                    Subscribe Now
+                  </button>
+                </form>
+              )}
             </div>
-          </div>
-          
-          {/* Related Articles */}
-          {relatedArticles.length > 0 && (
-            <>
-              <h4 className="text-label-md text-secondary uppercase tracking-widest mb-6">Related Articles</h4>
-              <div className="space-y-6">
-                {relatedArticles.map((article, index) => (
-                  <a
-                    key={index}
-                    href="#"
-                    className="group block"
-                  >
-                    <div className="flex gap-4">
-                      <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-variant">
-<Image
-                           alt={article.title}
-                           src={article.imageUrl}
-                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                           width={200}
-                           height={200}
-                         />
+            
+            {/* Related Articles */}
+            {relatedArticles.length > 0 && (
+              <>
+                <h4 className="text-label-md text-secondary uppercase tracking-widest mb-6">Related Articles</h4>
+                <div className="space-y-6">
+                  {relatedArticles.map((article, index) => (
+                    <a
+                      key={index}
+                      href="#"
+                      className="group block"
+                    >
+                      <div className="flex gap-4">
+                        <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-variant">
+                          <Image
+                            alt={article.title}
+                            src={article.imageUrl}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            width={200}
+                            height={200}
+                          />
+                        </div>
+                        <div className="flex flex-col justify-center">
+                          <h5 className="text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
+                            {article.title}
+                          </h5>
+                          <span className="text-caption font-caption text-on-surface-variant mt-1">{article.readTime}</span>
+                        </div>
                       </div>
-                      <div className="flex flex-col justify-center">
-                        <h5 className="text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">
-                          {article.title}
-                        </h5>
-                        <span className="text-caption font-caption text-on-surface-variant mt-1">{article.readTime}</span>
-                      </div>
-                    </div>
-                  </a>
-                ))}
-              </div>
-            </>
-          )}
-</aside>
-      </main>
-      {cta && <GlobalCTA data={cta} />}
+                    </a>
+                  ))}
+                </div>
+              </>
+            )}
+          </aside>
+        </main>
+        {cta && <GlobalCTA data={cta} />}
     </>
   )
 }

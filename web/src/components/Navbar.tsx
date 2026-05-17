@@ -28,9 +28,14 @@ export default function Navbar() {
   return (
     <nav className="bg-surface shadow-sm w-full">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
-        <Link href="/" className="font-headline-md text-headline-md font-bold text-primary">
-          Datamore
-        </Link>
+        {/* <Link href="/" className="font-headline-md text-headline-md font-bold text-primary">
+          <img alt="Datamore Logo" className="h-6 w-auto opacity-90" src="/logo.svg" />
+          atamore
+        </Link> */}
+        <Link href="/" className="flex items-center">
+              <img alt="Datamore Logo" className="h-6 w-auto" src="/logo.svg" />
+              <span className="-ml-0.5 text-headline-md font-bold ">atamore</span>
+            </Link>
         <div className="hidden md:flex gap-gutter items-center">
           {navItems.slice(1).map((item) => (
             <div 
