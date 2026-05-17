@@ -12,7 +12,7 @@ interface ServicesHeroData {
 
 export default function ServicesHero({ data }: { data: ServicesHeroData }) {
   return (
-    <section className="px-margin-desktop py-20 max-w-container-max mx-auto">
+    <section className="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-7">
           <span className="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant text-label-md rounded-full mb-6">

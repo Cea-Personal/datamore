@@ -8,11 +8,12 @@ interface ServiceCategory {
   description: string
   features: string[]
   link: string
+  explore: string
 }
 
 export default function ServiceCategories({ data }: { data: ServiceCategory[] }) {
   return (
-    <section className="px-margin-desktop py-24 bg-surface-container-low">
+    <section className="px-margin-mobile md:px-margin-desktop py-24 bg-surface-container-low">
       <div className="max-w-container-max mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
@@ -24,65 +25,119 @@ export default function ServiceCategories({ data }: { data: ServiceCategory[] })
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          {data.map((category, index) => {
-            // Determine layout - first item takes 8 columns, others take 4 columns in a bento-like layout
-            const isFirst = index === 0;
-            const colSpan = isFirst ? 'md:col-span-8' : 'md:col-span-4';
-            const isLargeCard = isFirst;
-            
-            return (
-              <div
-                key={index}
-                className={`${colSpan} ${isLargeCard ? 'bg-surface-container-lowest p-10 rounded-3xl ambient-shadow-card border border-outline-variant/30 flex flex-col justify-between group' : 'bg-primary-container p-8 rounded-3xl flex flex-col text-on-primary group hover:bg-on-primary-fixed-variant transition-colors duration-300'}`}
-              >
-                {isLargeCard ? (
-                  <>
-                    <div className="flex justify-between items-start">
-                      <div className="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl">
-                        <span className="material-symbols-outlined text-on-secondary-container text-4xl">{category.icon}</span>
-                      </div>
-                      <span className="text-label-md text-secondary uppercase tracking-widest">Foundational</span>
-                    </div>
-                    <div className="mt-12">
-                      <h3 className="text-headline-lg text-primary mb-4">{category.title}</h3>
-                      <p className="text-body-lg text-on-surface-variant max-w-2xl mb-8">
-                        {category.description}
-                      </p>
-                      <div className="grid grid-cols-2 gap-6 border-t border-outline-variant pt-8">
-                        {category.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-center gap-3">
-                            <span className="material-symbols-outlined text-secondary">check_circle</span>
-                            <span className="text-label-md">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  </>
-                ) : (
-                  <>
-                    <div className="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-xl mb-8">
-                      <span className="material-symbols-outlined text-on-tertiary-fixed text-2xl">{category.icon}</span>
-                    </div>
-                    <h3 className="text-headline-md mb-4">{category.title}</h3>
-                    <p className="text-body-md opacity-80 mb-8 flex-grow">
-                      {category.description}
-                    </p>
-                    <ul className="space-y-4 mb-8">
-                      {category.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex justify-between items-center border-b border-on-primary-container pb-2">
-                          <span className="text-label-md">{feature}</span>
-                          <span className="material-symbols-outlined text-tertiary-fixed text-sm">arrow_forward</span>
-                        </li>
-                      ))}
-                    </ul>
-                    <button className="w-full py-3 bg-surface-container-lowest text-primary rounded-xl text-label-md hover:bg-secondary-fixed transition-colors">
-                      Explore {category.title.split(' ')[0]}
-                    </button>
-                  </>
-                )}
+          {/* 1. Data Engineering & Infrastructure (Large Feature) */}
+          <div className="md:col-span-8 bg-surface-container-lowest p-10 rounded-3xl ambient-shadow-card border border-outline-variant/30 flex flex-col justify-between">
+            <div className="flex justify-between items-start">
+              <div className="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl">
+                <span className="material-symbols-outlined text-on-secondary-container text-4xl">{data[0].icon}</span>
               </div>
-            );
-          })}
+              <span className="text-label-md text-secondary uppercase tracking-widest">{data[0].category}</span>
+            </div>
+            <div className="mt-12">
+              <h3 className="text-headline-lg text-primary mb-4">{data[0].title}</h3>
+              <p className="text-body-lg text-on-surface-variant max-w-2xl mb-8">
+                {data[0].description}
+              </p>
+              <div className="grid grid-cols-2 gap-6 border-t border-outline-variant pt-8">
+                {data[0].features.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-3">
+                    <span className="material-symbols-outlined text-secondary">check_circle</span>
+                    <span className="text-label-md">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <Link href={data[0].link} className="mt-8 w-full py-3 bg-secondary text-on-secondary rounded-xl text-label-md text-center">
+              {data[0].explore}
+            </Link>
+          </div>
+
+          {/* 2. Business Intelligence (Side Card) */}
+          <div className="md:col-span-4 bg-primary-container p-8 rounded-3xl flex flex-col text-on-primary">
+            <div className="w-12 h-12 bg-tertiary-fixed flex items-center justify-center rounded-xl mb-8">
+              <span className="material-symbols-outlined text-on-tertiary-fixed text-2xl">{data[1].icon}</span>
+            </div>
+            <h3 className="text-headline-md mb-4">{data[1].title}</h3>
+            <p className="text-body-md opacity-80 mb-8 flex-grow">
+              {data[1].description}
+            </p>
+            <ul className="space-y-4 mb-8">
+              {data[1].features.map((feature, index) => (
+                <li key={index} className="flex justify-between items-center border-b border-on-primary-container pb-2">
+                  <span className="text-label-md">{feature}</span>
+                </li>
+              ))}
+            </ul>
+            <Link href={data[1].link} className="w-full py-3 bg-surface-container-lowest text-primary rounded-xl text-label-md text-center">
+              {data[1].explore}
+            </Link>
+          </div>
+
+          {/* 3. AI & LLM Automation (Interactive Card) */}
+          <div className="md:col-span-4 bg-surface-container-highest p-8 rounded-3xl ambient-shadow-card flex flex-col border border-outline-variant/50">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary flex items-center justify-center rounded-xl">
+                <span className="material-symbols-outlined text-on-primary text-2xl" style={{fontVariationSettings: "'FILL' 1"}}>
+                  {data[2].icon}
+                </span>
+              </div>
+              <h3 className="text-headline-md text-primary">{data[2].title}</h3>
+            </div>
+            <p className="text-body-md text-on-surface-variant mb-6">
+              {data[2].description}
+            </p>
+            <div className="bg-surface-container-lowest rounded-2xl p-4 space-y-3">
+              {data[2].features.map((feature, index) => (
+                <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-surface">
+                  <span className="text-label-md">{feature}</span>
+                </div>
+              ))}
+            </div>
+            <Link href={data[2].link} className="mt-6 w-full py-3 bg-secondary text-on-secondary rounded-xl text-label-md text-center">
+              {data[2].explore}
+            </Link>
+          </div>
+
+          {/* 4. Data Strategy (Bento Wide) */}
+          <div className="md:col-span-5 bg-white p-8 flex flex-col rounded-3xl ambient-shadow-card border border-outline-variant/30 relative overflow-hidden">
+            <div className="relative z-10">
+              <h3 className="text-headline-md text-primary mb-2">{data[3].title}</h3>
+              <p className="text-body-md text-on-surface-variant mb-8">{data[3].description}</p>
+              <div className="flex flex-wrap gap-2">
+                {data[3].features.map((feature, index) => (
+                  <span key={index} className="px-3 py-1 bg-surface-container-high rounded-full text-label-md text-on-surface">
+                    {feature}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className=" -bottom-10  w-48 h-48 bg-secondary/5 rounded-full blur-3xl"></div>
+            <Link href={data[3].link} className="mt-6 w-full py-3 bg-secondary text-on-secondary rounded-xl text-label-md text-center">
+              {data[3].explore}
+            </Link>
+          </div>
+
+          {/* 5. Managed Services (Bento Tall) */}
+          <div className="md:col-span-3 bg-secondary-container p-8 rounded-3xl flex flex-col justify-between text-on-secondary-container">
+            <div>
+              <span className="material-symbols-outlined text-4xl mb-6">{data[4].icon}</span>
+              <h3 className="text-headline-md mb-4">{data[4].title}</h3>
+              <p className="text-body-md opacity-90">
+                {data[4].description}
+              </p>
+            </div>
+            <div className="mt-8">
+              <div className="flex -space-x-2 mb-4">
+                <div className="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">JD</div>
+                <div className="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">AS</div>
+                <div className="w-8 h-8 rounded-full border-2 border-secondary-container bg-surface flex items-center justify-center text-[10px] font-bold text-primary">MK</div>
+              </div>
+              <p className="text-caption uppercase tracking-wider opacity-70">Dedicated Support Squads</p>
+            </div>
+            <Link href={data[4].link} className="mt-6 w-full py-3 bg-surface-container-lowest text-primary rounded-xl text-label-md text-center">
+              {data[4].explore}
+            </Link>
+          </div>
         </div>
       </div>
     </section>

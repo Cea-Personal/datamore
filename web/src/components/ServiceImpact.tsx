@@ -15,7 +15,7 @@ export default function ServiceImpact({ data }: { data: ServiceImpactData }) {
   return (
     <>
       {/* Outcome Section */}
-      <section className="px-margin-desktop py-24 max-w-container-max mx-auto">
+      <section className="px-margin-mobile md:px-margin-desktop py-24 max-w-container-max mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-headline-lg text-primary">{data.title}</h2>
           <p className="text-body-md text-on-surface-variant max-w-2xl mx-auto mt-4">

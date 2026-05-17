@@ -19,7 +19,8 @@
         "Data Lakehouse Design",
         "Real-time Streaming (Kafka)"
       ],
-      "link": "/services/data-engineering"
+      "link": "/services/data-engineering",
+      "explore": "Explore Data Engineering"
     },
     {
       "title": "Business Intelligence & Analytics",
@@ -30,7 +31,8 @@
         "Predictive Modeling",
         "Executive Reporting"
       ],
-      "link": "/services/bi"
+      "link": "/services/bi",
+      "explore": "Explore BI & Analytics"
     },
     {
       "title": "AI & LLM Automation",
@@ -42,7 +44,8 @@
         "Agentic Workflows",
         "Automated Compliance"
       ],
-      "link": "/services/ai-llm-automation"
+      "link": "/services/ai-llm-automation",
+      "explore": "Explore AI Automation"
     },
     {
       "title": "Data Strategy & Advisory",
@@ -55,7 +58,8 @@
         "Capability Maturity",
         "Regulatory Advisory"
       ],
-      "link": "/services/data-strategy"
+      "link": "/services/data-strategy",
+      "explore": "Explore Strategy"
     },
     {
       "title": "Managed Data Services",
@@ -65,7 +69,8 @@
       "features": [
         "Dedicated Support Squads"
       ],
-      "link": "/services/managed-data-services"
+      "link": "/services/managed-data-services",
+      "explore": "Explore Managed Services"
     }
   ],
   "impact": {
