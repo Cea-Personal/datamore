@@ -3,7 +3,7 @@ import ServicesData from '@/data/services.json'
 import ServicesHero from '@/components/ServicesHero'
 import ServiceCategories from '@/components/ServiceCategories'
 import ServiceImpact from '@/components/ServiceImpact'
-import ServiceCTA from '@/components/ServiceCTA'
+import ServicesCTA from '@/components/CTA'
 import ServicePageHero from '@/components/ServicePageHero'
 import ServiceCapabilities from '@/components/ServiceCapabilities'
 import ServiceSecurity from '@/components/ServiceSecurity'
@@ -31,7 +31,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
         <ServicesHero data={ServicesData.hero} />
         <ServiceCategories data={ServicesData.categories} />
         <ServiceImpact data={ServicesData.impact} />
-        <ServiceCTA data={ServicesData.cta} />
+        <ServicesCTA data={ServicesData.cta} />
       </>
     )
   }
@@ -49,7 +49,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
       {data.features && <ServiceFeatures data={data.features} />}
       {data.infrastructure && <ServiceInfrastructure data={data.infrastructure} />}
       <ServicePageImpact data={data.impact} />
-      <ServiceCTA data={data.cta} />
+      <ServicesCTA data={data.cta} />
     </>
   )
 }

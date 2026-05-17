@@ -4,11 +4,11 @@ import Link from 'next/link'
 interface ReadyToScaleCTAData {
   title: string
   subtitle: string
-  primaryButton: {
+  primaryButton?: {
     label: string
     url: string
   }
-  secondaryButton: {
+  secondaryButton?: {
     label: string
     url: string
   }
@@ -23,12 +23,16 @@ export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData })
           {data.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Link href={data.primaryButton.url} className="glassy-button text-on-primary px-10 py-4 rounded-lg text-label-md active:scale-95 transition-transform">
-            {data.primaryButton.label}
-          </Link>
-          <Link href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
-            {data.secondaryButton.label}
-          </Link>
+          {data.primaryButton && (
+            <Link href={data.primaryButton.url} className="glassy-button text-on-primary px-10 py-4 rounded-lg text-label-md active:scale-95 transition-transform">
+              {data.primaryButton.label}
+            </Link>
+          )}
+          {data.secondaryButton && (
+            <Link href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
+              {data.secondaryButton.label}
+            </Link>
+          )}
         </div>
       </div>
     </section>
