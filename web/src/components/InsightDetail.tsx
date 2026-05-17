@@ -3,6 +3,7 @@
 
 import Image from 'next/image'
 import type { InsightData } from '@/types/insight'
+import GlobalCTA from '@/components/CTA'
 
 export default function InsightDetail({
   title,
@@ -207,23 +208,9 @@ export default function InsightDetail({
           )}
         </aside>
       </main>
+      <GlobalCTA data={cta} />
 
-      {/* Ready to Scale CTA */}
-      <section className="bg-surface-container-highest py-24 px-margin-desktop text-center">
-        <div className="max-w-3xl mx-auto space-y-8">
-          <h2 className="text-display-lg-mobile md:text-headline-lg text-on-surface">{cta.title}</h2>
-          <p className="text-body-lg text-on-surface-variant">{cta.subtitle}</p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-            <button className="bg-primary text-on-primary px-10 py-4 rounded-lg text-label-md flex items-center gap-2 hover:bg-secondary-container transition-all">
-              {cta.primaryButton.label}
-              <span className="material-symbols-outlined">{cta.primaryButton.icon}</span>
-            </button>
-            <button className="bg-transparent border border-outline text-on-surface px-10 py-4 rounded-lg text-label-md hover:bg-surface-variant transition-all">
-              {cta.secondaryButton.label}
-            </button>
-          </div>
-        </div>
-      </section>
+
 
       {/* Footer - Imported from layout */}
     </>

@@ -35,12 +35,14 @@ export interface RelatedArticle {
 export interface CTA {
   title: string
   subtitle: string
-  primaryButton: {
+  primaryButton?: {
     label: string
-    icon: string
+    url?: string
+    icon?: string
   }
-  secondaryButton: {
+  secondaryButton?: {
     label: string
+    url?: string
   }
 }
 

@@ -1,78 +1,59 @@
 {
   "hero": {
-    "title": "Join Our Team",
-    "subtitle": "We're looking for passionate individuals to help us empower decision-makers with rigorous data engineering and strategic AI automation.",
+    "title": "Build the Future of Intelligence",
+    "subtitle": "Join an elite cohort of data engineers and AI specialists dedicated to solving complex challenges for fintech giants and humanitarian NGOs.",
     "image": {
-      "alt": "Team collaborating",
-      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA0tm_Lz2ykagfyg8nCywLPwyGsZf9CKBw6dK0AprsV1j4StB_hfkDy1lxD5bWx0OdBLPlWrohdFCDe_CYlamv3BYRef_lXPoJv4sN53GML8NuDiHhPxuiqSfKT5n53bCQbI0ot2_ak2Cf7UmN8rJ3QMuJw-Sz0SKWa36lTXa5_9tHfNFcJ3dDZKUzknSoip8xKDFjP9wqOUujmzb2zSc27u9yK9cT7UFJXk72Ut6FiQP2t8vr8WFqCAH_kvV94wkiFUMF3XyTPNY2F"
+      "alt": "A sophisticated technical monitoring environment with a large screen displaying AI-driven data analysis.",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCO20iLVExuZ1t9lSSN2UvVHlElLrD9RXgYMVclJlNSW_8oxUYpv9bc3RXewz99wtK0sS9gacUzs98bWqucxc3_MDTwBgqbW6Xidx6ePFv8iwBBcB55Tc83KTcXdRnG_aHWJN7JgsDxMqwwBA_V6jaIPyHlnWAh6bcGK7OhCwTcyd0ZsbcL_4H_40b7yZnN4V0MD4Q-XwN_eGhuzNGFKeyVnGkQPZUwltu561ZehWFwRfjZEJvHL7tmQeVOT8roJMZZfk-PjuiprUZc"
     }
   },
-  "positions": [
+  "values": [
     {
-      "title": "Senior Data Engineer",
-      "location": "Remote",
-      "type": "Full-time",
-      "description": "We are seeking a Senior Data Engineer to design, build, and maintain scalable data pipelines and infrastructure.",
-      "requirements": [
-        "5+ years of experience in data engineering",
-        "Proficiency in SQL, Python, and cloud platforms (AWS/Azure/GCP)",
-        "Experience with ETL/ELT tools and data modeling",
-        "Strong problem-solving skills and attention to detail"
-      ],
-      "responsibilities": [
-        "Design and implement data pipelines for structured and unstructured data",
-        "Optimize data storage and retrieval for performance and cost",
-        "Collaborate with data scientists and analysts to understand data needs",
-        "Ensure data quality, security, and compliance"
-      ]
+      "icon": "precision_manufacturing",
+      "title": "Technical Rigor",
+      "description": "We don't just ship code; we engineer mathematical certainties. Our methodologies are rooted in high-concurrency architecture and verifiable AI models that withstand the scrutiny of global fintech regulations."
     },
     {
-      "title": "AI/ML Engineer",
-      "location": "New York, NY",
-      "type": "Full-time",
-      "description": "We are looking for an AI/ML Engineer to develop and deploy machine learning models for our clients.",
-      "requirements": [
-        "3+ years of experience in machine learning or AI",
-        "Proficiency in Python, TensorFlow/PyTorch, and MLops",
-        "Experience with NLP, computer vision, or predictive modeling",
-        "Strong mathematical and statistical background"
-      ],
-      "responsibilities": [
-        "Develop and train machine learning models for client projects",
-        "Deploy models to production and monitor performance",
-        "Collaborate with data engineers to integrate models into pipelines",
-        "Stay updated with the latest advancements in AI/ML"
-      ]
+      "icon": "insights",
+      "title": "Strategic Clarity",
+      "description": "Data without direction is noise. We distill complex information into actionable, high-level business strategies."
     },
     {
-      "title": "Technical Writer",
-      "location": "Remote",
-      "type": "Contract",
-      "description": "We are seeking a Technical Writer to create clear and comprehensive documentation for our solutions.",
-      "requirements": [
-        "Experience in technical writing for software or data products",
-        "Ability to explain complex technical concepts in simple terms",
-        "Proficiency in Markdown, HTML, and documentation tools",
-        "Strong research and communication skills"
-      ],
-      "responsibilities": [
-        "Create user guides, API documentation, and technical tutorials",
-        "Work with engineers to understand product features",
-        "Ensure documentation is accurate, up-to-date, and easy to follow",
-        "Maintain documentation standards and style guides"
-      ]
+      "icon": "visibility",
+      "title": "Radical Transparency",
+      "description": "Communication is our strongest tool. Whether it's internally with the team or externally with stakeholders, we provide unfiltered, honest access to our processes, failures, and triumphs.",
+      "image": {
+        "alt": "Data visualization representing radical transparency",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA-va4poiSa5F4dEkTh615QsLq3On_5vO8tk6EAYe5qFK1W9otbPnLikFBTJkE151HAc_rngZ-rvsxvGjfOBSfex9MXGkf4-hpH0ve0ejdfXSi1_dew_grXINbSyQRt7mRHj2CVz-qmSwW2bOBbARkhTPZ9hTT2pi0unUjvcMQdjp7b_7X_Iu5JgCBKxqvGQhC6HntNxSSFYcYuZjvnGG7lV6GE3fLcybb4HBodhzHzFQTQJGrD6d10agFD4DAd8lkyLQHTbTiHXRGd"
+      }
     }
   ],
-  "cta": {
-    "title": "Ready to join our team?",
-    "subtitle": "Explore our open positions and apply today.",
-    "primaryButton": {
-      "label": "View All Positions",
-      "url": "#"
+  "benefits": [
+    {
+      "icon": "school",
+      "title": "Growth Path",
+      "description": "Annual professional development budget for research and conferences."
     },
-    "secondaryButton": {
-      "label": "Learn About Our Culture",
-      "url": "#"
+    {
+      "icon": "public",
+      "title": "High Impact",
+      "description": "Work on projects that range from fintech optimization to NGO crisis data."
+    },
+    {
+      "icon": "distance",
+      "title": "Remote-First",
+      "description": "Operate from anywhere with a culture designed for async efficiency."
+    },
+    {
+      "icon": "terminal",
+      "title": "Elite Stack",
+      "description": "The latest in ML-Ops, Rust, and distributed computing frameworks."
     }
-  }
+  ],
+  "talentPoolCta": {
+    "title": "No Open Positions Today",
+    "subtitle": "While we don't have active openings at this moment, we're always looking for exceptional talent to join our network. Exceptional engineers and strategists are rare—we'd love to know who you are.",
+    "breezyHrUrl": "https://jobs.breezy.hr/datamore"
+  },
+  "positions": []
 }
