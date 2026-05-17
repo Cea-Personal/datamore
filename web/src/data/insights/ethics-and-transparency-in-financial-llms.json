@@ -1,0 +1,40 @@
+{
+  "title": "Ethics and Transparency in Financial LLMs",
+  "author": {
+    "name": "Maria Rodriguez",
+    "title": "AI Ethics Lead",
+    "date": "Mar 08, 2024"
+  },
+  "heroImage": {
+    "alt": "AI neural network visualization",
+    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkCwACNCfMWy9hHriICkI99UejO80_mE4x-TI6CwiJxDm16IiYAQWXZp7sYEHho_1fC-FLjZrUzk-AsWvR6UMR6MAXft-L8sbim1NGYoSMk036tx36HZp8CToivfCwRYiSXZQevZrzXRyRSEs5t92RDrkRySErJq6t1MAZwFx1Q4g7omgiahemePLIgM5jARxBILe3htyZyZzBJ-QvLuI7DZ28jV65Vg1_S442SHyEssjmg6viwS_bqwRsgkJMNj_4x5unyJAhYVwQ"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "content": "Addressing the 'black box' problem in AI-driven credit scoring through explainable models requires a fundamental shift in how we approach model interpretability.",
+      "variant": "first-letter"
+    },
+    {
+      "type": "heading",
+      "content": "Explainable AI Framework"
+    },
+    {
+      "type": "text",
+      "content": "Our framework provides transparent decision trees that regulators can audit while maintaining the predictive power of deep learning models."
+    }
+  ],
+  "socialShare": true,
+  "relatedArticles": [],
+  "cta": {
+    "title": "Ready to Address AI Governance?",
+    "subtitle": "Ensure your AI systems meet regulatory requirements with our explainability toolkit.",
+    "primaryButton": {
+      "label": "Schedule Consultation",
+      "icon": "arrow_forward"
+    },
+    "secondaryButton": {
+      "label": "View All Articles"
+    }
+  }
+}

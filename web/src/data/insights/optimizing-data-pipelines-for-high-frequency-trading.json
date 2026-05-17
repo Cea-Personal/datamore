@@ -1,0 +1,49 @@
+{
+  "title": "Optimizing Data Pipelines for High-Frequency Trading",
+  "author": {
+    "name": "Sarah Chen",
+    "title": "Lead Data Engineer",
+    "date": "Mar 12, 2024"
+  },
+  "heroImage": {
+    "alt": "High-frequency trading visualization",
+    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ3d_SOZi3PROaTuqD66jWLGG9R40LNaJiIfZsaeVlefHsbcZwXGgqH2uCuBmteD0Cn422ICoBmzTzGovs9iJ_FJbHnj38pDYxHFXVBOIepaM56adwt6g-bmKqTI4GRJ4GlfKFV6hpaVYKEcOVx8FKU4JU6T6PUEmMAUR0nMRcDkWp1mAmaffJXB1LiU0sNeFJb34bJWyWN9PWQnri3cp-VtAHVKqwsHxL9hmxCoFK7ZeALwP0tvDiYDuPifZ4oG69tgYESNBlXNPM"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "content": "High-frequency trading firms operate in an environment where milliseconds can mean the difference between massive profits and catastrophic losses. Our work with a leading HFT firm resulted in a 40% reduction in pipeline latency through custom ETL architectures and real-time stream processing.",
+      "variant": "first-letter"
+    },
+    {
+      "type": "heading",
+      "content": "Real-Time Infrastructure Challenges"
+    },
+    {
+      "type": "text",
+      "content": "The challenges in HFT data infrastructure are unique: handling millions of events per second, maintaining sub-millisecond latencies, and ensuring zero data loss. Traditional batch processing simply cannot meet these demands."
+    },
+    {
+      "type": "roi-chart",
+      "title": "Performance Gains Achieved",
+      "data": [
+        { "label": "LATENCY REDUCTION", "value": "75%", "color": "secondary" },
+        { "label": "THROUGHPUT IMPROVEMENT", "value": "60%", "color": "secondary" },
+        { "label": "COST SAVINGS", "value": "45%", "color": "secondary" }
+      ]
+    }
+  ],
+  "socialShare": true,
+  "relatedArticles": [],
+  "cta": {
+    "title": "Ready to Optimize Your Data Infrastructure?",
+    "subtitle": "Our engineering team specializes in ultra-low-latency systems for financial markets.",
+    "primaryButton": {
+      "label": "Book a Technical Review",
+      "icon": "arrow_forward"
+    },
+    "secondaryButton": {
+      "label": "View All Articles"
+    }
+  }
+}

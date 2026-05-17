@@ -1,5 +1,7 @@
-// src/components/InsightsGrid.tsx
+import Link from 'next/link'
+
 interface Article {
+  slug: string
   thumbnail: string
   category: string
   date: string
@@ -37,9 +39,9 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
             <p className="text-body-md text-on-surface-variant mb-6 flex-grow">
               {article.description}
             </p>
-            <a href="#" className="text-secondary text-label-md flex items-center gap-1 group-hover:underline">
+            <Link href={`/insights/${article.slug}`} className="text-secondary text-label-md flex items-center gap-1 group-hover:underline">
               Read more <span className="material-symbols-outlined text-sm">chevron_right</span>
-            </a>
+            </Link>
           </div>
         </article>
       ))}

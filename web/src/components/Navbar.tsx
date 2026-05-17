@@ -12,9 +12,18 @@ const navItems = [
   { href: '/careers', label: 'Careers' },
 ]
 
+const serviceItems = [
+  { href: '/services/data-engineering', label: 'Data Engineering & Infrastructure' },
+  { href: '/services/bi', label: 'Business Intelligence & Analytics' },
+  { href: '/services/ai-llm-automation', label: 'AI & LLM Automation' },
+  { href: '/services/data-strategy', label: 'Data Strategy & Advisory' },
+  { href: '/services/managed-data-services', label: 'Managed Data Services' },
+]
+
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
 
   return (
     <nav className="bg-surface shadow-sm w-full">
@@ -25,13 +34,38 @@ export default function Navbar() {
         </Link>
         <div className="hidden md:flex gap-gutter items-center">
           {navItems.slice(1).map((item) => (
-            <Link 
+            <div 
               key={item.href}
-              href={item.href} 
-              className={`${pathname === item.href ? 'text-body-md text-secondary border-b-2 border-secondary pb-1' : 'text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'}`}
+              className="relative"
+              onMouseEnter={() => item.href === '/services' && setServicesOpen(true)}
+              onMouseLeave={() => item.href === '/services' && setServicesOpen(false)}
             >
-              {item.label}
-            </Link>
+              <Link 
+                href={item.href} 
+                className={`${pathname.startsWith(item.href) ? 'text-body-md text-secondary border-b-2 border-secondary pb-1' : 'text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'}`}
+              >
+                {item.label}
+              </Link>
+              {item.href === '/services' && servicesOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant p-4 z-50"
+                  onMouseEnter={() => setServicesOpen(true)}
+                  onMouseLeave={() => setServicesOpen(false)}
+                >
+                  <div className="space-y-2">
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block text-body-md text-on-surface-variant hover:text-secondary transition-colors py-1"
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
         </div>
 <Link href="/contact" className="hidden md:flex glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
@@ -47,29 +81,44 @@ export default function Navbar() {
         </button>
       </div>
       
-      {mobileOpen && (
-        <div className="md:hidden bg-surface border-t border-outline-variant">
-          <div className="px-margin-mobile py-4 space-y-4">
-            {navItems.map((item) => (
-              <Link 
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className={`block text-body-md ${pathname === item.href ? 'text-secondary' : 'text-on-surface-variant'}`}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link 
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="block text-body-md text-secondary"
-            >
-              Book
-            </Link>
-          </div>
-        </div>
-      )}
+{mobileOpen && (
+         <div className="md:hidden bg-surface border-t border-outline-variant">
+           <div className="px-margin-mobile py-4 space-y-4">
+             {navItems.map((item) => (
+               <div key={item.href}>
+                 <Link 
+                   href={item.href}
+                   onClick={() => setMobileOpen(false)}
+                   className={`block text-body-md ${pathname === item.href ? 'text-secondary' : 'text-on-surface-variant'}`}
+                 >
+                   {item.label}
+                 </Link>
+                 {item.href === '/services' && (
+                   <div className="ml-4 mt-2 space-y-2">
+                     {serviceItems.map((service) => (
+                       <Link
+                         key={service.href}
+                         href={service.href}
+                         onClick={() => setMobileOpen(false)}
+                         className="block text-body-sm text-on-surface-variant"
+                       >
+                         {service.label}
+                       </Link>
+                     ))}
+                   </div>
+                 )}
+               </div>
+             ))}
+             <Link 
+               href="/contact"
+               onClick={() => setMobileOpen(false)}
+               className="block text-body-md text-secondary"
+             >
+               Book
+             </Link>
+           </div>
+         </div>
+       )}
     </nav>
   )
 }

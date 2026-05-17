@@ -1,50 +1,6 @@
 // src/components/InsightDetail.tsx
-import Link from 'next/link'
 import Image from 'next/image'
-
-interface AuthorInfo {
-  name: string
-  title: string
-  date: string
-  imageUrl?: string
-}
-
-interface HeroImage {
-  alt: string
-  url: string
-}
-
-interface ROIData {
-  label: string
-  value: string
-  color: string
-}
-
-interface Section {
-  type: 'text' | 'heading' | 'roi-chart'
-  content: string
-  title?: string
-  data?: ROIData[]
-  variant?: string
-}
-
-interface RelatedArticle {
-  title: string
-  readTime: string
-  imageUrl: string
-}
-
-interface CTA {
-  title: string
-  subtitle: string
-  primaryButton: {
-    label: string
-    icon: string
-  }
-  secondaryButton: {
-    label: string
-  }
-}
+import type { InsightData } from '@/types/insight'
 
 export default function InsightDetail({
   title,
@@ -54,15 +10,7 @@ export default function InsightDetail({
   socialShare = false,
   relatedArticles = [],
   cta
-}: {
-  title: string
-  author: AuthorInfo
-  heroImage: HeroImage
-  sections: Section[]
-  socialShare?: boolean
-  relatedArticles?: RelatedArticle[]
-  cta: CTA
-}) {
+}: InsightData) {
   return (
     <>
       {/* Hero Section */}
@@ -76,18 +24,18 @@ export default function InsightDetail({
             </nav>
             <h1 className="text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: title }}>
             </h1>
-            <div className="flex items-center space-x-4">
+<div className="flex items-center space-x-4">
               {author.imageUrl && (
              <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
-                   <Image
-                     alt={`${author.name} headshot`}
-                     src={author.imageUrl}
-                     className="w-full h-full object-cover"
-                     width={120}
-                     height={120}
-                     priority
-                   />
-                 </div>
+                    <Image
+                      alt={`${author.name} headshot`}
+                      src={author.imageUrl}
+                      className="w-full h-full object-cover"
+                      width={120}
+                      height={120}
+                      priority
+                    />
+                  </div>
               )}
               <div>
                 <p className="text-label-md text-on-surface">{author.name}</p>
@@ -98,11 +46,13 @@ export default function InsightDetail({
             </div>
           </div>
           <div className="lg:col-span-5 relative">
-            <div className="rounded-xl overflow-hidden ambient-shadow glass-edge h-[400px]">
+            <div className="rounded-xl overflow-hidden ambient-shadow h-[400px]">
               <Image
                 alt={heroImage.alt}
                 src={heroImage.url}
                 className="w-full h-full object-cover"
+                width={800}
+                height={600}
                 priority
               />
             </div>
@@ -221,12 +171,13 @@ export default function InsightDetail({
                   >
                     <div className="flex gap-4">
                       <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 bg-surface-variant">
-                        <Image
-                          alt={article.title}
-                          src={article.imageUrl}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                          priority
-                        />
+<Image
+                           alt={article.title}
+                           src={article.imageUrl}
+                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                           width={200}
+                           height={200}
+                         />
                       </div>
                       <div className="flex flex-col justify-center">
                         <h5 className="text-label-md text-on-surface group-hover:text-secondary transition-colors leading-snug">

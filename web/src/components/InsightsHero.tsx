@@ -1,4 +1,5 @@
 // src/components/InsightsHero.tsx
+import Link from 'next/link'
 import Image from 'next/image'
 
 interface InsightsHeroData {
@@ -13,11 +14,12 @@ interface InsightsHeroData {
     alt: string
     url: string
   }
+  slug?: string
 }
 
 export default function InsightsHero({ data }: { data: InsightsHeroData }) {
   return (
-    <section className="px-margin-desktop max-w-container-max mx-auto mb-20">
+    <section className="pt-24 pb-20 px-margin-desktop max-w-container-max mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-7">
           <div className="flex items-center gap-2 mb-4">
@@ -31,21 +33,23 @@ export default function InsightsHero({ data }: { data: InsightsHeroData }) {
           <p className="text-body-lg text-on-surface-variant mb-8 max-w-2xl">
             {data.subtitle}
           </p>
-          <button className="bg-secondary text-on-secondary px-8 py-4 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group">
-            Read Full Article
-            <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
+          {data.slug && (
+            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-8 py-4 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group">
+              Read Full Article
+              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </Link>
+          )}
         </div>
-            <div className="md:col-span-5 relative aspect-[4/3] rounded-xl overflow-hidden ambient-shadow">
-              <Image
-                alt={data.image.alt}
-                src={data.image.url}
-                className="w-full h-full object-cover"
-                width={800}
-                height={600}
-                priority
-              />
-            </div>
+        <div className="md:col-span-5 relative aspect-[4/3] rounded-xl overflow-hidden ambient-shadow">
+          <Image
+            alt={data.image.alt}
+            src={data.image.url}
+            className="w-full h-full object-cover"
+            width={800}
+            height={600}
+            priority
+          />
+        </div>
       </div>
     </section>
   )

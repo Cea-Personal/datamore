@@ -1,0 +1,40 @@
+{
+  "title": "Modernizing Legacy Data for Global Banks",
+  "author": {
+    "name": "James Liu",
+    "title": "Cloud Solutions Architect",
+    "date": "Feb 15, 2024"
+  },
+  "heroImage": {
+    "alt": "Banking data modernization",
+    "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuB-sfMaYHQwRfsoyTE0ezzmO-VKVJaEpDBRobq62R2C3aSx6V5CykKDH_yrG9D289_DqtxZs_hMzC7rDNCPS-w_BGlCxWzKnB4ikJ3uZCzHlTmVnv9-GqGBHMZxBCwx-A6OSPdZRqclkkHQEl9nPBUkafJl9TFlqCg0n4FrPqQG6SKMeTHFUxzFegWl3H-oOjnrx-ohglLdTePOgi9tIdGabcZe12dIx2-qU-2B-ghGCVbczKY2ZUQN5twnxRerfUn_PtyBwz8j2vSK"
+  },
+  "sections": [
+    {
+      "type": "text",
+      "content": "A technical review of migrating monolithic data to scalable cloud-native architectures.",
+      "variant": "first-letter"
+    },
+    {
+      "type": "heading",
+      "content": "Migration Strategy"
+    },
+    {
+      "type": "text",
+      "content": "Our phased approach minimized downtime while transitioning from legacy systems to modern cloud infrastructure."
+    }
+  ],
+  "socialShare": true,
+  "relatedArticles": [],
+  "cta": {
+    "title": "Ready for Cloud Migration?",
+    "subtitle": "Transform your legacy systems with our proven migration methodology.",
+    "primaryButton": {
+      "label": "Get Started",
+      "icon": "arrow_forward"
+    },
+    "secondaryButton": {
+      "label": "View All Articles"
+    }
+  }
+}
