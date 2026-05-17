@@ -1,13 +1,25 @@
 {
-  "heroTitle": "Architecting the Future with <span class=\"text-secondary\">Generative AI</span>.",
-  "heroSubtitle": "We transform complex enterprise data into autonomous intelligence engines. Deploying custom LLM architectures that drive strategy, compliance, and growth with mathematical precision.",
-  "primaryButtonLabel": "Explore Capabilities",
-  "secondaryButtonLabel": "View Case Studies",
-  "offerings": [
+  "hero": {
+    "title": "Architecting the Future with <span class=\"text-secondary\">Generative AI.</span>",
+    "subtitle": "We transform complex enterprise data into autonomous intelligence engines. Deploying custom LLM architectures that drive strategy, compliance, and growth with mathematical precision.",
+    "badge": {
+      "label": "AI & LLM AUTOMATION",
+      "caption": "generative intelligence",
+      "icon": "auto_awesome"
+    },
+    "image": {
+      "alt": "AI Architecture",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBoKdAydz8LFm0bZx__CWMtwQnHNvKpjL4sznf_qCr8qTX0hYcHVnMYilkmm6NYkkShQHSUV0tZDDspaUB8F_GU5eh59UiBZige-cNdCXz3QAXbjYw2bHDmVxYswJ0FDC5prj6PihGg0x9rRtSwQyUO9geQsV6p-UvRNmvGi6JvrcVZ2Ez-bTdZcHngvb-uu4T3XwqXki4aRW2KmmkrmiL2YosLop5wRjRs0fqDTgfvAFcZX8g0jYpsHt7BTz0QbtIeDx5ldPcxii-O"
+    }
+  },
+  "capabilities": [
     {
       "icon": "database",
       "title": "Custom RAG Pipelines",
-      "description": "Augment LLMs with your private enterprise knowledge base. We build Retrieval-Augmented Generation systems that eliminate hallucinations and ensure factual consistency."
+      "description": "Augment LLMs with your private enterprise knowledge base. We build Retrieval-Augmented Generation systems that eliminate hallucinations and ensure factual consistency.",
+      "features": ["Semantic Search Optimization", "Real-time Data Synchronization"],
+      "gridSpan": 2,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDqWJ09VXqwJEe9trXMGCgxEgCFUeL5i1_IsalX8jWnBk-jHbL1JViFmNcM761j3cqeF0N3WG40uCf8qUuIBSW0ACrkAXcD8954FG-NRdRFd01SS1oatsDrrPEyTVbw780j6MB7m3jlEy1kfDa2Tlwv8ZWh-avR854qYkz2MYHRBKw56rQSEaRlbTIW99ps_gCm6hBBfDvLKduWh608YbBtxKD9GpWget2mR3HqGvgD6qpt5N5IJEWhusuOt6eZNWwez5bsrIDq8ZvY"
     },
     {
       "icon": "hub",
@@ -22,23 +34,43 @@
     {
       "icon": "model_training",
       "title": "Fine-tuned LLMs",
-      "description": "When general models aren't enough. We fine-tune open-source models (Llama 3, Mistral) on your domain-specific language for superior performance at lower costs."
+      "description": "When general models aren't enough. We fine-tune open-source models (Llama 3, Mistral) on your domain-specific language for superior performance at lower costs.",
+      "features": ["Parameter Efficient", "Quantized Models"],
+      "gridSpan": 2,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuDFW1VSisbzY1eCITkykS1dvvohWT58_cuJRgTfcygKdfpEzl87RTNsOpKMh4kgkcp0ISU37kVk7bx1FlZgx6j2IZ8TChXuWX3bQT3q3BxPJ_oaEtCbB_M76SELUvTEaRhYpYTJzMx5iEBUE1MzMWFJ1J7W48QDvDutEGObuHUZIX6Hw7XFty6Z-8xXjnntR4bO0v6UhNLOtc1b0i2a5JqGR8QQKwunX_Zv9-BdN_2XXfxRuNAH-zunk_KItdoVUcqrldtLndDskiWN"
     }
   ],
-  "impactMetrics": [
-    {
-      "value": "85%",
-      "label": "Automation Efficiency",
-      "description": "Average reduction in manual document processing time for our fintech clients using Agentic Workflows."
-    },
-    {
-      "value": "60%",
-      "label": "Cost Reduction",
-      "description": "Reduction in operational costs associated with specialized data analysis and compliance reporting."
-    }
-  ],
-  "ctaTitle": "Ready to scale your impact with data?",
-  "ctaSubtitle": "Join the leading enterprises leveraging Datamore to build the next generation of autonomous intelligence.",
-  "primaryCTALabel": "Book a Strategy Session",
-  "secondaryCTALabel": "View Case Studies"
+  "security": {
+    "title": "Enterprise-Grade Security",
+    "subtitle": "Data privacy isn't an afterthought—it's the foundation of our AI deployments. We ensure your proprietary data never leaves your secure perimeter.",
+    "features": [
+      {
+        "icon": "encrypted",
+        "title": "On-Prem & VPC Hosting",
+        "description": "Deploy models within your own AWS, GCP, or Azure environments to maintain full data sovereignty."
+      },
+      {
+        "icon": "visibility_off",
+        "title": "Zero-Data Retention",
+        "description": "Strict ZDR protocols and PII masking ensure that sensitive information is never used for training or logging."
+      }
+    ],
+    "metrics": [
+      { "label": "SLA Guarantee", "value": "99.99%" },
+      { "label": "Encryption", "value": "AES-256" }
+    ]
+  },
+  "impact": {
+    "title": "The Datamore Impact",
+    "metrics": [
+      { "value": "85%", "label": "Automation Efficiency", "description": "Average reduction in manual document processing time for our fintech clients using Agentic Workflows." },
+      { "value": "60%", "label": "Cost Reduction", "description": "Reduction in operational costs associated with specialized data analysis and compliance reporting." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to scale your impact with data?",
+    "subtitle": "Join the leading enterprises leveraging Datamore to build the next generation of autonomous intelligence.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
 }

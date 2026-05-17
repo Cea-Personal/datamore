@@ -1,0 +1,65 @@
+{
+  "hero": {
+    "title": "Aligning Technical Debt with Long-Term <span class=\"text-secondary\">Capital Goals.</span>",
+    "subtitle": "We transform fragmented data ecosystems into strategic assets, ensuring every byte processed contributes to shareholder value and regulatory resilience.",
+    "badge": {
+      "label": "Data Strategy & Advisory",
+      "caption": "strategic transformation",
+      "icon": "verified"
+    },
+    "image": {
+      "alt": "Data Strategy Visual",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-_i_DJ1wFxH8Jo80ADt_AWeFQcdgWLLjygx6OCTlFMF0rPjg3H95lzdZ5gasFmGSmjh-O4Dwuq7N69O1StdfYBbobCy3FgBrgpsQqoUfpP3KMb7A-x0nf96vOYlCDZFTorlRY5UGVlyUsxGIbDNPK1ULylCoNXzxZTC6UOqzCg037KRl4oi5jdj2Yb8jIS3WDnTqx19QORpgEHVGMFOQqVKFGUmPxJ0uFnh3ALdrwk_xEkM3XNIXtqnnBBOGTr6qN3qHdiI6hZy60"
+    }
+  },
+  "pillars": [
+    {
+      "icon": "gavel",
+      "title": "Data Governance",
+      "description": "Implementing rigid stewardship protocols and automated quality checks that transform data from a liability into a verifiable source of truth.",
+      "features": ["Automated Lineage Mapping", "Quality SLA Frameworks"],
+      "gridSpan": 2,
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC4kjjfOy95oqA8pzlpr5A31FY0LMuP7DqeGUZikHmBtUi_p26h01t-6hs42VwAdT-Df6Gbhz-65E3bZhZTU9QmQPzRDHky6ziFoXvYzeP2J2XHPa5YAVKaV4wuYOkHGXaBp6FARlaFqAIV7RPLeS_JFKVJyqHHcEmmZZ7B19d4vdSIYbdeRc5CjnTjNsGtOdlbfh1AZF2i5FcrZXMty3vezJjmgYIUXoxpd23GAYLdtv7gBbe0Gimnzg-DhxbH_yD9ypODcNA2Vjp"
+    },
+    {
+      "icon": "insights",
+      "title": "ROI Mapping",
+      "description": "Quantifying the fiscal impact of technical infrastructure investments against long-term business KPIs."
+    },
+    {
+      "icon": "monitoring",
+      "title": "Capability Maturity",
+      "description": "Benchmarking your team's current technical prowess against industry-leading AI and data engineering standards."
+    },
+    {
+      "icon": "policy",
+      "title": "Regulatory Advisory",
+      "description": "Proactive navigation of the shifting global regulatory landscape, from GDPR to the latest EU AI Act frameworks.",
+      "gridSpan": 2,
+      "regulatoryScore": 95
+    }
+  ],
+  "roadmap": {
+    "title": "The Strategic Transformation Journey",
+    "steps": [
+      { "num": "01", "title": "Discovery & Audit", "description": "A deep-dive technical and cultural assessment of your existing data footprint and operational bottlenecks." },
+      { "num": "02", "title": "Blueprint Design", "description": "Architecting a custom data strategy that bridges current technical gaps with future business objectives." },
+      { "num": "03", "title": "Agile Integration", "description": "Iterative rollout of governance frameworks and infrastructure enhancements with zero-downtime goals." },
+      { "num": "04", "title": "Maturity Scale", "description": "Continuous optimization and training to ensure long-term self-sufficiency and strategic agility." }
+    ]
+  },
+  "impact": {
+    "title": "The Datamore Impact",
+    "metrics": [
+      { "value": "82%", "label": "Risk Reduction", "description": "Proactive identification of structural vulnerabilities and compliance gaps before they manifest as costly operational failures or regulatory fines." },
+      { "value": "88%", "label": "Project Traceability", "description": "Average traceability of data initiatives to specific business outcomes." },
+      { "value": "94%", "label": "Compliance Accuracy", "description": "Data-driven insights for informed decision-making." }
+    ]
+  },
+  "cta": {
+    "title": "Ready to scale your impact with data?",
+    "subtitle": "Join the ranks of high-performing enterprises that treat data as a rigorous strategic discipline rather than a technical burden.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}
