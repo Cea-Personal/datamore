@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "More Value&nbsp;<div>From Your Data</div>",
+    "title": "More Value From <br><span class=\"text-secondary\">Your Data</span>",
     "subtitle": "Datamore helps organizations build modern data systems, automate reporting, and unlock AI-powered insights for better decision-making.",
     "buttons": [
       {
@@ -160,10 +160,10 @@
         "label": "Compliance Accuracy"
       }
     ],
-    "cta": {
-      "label": "Read the Full Case Study",
-      "url": "#"
-    },
+"cta": {
+    "label": "Read the Full Case Study",
+    "url": "/success-stories/optimizing-liquidity-risk-for-tier-1-fintech"
+  },
     "image": {
       "alt": "Optimizing Liquidity Risk for Tier-1 Fintech",
       "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDU33DS24BDJUiEnCm93hkvBd77RrddMnZrkF2deR9FsfuatG9wEqyDQ5bO0toq5wBzNd03PcO--zwFltETN7W6zDgpd1pMQMK7vf0PB1QIParBGSpPtb71vDL0TohmXfvdTizmMMEB3gWOS3aUrA9I7EjiD-p7KTGJHcP9eFz4EoRVL0tPwCL5Mcoro-Z_NHet-HO4v5mGcuBaPFzPTqNHxMNCMuAE8JdnJKdKFO4nbW8C0BFOeUNaI_Z5Es0VMzIvzJ4g9PwPBu4G"

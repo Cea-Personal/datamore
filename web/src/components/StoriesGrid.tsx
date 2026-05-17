@@ -27,7 +27,7 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
             className={`col-span-12 md:col-span-${index === 0 ? 8 : 4} group`}
           >
             <div
-              className="ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary border border-outline-variant h-full flex flex-col ${index === 0 ? 'md:flex-row' : 'flex-col'}"
+              className={`ambient-shadow-card bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:border-secondary h-full flex flex-col ${index === 0 ? 'md:flex-row' : 'flex-col'}`}
             >
               {index === 0 && (
                 <>

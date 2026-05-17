@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "Supply Chain Predictive Modeling",
+    "subtitle": "A custom AI solution for inventory forecasting that reduced stockouts by 22% during peak holiday demand for a major retail chain.",
+    "badge": {
+      "label": "RETAIL SUCCESS STORY",
+      "icon": "analytics"
+    },
+    "image": {
+      "alt": "Logistics Data",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDoNgHDlqyIqARKOlKBNK9RQcjLYLIPDyOSKOY1L7S2jYPC5fDt0JPfMW5RMnq06ow4caMoGwzSSBcVdD5-hCIT6dyWz5C4tl_yn_Mu7mihoEXJx0yzWgl3v3reAITI3jj5msb_habC9LFUAuldFlTwkvjWdH39bXwoUMlc9_jAD0n9ezt3b6ZtVidBWcCGXtiCJvyyNKHPII_xjVbMsZ76eReWWbgm8ZuHCY0kfd2XkDIjiFxk6krw1RMFxyT9dEkzAfHIJxiOxAWA"
+    }
+  },
+  "executiveSummary": "A major retail chain struggled with inventory optimization during peak seasons, experiencing frequent stockouts that cost millions in lost revenue. Datamore implemented a predictive analytics solution that transformed their supply chain operations.",
+  "metrics": [
+    { "value": "22%", "label": "Stockout Reduction" }
+  ],
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Traditional forecasting methods failed to account for seasonal variations and unexpected demand surges, leading to inefficient inventory allocation.",
+    "items": [
+      { "icon": "close", "text": "Legacy forecasting systems unable to handle demand volatility." },
+      { "icon": "close", "text": "Manual intervention required for regional inventory adjustments." },
+      { "icon": "close", "text": "Lack of real-time visibility into supplier delays." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "We built a machine learning pipeline that analyzes historical sales, weather patterns, and supplier lead times to generate accurate demand forecasts.",
+    "features": [
+      {
+        "icon": "trending_up",
+        "title": "Demand Forecasting",
+        "description": "AI models trained on 5 years of historical data with 95% accuracy."
+      },
+      {
+        "icon": "inventory",
+        "title": "Inventory Optimization",
+        "description": "Automated replenishment recommendations with safety stock calculations."
+      }
+    ]
+  },
+  "technicalSpotlight": {
+    "title": "Performance Metrics",
+    "metrics": [
+      { "label": "Forecast Accuracy", "value": "95%", "percentage": 95 },
+      { "label": "Processing Speed", "value": "<5min", "percentage": 90 }
+    ],
+    "quote": "The predictive models adapt in real-time to market conditions, giving us a competitive edge."
+  },
+  "testimonial": {
+    "quote": "Datamore's solution transformed our inventory management from reactive to proactive. We haven't had a stockout during peak season since implementation.",
+    "author": "Sarah Chen",
+    "title": "VP of Supply Chain, Major Retail Chain",
+    "image": {
+      "alt": "VP Portrait",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7JdOSM_vXV-o0pZCKgyPfcY8bh6DnKUKLncgNTO4pKvU7zpbQvrZTE-WvXHidfdl-wTzA34B88i_CUV3nr9H25OOEQfwth640tydVU-HE89xro6JqiI6f2F6BRLAIDXPrMWY13VMeeHBDPVpchW9QWT2xqJGj4l6HPBQ4JF7Id0yg8ukp6Npk70HsWZU7I9jVnpnp8MKYoIOtX7FqIp9Lf7Zmt_2EFiVe6j6POrgv260GyEfqqBr9iHmcMCTAY-cxsixa2Djk6p8D"
+    }
+  },
+  "cta": {
+    "title": "Ready to optimize your supply chain?",
+    "subtitle": "Transform your inventory management with predictive analytics.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}

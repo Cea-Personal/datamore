@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "Data-Driven Philanthropy Impact",
+    "subtitle": "Analyzing decade-long health outcomes to optimize global grant distribution, increasing resource efficiency by 30% for medical research.",
+    "badge": {
+      "label": "NGO SUCCESS STORY",
+      "icon": "analytics"
+    },
+    "image": {
+      "alt": "NGO Research",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7JdOSM_vXV-o0pZCKgyPfcY8bh6DnKUKLncgNTO4pKvU7zpbQvrZTE-WvXHidfdl-wTzA34B88i_CUV3nr9H25OOEQfwth640tydVU-HE89xro6JqiI6f2F6BRLAIDXPrMWY13VMeeHBDPVpchW9QWT2xqJGj4l6HPBQ4JF7Id0yg8ukp6Npk70HsWZU7I9jVnpnp8MKYoIOtX7FqIp9Lf7Zmt_2EFiVe6j6POrgv260GyEfqqBr9iHmcMCTAY-cxsixa2Djk6p8D"
+    }
+  },
+  "executiveSummary": "An international NGO operating in 45 countries needed better data insights to maximize the impact of their $200M annual grant portfolio. We built a comprehensive analytics platform that transformed their decision-making process.",
+  "metrics": [
+    { "value": "30%", "label": "Resource Efficiency Increase" }
+  ],
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Decades of scattered health outcome data across multiple programs made it impossible to identify which interventions delivered the highest impact per dollar spent.",
+    "items": [
+      { "icon": "close", "text": "Data silos across 45 country offices with different formats." },
+      { "icon": "close", "text": "Inability to track long-term outcomes of funded programs." },
+      { "icon": "close", "text": "Manual reporting process took 6 months to generate insights." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "A unified data platform with automated ETL pipelines and interactive dashboards for program managers worldwide.",
+    "features": [
+      {
+        "icon": "analytics",
+        "title": "Impact Analytics",
+        "description": "Real-time dashboards showing ROI per program intervention."
+      },
+      {
+        "icon": "public",
+        "title": "Global Data Mesh",
+        "description": "Centralized data warehouse with country-level access controls."
+      }
+    ]
+  },
+  "technicalSpotlight": {
+    "title": "Global Scale",
+    "metrics": [
+      { "label": "Countries Covered", "value": "45", "percentage": 90 },
+      { "label": "Data Points", "value": "2.5M+", "percentage": 95 }
+    ],
+    "quote": "For the first time, we can see what works and invest accordingly."
+  },
+  "testimonial": {
+    "quote": "Datamore helped us move from anecdotal success stories to data-driven impact measurement. Our donors now have unprecedented transparency into their contributions.",
+    "author": "Dr. Amara Okafor",
+    "title": "Director of Impact, Global Health NGO",
+    "image": {
+      "alt": "Director Portrait",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuC7JdOSM_vXV-o0pZCKgyPfcY8bh6DnKUKLncgNTO4pKvU7zpbQvrZTE-WvXHidfdl-wTzA34B88i_CUV3nr9H25OOEQfwth640tydVU-HE89xro6JqiI6f2F6BRLAIDXPrMWY13VMeeHBDPVpchW9QWT2xqJGj4l6HPBQ4JF7Id0yg8ukp6Npk70HsWZU7I9jVnpnp8MKYoIOtX7FqIp9Lf7Zmt_2EFiVe6j6POrgv260GyEfqqBr9iHmcMCTAY-cxsixa2Djk6p8D"
+    }
+  },
+  "cta": {
+    "title": "Maximize your mission impact with data",
+    "subtitle": "Transform your organization's decision-making with advanced analytics.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}

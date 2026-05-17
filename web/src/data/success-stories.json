@@ -1,7 +1,11 @@
 {
   "hero": {
-    "title": "Strategic Transformations Enabled by Data",
-    "subtitle": "Explore how Datamore partners with global leaders in fintech, NGOs, and enterprise sectors to solve complex challenges through AI strategy and engineering."
+    "title": "Strategic Transformation <br><span class=\"text-secondary\">Enabled by Data</span>",
+    "subtitle": "Explore how Datamore partners with global leaders in fintech, NGOs, and enterprise sectors to solve complex challenges through AI strategy and engineering.",
+    "image": {
+      "alt": "Success Stories Visualization",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyD67EvyfN4FJbWZRRuHPVDYrYz6EIZyNi92teVnEb67g3DzVpP43aHkPZ5TRjC8sN8UF6iLQwEEJhze9E1ZIdTkvtppjXDB5Da7MUuNlqbiaCLRC__Cubbvaa583E2npOSbSZIJDkY0W0gdA8qwCf-I4iXZ7-DnU-0-Ad6w_NSUgt7KJiPaIrCLSG0v-9AwbhtGTO-TN7Fm8k60rkHsdGq7yuKutBHLyJHy8Yfx1JGixZ6x9D_177V3KaZM8SBs3aMFSLx2SZpFDd"
+    }
   },
   "stories": [
     {
@@ -9,8 +13,8 @@
       "title": "Optimizing Liquidity Risk for Tier-1 Fintech",
       "sector": "Financial Services",
       "image": {
-        "alt": "Financial Analytics",
-        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyD67EvyfN4FJbWZRRuHPVDYrYz6EIZyNi92teVnEb67g3DzVpP43aHkPZ5TRjC8sN8UF6iLQwEEJhze9E1ZIdTkvtppjXDB5Da7MUuNlqbiaCLRC__Cubbvaa583E2npOSbSZIJDkY0W0gdA8qwCf-I4iXZ7-DnU-0-Ad6w_NSUgt7KJiPaIrCLSG0v-9AwbhtGTO-TN7Fm8k60rkHsdGq7yuKutBHLyJHy8Yfx1JGixZ6x9D_177V3KaZM8SBs3aMFSLx2SZpFDd"
+        "alt": "Financial Data Dashboard",
+        "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDU33DS24BDJUiEnCm93hkvBd77RrddMnZrkF2deR9FsfuatG9wEqyDQ5bO0toq5wBzNd03PcO--zwFltETN7W6zDgpd1pMQMK7vf0PB1QIParBGSpPtb71vDL0TohmXfvdTizmMMEB3gWOS3aUrA9I7EjiD-p7KTGJHcP9eFz4EoRVL0tPwCL5Mcoro-Z_NHet-HO4v5mGcuBaPFzPTqNHxMNCMuAE8JdnJKdKFO4nbW8C0BFOeUNaI_Z5Es0VMzIvzJ4g9PwPBu4G"
       },
       "summary": "Implementing a real-time risk mitigation engine that reduced capital overhead by 14% while ensuring 99.9% compliance accuracy across four jurisdictions.",
       "metrics": [

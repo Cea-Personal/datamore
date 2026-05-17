@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "Enterprise Knowledge Retrieval",
+    "subtitle": "Built a RAG-based internal engine for a legal conglomerate, automating 65% of discovery phase documentation analysis.",
+    "badge": {
+      "label": "AI AUTOMATION SUCCESS STORY",
+      "icon": "analytics"
+    },
+    "image": {
+      "alt": "AI Automation",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq9F_6-1pD2ClmU--1y4UbquI3TOcwBzDkuioEbteLbGWHSDdIH7DcHcg11iLbFF63LaNSi_7OLTw1czAG8cL5AAu3UawjNrWDr_5W6Bnjf6cHbLpAhSiWcphwNGQ2e6I2b_D-EeLvZ4sTh_lo3IIauvXqQKKamlwu-lYPrChBz0-okYPKwYX25OBZellD-g75sPbdhrUojHJ5rBfc1vvwkPUah33bjtawoqSJjchhc3br2mh9Ug2FsU6vRgRreJA7ibDL59Y2kVfn"
+    }
+  },
+  "executiveSummary": "A global legal firm with 5,000+ attorneys needed an AI-powered solution to accelerate document review in litigation cases. Our RAG-based engine reduced discovery time from weeks to hours.",
+  "metrics": [
+    { "value": "65%", "label": "Discovery Phase Automation" }
+  ],
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Attorneys spent 40% of their time on document review, manually searching through millions of pages for relevant information in each case.",
+    "items": [
+      { "icon": "close", "text": "Manual review of 100,000+ documents per major case." },
+      { "icon": "close", "text": "Inconsistent results across different legal teams." },
+      { "icon": "close", "text": "High cost of contract attorneys for document review." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "A secure RAG system with domain-specific fine-tuning that understands legal terminology and case context.",
+    "features": [
+      {
+        "icon": "psychology",
+        "title": "Legal AI Model",
+        "description": "Fine-tuned on 2M+ legal documents for accurate retrieval."
+      },
+      {
+        "icon": "security",
+        "title": "Secure Architecture",
+        "description": "On-prem deployment with zero data sharing with external APIs."
+      }
+    ]
+  },
+  "technicalSpotlight": {
+    "title": "Performance",
+    "metrics": [
+      { "label": "Accuracy", "value": "94%", "percentage": 94 },
+      { "label": "Time Saved", "value": "80%", "percentage": 80 }
+    ],
+    "quote": "The system found relevant precedents our attorneys missed in manual review."
+  },
+  "testimonial": {
+    "quote": "Our attorneys now start with AI-curated document sets instead of blank slates. We're serving clients faster and more thoroughly.",
+    "author": "Jennifer Walsh",
+    "title": "Partner, Global Legal Conglomerate",
+    "image": {
+      "alt": "Partner Portrait",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAq9F_6-1pD2ClmU--1y4UbquI3TOcwBzDkuioEbteLbGWHSDdIH7DcHcg11iLbFF63LaNSi_7OLTw1czAG8cL5AAu3UawjNrWDr_5W6Bnjf6cHbLpAhSiWcphwNGQ2e6I2b_D-EeLvZ4sTh_lo3IIauvXqQKKamlwu-lYPrChBz0-okYPKwYX25OBZellD-g75sPbdhrUojHJ5rBfc1vvwkPUah33bjtawoqSJjchhc3br2mh9Ug2FsU6vRgRreJA7ibDL59Y2kVfn"
+    }
+  },
+  "cta": {
+    "title": "Transform your legal workflow with AI",
+    "subtitle": "Automate document review while maintaining the highest security standards.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}

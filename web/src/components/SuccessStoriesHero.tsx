@@ -1,20 +1,42 @@
 // src/components/SuccessStoriesHero.tsx
+import Image from 'next/image'
 
-interface HeroData {
+interface SuccessStoriesHeroData {
   title: string
   subtitle: string
+  image: {
+    alt: string
+    url: string
+  }
 }
 
-export default function SuccessStoriesHero({ data }: { data: HeroData }) {
+export default function SuccessStoriesHero({ data }: { data: SuccessStoriesHeroData }) {
   return (
-    <header className="pt-20 pb-16 px-margin-desktop max-w-container-max mx-auto text-center">
-      <span className="bg-tertiary-container text-tertiary-fixed-dim px-4 py-1 rounded-full text-label-md inline-block mb-6 uppercase tracking-wider">
-        Our Impact
-      </span>
-      <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-primary">{data.title}</h1>
-      <p className="text-body-lg text-on-surface-variant max-w-3xl mx-auto">
-        {data.subtitle}
-      </p>
-    </header>
+    <section className="px-margin-mobile md:px-margin-desktop py-20 max-w-container-max mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+        <div className="md:col-span-7">
+          <span className="inline-block py-1 px-3 bg-surface-container-high text-on-secondary-fixed-variant text-label-md rounded-full mb-6">
+            Our Impact
+          </span>
+          <h1 className="text-display-lg-mobile md:text-display-lg text-primary mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          </h1>
+          <p className="text-body-lg text-on-surface-variant max-w-xl">
+            {data.subtitle}
+          </p>
+        </div>
+        <div className="md:col-span-5 relative">
+            <div className="aspect-square bg-surface-container rounded-3xl overflow-hidden ambient-shadow-card">
+              <Image
+                alt={data.image.alt}
+                src={data.image.url}
+                className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
+                width={800}
+                height={800}
+                priority
+              />
+            </div>
+        </div>
+      </div>
+    </section>
   )
 }

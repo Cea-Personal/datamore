@@ -1,0 +1,67 @@
+{
+  "hero": {
+    "title": "Optimizing Liquidity Risk for Tier-1 Fintech",
+    "subtitle": "How Datamore implemented real-time predictive risk assessment to stabilize $2.4B in daily transactions across 14 jurisdictions.",
+    "badge": {
+      "label": "FINTECH SUCCESS STORY",
+      "icon": "analytics"
+    },
+    "image": {
+      "alt": "Financial Data Dashboard",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDU33DS24BDJUiEnCm93hkvBd77RrddMnZrkF2deR9FsfuatG9wEqyDQ5bO0toq5wBzNd03PcO--zwFltETN7W6zDgpd1pMQMK7vf0PB1QIParBGSpPtb71vDL0TohmXfvdTizmMMEB3gWOS3aUrA9I7EjiD-p7KTGJHcP9eFz4EoRVL0tPwCL5Mcoro-Z_NHet-HO4v5mGcuBaPFzPTqNHxMNCMuAE8JdnJKdKFO4nbW8C0BFOeUNaI_Z5Es0VMzIvzJ4g9PwPBu4G"
+    }
+  },
+  "executiveSummary": "A global fintech leader faced significant operational hurdles in managing liquidity volatility. As they expanded into new territories, their legacy systems struggled to provide the granular, real-time visibility required for regulatory compliance and capital efficiency. Datamore delivered an end-to-end data architecture that unified fragmented silos into a single, AI-driven risk engine.",
+  "metrics": [
+    { "value": "14%", "label": "Capital Overhead Reduction" },
+    { "value": "99.9%", "label": "Compliance Accuracy" }
+  ],
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Scaling real-time risk assessment across multiple jurisdictions was no longer a matter of simple data collection. The client suffered from high latency in their reporting cycles, often identifying liquidity shortfalls 48 hours after they occurred.",
+    "items": [
+      { "icon": "close", "text": "Inconsistent data formats across regional banking partners." },
+      { "icon": "close", "text": "Strict Basel III compliance requirements in diverse legal markets." },
+      { "icon": "close", "text": "Exponentially growing transaction volumes causing system timeouts." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "Datamore deployed a custom ETL (Extract, Transform, Load) pipeline coupled with a distributed AI predictive engine. By leveraging asynchronous data streaming, we eliminated the batch-processing bottleneck.",
+    "features": [
+      {
+        "icon": "database",
+        "title": "Unified Data Lake",
+        "description": "Consolidated 42 disparate regional sources into a high-throughput stream."
+      },
+      {
+        "icon": "psychology",
+        "title": "AI Risk Forecaster",
+        "description": "Predictive models that flag volatility 6 hours before it impacts capital."
+      }
+    ]
+  },
+  "technicalSpotlight": {
+    "title": "Technical Spotlight",
+    "metrics": [
+      { "label": "Pipeline Latency", "value": "<200ms", "percentage": 95 },
+      { "label": "System Throughput", "value": "150k TPS", "percentage": 88 }
+    ],
+    "quote": "The engineering challenge was not just moving data, but moving it with total transactional integrity across a global mesh network."
+  },
+  "testimonial": {
+    "quote": "Datamore didn't just give us a dashboard; they re-engineered how we think about risk. We now have a predictive advantage that has directly improved our bottom line.",
+    "author": "Marcus Thorne",
+    "title": "CTO, Global Finance Partners",
+    "image": {
+      "alt": "CTO Portrait",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBFRol4ioBI_54Ihg90CeARjryjZbXIShubIUwgm6-o_OskqqSoZuRLTBuXeDQJWs-PkZtaR9nKrdGVi99d_7mLVTH8VfboAhCzlMzLf2G8_68mNN_jeVbf1oysegdC-K-Y0gGYIXjqZDPM80J4L2AxewQ2EN-3_ek73zCxqCmBil7EK5fZsAl5Ev6JglUENseJOepbehDJ03im4esUZTM94AbLb4cK2cqIQCD-ThLi4U5hPY7yz1GjaOJuYGYl0JVhsBjJwwVGLvNZ"
+    }
+  },
+  "cta": {
+    "title": "Ready to scale your impact with data?",
+    "subtitle": "Partner with Datamore to transform your complex data challenges into strategic market advantages. Let's build the future of finance together.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "hero": {
+    "title": "Scaling Data Maturity for Growth",
+    "subtitle": "Guiding a series-B startup from fragmented spreadsheets to a centralized Snowflake-based data warehouse in under 90 days.",
+    "badge": {
+      "label": "SME SUCCESS STORY",
+      "icon": "analytics"
+    },
+    "image": {
+      "alt": "SME Solutions",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvky4mRjkAWfaqdQrnWvCJQL0FTNWsF7sOk_VZIBPLOyOJYeH2YFotNmTsBJ_TZD3HDdrZHRuRLtC28hqyUTRgq7j0GgJuh0q8xAske4xxbVgJT_Aj2NtBHMwr30lLAk4Ugm1s-xcUQp4vTH-wSLQ5Viya8jHvlWTrNEx0XLrABgUEJq6m4dymCtj2_VVBfjvLmzTEvuXo4Wc1j68ubenZYt5FNrWdscFYgY1OU-xttNN-zMQ5hR_iVFGI72jvHdVgmpVMFo2-0lA4"
+    }
+  },
+  "executiveSummary": "A rapidly growing fintech startup hit a ceiling with spreadsheets and disparate data sources. We built a scalable data foundation that supported their next phase of growth.",
+  "metrics": [
+    { "value": "90 days", "label": "Implementation Time" }
+  ],
+  "challenge": {
+    "title": "The Challenge",
+    "description": "Rapid growth exposed data infrastructure limitations. Teams couldn't get timely answers, and executives lacked reliable dashboards for decision-making.",
+    "items": [
+      { "icon": "close", "text": "Critical business metrics scattered across 15+ spreadsheets." },
+      { "icon": "close", "text": "No single source of truth for revenue reporting." },
+      { "icon": "close", "text": "Manual reporting took 3 days each month." }
+    ]
+  },
+  "solution": {
+    "title": "Our Solution",
+    "description": "A cloud-native data stack with automated pipelines and self-service analytics for the entire organization.",
+    "features": [
+      {
+        "icon": "cloud_sync",
+        "title": "Snowflake Data Warehouse",
+        "description": "Scalable cloud warehouse with automated ETL workflows."
+      },
+      {
+        "icon": "dashboard",
+        "title": "Self-Service Analytics",
+        "description": "BI dashboards with row-level security for 200+ users."
+      }
+    ]
+  },
+  "technicalSpotlight": {
+    "title": "Speed & Reliability",
+    "metrics": [
+      { "label": "Implementation", "value": "90 days", "percentage": 100 },
+      { "label": "Data Freshness", "value": "<1hr", "percentage": 95 }
+    ],
+    "quote": "We went from spreadsheet chaos to data-driven decisions overnight."
+  },
+  "testimonial": {
+    "quote": "Datamore delivered what we thought would take 6 months in just 90 days. Our Series-C fundraising was powered by real-time metrics.",
+    "author": "Alex Rodriguez",
+    "title": "Head of Data, Series-B Fintech",
+    "image": {
+      "alt": "Head of Data Portrait",
+      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBvky4mRjkAWfaqdQrnWvCJQL0FTNWsF7sOk_VZIBPLOyOJYeH2YFotNmTsBJ_TZD3HDdrZHRuRLtC28hqyUTRgq7j0GgJuh0q8xAske4xxbVgJT_Aj2NtBHMwr30lLAk4Ugm1s-xcUQp4vTH-wSLQ5Viya8jHvlWTrNEx0XLrABgUEJq6m4dymCtj2_VVBfjvLmzTEvuXo4Wc1j68ubenZYt5FNrWdscFYgY1OU-xttNN-zMQ5hR_iVFGI72jvHdVgmpVMFo2-0lA4"
+    }
+  },
+  "cta": {
+    "title": "Accelerate your growth with data infrastructure",
+    "subtitle": "Build a scalable foundation for your startup's next milestone.",
+    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
+    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+  }
+}
