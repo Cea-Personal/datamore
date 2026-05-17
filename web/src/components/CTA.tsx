@@ -35,10 +35,16 @@ export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData })
               </button>
             )
           )}
-          {data.secondaryButton && data.secondaryButton.url && (
-            <Link href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
-              {data.secondaryButton.label}
-            </Link>
+          {data.secondaryButton && (
+            data.secondaryButton.url ? (
+              <Link href={data.secondaryButton.url} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
+                {data.secondaryButton.label}
+              </Link>
+            ) : (
+              <button className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
+                {data.secondaryButton.label}
+              </button>
+            )
           )}
         </div>
       </div>

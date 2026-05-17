@@ -4,7 +4,7 @@ import ContactForm from './ContactForm'
 
 export default function ContactHero() {
   return (
-    <section className="pt-32 pb-24 px-margin-desktop max-w-container-max mx-auto">
+    <section className="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
         {/* Left Column: Branding & Info */}
         <div className="md:col-span-5 flex flex-col gap-12">

@@ -19,7 +19,7 @@ interface InsightsHeroData {
 
 export default function InsightsHero({ data }: { data: InsightsHeroData }) {
   return (
-    <section className="pt-24 pb-20 px-margin-desktop max-w-container-max mx-auto">
+    <section className="pt-24 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
         <div className="md:col-span-7">
           <div className="flex items-center gap-2 mb-4">

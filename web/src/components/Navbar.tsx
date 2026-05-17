@@ -28,9 +28,8 @@ export default function Navbar() {
   return (
     <nav className="bg-surface shadow-sm w-full">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center">
-          <img alt="Datamore Logo" className="h-8 w-auto" src="https://lh3.googleusercontent.com/aida/ADBb0ugacJ5dMBxRkXdS03XhMkj7gCoE2d8i3qE97MysiBXpfy12t-0cBr3M8ucg6o4UFJvO6ij3JphzzoMQ15EbS6qpL8FFPJTKpOyJ8o6-7P5wq6oXPHX1hVDRbNu69eyquWaKXie39JN0_qCBZ0sjUv7Ca8eIeod0XNpJpjDxrCJ3v0r1QhM5w3taJX-SYr4tgr8ketyFPlRRUvlNT6j0GorWu5r3QtqKCKMEvbUXqdHE_gx-O8kLeUA8icMt" />
-          <span className="-ml-1 text-headline-md font-bold text-primary">atamore</span>
+        <Link href="/" className="font-headline-md text-headline-md font-bold text-primary">
+          Datamore
         </Link>
         <div className="hidden md:flex gap-gutter items-center">
           {navItems.slice(1).map((item) => (

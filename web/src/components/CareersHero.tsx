@@ -22,14 +22,6 @@ export default function CareersHero({ data }: { data: CareersHeroData }) {
         <p className="text-body-lg text-on-surface-variant max-w-lg mb-10">
           {data.subtitle}
         </p>
-        <div className="flex gap-4">
-          <a href="#talent-pool" className="glassy-button text-on-primary px-8 py-4 rounded-lg text-label-md active:scale-95 transition-transform">
-            View Mission
-          </a>
-          <a href="#values" className="border border-outline text-on-surface px-8 py-4 rounded-lg text-label-md hover:bg-surface-container transition-all active:scale-95">
-            Our Values
-          </a>
-        </div>
       </div>
       <div className="relative h-[450px] md:h-[500px] rounded-2xl overflow-hidden ambient-shadow">
         <Image

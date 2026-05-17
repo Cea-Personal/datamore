@@ -1,9 +1,10 @@
 // src/components/ContactForm.tsx
 import Image from 'next/image'
+import ContactBadges from './ContactBadges'
 
 export default function ContactForm() {
   return (
-    <>
+    <div className="bg-surface-container-lowest p-10 rounded-xl shadow-premium glass-edge space-y-8">
       <div className="space-y-2">
         <h2 className="text-headline-lg text-primary">Request a Strategy Call</h2>
         <p className="text-body-md text-on-surface-variant">
@@ -37,6 +38,7 @@ export default function ContactForm() {
           </p>
         </div>
       </form>
-    </>
+      <ContactBadges />
+    </div>
   )
 }

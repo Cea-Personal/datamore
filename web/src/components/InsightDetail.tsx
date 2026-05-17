@@ -17,7 +17,7 @@ export default function InsightDetail({
   return (
     <>
       {/* Hero Section */}
-      <header className="pt-32 pb-20 px-margin-desktop max-w-container-max mx-auto">
+      <header className="pt-32 pb-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
           <div className="lg:col-span-7">
             <nav className="mb-6 flex items-center space-x-2 text-on-surface-variant opacity-70">
@@ -64,7 +64,7 @@ export default function InsightDetail({
       </header>
 
       {/* Main Content Area */}
-      <main className="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-32">
+      <main className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter pb-32">
         {/* Article Body */}
         <article className="lg:col-span-8 space-y-8 pr-0 lg:pr-12">
           {sections.map((section, index) => {
@@ -206,13 +206,9 @@ export default function InsightDetail({
               </div>
             </>
           )}
-        </aside>
+</aside>
       </main>
-      <GlobalCTA data={cta} />
-
-
-
-      {/* Footer - Imported from layout */}
+      {cta && <GlobalCTA data={cta} />}
     </>
   )
 }

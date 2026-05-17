@@ -2,7 +2,7 @@
 
 export default function ContactBadges() {
   return (
-    <div className="mt-8 grid grid-cols-3 gap-gutter opacity-60">
+    <div className="grid grid-cols-3 gap-gutter opacity-60">
       <div className="flex flex-col items-center text-center p-4">
         <span className="material-symbols-outlined text-secondary text-4xl mb-2">security</span>
         <p className="text-label-md">ISO 27001 Certified</p>

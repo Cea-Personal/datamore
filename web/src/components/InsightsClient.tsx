@@ -49,13 +49,13 @@ export default function InsightsClient({
 
   return (
     <>
-      <section className="px-margin-desktop max-w-container-max mx-auto mb-20">
+      <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-20">
         <InsightsFilter data={filterData} articles={allArticles} onFilterChange={(filtered) => {
           setFilteredArticles(filtered)
           setShowAll(false)
         }} />
       </section>
-      <section className="px-margin-desktop max-w-container-max mx-auto">
+      <section className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
           <div className="lg:col-span-8">
             <InsightsGrid data={displayArticles} />

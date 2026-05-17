@@ -32,6 +32,7 @@ export interface RelatedArticle {
   imageUrl: string
 }
 
+
 export interface CTA {
   title: string
   subtitle: string
@@ -53,7 +54,7 @@ export interface InsightData {
   sections: Section[]
   socialShare?: boolean
   relatedArticles?: RelatedArticle[]
-  cta: CTA
+  cta?: CTA
 }
 
 export interface Article {

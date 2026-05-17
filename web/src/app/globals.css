@@ -82,6 +82,11 @@
 .glass-card { background: rgba(255,255,255,.7); backdrop-filter: blur(12px); border: 1px solid #E2E8F0; }
 .glass-edge { background: rgba(255,255,255,.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.3); box-shadow: inset 0 0 20px rgba(255,255,255,.1); }
 
+/* Contact form button */
+.btn-gradient { background: linear-gradient(135deg, #0058be 0%, #131b2e 100%); }
+.shadow-premium { box-shadow: 0px 4px 20px rgba(15, 23, 42, 0.05); }
+.shadow-interactive:hover { box-shadow: 0px 10px 30px rgba(15, 23, 42, 0.08); }
+
 /* Spacing & layout */
 .px-margin-desktop { padding-left: var(--margin-desktop); padding-right: var(--margin-desktop); }
 .px-margin-mobile  { padding-left: var(--margin-mobile);  padding-right: var(--margin-mobile);  }
