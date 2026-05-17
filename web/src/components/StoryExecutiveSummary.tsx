@@ -7,7 +7,7 @@ interface StoryData {
 export default function StoryExecutiveSummary({ data }: { data: StoryData }) {
   return (
     <section className="py-20 bg-surface-container-low">
-      <div className="max-w-container-max mx-auto px-margin-desktop">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="bg-surface-container-lowest p-10 rounded-xl shadow-[0px_4px_20px_rgba(15,23,42,0.05)] border border-outline-variant/30 flex flex-col md:flex-row gap-12">
           <div className="flex-1">
             <h2 className="font-headline-md text-headline-md mb-4 text-primary">Executive Summary</h2>

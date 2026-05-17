@@ -24,7 +24,7 @@ export default function StoryHero({ data }: { data: StoryHeroData }) {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
         </div>
-        <div className="relative z-10 max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+        <div className="relative z-10 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
           <div className="md:col-span-8 flex flex-col gap-6">
             {data.badge && (
               <div className="inline-flex items-center bg-tertiary-fixed-dim/20 text-on-tertiary-container px-3 py-1 rounded-full w-fit">

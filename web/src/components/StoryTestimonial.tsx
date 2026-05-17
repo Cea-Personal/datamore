@@ -12,7 +12,7 @@ interface TestimonialData {
 export default function StoryTestimonial({ data }: { data: TestimonialData }) {
   return (
     <section className="py-24 bg-white border-y border-outline-variant/30">
-      <div className="max-w-container-max mx-auto px-margin-desktop text-center">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
         <span className="material-symbols-outlined text-secondary text-[48px] mb-8" style={{ fontVariationSettings: "'FILL' 1" }}>format_quote</span>
 <blockquote className="font-headline-lg text-headline-lg md:text-[36px] text-primary max-w-4xl mx-auto leading-tight mb-10">
           &quot;Datamore didn&apos;t just give us a dashboard; they re-engineered how we think about risk. We now have a predictive advantage that has directly improved our bottom line.&quot;

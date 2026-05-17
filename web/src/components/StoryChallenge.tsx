@@ -13,7 +13,7 @@ interface StoryChallengeProps {
 export default function StoryChallenge({ data, metrics }: StoryChallengeProps) {
   return (
     <section className="py-20">
-      <div className="max-w-container-max mx-auto px-margin-desktop">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           <div className="md:col-span-7 bg-white p-12 rounded-xl border border-outline-variant/50 shadow-[0px_4px_20px_rgba(15,23,42,0.05)]">
             <span className="material-symbols-outlined text-secondary text-[40px] mb-6">warning</span>

@@ -18,7 +18,7 @@ interface Story {
 
 export default function StoriesGrid({ data }: { data: Story[] }) {
   return (
-    <main className="px-margin-desktop max-w-container-max mx-auto pb-32">
+    <main className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-32">
       <div className="grid grid-cols-12 gap-gutter">
         {/* Main Story (larger) */}
         {data.map((story, index) => (

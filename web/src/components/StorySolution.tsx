@@ -25,7 +25,7 @@ interface StorySolutionProps {
 export default function StorySolution({ data, technicalSpotlight }: StorySolutionProps) {
   return (
     <section className="py-20">
-      <div className="max-w-container-max mx-auto px-margin-desktop">
+      <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           <div className="md:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-gutter">
             <div className="bg-surface-container-high p-12 rounded-xl border border-secondary/20">
