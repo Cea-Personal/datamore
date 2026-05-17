@@ -50,9 +50,9 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     </p>
                     <Link
                       href={`/success-stories/${story.slug}`}
-                      className="inline-flex items-center text-secondary text-label-md hover:underline"
+                      className="inline-flex items-center text-secondary text-label-md"
                     >
-                      Read Full Story <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                      <span className="hover:underline">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
                     </Link>
                   </div>
                 </>
@@ -78,9 +78,9 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     </p>
                     <Link
                       href={`/success-stories/${story.slug}`}
-                      className="mt-auto inline-flex items-center text-secondary text-label-md hover:underline"
+                      className="mt-auto inline-flex items-center text-secondary text-label-md"
                     >
-                      Read Full Story <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                      <span className="hover:underline">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
                     </Link>
                   </div>
                 </>

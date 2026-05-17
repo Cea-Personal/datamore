@@ -7,9 +7,7 @@ import StoryHero from '@/components/StoryHero'
 import StoryExecutiveSummary from '@/components/StoryExecutiveSummary'
 import StoryChallenge from '@/components/StoryChallenge'
 import StorySolution from '@/components/StorySolution'
-import StoryTechnicalSpotlight from '@/components/StoryTechnicalSpotlight'
 import StoryTestimonial from '@/components/StoryTestimonial'
-import StoryCTA from '@/components/StoryCTA'
 import type { StoryData } from '@/types/success-story'
 
 const storyFiles = {
@@ -44,7 +42,7 @@ export default async function SuccessStoriesPage({ params }: { params: Promise<{
       <StoryChallenge data={data.challenge} metrics={data.metrics} />
       <StorySolution data={data.solution} technicalSpotlight={data.technicalSpotlight} />
       <StoryTestimonial data={data.testimonial} />
-      <StoryCTA data={data.cta} />
+      <SuccessStoriesCTA data={data.cta} />
     </>
   )
 }
