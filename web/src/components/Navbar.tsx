@@ -34,9 +34,9 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <Link href="/contact" className="glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
-          Book
-        </Link>
+<Link href="/contact" className="hidden md:flex glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
+           Book
+         </Link>
         
         <button 
           className="md:hidden flex items-center justify-center w-10 h-10 text-primary"
