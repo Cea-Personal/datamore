@@ -1,4 +1,6 @@
 // src/components/InsightDetail.tsx
+'use client'
+
 import Image from 'next/image'
 import type { InsightData } from '@/types/insight'
 
@@ -123,20 +125,32 @@ export default function InsightDetail({
             }
           })}
           
-          {socialShare && (
-            <div className="flex items-center space-x-4 pt-12 border-t border-outline-variant">
-              <span className="text-label-md text-on-surface">Share Article:</span>
-              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
-                <span className="material-symbols-outlined text-[20px]">share</span>
-              </button>
-              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
-                <span className="material-symbols-outlined text-[20px]">link</span>
-              </button>
-              <button className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95">
-                <span className="material-symbols-outlined text-[20px]">mail</span>
-              </button>
-            </div>
-          )}
+{socialShare && (
+             <div className="flex items-center space-x-4 pt-12 border-t border-outline-variant">
+               <span className="text-label-md text-on-surface">Share Article:</span>
+               <button 
+                 onClick={() => navigator.share({ title: document.title, url: window.location.href })}
+                 className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95"
+                 title="Share this article"
+               >
+                 <span className="material-symbols-outlined text-[20px]">share</span>
+               </button>
+               <button 
+                 onClick={() => navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied to clipboard!'))}
+                 className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95"
+                 title="Copy link"
+               >
+                 <span className="material-symbols-outlined text-[20px]">link</span>
+               </button>
+<button 
+                  onClick={() => window.open(`mailto:?subject=${encodeURIComponent(document.title)}&body=${encodeURIComponent(window.location.href)}`, '_blank')}
+                  className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95"
+                  title="Share via email"
+                >
+                  <span className="material-symbols-outlined text-[20px]">mail</span>
+                </button>
+             </div>
+           )}
         </article>
 
         {/* Sidebar */}

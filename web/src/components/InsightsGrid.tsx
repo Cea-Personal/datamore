@@ -39,8 +39,8 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
             <p className="text-body-md text-on-surface-variant mb-6 flex-grow">
               {article.description}
             </p>
-            <Link href={`/insights/${article.slug}`} className="text-secondary text-label-md flex items-center gap-1 group-hover:underline">
-              Read more <span className="material-symbols-outlined text-sm">chevron_right</span>
+            <Link href={`/insights/${article.slug}`} className="text-secondary text-label-md flex items-center gap-1 no-underline">
+              <span className="hover:underline decoration-2 underline-offset-2">Read more</span> <span className="material-symbols-outlined text-sm">chevron_right</span>
             </Link>
           </div>
         </article>

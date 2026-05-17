@@ -1,7 +1,10 @@
-// src/components/InsightsSidebar.tsx
-interface CategoryItem {
-  label: string
-  count: number
+'use client'
+
+import Link from 'next/link'
+
+interface Article {
+  slug: string
+  category: string
 }
 
 interface EditorsChoiceItem {
@@ -10,70 +13,73 @@ interface EditorsChoiceItem {
   readTime: string
 }
 
-interface QuarterlyReportItem {
-  title: string
-  description: string
-  action: {
-    label: string
-    icon: string
-  }
+const categoryLabelMap: Record<string, string> = {
+  'data-strategy': 'Data Strategy',
+  'ai-ml': 'AI & ML',
+  'engineering': 'Engineering',
+  'case-studies': 'Case Studies',
+  'cloud-architecture': 'Cloud Architecture',
+  'Data Strategy': 'data-strategy',
+  'AI & ML': 'ai-ml',
+  'Engineering': 'engineering',
+  'Case Studies': 'case-studies',
+  'Cloud Architecture': 'cloud-architecture'
 }
 
-export default function InsightsSidebar({ data }: { data: { categories: CategoryItem[]; editorsChoice: EditorsChoiceItem[]; quarterlyReport: QuarterlyReportItem } }) {
+export default function InsightsSidebar({ 
+  articles,
+  onFilter 
+}: { 
+  articles: Article[]
+  onFilter?: (category: string) => void
+}) {
+  const categoryCounts = articles.reduce((acc, article) => {
+    const cat = article.category
+    acc[cat] = (acc[cat] || 0) + 1
+    return acc
+  }, {} as Record<string, number>)
+
+  const categories = [
+    { label: 'Data Strategy', slug: 'data-strategy' },
+    { label: 'AI & ML', slug: 'ai-ml' },
+    { label: 'Engineering', slug: 'engineering' },
+    { label: 'Case Studies', slug: 'case-studies' },
+    { label: 'Cloud Architecture', slug: 'cloud-architecture' }
+  ]
+
   return (
     <>
       {/* Browse by Category */}
       <div className="bg-surface-container-low p-8 rounded-2xl">
         <h4 className="text-headline-md text-primary mb-6">Browse by Category</h4>
         <ul className="flex flex-col gap-4">
-          {data.categories.map((category, index) => (
-            <li key={index}>
-              <a href="#" className="flex justify-between items-center group">
-                <span className="text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">
-                  {category.label}
-                </span>
-                <span className={`bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-label-md text-caption`}>
-                  {category.count}
-                </span>
-              </a>
+          {categories.map((category) => (
+            <li key={category.slug}>
+              {onFilter ? (
+                <button
+                  onClick={() => onFilter(category.label)}
+                  className="w-full flex justify-between items-center group"
+                >
+                  <span className="text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">
+                    {category.label}
+                  </span>
+                  <span className="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-label-md text-caption">
+                    {categoryCounts[category.label] || 0}
+                  </span>
+                </button>
+              ) : (
+                <Link href={`/insights?category=${category.slug}`} className="flex justify-between items-center group">
+                  <span className="text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">
+                    {category.label}
+                  </span>
+                  <span className="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-label-md text-caption">
+                    {categoryCounts[category.label] || 0}
+                  </span>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
-      </div>
-      
-      {/* Editor's Choice */}
-      <div className="mt-12">
-        <h4 className="text-headline-md text-primary mb-6 flex items-center gap-2">
-          <span className="material-symbols-outlined text-secondary">verified</span>
-          Editor&apos;s Choice
-        </h4>
-        <div className="space-y-6">
-          {data.editorsChoice.map((item, index) => (
-            <a
-              key={index}
-              href="#"
-              className="group block border-b border-outline-variant pb-6"
-            >
-              <span className={`text-${item.category.toLowerCase().replace(' & ', '-').replace(' ', '-')} text-label-md text-caption block mb-1`}>
-                {item.category}
-              </span>
-              <h5 className="text-label-md text-primary group-hover:text-secondary transition-colors leading-tight mb-2">
-                {item.title}
-              </h5>
-              <span className="text-on-surface-variant text-caption">{item.readTime}</span>
-            </a>
-          ))}
-        </div>
-      </div>
-      
-      {/* Recommended Reading */}
-      <div className="mt-12 bg-primary-container p-8 rounded-2xl text-on-primary">
-        <h4 className="text-headline-md mb-4">{data.quarterlyReport.title}</h4>
-        <p className="text-body-md mb-6 opacity-80">{data.quarterlyReport.description}</p>
-        <button className="w-full bg-white text-primary py-3 rounded-lg text-label-md hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
-          <span className="material-symbols-outlined">{data.quarterlyReport.action.icon}</span>
-          {data.quarterlyReport.action.label}
-        </button>
       </div>
     </>
   )

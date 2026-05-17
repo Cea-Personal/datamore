@@ -1,10 +1,6 @@
-// app/insights/[[...slug]]/page.tsx
 import InsightsData from '@/data/insights.json'
 import InsightsHero from '@/components/InsightsHero'
-import InsightsFilter from '@/components/InsightsFilter'
-import InsightsGrid from '@/components/InsightsGrid'
-import InsightsSidebar from '@/components/InsightsSidebar'
-import GlobalCTA from '@/components/CTA'
+import InsightsClient from '@/components/InsightsClient'
 import InsightDetail from '@/components/InsightDetail'
 import type { Article, InsightData } from '@/types/insight'
 
@@ -17,6 +13,8 @@ const insightFiles = {
   'modernizing-legacy-data-for-global-banks': () => import('@/data/insights/modernizing-legacy-data-for-global-banks.json'),
   'ai-driven-fraud-detection-strategies': () => import('@/data/insights/ai-driven-fraud-detection-strategies.json'),
 }
+
+const ARTICLES_PER_PAGE = 4
 
 export default async function InsightsPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params
@@ -33,30 +31,18 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
       description: InsightsData.hero.subtitle
     }
 
-    const otherArticles = InsightsData.articles.filter(a => a.slug !== InsightsData.hero.slug)
+    const allArticles = InsightsData.articles.filter(a => a.slug !== InsightsData.hero.slug)
+    const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE)
 
-return (
-    <>
-      <InsightsHero data={InsightsData.hero} />
-      <section className="px-margin-desktop max-w-container-max mx-auto mb-20">
-        <InsightsFilter data={InsightsData.filter} />
-      </section>
-        <section className="px-margin-desktop max-w-container-max mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-            <div className="lg:col-span-8">
-              <InsightsGrid data={otherArticles} />
-              <div className="mt-12 text-center">
-                <button className="px-8 py-3 border border-outline text-primary font-label-md rounded-lg hover:bg-surface-container transition-colors">
-                  Load More Articles
-                </button>
-              </div>
-            </div>
-            <aside className="lg:col-span-4 space-y-12">
-              <InsightsSidebar data={InsightsData.sidebar} />
-            </aside>
-          </div>
-        </section>
-        <GlobalCTA data={InsightsData.cta} />
+    return (
+      <>
+        <InsightsHero data={InsightsData.hero} />
+        <InsightsClient 
+          initialArticles={initialArticles} 
+          allArticles={allArticles}
+          filterData={InsightsData.filter} 
+          ctaData={InsightsData.cta} 
+        />
       </>
     )
   }

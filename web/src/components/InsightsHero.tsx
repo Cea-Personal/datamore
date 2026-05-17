@@ -34,9 +34,9 @@ export default function InsightsHero({ data }: { data: InsightsHeroData }) {
             {data.subtitle}
           </p>
           {data.slug && (
-            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-8 py-4 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group">
+            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60">
               Read Full Article
-              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
             </Link>
           )}
         </div>
