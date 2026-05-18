@@ -33,8 +33,8 @@ export default function Navbar() {
           atamore
         </Link> */}
         <Link href="/" className="flex items-center">
-              <img alt="Datamore Logo" className="h-6 w-auto" src="/logo.svg" />
-              <span className="-ml-0.5 text-headline-md font-bold ">atamore</span>
+              <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
+              <span className="-ml-0.5 text-headline-md text font-bold " style={{fontSize: '2rem'}}>atamore</span>
             </Link>
         <div className="hidden md:flex gap-gutter items-center">
           {navItems.slice(1).map((item) => (
