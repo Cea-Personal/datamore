@@ -28,14 +28,10 @@ export default function Navbar() {
   return (
     <nav className="bg-surface shadow-sm w-full">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex justify-between items-center">
-        {/* <Link href="/" className="font-headline-md text-headline-md font-bold text-primary">
-          <img alt="Datamore Logo" className="h-6 w-auto opacity-90" src="/logo.svg" />
-          atamore
-        </Link> */}
         <Link href="/" className="flex items-center">
-              <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
-              <span className="-ml-0.5 text-headline-md text font-bold " style={{fontSize: '2rem'}}>atamore</span>
-            </Link>
+          <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
+          <span className="-ml-0.5 text-headline-md text font-bold" style={{fontSize: '2rem'}}>atamore</span>
+        </Link>
         <div className="hidden md:flex gap-gutter items-center">
           {navItems.slice(1).map((item) => (
             <div 
@@ -72,11 +68,11 @@ export default function Navbar() {
             </div>
           ))}
         </div>
-<Link href="/contact" className="hidden md:flex glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
-           Book
-         </Link>
+        <Link href="/contact" className="hidden md:flex glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
+          Book
+        </Link>
         
-<button 
+        <button 
           className="md:hidden flex items-center justify-center w-10 h-10 text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
@@ -87,26 +83,39 @@ export default function Navbar() {
       
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 bg-surface z-50 overflow-y-auto">
+          <div className="px-margin-mobile py-4 flex justify-between items-center border-b border-outline-variant">
+            <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
+              <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
+              <span className="-ml-0.5 text-headline-md text font-bold" style={{fontSize: '2rem'}}>atamore</span>
+            </Link>
+            <button 
+              className="flex items-center justify-center w-10 h-10 text-primary"
+              onClick={() => setMobileOpen(false)}
+              aria-label="Close menu"
+            >
+              <span className="material-symbols-outlined">close</span>
+            </button>
+          </div>
           <div className="px-margin-mobile py-8 space-y-6 min-h-screen">
-            {navItems.map((item) => (
+            {navItems.slice(1).map((item) => (
               <div key={item.href}>
                 <Link 
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`block text-headline-md ${pathname === item.href ? 'text-secondary' : 'text-on-surface-variant'}`}
+                  className={`block text-headline-md hover:underline decoration-2 underline-offset-4 ${item.href !== '/' && pathname.startsWith(item.href) ? 'text-secondary' : 'text-on-surface-variant'}`}
                 >
                   {item.label}
                 </Link>
                 {item.href === '/services' && (
                   <div className="ml-4 mt-2 space-y-2">
                     {serviceItems.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        onClick={() => setMobileOpen(false)}
-                        className="block text-body-lg text-on-surface-variant"
-                      >
-                        {service.label}
+<Link
+                          key={service.href}
+                          href={service.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block text-body-lg text-on-surface-variant hover:underline decoration-2 underline-offset-4"
+                        >
+                          {service.label}
                       </Link>
                     ))}
                   </div>
@@ -116,7 +125,7 @@ export default function Navbar() {
             <Link 
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="block text-headline-md text-secondary"
+              className="block text-headline-md text-secondary hover:underline decoration-2 underline-offset-4"
             >
               Book
             </Link>
