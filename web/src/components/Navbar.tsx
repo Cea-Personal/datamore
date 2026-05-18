@@ -76,7 +76,7 @@ export default function Navbar() {
            Book
          </Link>
         
-        <button 
+<button 
           className="md:hidden flex items-center justify-center w-10 h-10 text-primary"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
@@ -85,44 +85,44 @@ export default function Navbar() {
         </button>
       </div>
       
-{mobileOpen && (
-         <div className="md:hidden bg-surface border-t border-outline-variant">
-           <div className="px-margin-mobile py-4 space-y-4">
-             {navItems.map((item) => (
-               <div key={item.href}>
-                 <Link 
-                   href={item.href}
-                   onClick={() => setMobileOpen(false)}
-                   className={`block text-body-md ${pathname === item.href ? 'text-secondary' : 'text-on-surface-variant'}`}
-                 >
-                   {item.label}
-                 </Link>
-                 {item.href === '/services' && (
-                   <div className="ml-4 mt-2 space-y-2">
-                     {serviceItems.map((service) => (
-                       <Link
-                         key={service.href}
-                         href={service.href}
-                         onClick={() => setMobileOpen(false)}
-                         className="block text-body-sm text-on-surface-variant"
-                       >
-                         {service.label}
-                       </Link>
-                     ))}
-                   </div>
-                 )}
-               </div>
-             ))}
-             <Link 
-               href="/contact"
-               onClick={() => setMobileOpen(false)}
-               className="block text-body-md text-secondary"
-             >
-               Book
-             </Link>
-           </div>
-         </div>
-       )}
+      {mobileOpen && (
+        <div className="md:hidden fixed inset-0 bg-surface z-50 overflow-y-auto">
+          <div className="px-margin-mobile py-8 space-y-6 min-h-screen">
+            {navItems.map((item) => (
+              <div key={item.href}>
+                <Link 
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`block text-headline-md ${pathname === item.href ? 'text-secondary' : 'text-on-surface-variant'}`}
+                >
+                  {item.label}
+                </Link>
+                {item.href === '/services' && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block text-body-lg text-on-surface-variant"
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+            <Link 
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="block text-headline-md text-secondary"
+            >
+              Book
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
