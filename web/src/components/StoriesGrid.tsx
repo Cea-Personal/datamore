@@ -42,7 +42,7 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     <span className="text-secondary text-label-md mb-3">
                       {story.sector}
                     </span>
-                    <h3 className="text-headline-lg text-primary mb-4 leading-tight">
+                    <h3 className="text-headline-md text-primary mb-4 leading-tight">
                       {story.title}
                     </h3>
                     <p className="text-on-surface-variant text-body-md mb-6">
@@ -52,7 +52,7 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                       href={`/success-stories/${story.slug}`}
                       className="inline-flex items-center text-secondary text-label-md"
                     >
-                      <span className="hover:underline">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                      <span className="hover:underline decoration-2 underline-offset-2">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
                     </Link>
                   </div>
                 </>
@@ -76,12 +76,12 @@ export default function StoriesGrid({ data }: { data: Story[] }) {
                     <p className="text-on-surface-variant text-body-md mb-6">
                       {story.summary}
                     </p>
-                    <Link
-                      href={`/success-stories/${story.slug}`}
-                      className="mt-auto inline-flex items-center text-secondary text-label-md"
-                    >
-                      <span className="hover:underline">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
-                    </Link>
+<Link
+                       href={`/success-stories/${story.slug}`}
+                       className="mt-auto inline-flex items-center text-secondary text-label-md"
+                     >
+                       <span className="hover:underline decoration-2 underline-offset-2">Read Full Story</span> <span className="material-symbols-outlined ml-2">arrow_forward</span>
+                     </Link>
                   </div>
                 </>
               )}
