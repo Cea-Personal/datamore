@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { Inter } from 'next/font/google'
-import { Space_Grotesk } from 'next/font/google'
+import { Lora } from 'next/font/google'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,10 +13,10 @@ const inter = Inter({
   display: 'swap',
 })
 
-const spaceGrotesk = Space_Grotesk({
+const lora = Lora({
   subsets: ['latin'],
-  weight: ['400', '600', '700'],
-  variable: '--font-space-grotesk',
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-lora',
   display: 'swap',
 })
 
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.className} ${spaceGrotesk.className}`}>
+    <html lang="en" className={`scroll-smooth ${inter.className} ${lora.className}`}>
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
       </head>

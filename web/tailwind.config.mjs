@@ -74,12 +74,12 @@ export default {
         "container-max": "1280px"
       },
       fontFamily: {
-        "headline-md": ["Space Grotesk"],
-        "headline-lg": ["Space Grotesk"],
+        "headline-md": ["Lora", "Georgia", "serif"],
+        "headline-lg": ["Lora", "Georgia", "serif"],
         "caption": ["Inter"],
-        "display-lg-mobile": ["Space Grotesk"],
+        "display-lg-mobile": ["Lora", "Georgia", "serif"],
         "body-md": ["Inter"],
-        "display-lg": ["Space Grotesk"],
+        "display-lg": ["Lora", "Georgia", "serif"],
         "body-lg": ["Inter"],
         "label-md": ["Inter"]
       },
