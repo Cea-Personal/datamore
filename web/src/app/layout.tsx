@@ -31,10 +31,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.className} ${lora.className}`}>
-      <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
-      </head>
+<html lang="en" className={`scroll-smooth ${inter.className} ${lora.className}`}>
+       <head>
+         <link rel="icon" href="/favicon.ico" sizes="any" />
+         <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+         <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16" />
+         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+       </head>
       <body className="bg-background text-on-background font-body-md overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
