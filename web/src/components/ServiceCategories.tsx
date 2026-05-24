@@ -18,7 +18,7 @@ export default function ServiceCategories({ data }: { data: ServiceCategory[] })
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
             <h2 className="text-headline-lg text-primary">Core Service Areas</h2>
-            <p className="text-body-md text-on-surface-variant mt-2">End-to-end data excellence for fintech and NGOs.</p>
+            <p className="text-body-md text-on-surface-variant mt-2">End-to-end data excellence for businesses and organisations.</p>
           </div>
           <div className="flex gap-4">
             <div className="h-[2px] w-24 bg-outline-variant mb-3"></div>
@@ -31,7 +31,6 @@ export default function ServiceCategories({ data }: { data: ServiceCategory[] })
               <div className="w-16 h-16 bg-secondary-container flex items-center justify-center rounded-2xl">
                 <span className="material-symbols-outlined text-on-secondary-container text-4xl">{data[0].icon}</span>
               </div>
-              <span className="text-label-md text-secondary uppercase tracking-widest">{data[0].category}</span>
             </div>
             <div className="mt-12">
               <h3 className="text-headline-lg text-primary mb-4">{data[0].title}</h3>

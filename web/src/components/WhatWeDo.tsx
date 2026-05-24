@@ -7,10 +7,7 @@ interface WhatWeDoData {
     icon: string
     title: string
     description: string
-    link: {
-      label: string
-      url: string
-    }
+    url: string
   }>
 }
 
@@ -35,10 +32,10 @@ export default function WhatWeDo({ data }: { data: WhatWeDoData }) {
               {card.description}
             </p>
             <Link
-              href={card.link.url}
+              href={card.url}
               className="text-secondary text-label-md flex items-center gap-2 group-hover:gap-4 transition-all"
             >
-              {card.link.label}
+              Learn more
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>

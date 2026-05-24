@@ -13,10 +13,10 @@ const navItems = [
 ]
 
 const serviceItems = [
-  { href: '/services/data-engineering', label: 'Data Engineering & Infrastructure' },
-  { href: '/services/bi', label: 'Business Intelligence & Analytics' },
-  { href: '/services/ai-llm-automation', label: 'AI & LLM Automation' },
-  { href: '/services/data-strategy', label: 'Data Strategy & Advisory' },
+  { href: '/services/data-engineering', label: 'Data Engineering' },
+  { href: '/services/bi', label: 'BI Analytics' },
+  { href: '/services/ai-llm-automation', label: 'AI Automation' },
+  { href: '/services/data-strategy', label: 'Data Strategy' },
   { href: '/services/managed-data-services', label: 'Managed Data Services' },
 ]
 
@@ -32,39 +32,44 @@ export default function Navbar() {
           <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
           <span className="-ml-0.5 text-headline-md text font-bold" style={{fontSize: '2rem'}}>atamore</span>
         </Link>
-        <div className="hidden md:flex gap-gutter items-center">
-          {navItems.slice(1).map((item) => (
-            <div 
-              key={item.href}
-              className="relative"
-              onMouseEnter={() => item.href === '/services' && setServicesOpen(true)}
-              onMouseLeave={() => item.href === '/services' && setServicesOpen(false)}
+<div className="hidden md:flex gap-gutter items-center">
+          <div 
+            className="relative"
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
+            <Link 
+              href="/services" 
+              className={`${pathname.startsWith('/services') ? 'text-body-md text-secondary border-b-2 border-secondary pb-1' : 'text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'}`}
             >
+              Services
+            </Link>
+            {servicesOpen && (
+              <div 
+                className="absolute top-full left-0 w-64 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant p-4 z-50"
+              >
+                <div className="space-y-2">
+                  {serviceItems.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block text-body-md text-on-surface-variant hover:text-secondary transition-colors py-1"
+                    >
+                      {service.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+          {navItems.slice(2).map((item) => (
+            <div key={item.href}>
               <Link 
                 href={item.href} 
                 className={`${pathname.startsWith(item.href) ? 'text-body-md text-secondary border-b-2 border-secondary pb-1' : 'text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200'}`}
               >
                 {item.label}
               </Link>
-              {item.href === '/services' && servicesOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-surface-container-lowest rounded-lg shadow-lg border border-outline-variant p-4 z-50"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  <div className="space-y-2">
-                    {serviceItems.map((service) => (
-                      <Link
-                        key={service.href}
-                        href={service.href}
-                        className="block text-body-md text-on-surface-variant hover:text-secondary transition-colors py-1"
-                      >
-                        {service.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
             </div>
           ))}
         </div>

@@ -47,11 +47,11 @@ export default function Hero({ data }: { data: HeroData }) {
             </div>
           </div>
           <div className="md:col-span-5 relative mt-12 md:mt-0">
-            <div className="aspect-square rounded-2xl bg-surface-container-highest flex items-center justify-center p-8 overflow-hidden ambient-shadow">
+            <div className="aspect-square rounded-2xl bg-surface-container-highest flex items-center justify-center p-6 overflow-hidden ambient-shadow">
               <Image
                 alt={data.image.alt}
                 src={data.image.url}
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover object-[18%_50%] rounded-xl"
                 width={800}
                 height={800}
                 priority

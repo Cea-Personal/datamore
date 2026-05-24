@@ -6,7 +6,9 @@ import HowWeDoIt from '@/components/HowWeDoIt'
 import Impact from '@/components/Impact'
 import Industries from '@/components/Industries'
 import FeaturedSuccessStory from '@/components/FeaturedSuccessStory'
+import { loadedStories } from '@/utils/success-stories'
 import ReadyToScaleCTA from '@/components/CTA'
+
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
       <HowWeDoIt data={LandingData.howWeDoIt} />
       <Impact data={LandingData.impact} />
       <Industries data={LandingData.industries} />
-      <FeaturedSuccessStory data={LandingData.featuredSuccessStory} />
+      <FeaturedSuccessStory data={loadedStories[0]} />
       <ReadyToScaleCTA data={LandingData.cta} />
     </div>
   )

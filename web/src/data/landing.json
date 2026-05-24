@@ -1,10 +1,10 @@
 {
   "hero": {
     "title": "More Value <br> From <span class=\"text-secondary\"> Your Data</span>",
-    "subtitle": "Datamore helps organizations build modern data systems, automate reporting, and unlock AI-powered insights for better decision-making.",
+    "subtitle": "Datamore helps organizations build intelligent data systems, automate operations, and unlock AI-driven business growth.",
     "buttons": [
       {
-        "label": "Request a Consultation",
+        "label": "Talk to an Expert",
         "variant": "primary",
         "url": "/contact"
       },
@@ -15,12 +15,12 @@
       }
     ],
     "image": {
-      "alt": "3D data visualization featuring translucent geometric nodes connected by glowing threads",
-      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpWG_5ZRsqmic8kiFU9f61CFcMhx9yHGcv0BxsiMkCoTd-9ehMBLBcC081PQq9eiO3bbIGcLeDZhamZSCw9I2weTv9CeRBvJQwdFeoLsc8Ibjuxq0V1V7uvCdwQ6u9a6RmCNmF-W7w6uGAeCcAODf2N4_bzN8wlTbeW3XuzOF8TNec73WIsmnlsvpAD0MCI9S46P6q1wy7FnkSyVCSDMYUHvTi9uikniS-JUNEfUts1is_Yp8T4lekCNqJfmAkKDujhM12h5JjGfiJ"
+      "alt": "Tech agency staff members using tablet to optimize AI performance",
+      "url": "/hero_image.png"
     },
     "badge": {
-      "label": "+84% Accuracy",
-      "caption": "AI Optimization",
+      "label": "Data Consulting",
+      "caption": "Strategy • Engineering • Analytics",
       "icon": "analytics"
     }
   },
@@ -31,28 +31,31 @@
         "icon": "database",
         "title": "Data Engineering",
         "description": "Building robust, scalable pipelines that ensure your data is clean, secure, and ready for analysis.",
-        "link": {
-          "label": "Learn more",
-          "url": "/services/data-engineering"
-        }
+        "url": "/services/data-engineering"
       },
       {
         "icon": "insights",
         "title": "Analytics",
         "description": "Transforming raw numbers into intuitive dashboards and strategic insights that drive business growth.",
-        "link": {
-          "label": "Learn more",
-          "url": "/services/bi"
-        }
+        "url": "/services/bi"
       },
       {
         "icon": "smart_toy",
         "title": "AI Automation",
         "description": "Leveraging machine learning to automate complex reporting and predict future market trends.",
-        "link": {
-          "label": "Learn more",
-          "url": "/services/ai-llm-automation"
-        }
+        "url": "/services/ai-llm-automation"
+      },
+      {
+        "icon": "Psychology",
+        "title": "Data Strategy",
+        "description": "Aligning your data initiatives with business goals to create a roadmap for long-term success.",
+        "url": "/services/data-strategy"
+      },
+      {
+        "icon": "security",
+        "title": "Managed Data Services",
+        "description": "Implementing policies and technologies to ensure data privacy, compliance, and ethical use.",
+        "url": "/services/data-governance"
       }
     ]
   },
@@ -67,17 +70,17 @@
       {
         "number": "2",
         "title": "Architecture",
-        "description": "Designing custom, scalable cloud infrastructure tailored to your industry requirements."
+        "description": "Designing custom, scalable infrastructure tailored to your organisation requirements."
       },
       {
         "number": "3",
         "title": "Implementation",
-        "description": "Agile deployment of pipelines and models with continuous testing and validation."
+        "description": "Agile deployment of self-healing pipelines, models and automation workflows with continuous testing and validation."
       },
       {
         "number": "4",
         "title": "Optimization",
-        "description": "Refining AI models and scaling data access across your organization."
+      "description": "Finetuning AI models, RAG systems and scaling data access across your organization."
       }
     ]
   },
@@ -89,16 +92,16 @@
         "label": "Reduction in Ops Costs"
       },
       {
-        "value": "500+",
+        "value": "200+",
         "label": "Automated Reports"
       },
       {
-        "value": "24/7",
-        "label": "Data Monitoring"
+        "value": "3–5x",
+        "label": "Faster reporting workflows"
       },
       {
-        "value": "12M",
-        "label": "Records Processed Daily"
+        "value": "99.9%",
+        "label": "Data pipeline reliability"
       }
     ]
   },
@@ -114,15 +117,15 @@
     "cards": [
       {
         "title": "Fintech",
-        "description": "Real-time fraud detection and liquidity forecasting.",
+        "description": "Real-time analytics, fraud detection, and financial data infrastructure",
         "image": {
-          "alt": "Fintech data visualization",
+          "alt": "Fintech analytics dashboard",
           "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAWqZaonCLxqW8HDP73qic3L45P5GQDglHsJbGklN902z1aM0xJ2t16mSj0U_elMI_wuhfZTpb6X8CohCXx6wBSstgyzKtVcuhy6ZZfgaKf5lExNeVkGLtEMgjIrxcqo4LV75hmKO8aboCHuRaGRw4ta8PQzf8haJhtGBUYLaLgI5iIQ__srKgoIepHr-2xalLIlPwF5KAw7BUPtAA0Ekwu9V6j1Zfn-ebKp8_9AH3rnzbumxNqcQG5T3SpQFrIWFMgf6nw1gFnwGYV"
         }
       },
       {
         "title": "NGOs",
-        "description": "Resource allocation and impact reporting automation.",
+        "description": "Impact measurement, automated reporting, and data-driven resource allocation.",
         "image": {
           "alt": "NGO team using data maps",
           "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDf3iq_Oj8f7P7u27OXJ-0D1MuUaMUUcFKZ9l-o7WF4tim5PuXY7iqjsVzSvjxi9-PwbCbFWBzgQDoDg3vF342jndFyfuNQLPdikdRjuoi5y2DUe0P1ZK8gMI3_7_WMni7ilBpnGa1QpiTwJ6iBHknOAyTuHyOt7V8qNB1jgNrX4vjyQiQlmvVbf34BzuDpfYCeu08X719cNnQexDLO6_hJPvOp82yLaNnxosuw5KXb0oZ9N_3XYUIvj4uPTJCQiFTVdqCg8laEH3v0"
@@ -130,7 +133,7 @@
       },
       {
         "title": "Retail",
-        "description": "Inventory optimization and predictive buyer behavior.",
+        "description": "Customer analytics, inventory optimization, and sales performance tracking.",
         "image": {
           "alt": "Automated warehouse data",
           "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuColeDfwsajJQ3xjmgMBpLr65g07YAw43RUJVYaO90MM4doNir4v7T2BQmqiBhWctwaaM77XAJnovIxH0yc80d3_bHV54YGIKlaLCyNofrbPua8sDfpxv3cRJhsYk3DWXSZ9S-lpbsPP6reTCGXrPak2R5PDNur-AHxaEjfZLR0weIMQpjJPHtWaFJijGoABmyKZ0cimde9Bwii3N3KTPC4Y5WCbGGNWxDUMM9kN1p4anQtOjNrAFbeVgJ_Q4dpDedAjDASDf87JjOb"
@@ -138,7 +141,7 @@
       },
       {
         "title": "SMEs",
-        "description": "Scalable analytics for rapid business expansion.",
+        "description": "Scalable engineering and analytics for rapid business expansion.",
         "image": {
           "alt": "SME data dashboard",
           "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAuPVEkP1c9VMXU4aUtxHcVdDaDn7Al3UEMnhd-cFWvzzMGXXFdb63tWtiOJOOkSR88ptc9YrEfB28Y-3sRP4Pj8H_hX5CNT_jnG4EgPJXCH2-onRqMPpsIV5nAcspaKBavQaJwTeoA1t1zYktaO6j012ymTUEe8ehBXjp-1tyW06RnNHUSGTNf0tFeMO6dp1dHbqkGiqJiqQB-KRJCzMChWmToTPqEvkbP2JeK8MGdDwzl8o0A4rN5JV792eRYWzSixZ-nTBOqas5a"
@@ -146,39 +149,8 @@
       }
     ]
   },
-  "featuredSuccessStory": {
-    "badge": "Featured Success Story",
-    "title": "Optimizing Liquidity Risk for Tier-1 Fintech",
-    "description": "How we implemented real-time predictive risk assessment to stabilize $2.4B in daily transactions across 14 jurisdictions.",
-    "metrics": [
-      {
-        "value": "14%",
-        "label": "Capital reduction"
-      },
-      {
-        "value": "99.9%",
-        "label": "Compliance Accuracy"
-      }
-    ],
-"cta": {
-    "label": "Read the Full Case Study",
-    "url": "/success-stories/optimizing-liquidity-risk-for-tier-1-fintech"
-  },
-    "image": {
-      "alt": "Optimizing Liquidity Risk for Tier-1 Fintech",
-      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDU33DS24BDJUiEnCm93hkvBd77RrddMnZrkF2deR9FsfuatG9wEqyDQ5bO0toq5wBzNd03PcO--zwFltETN7W6zDgpd1pMQMK7vf0PB1QIParBGSpPtb71vDL0TohmXfvdTizmMMEB3gWOS3aUrA9I7EjiD-p7KTGJHcP9eFz4EoRVL0tPwCL5Mcoro-Z_NHet-HO4v5mGcuBaPFzPTqNHxMNCMuAE8JdnJKdKFO4nbW8C0BFOeUNaI_Z5Es0VMzIvzJ4g9PwPBu4G"
-    }
-  },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Join forward-thinking organizations using precision intelligence to drive growth and efficiency.",
-    "primaryButton": {
-      "label": "Book a Strategy Session",
-      "url": "/contact"
-    },
-    "secondaryButton": {
-      "label": "View Case Studies",
-      "url": "/success-stories"
-    }
+    "subtitle": "Join forward-thinking organizations using intelligence to drive growth."
   }
 }

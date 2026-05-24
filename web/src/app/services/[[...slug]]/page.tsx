@@ -1,10 +1,8 @@
 // app/services/[[...slug]]/page.tsx
 import ServicesData from '@/data/services.json'
-import ServicesHero from '@/components/ServicesHero'
+import ServicesHero from '@/components/PageHero'
 import ServiceCategories from '@/components/ServiceCategories'
-import ServiceImpact from '@/components/ServiceImpact'
 import ServicesCTA from '@/components/CTA'
-import ServicePageHero from '@/components/ServicePageHero'
 import ServiceCapabilities from '@/components/ServiceCapabilities'
 import ServiceSecurity from '@/components/ServiceSecurity'
 import ServicePageImpact from '@/components/ServicePageImpact'
@@ -30,7 +28,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
       <>
         <ServicesHero data={ServicesData.hero} />
         <ServiceCategories data={ServicesData.categories} />
-        <ServiceImpact data={ServicesData.impact} />
+        {/* <ServicePageImpact data={data.impact} /> */}
         <ServicesCTA data={ServicesData.cta} />
       </>
     )
@@ -43,12 +41,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
 
   return (
     <>
-      <ServicePageHero data={data.hero} />
+      <ServicesHero data={data.hero} />
       <ServiceCapabilities data={capabilities} />
       {data.security && <ServiceSecurity data={data.security} />}
       {data.features && <ServiceFeatures data={data.features} />}
       {data.infrastructure && <ServiceInfrastructure data={data.infrastructure} />}
-      <ServicePageImpact data={data.impact} />
+      {/* <ServicePageImpact data={data.impact} /> */}
       <ServicesCTA data={data.cta} />
     </>
   )

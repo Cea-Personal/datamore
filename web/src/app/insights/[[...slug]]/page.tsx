@@ -1,5 +1,5 @@
 import InsightsData from '@/data/insights.json'
-import InsightsHero from '@/components/InsightsHero'
+import InsightsHero from '@/components/PageHero'
 import InsightsClient from '@/components/InsightsClient'
 import InsightDetail from '@/components/InsightDetail'
 import type { Article, InsightData } from '@/types/insight'

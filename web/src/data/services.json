@@ -1,10 +1,14 @@
 {
   "hero": {
-    "title": "Architecting the Future<br>of <span class=\"text-secondary\">Precision Data.</span>",
-    "subtitle": "Our specialized core services bridge the gap between complex infrastructure and strategic growth, delivering clarity to the world's most data-intensive organizations.",
+    "title": "Architecting solutions<br>for <span class=\"text-secondary\">modern businesses</span>",
+    "subtitle": "We help organizations build and operate complete data systems that unify infrastructure, enable automation, support analytics, and guide long-term data strategy.",
     "image": {
       "alt": "Technical Infrastructure",
       "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA0tm_Lz2ykagfyg8nCywLPwyGsZf9CKBw6dK0AprsV1j4StB_hfkDy1lxD5bWx0OdBLPlWrohdFCDe_CYlamv3BYRef_lXPoJv4sN53GML8NuDiHhPxuiqSfKT5n53bCQbI0ot2_ak2Cf7UmN8rJ3QMuJw-Sz0SKWa36lTXa5_9tHfNFcJ3dDZKUzknSoip8xKDFjP9wqOUujmzb2zSc27u9yK9cT7UFJXk72Ut6FiQP2t8vr8WFqCAH_kvV94wkiFUMF3XyTPNY2F"
+    },
+    "badge": {
+      "label": "Enterprise Solutions",
+      "icon": "automation"
     }
   },
   "categories": [
@@ -12,12 +16,14 @@
       "title": "Data Engineering & Infrastructure",
       "category": "foundational",
       "icon": "database",
-      "description": "Building resilient pipelines and cloud-native architectures that handle petabyte-scale loads with zero-latency integrity. We turn fragmented silos into unified, high-performance engines.",
+      "description": "Building resilient pipelines and cloud-native architectures that handle petabyte-scale loads. We turn fragmented silos into unified, high-performance engines.",
       "features": [
         "ETL/ELT Architecture",
-        "Cloud Migration (AWS/Azure)",
-        "Data Lakehouse Design",
-        "Real-time Streaming (Kafka)"
+        "Cloud Migration",
+        "CI/CD for Data tools and pipelines",
+        "Data Lakehouse / Warehouse Design",
+        "Data Modelling & Visualisation",
+        "Batch & Stream Processing"
       ],
       "link": "/services/data-engineering",
       "explore": "Explore Data Engineering"
@@ -35,7 +41,7 @@
       "explore": "Explore BI & Analytics"
     },
     {
-      "title": "AI & LLM Automation",
+      "title": "AI Automation",
       "category": "innovation",
       "icon": "psychology",
       "description": "Deploying private, secure Large Language Models tailored to your institutional knowledge and regulatory requirements.",
@@ -54,6 +60,7 @@
       "description": "Aligning technical debt with long-term capital goals through rigorous audit and roadmapping.",
       "features": [
         "Data Governance",
+        "Data Architecture Roadmapping",
         "ROI Mapping",
         "Capability Maturity",
         "Regulatory Advisory"
@@ -65,7 +72,7 @@
       "title": "Managed Data Services",
       "category": "managed",
       "icon": "support_agent",
-      "description": "24/7 technical oversight. We manage the complexity so your internal teams can focus on core innovation.",
+      "description": "Technical oversight. We manage the complexity so your internal teams can focus on core innovation.",
       "features": [
         "Dedicated Support Squads"
       ],
@@ -73,36 +80,8 @@
       "explore": "Explore Managed Services"
     }
   ],
-  "impact": {
-    "title": "The Datamore Impact",
-    "subtitle": "Calculated precision in every deployment, ensuring technical rigor meets executive demand.",
-    "metrics": [
-      {
-        "value": "40%",
-        "label": "Efficiency Gain",
-        "description": "Average reduction in data latency for fintech trading platforms."
-      },
-      {
-        "value": "Zero",
-        "label": "Data Integrity Gaps",
-        "description": "Across 150+ successfully deployed production pipelines."
-      },
-      {
-        "value": "24/7",
-        "label": "Active Monitoring",
-        "description": "Global infrastructure oversight with automated incident response."
-      }
-    ]},
     "cta": {
       "title": "Ready to scale your impact with data?",
-      "subtitle": "Schedule a technical discovery session with our lead architects today.",
-      "primaryButton": {
-        "label": "Book a Strategy Session",
-        "url": "/contact"
-      },
-      "secondaryButton": {
-        "label": "View Case Studies",
-        "url": "/success-stories"
-      }
+      "subtitle": "Schedule a technical discovery session with our lead architects today."
     }
 }
