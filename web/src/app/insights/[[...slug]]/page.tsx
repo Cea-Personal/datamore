@@ -1,18 +1,9 @@
-import InsightsData from '@/data/insights.json'
 import InsightsHero from '@/components/PageHero'
 import InsightsClient from '@/components/InsightsClient'
 import InsightDetail from '@/components/InsightDetail'
-import type { Article, InsightData } from '@/types/insight'
+import type { InsightData } from '@/types/insight'
+import { insightFiles, InsightsData, LoadedInsights} from '@/data/insights/index'
 
-const insightFiles = {
-  'the-future-of-ai-automation-in-enterprise-fintech': () => import('@/data/insights/the-future-of-ai-automation-in-enterprise-fintech.json'),
-  'optimizing-data-pipelines-for-high-frequency-trading': () => import('@/data/insights/optimizing-data-pipelines-for-high-frequency-trading.json'),
-  'ethics-and-transparency-in-financial-llms': () => import('@/data/insights/ethics-and-transparency-in-financial-llms.json'),
-  'scaling-ngo-impact-with-data-strategy': () => import('@/data/insights/scaling-ngo-impact-with-data-strategy.json'),
-  'the-rise-of-semantic-layers-in-bi': () => import('@/data/insights/the-rise-of-semantic-layers-in-bi.json'),
-  'modernizing-legacy-data-for-global-banks': () => import('@/data/insights/modernizing-legacy-data-for-global-banks.json'),
-  'ai-driven-fraud-detection-strategies': () => import('@/data/insights/ai-driven-fraud-detection-strategies.json'),
-}
 
 const ARTICLES_PER_PAGE = 4
 
@@ -21,26 +12,31 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
   const insightSlug = slug?.[0]
 
   if (!insightSlug) {
-    const heroArticle: Article = {
-      slug: InsightsData.hero.slug,
-      thumbnail: InsightsData.hero.image.url,
-      category: InsightsData.hero.badge.label,
-      date: '',
-      readTime: InsightsData.hero.readTime,
-      title: InsightsData.hero.title,
-      description: InsightsData.hero.subtitle
-    }
+    const allArticles = LoadedInsights.filter(
+      a => a.insights.slug !== InsightsData.hero.slug
+);
 
-    const allArticles = InsightsData.articles.filter(a => a.slug !== InsightsData.hero.slug)
-    const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE)
+const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE);
+
+const uniqueFilters = Array.from(
+new Map(allArticles.map(a => [a.filter.label, a.filter])).values()
+);
+
+const buttons = [
+  { label: "All Insights", variant: "primary" },
+  ...uniqueFilters.map(f => ({
+    label: f.label,
+    variant: f.variant
+  }))
+];
 
     return (
       <>
         <InsightsHero data={InsightsData.hero} />
         <InsightsClient 
-          initialArticles={initialArticles} 
-          allArticles={allArticles}
-          filterData={InsightsData.filter} 
+          initialArticles={initialArticles.map(a => a.insights)} 
+          allArticles={allArticles.map(a => a.insights)}
+          filterData={{ buttons }} 
           ctaData={InsightsData.cta} 
         />
       </>

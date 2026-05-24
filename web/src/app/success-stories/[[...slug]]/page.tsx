@@ -1,5 +1,4 @@
 // app/success-stories/[[...slug]]/page.tsx
-import SuccessStoriesData from '@/data/success-stories.json'
 import SuccessStoriesHero from '@/components/PageHero'
 import StoriesGrid from '@/components/StoriesGrid'
 import SuccessStoriesCTA from '@/components/CTA'
@@ -8,7 +7,7 @@ import StoryChallenge from '@/components/StoryChallenge'
 import StorySolution from '@/components/StorySolution'
 import StoryTestimonial from '@/components/StoryTestimonial'
 import type { StoryData } from '@/types/success-story'
-import { storyFiles, loadedStories } from '@/utils/success-stories'
+import { StoryFiles, LoadedStories, SuccessStoriesData } from '@/data/success-stories/index'
 
 export default async function SuccessStoriesPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params
@@ -19,13 +18,13 @@ export default async function SuccessStoriesPage({ params }: { params: Promise<{
     return (
       <>
         <SuccessStoriesHero data={SuccessStoriesData.hero} />
-        <StoriesGrid data={loadedStories } />
+        <StoriesGrid data={LoadedStories } />
         <SuccessStoriesCTA data={SuccessStoriesData.cta} />
       </>
     )
   }
 
-  const loadData = storyFiles[storySlug as keyof typeof storyFiles] || storyFiles['optimizing-liquidity-risk-for-tier-1-fintech']
+  const loadData = StoryFiles[storySlug as keyof typeof StoryFiles] || StoryFiles['optimizing-liquidity-risk-for-tier-1-fintech']
   const data = (await loadData()).default as StoryData
 
   return (

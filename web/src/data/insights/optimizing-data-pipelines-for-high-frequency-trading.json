@@ -5,6 +5,9 @@
     "title": "Lead Data Engineer",
     "date": "Mar 12, 2024"
   },
+  "readTime": "12 min read",
+  "category": "Engineering",
+  "summary": "How we reduced latency by 40% using custom ETL architectures and real-time stream processing.",
   "heroImage": {
     "alt": "High-frequency trading visualization",
     "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQ3d_SOZi3PROaTuqD66jWLGG9R40LNaJiIfZsaeVlefHsbcZwXGgqH2uCuBmteD0Cn422ICoBmzTzGovs9iJ_FJbHnj38pDYxHFXVBOIepaM56adwt6g-bmKqTI4GRJ4GlfKFV6hpaVYKEcOVx8FKU4JU6T6PUEmMAUR0nMRcDkWp1mAmaffJXB1LiU0sNeFJb34bJWyWN9PWQnri3cp-VtAHVKqwsHxL9hmxCoFK7ZeALwP0tvDiYDuPifZ4oG69tgYESNBlXNPM"

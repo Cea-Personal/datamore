@@ -1,5 +1,5 @@
 // app/services/[[...slug]]/page.tsx
-import ServicesData from '@/data/services.json'
+import ServicesData from '@/data/services/services.json'
 import ServicesHero from '@/components/PageHero'
 import ServiceCategories from '@/components/ServiceCategories'
 import ServicesCTA from '@/components/CTA'

@@ -1,6 +1,5 @@
 // src/components/ServicePageHero.tsx
 import Link from 'next/dist/client/link'
-import Image from 'next/image'
 
 interface HeroData {
   title: string
@@ -21,9 +20,9 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
   return (
     <section className="relative overflow-hidden pt-20 pb-32 px-margin-mobile md:px-margin-desktop">
       <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-        <div className="lg:col-span-7 z-10">
+        <div className="lg:col-span-10 lg:col-start-2 z-10 text-center">
           {data.badge && (
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-secondary mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-container rounded-full text-secondary mb-6 mx-auto">
               {data.badge.icon && (
                 <span className="material-symbols-outlined text-[18px]" style={{fontVariationSettings: "'FILL' 1"}}>{data.badge.icon}</span>
               )}
@@ -31,13 +30,13 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
               <span className="text-on-surface-variant text-caption">{data.readTime}</span>
             </div>
           )}
-          <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6" dangerouslySetInnerHTML={{ __html: data.title }}>
+          <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 text-center" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 mx-auto text-left">
             {data.subtitle}
           </p>
           {data.slug && (
-            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60">
+            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60 mx-auto">
               Read Full Article
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
             </Link>

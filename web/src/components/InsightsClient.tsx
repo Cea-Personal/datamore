@@ -10,13 +10,11 @@ import type { Article } from '@/types/insight'
 interface CTAData {
   title: string
   subtitle: string
-  primaryButton: { label: string; url: string }
-  secondaryButton: { label: string; url: string }
 }
 
 interface FilterData {
   buttons: { label: string; variant: string }[]
-  placeholder: string
+ 
 }
 
 const ARTICLES_PER_PAGE = 4
