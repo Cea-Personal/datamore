@@ -40,13 +40,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Ready to Optimize Your Data Infrastructure?",
-    "subtitle": "Our engineering team specializes in ultra-low-latency systems for financial markets.",
-    "primaryButton": {
-      "label": "Book a Technical Review",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Our engineering team specializes in ultra-low-latency systems for financial markets."
   }
 }

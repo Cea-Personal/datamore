@@ -31,13 +31,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Ready to Scale Your Impact?",
-    "subtitle": "Partner with us to transform your data into actionable insights.",
-    "primaryButton": {
-      "label": "Book Strategy Session",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Partner with us to transform your data into actionable insights."
   }
 }

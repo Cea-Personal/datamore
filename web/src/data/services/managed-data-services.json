@@ -68,8 +68,6 @@
   },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Schedule a technical audit with our lead architects to identify optimization opportunities in your current stack.",
-    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
-    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+    "subtitle": "Schedule a technical audit with our lead architects to identify optimization opportunities in your current stack."
   }
 }

@@ -31,13 +31,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Ready to Address AI Governance?",
-    "subtitle": "Ensure your AI systems meet regulatory requirements with our explainability toolkit.",
-    "primaryButton": {
-      "label": "Schedule Consultation",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Ensure your AI systems meet regulatory requirements with our explainability toolkit."
   }
 }

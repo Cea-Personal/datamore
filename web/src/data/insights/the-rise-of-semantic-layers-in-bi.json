@@ -31,13 +31,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Ready to Modernize Your BI Stack?",
-    "subtitle": "Implement semantic layers for consistent, trustworthy analytics.",
-    "primaryButton": {
-      "label": "Learn More",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Implement semantic layers for consistent, trustworthy analytics."
   }
 }

@@ -69,8 +69,6 @@
   },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Join the ranks of data-forward organizations using Datamore to turn complexity into competitive advantage.",
-    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
-    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+    "subtitle": "Join the ranks of data-forward organizations using Datamore to turn complexity into competitive advantage."
   }
 }

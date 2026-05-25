@@ -31,13 +31,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Ready for Cloud Migration?",
-    "subtitle": "Transform your legacy systems with our proven migration methodology.",
-    "primaryButton": {
-      "label": "Get Started",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Transform your legacy systems with our proven migration methodology."
   }
 }

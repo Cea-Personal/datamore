@@ -58,8 +58,6 @@
   },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Join the ranks of high-performing enterprises that treat data as a rigorous strategic discipline rather than a technical burden.",
-    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
-    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+    "subtitle": "Join the ranks of high-performing enterprises that treat data as a rigorous strategic discipline rather than a technical burden."
   }
 }

@@ -31,13 +31,6 @@
   "relatedArticles": [],
   "cta": {
     "title": "Need Fraud Detection Solutions?",
-    "subtitle": "Protect your financial transactions with our AI-powered security solutions.",
-    "primaryButton": {
-      "label": "Schedule Demo",
-      "icon": "arrow_forward"
-    },
-    "secondaryButton": {
-      "label": "View All Articles"
-    }
+    "subtitle": "Protect your financial transactions with our AI-powered security solutions."
   }
 }

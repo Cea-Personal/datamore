@@ -46,8 +46,6 @@
   },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Stop fighting your infrastructure. Let our engineers build the foundation your AI and Analytics teams deserve.",
-    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
-    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
+    "subtitle": "Stop fighting your infrastructure. Let our engineers build the foundation your AI and Analytics teams deserve."
   }
 }

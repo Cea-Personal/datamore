@@ -69,8 +69,5 @@
   },
   "cta": {
     "title": "Ready to scale your impact with data?",
-    "subtitle": "Join the leading enterprises leveraging Datamore to build the next generation of autonomous intelligence.",
-    "primaryButton": { "label": "Book a Strategy Session", "url": "/contact" },
-    "secondaryButton": { "label": "View Case Studies", "url": "/success-stories" }
-  }
+    "subtitle": "Join the leading enterprises leveraging Datamore to build the next generation of autonomous intelligence."
 }
