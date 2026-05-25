@@ -29,8 +29,11 @@ export default function CareersTalentPool({ data }: { data: { title: string; sub
             <div>
               <label className="block text-label-md mb-2 text-on-surface">Specialization</label>
               <select className="w-full bg-transparent border border-outline-variant rounded-lg p-3 focus:ring-2 focus:ring-secondary focus:border-secondary transition-all">
-                <option>AI Engineering</option>
-                <option>Data Architecture</option>
+                <option> AI Engineering</option>
+                <option> Data Platform & Architecture</option>
+                <option> Data Engineer </option>
+                <option> Analytics Engineer</option>
+                <option> Business Analyst </option>
                 <option>Product Strategy</option>
                 <option>Other</option>
               </select>

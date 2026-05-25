@@ -48,7 +48,10 @@ export const InsightsData =
       "alt": "Featured Article",
       "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDJ_Vn36LGGHSB2SfBKMknZPPd82nR9ulQvtF8kwcgDuZCU20Ny-jEfQNlmsaVePzhZEQM2G429lHy--fc_dwX3l58iLXhrw-lvaozZsvuyq_6ksLVyYyNbZv27tn1Hz1UbBjQEtRpSDkSO2EWGgJbrGD8G5whdGHW07PeJCDuCksBpHmn9lkx245UMq0UkLFv0EDfg-dBPGwYSGo8fkn4enKQ6gyuYB8lVG4H4uct6wm6M6wxDyzGiv_PWPK8_rciRTElQdOQy_IvD"
     },
-    "slug": "the-future-of-ai-automation-in-enterprise-fintech"
+    "slug": {
+      "url": "/insights/the-future-of-ai-automation-in-enterprise-fintech",
+      "label": "Read Full Article"
+    }
   },
   "cta": {
     "title": "Ready to scale your impact with data?",

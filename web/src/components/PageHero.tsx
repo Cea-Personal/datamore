@@ -12,13 +12,16 @@ interface HeroData {
     alt: string
     url: string
   }
-  slug?: string
+  slug?:{
+    url : string
+    label: string
+  } 
   readTime?: string
 }
 
 export default function ServicePageHero({ data }: { data: HeroData }) {
   return (
-    <section className="relative overflow-hidden pt-20 pb-32 px-margin-mobile md:px-margin-desktop">
+    <section className="relative overflow-hidden min-h-[70vh] pt-20 pb-32 px-margin-mobile md:px-margin-desktop">
       <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
         <div className="lg:col-span-10 lg:col-start-2 z-10 text-center">
           {data.badge && (
@@ -36,8 +39,8 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
             {data.subtitle}
           </p>
           {data.slug && (
-            <Link href={`/insights/${data.slug}`} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60 mx-auto">
-              Read Full Article
+            <Link href={data.slug.url} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60 mx-auto">
+              {data.slug.label}
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
             </Link>
           )}

@@ -13,7 +13,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
 
   if (!insightSlug) {
     const allArticles = LoadedInsights.filter(
-      a => a.insights.slug !== InsightsData.hero.slug
+      a => a.insights.slug !== InsightsData.hero.slug.url
 );
 
 const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE);

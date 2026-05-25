@@ -9,6 +9,10 @@
     "badge": {
       "label": "We're Hiring",
       "icon": "engineering"
+    },
+    "slug": {
+      "url": "/careers/positions",
+      "label": "View Open Positions"
     }
   },
   "values": [
