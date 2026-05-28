@@ -99,19 +99,19 @@ export default function Footer() {
             {subscribed ? (
               <p className="text-body-md text-tertiary-fixed font-label-md">Thanks for subscribing!</p>
             ) : (
-            <form onSubmit={handleSubscribe} className="flex gap-2">
-              <input
-                className="bg-white/5 border border-white/20 rounded-lg px-4 py-3 flex-grow focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40"
-                placeholder="Email address"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button className="bg-secondary text-white px-6 py-3 rounded-lg text-label-md hover:bg-secondary/90 transition-colors">
-                Join
-              </button>
-            </form>
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2 w-full max-w-full">
+                <input
+                  className="bg-white/5 border border-white/20 rounded-lg px-4 py-3 flex-grow focus:outline-none focus:ring-2 focus:ring-secondary text-white placeholder-white/40 min-w-0"
+                  placeholder="Email address"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <button className="bg-secondary text-white px-6 py-3 rounded-lg text-label-md hover:bg-secondary/90 transition-colors whitespace-nowrap">
+                  Join
+                </button>
+              </form>
             )}
           </div>
         </div>

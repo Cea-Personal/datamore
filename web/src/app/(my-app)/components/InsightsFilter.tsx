@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import type { Article } from '@/app/(my-app)/types/insight'
+import type { Article } from '@/(my-app)/types/insight'
 
 interface FilterButton {
   label: string

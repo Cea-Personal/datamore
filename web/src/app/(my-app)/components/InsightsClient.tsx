@@ -1,11 +1,11 @@
 'use client'
 
 import { useState } from 'react'
-import InsightsFilter from '@/app/(my-app)/components/InsightsFilter'
-import InsightsGrid from '@/app/(my-app)/components/InsightsGrid'
-import InsightsSidebar from '@/app/(my-app)/components/InsightsSidebar'
-import GlobalCTA from '@/app/(my-app)/components/CTA'
-import type { Article } from '@/app/(my-app)/types/insight'
+import InsightsFilter from '@/(my-app)/components/InsightsFilter'
+import InsightsGrid from '@/(my-app)/components/InsightsGrid'
+import InsightsSidebar from '@/(my-app)/components/InsightsSidebar'
+import GlobalCTA from '@/(my-app)/components/CTA'
+import type { Article } from '@/(my-app)/types/insight'
 
 interface CTAData {
   title: string

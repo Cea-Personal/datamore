@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import { useState } from 'react'
-import type { InsightData } from '@/app/(my-app)/types/insight'
-import GlobalCTA from '@/app/(my-app)/components/CTA'
+import type { InsightData } from '@/(my-app)/types/insight'
+import GlobalCTA from '@/(my-app)/components/CTA'
 
 export default function InsightDetail({
   title,
