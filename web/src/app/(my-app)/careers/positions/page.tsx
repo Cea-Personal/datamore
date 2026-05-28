@@ -1,5 +1,5 @@
 // app/careers/positions/page.tsx
-import CareersData from '@/data/careers.json'
+import CareersData from '@data/careers.json'
 import CareersTalentPool from '@/(my-app)/components/CareersTalentPool'
 import type { ReactNode } from 'react'
 

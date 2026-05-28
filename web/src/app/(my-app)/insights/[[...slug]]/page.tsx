@@ -2,7 +2,7 @@ import InsightsHero from '@/(my-app)/components/PageHero'
 import InsightsClient from '@/(my-app)/components/InsightsClient'
 import InsightDetail from '@/(my-app)/components/InsightDetail'
 import type { InsightData } from '@/(my-app)/types/insight'
-import { insightFiles, InsightsData, LoadedInsights} from '@/data/insights/index'
+import { insightFiles, InsightsData, LoadedInsights} from '@data/insights/index'
 
 
 const ARTICLES_PER_PAGE = 4

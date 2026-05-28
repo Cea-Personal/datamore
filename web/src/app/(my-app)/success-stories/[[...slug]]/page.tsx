@@ -7,7 +7,7 @@ import StoryChallenge from '@/(my-app)/components/StoryChallenge'
 import StorySolution from '@/(my-app)/components/StorySolution'
 import StoryTestimonial from '@/(my-app)/components/StoryTestimonial'
 import type { StoryData } from '@/(my-app)/types/success-story'
-import { StoryFiles, LoadedStories, SuccessStoriesData } from '@/data/success-stories/index'
+import { StoryFiles, LoadedStories, SuccessStoriesData } from '@data/success-stories/index'
 
 export default async function SuccessStoriesPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params

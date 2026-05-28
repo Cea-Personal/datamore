@@ -1,10 +1,10 @@
 import { getFirstTwoSentences } from '..';
 export const StoryFiles = {
-  'optimizing-liquidity-risk-for-tier-1-fintech': () => import('@/data/success-stories/fixing-broken-reporting-for-ecommerce-company.json'),
-  'supply-chain-predictive-modeling': () => import('@/data/success-stories/supply-chain-predictive-modeling.json'),
-  'data-driven-philanthropy-impact': () => import('@/data/success-stories/data-driven-philanthropy-impact.json'),
-  'enterprise-knowledge-retrieval': () => import('@/data/success-stories/enterprise-knowledge-retrieval.json'),
-  'scaling-data-maturity-for-growth': () => import('@/data/success-stories/scaling-data-maturity-for-growth.json'),
+  'optimizing-liquidity-risk-for-tier-1-fintech': () => import('./fixing-broken-reporting-for-ecommerce-company.json'),
+  'supply-chain-predictive-modeling': () => import('./supply-chain-predictive-modeling.json'),
+  'data-driven-philanthropy-impact': () => import('./data-driven-philanthropy-impact.json'),
+  'enterprise-knowledge-retrieval': () => import('./enterprise-knowledge-retrieval.json'),
+  'scaling-data-maturity-for-growth': () => import('./scaling-data-maturity-for-growth.json'),
 }
 
 export const LoadedStories = await Promise.all(

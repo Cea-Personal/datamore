@@ -1,13 +1,13 @@
 import { getFirstTwoSentences } from '..';
 
 export const insightFiles = {
-  'the-future-of-ai-automation-in-enterprise-fintech': () => import('@/data/insights/the-future-of-ai-automation-in-enterprise-fintech.json'),
-  'optimizing-data-pipelines-for-high-frequency-trading': () => import('@/data/insights/optimizing-data-pipelines-for-high-frequency-trading.json'),
-  'ethics-and-transparency-in-financial-llms': () => import('@/data/insights/ethics-and-transparency-in-financial-llms.json'),
-  'scaling-ngo-impact-with-data-strategy': () => import('@/data/insights/scaling-ngo-impact-with-data-strategy.json'),
-  'the-rise-of-semantic-layers-in-bi': () => import('@/data/insights/the-rise-of-semantic-layers-in-bi.json'),
-  'modernizing-legacy-data-for-global-banks': () => import('@/data/insights/modernizing-legacy-data-for-global-banks.json'),
-  'ai-driven-fraud-detection-strategies': () => import('@/data/insights/ai-driven-fraud-detection-strategies.json'),
+  'the-future-of-ai-automation-in-enterprise-fintech': () => import('./the-future-of-ai-automation-in-enterprise-fintech.json'),
+  'optimizing-data-pipelines-for-high-frequency-trading': () => import('./optimizing-data-pipelines-for-high-frequency-trading.json'),
+  'ethics-and-transparency-in-financial-llms': () => import('./ethics-and-transparency-in-financial-llms.json'),
+  'scaling-ngo-impact-with-data-strategy': () => import('./scaling-ngo-impact-with-data-strategy.json'),
+  'the-rise-of-semantic-layers-in-bi': () => import('./the-rise-of-semantic-layers-in-bi.json'),
+  'modernizing-legacy-data-for-global-banks': () => import('./modernizing-legacy-data-for-global-banks.json'),
+  'ai-driven-fraud-detection-strategies': () => import('./ai-driven-fraud-detection-strategies.json'),
 }
 
 

@@ -1,5 +1,5 @@
 // app/services/[[...slug]]/page.tsx
-import ServicesData from '@/data/services/services.json'
+import ServicesData from '@data/services/services.json'
 import ServicesHero from '@/(my-app)/components/PageHero'
 import ServiceCategories from '@/(my-app)/components/ServiceCategories'
 import ServicesCTA from '@/(my-app)/components/CTA'
@@ -8,13 +8,14 @@ import ServiceSecurity from '@/(my-app)/components/ServiceSecurity'
 import ServiceFeatures from '@/(my-app)/components/ServiceFeatures'
 import ServiceInfrastructure from '@/(my-app)/components/ServiceInfrastructure'
 import type { ServiceData, Capability } from '@/(my-app)/types/service'
+import ServicePageImpact from '@/(my-app)/components/ServicePageImpact'
 
 const serviceFiles = {
-  'data-engineering': () => import('@/data/services/data-engineering.json'),
-  'bi': () => import('@/data/services/bi.json'),
-  'ai-llm-automation': () => import('@/data/services/ai-llm-automation.json'),
-  'data-strategy': () => import('@/data/services/data-strategy.json'),
-  'managed-data-services': () => import('@/data/services/managed-data-services.json'),
+  'data-engineering': () => import('@data/services/data-engineering.json'),
+  'bi': () => import('@data/services/bi.json'),
+  'ai-llm-automation': () => import('@data/services/ai-llm-automation.json'),
+  'data-strategy': () => import('@data/services/data-strategy.json'),
+  'managed-data-services': () => import('@data/services/managed-data-services.json'),
 }
 
 export default async function ServicePage({ params }: { params: Promise<{ slug?: string[] }> }) {
@@ -27,7 +28,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
       <>
         <ServicesHero data={ServicesData.hero} />
         <ServiceCategories data={ServicesData.categories} />
-        {/* <ServicePageImpact data={data.impact} /> */}
+        <ServicePageImpact data={ServicesData.impact} />
         <ServicesCTA data={ServicesData.cta} />
       </>
     )
@@ -45,7 +46,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug?:
       {data.security && <ServiceSecurity data={data.security} />}
       {data.features && <ServiceFeatures data={data.features} />}
       {data.infrastructure && <ServiceInfrastructure data={data.infrastructure} />}
-      {/* <ServicePageImpact data={data.impact} /> */}
+      <ServicePageImpact data={data.impact} />
       <ServicesCTA data={data.cta} />
     </>
   )

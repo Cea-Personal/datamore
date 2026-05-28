@@ -11,6 +11,14 @@
       "icon": "automation"
     }
   },
+  "impact": {
+    "title": "The Datamore Impact",
+    "metrics": [
+      { "value": "99.9%", "label": "Pipeline Uptime", "description": "Redundant architectures and automated self-healing clusters." },
+      { "value": "60%", "label": "Reduction in ETL Latency", "description": "Proprietary partitioning logic and optimized compute allocation." },
+      { "value": "45%", "label": "Cloud Cost Optimization", "description": "Aggressive resource monitoring and spot instance orchestration." }
+    ]
+  },
   "categories": [
     {
       "title": "Data Engineering & Infrastructure",

@@ -1,12 +1,12 @@
 // app/page.tsx
-import LandingData from '@/data/landing.json'
+import LandingData from '@data/landing.json'
 import Hero from '@/(my-app)/components/Hero'
 import WhatWeDo from '@/(my-app)/components/WhatWeDo'
 import HowWeDoIt from '@/(my-app)/components/HowWeDoIt'
 import Impact from '@/(my-app)/components/Impact'
 import IndustriesEmpower from '@/(my-app)/components/IndustriesEmpower'
 import FeaturedSuccessStory from '@/(my-app)/components/FeaturedSuccessStory'
-import { LoadedStories } from '@/data/success-stories/index'
+import { LoadedStories } from '../../data/success-stories/index'
 import ReadyToScaleCTA from '@/(my-app)/components/CTA'
 
 
