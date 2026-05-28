@@ -17,6 +17,7 @@ interface HeroData {
     label: string
   } 
   readTime?: string
+  likes?: number
 }
 
 export default function ServicePageHero({ data }: { data: HeroData }) {
@@ -30,7 +31,13 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
                 <span className="material-symbols-outlined text-[18px]" style={{fontVariationSettings: "'FILL' 1"}}>{data.badge.icon}</span>
               )}
               <span className="font-label-md text-label-md uppercase tracking-wider">{data.badge.label}</span>
-              <span className="text-on-surface-variant text-caption">{data.readTime}</span>
+              <span className="text-on-surface-variant text-caption">{data.readTime} min read</span>
+              {data.likes !== undefined && data.likes > 0 && (
+                <span className="flex items-center gap-1 text-on-surface-variant text-caption">
+                  <span className="material-symbols-outlined text-[16px]">favorite</span>
+                  {data.likes}
+                </span>
+              )}
             </div>
           )}
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 text-center" dangerouslySetInnerHTML={{ __html: data.title }}>

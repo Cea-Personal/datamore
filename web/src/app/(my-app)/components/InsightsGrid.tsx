@@ -8,6 +8,7 @@ interface Article {
   readTime: string
   title: string
   description: string
+  likes?: number
 }
 
 export default function InsightsGrid({ data }: { data: Article[] }) {
@@ -39,6 +40,12 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
             <p className="text-body-md text-on-surface-variant mb-6 flex-grow">
               {article.description}
             </p>
+            {article.likes !== undefined && (
+              <div className="flex items-center text-on-surface-variant text-caption mb-4">
+                <span className="material-symbols-outlined text-[16px] mr-1">favorite</span>
+                <span>{article.likes} likes</span>
+              </div>
+            )}
             <Link href={`/insights/${article.slug}`} className="text-secondary text-label-md flex items-center gap-1 no-underline">
               <span className="hover:underline decoration-2 underline-offset-2">Read more</span> <span className="material-symbols-outlined text-sm">chevron_right</span>
             </Link>

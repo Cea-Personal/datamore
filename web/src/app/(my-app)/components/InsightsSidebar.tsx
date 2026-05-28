@@ -7,6 +7,17 @@ interface Article {
   category: string
 }
 
+const categoryLabelMap: Record<string, string> = {
+  'ai-ml': 'AI & ML',
+  'bi': 'Business Intelligence',
+  'ai': 'AI & LLM Automation',
+  'data-engineering': 'Data Engineering',
+  'data-strategy': 'Data Strategy',
+  'managed-data': 'Managed Data Services',
+  'technology': 'Technology',
+  'industry': 'Industry',
+}
+
 export default function InsightsSidebar({ 
   articles,
   onFilter 
@@ -23,7 +34,7 @@ export default function InsightsSidebar({
   const uniqueCategories = Array.from(
     new Set(articles.map(a => a.category).filter(Boolean))
   ).map(category => ({
-    label: category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    label: categoryLabelMap[category] || category,
     slug: category
   }))
 

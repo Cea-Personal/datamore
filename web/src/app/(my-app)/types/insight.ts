@@ -19,11 +19,15 @@ export interface ROIData {
 }
 
 export interface Section {
-  type: 'text' | 'heading' | 'roi-chart'
+  type: 'text' | 'heading' | 'roi-chart' | 'image'
   content: string
   title?: string
   data?: ROIData[]
   variant?: string
+  image?: {
+    alt: string
+    url: string
+  }
 }
 
 export interface RelatedArticle {
@@ -31,7 +35,6 @@ export interface RelatedArticle {
   readTime: string
   imageUrl: string
 }
-
 
 export interface CTA {
   title: string
@@ -48,6 +51,7 @@ export interface CTA {
 }
 
 export interface InsightData {
+  id?: number
   title: string
   author: AuthorInfo
   heroImage: HeroImage
@@ -55,6 +59,7 @@ export interface InsightData {
   socialShare?: boolean
   relatedArticles?: RelatedArticle[]
   cta?: CTA
+  likes?: number
 }
 
 export interface Article {
@@ -65,4 +70,5 @@ export interface Article {
   readTime: string
   title: string
   description: string
+  likes?: number
 }

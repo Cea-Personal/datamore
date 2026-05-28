@@ -6,16 +6,19 @@ import type { InsightData } from '@/(my-app)/types/insight'
 import GlobalCTA from '@/(my-app)/components/CTA'
 
 export default function InsightDetail({
+  id,
   title,
   author,
   heroImage,
   sections,
   socialShare = false,
   relatedArticles = [],
-  cta
+  cta,
+  likes: initialLikes = 0
 }: InsightData) {
   const [email, setEmail] = useState('')
   const [subscribed, setSubscribed] = useState(false)
+  const [likes, setLikes] = useState(initialLikes)
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault()
@@ -23,6 +26,20 @@ export default function InsightDetail({
       console.log('Subscribing email:', email)
       setSubscribed(true)
       setEmail('')
+    }
+  }
+
+  const handleLike = async () => {
+    try {
+      const response = await fetch(`/api/insights/${id}/like`, {
+        method: 'POST',
+      })
+      if (response.ok) {
+        const data = await response.json()
+        setLikes(data.likes)
+      }
+    } catch (error) {
+      console.error('Failed to like insight:', error)
     }
   }
 
@@ -44,6 +61,7 @@ export default function InsightDetail({
              <div className="w-12 h-12 rounded-full overflow-hidden bg-surface-variant">
                     <Image
                       alt={`${author.name} headshot`}
+                      unoptimized
                       src={author.imageUrl}
                       className="w-full h-full object-cover"
                       width={120}
@@ -55,10 +73,17 @@ export default function InsightDetail({
               <div>
                 <p className="text-label-md text-on-surface">{author.name}</p>
                 <p className="text-caption text-on-surface-variant">
-                  {author.title} • {author.date}
+                  {author.title} • {author.date.split('T')[0]}
                 </p>
               </div>
             </div>
+            <button
+              onClick={handleLike}
+              className="flex items-center space-x-2 mt-4 px-4 py-2 bg-surface-container text-on-surface rounded-lg hover:bg-secondary/20 transition-colors"
+            >
+              <span className="material-symbols-outlined text-[20px]">favorite</span>
+              <span className="text-label-md">{likes} likes</span>
+            </button>
           </div>
           <div className="lg:col-span-5 relative">
             <div className="rounded-xl overflow-hidden ambient-shadow h-[400px]">
@@ -67,6 +92,7 @@ export default function InsightDetail({
                 src={heroImage.url}
                 className="w-full h-full object-cover"
                 width={800}
+                unoptimized
                 height={600}
                 priority
               />
@@ -133,6 +159,18 @@ export default function InsightDetail({
                     )}
                   </div>
                 );
+              case 'image':
+                return section.image ? (
+                  <div key={index} className="my-12">
+                    <Image
+                      alt={section.image.alt}
+                      src={section.image.url}
+                      className="w-full rounded-xl ambient-shadow"
+                      width={800}
+                      height={400}
+                    />
+                  </div>
+                ) : null;
               default:
                 return null;
             }

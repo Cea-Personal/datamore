@@ -131,25 +131,62 @@ export interface Insight {
   id: number;
   title: string;
   slug: string;
-  category: 'bi' | 'ai' | 'data-engineering' | 'data-strategy' | 'managed-data' | 'technology' | 'industry';
-  content: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
+  category:
+    | 'ai-ml'
+    | 'bi'
+    | 'data-engineering'
+    | 'data-strategy'
+    | 'managed-data'
+    | 'software-development'
+    | 'technology'
+    | 'case-study'
+    | 'industry';
+  summary?: string | null;
+  readTime?: string | null;
+  author?: {
+    name?: string | null;
+    title?: string | null;
+    image?: (number | null) | Media;
   };
-  image?: (number | null) | Media;
-  excerpt?: string | null;
+  heroImage?: {
+    image?: (number | null) | Media;
+  };
+  sections?:
+    | {
+        type: 'text' | 'heading' | 'Chart' | 'image';
+        content?: string | null;
+        title?: string | null;
+        variant?: string | null;
+        image?: (number | null) | Media;
+        data?:
+          | {
+              label?: string | null;
+              value?: string | null;
+              color?: string | null;
+              id?: string | null;
+            }[]
+          | null;
+        id?: string | null;
+      }[]
+    | null;
+  socialShare?: boolean | null;
+  relatedArticles?:
+    | {
+        title?: string | null;
+        readTime?: string | null;
+        imageUrl?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  cta: {
+    title: string;
+    subtitle: string;
+  };
   publishedDate: string;
+  /**
+   * Total number of likes for this insight
+   */
+  likes?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -404,10 +441,55 @@ export interface InsightsSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
   category?: T;
-  content?: T;
-  image?: T;
-  excerpt?: T;
+  summary?: T;
+  readTime?: T;
+  author?:
+    | T
+    | {
+        name?: T;
+        title?: T;
+        image?: T;
+      };
+  heroImage?:
+    | T
+    | {
+        image?: T;
+      };
+  sections?:
+    | T
+    | {
+        type?: T;
+        content?: T;
+        title?: T;
+        variant?: T;
+        image?: T;
+        data?:
+          | T
+          | {
+              label?: T;
+              value?: T;
+              color?: T;
+              id?: T;
+            };
+        id?: T;
+      };
+  socialShare?: T;
+  relatedArticles?:
+    | T
+    | {
+        title?: T;
+        readTime?: T;
+        imageUrl?: T;
+        id?: T;
+      };
+  cta?:
+    | T
+    | {
+        title?: T;
+        subtitle?: T;
+      };
   publishedDate?: T;
+  likes?: T;
   updatedAt?: T;
   createdAt?: T;
 }
