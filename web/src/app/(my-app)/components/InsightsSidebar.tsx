@@ -7,25 +7,6 @@ interface Article {
   category: string
 }
 
-interface EditorsChoiceItem {
-  category: string
-  title: string
-  readTime: string
-}
-
-const categoryLabelMap: Record<string, string> = {
-  'data-strategy': 'Data Strategy',
-  'ai-ml': 'AI & ML',
-  'engineering': 'Engineering',
-  'case-studies': 'Case Studies',
-  'cloud-architecture': 'Cloud Architecture',
-  'Data Strategy': 'data-strategy',
-  'AI & ML': 'ai-ml',
-  'Engineering': 'engineering',
-  'Case Studies': 'case-studies',
-  'Cloud Architecture': 'cloud-architecture'
-}
-
 export default function InsightsSidebar({ 
   articles,
   onFilter 
@@ -39,32 +20,31 @@ export default function InsightsSidebar({
     return acc
   }, {} as Record<string, number>)
 
-  const categories = [
-    { label: 'Data Strategy', slug: 'data-strategy' },
-    { label: 'AI & ML', slug: 'ai-ml' },
-    { label: 'Engineering', slug: 'engineering' },
-    { label: 'Case Studies', slug: 'case-studies' },
-    { label: 'Cloud Architecture', slug: 'cloud-architecture' }
-  ]
+  const uniqueCategories = Array.from(
+    new Set(articles.map(a => a.category).filter(Boolean))
+  ).map(category => ({
+    label: category.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    slug: category
+  }))
 
   return (
     <>
       {/* Browse by Category */}
-      <div className="bg-surface-container-low p-8 rounded-2xl">
+      <div className="hidden md:block bg-surface-container-low p-8 rounded-2xl">
         <h4 className="text-headline-md text-primary mb-6">Browse by Category</h4>
         <ul className="flex flex-col gap-4">
-          {categories.map((category) => (
+          {uniqueCategories.map((category) => (
             <li key={category.slug}>
               {onFilter ? (
                 <button
-                  onClick={() => onFilter(category.label)}
+                  onClick={() => onFilter(category.slug)}
                   className="w-full flex justify-between items-center group"
                 >
                   <span className="text-body-md text-on-surface-variant group-hover:text-secondary transition-colors">
                     {category.label}
                   </span>
                   <span className="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-label-md text-caption">
-                    {categoryCounts[category.label] || 0}
+                    {categoryCounts[category.slug] || 0}
                   </span>
                 </button>
               ) : (
@@ -73,7 +53,7 @@ export default function InsightsSidebar({
                     {category.label}
                   </span>
                   <span className="bg-surface-container-high text-on-surface-variant px-2 py-1 rounded text-label-md text-caption">
-                    {categoryCounts[category.label] || 0}
+                    {categoryCounts[category.slug] || 0}
                   </span>
                 </Link>
               )}

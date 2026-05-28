@@ -3,16 +3,13 @@ import { fileURLToPath } from 'url'
 import path, { dirname, join } from 'path'
 import sharp from 'sharp'
 
-
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { s3Storage } from '@payloadcms/storage-s3'
-
 import { Insights } from './src/collections/Insights'
 import { SuccessStories } from './src/collections/SuccessStories'
 import { Services } from './src/collections/Services'
 import { Users } from './src/collections/Users'
 import { Media } from './src/collections/Media'
-import { Admin } from './src/collections/Admin'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 const filename = fileURLToPath(import.meta.url)
@@ -22,12 +19,12 @@ const dirnameValue = dirname(filename)
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3000',
   admin: {
-    user: Admin.slug,
+    user: Users.slug,
     importMap: {
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Admin, Insights, SuccessStories, Services, Users, Media],
+  collections: [Insights, SuccessStories, Services, Users, Media],
   editor: lexicalEditor(),
   secret: 'payload-123',
   typescript: {

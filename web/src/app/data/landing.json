@@ -34,16 +34,22 @@
         "url": "/services/data-engineering"
       },
       {
-        "icon": "insights",
-        "title": "Analytics",
-        "description": "Transforming raw numbers into intuitive dashboards and strategic insights that drive business growth.",
-        "url": "/services/bi"
+        "icon": "code",
+        "title": "Software Development",
+        "description": "Custom software solutions that integrate seamlessly with your data infrastructure and enhance operational efficiency.",
+        "url": "/services/software-development"
       },
       {
         "icon": "smart_toy",
         "title": "AI Automation",
         "description": "Leveraging machine learning to automate complex reporting and predict future market trends.",
         "url": "/services/ai-llm-automation"
+      },
+      {
+        "icon": "insights",
+        "title": "BI Analytics",
+        "description": "Transforming raw numbers into intuitive dashboards and strategic insights that drive business growth.",
+        "url": "/services/bi"
       },
       {
         "icon": "Psychology",
@@ -80,7 +86,7 @@
       {
         "number": "4",
         "title": "Optimization",
-      "description": "Finetuning AI models, RAG systems and scaling data access across your organization."
+        "description": "Finetuning AI models, RAG systems and scaling data access across your organization."
       }
     ]
   },
@@ -136,7 +142,7 @@
         "description": "Customer analytics, inventory optimization, and sales performance tracking.",
         "image": {
           "alt": "Automated warehouse data",
-          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuColeDfwsajJQ3xjmgMBpLr65g07YAw43RUJVYaO90MM4doNir4v7T2BQmqiBhWctwaaM77XAJnovIxH0yc80d3_bHV54YGIKlaLCyNofrbPua8sDfpxv3cRJhsYk3DWXSZ9S-lpbsPP6reTCGXrPak2R5PDNur-AHxaEjfZLR0weIMQpjJPHtWaFJijGoABmyKZ0cimde9Bwii3N3KTPC4Y5WCbGGNWxDUMM9kN1p4anQtOjNrAFbeVgJ_Q4dpDedAjDASDf87JjOb"
+          "url": "https://lh3.googleusercontent.com/aida-public/aida-public/AB6AXuAWqZaonCLxqW8HDP73qic3L45P5GQDglHsJbGklN902z1aM0xJ2t16mSj0U_elMI_wuhfZTpb6X8CohCXx6wBSstgyzKtVcuhy6ZZfgaKf5lExNeVkGLtEMgjIrxcqo4LV75hmKO8aboG1"
         }
       },
       {
@@ -146,6 +152,32 @@
           "alt": "SME data dashboard",
           "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAuPVEkP1c9VMXU4aUtxHcVdDaDn7Al3UEMnhd-cFWvzzMGXXFdb63tWtiOJOOkSR88ptc9YrEfB28Y-3sRP4Pj8H_hX5CNT_jnG4EgPJXCH2-onRqMPpsIV5nAcspaKBavQaJwTeoA1t1zYktaO6j012ymTUEe8ehBXjp-1tyW06RnNHUSGTNf0tFeMO6dp1dHbqkGiqJiqQB-KRJCzMChWmToTPqEvkbP2JeK8MGdDwzl8o0A4rN5JV792eRYWzSixZ-nTBOqas5a"
         }
+      }
+    ]
+  },
+  "industriesEmpower": {
+    "title": "Our Expertise",
+    "subtitle": "Specialized data solutions across key industry sectors.",
+    "industries": [
+      {
+        "label": "Fintech",
+        "icon": "account_balance"
+      },
+      {
+        "label": "NGOs",
+        "icon": "volunteer_activism"
+      },
+      {
+        "label": "Retail",
+        "icon": "shopping_cart"
+      },
+      {
+        "label": "SMEs",
+        "icon": "business_center"
+      },
+      {
+        "label": "Healthcare",
+        "icon": "health_and_safety"
       }
     ]
   },

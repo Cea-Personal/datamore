@@ -63,11 +63,10 @@ export type SupportedTimezones =
 
 export interface Config {
   auth: {
-    admin: AdminAuthOperations;
+    users: UserAuthOperations;
   };
   blocks: {};
   collections: {
-    admin: Admin;
     insights: Insight;
     'success-stories': SuccessStory;
     services: Service;
@@ -80,7 +79,6 @@ export interface Config {
   };
   collectionsJoins: {};
   collectionsSelect: {
-    admin: AdminSelect<false> | AdminSelect<true>;
     insights: InsightsSelect<false> | InsightsSelect<true>;
     'success-stories': SuccessStoriesSelect<false> | SuccessStoriesSelect<true>;
     services: ServicesSelect<false> | ServicesSelect<true>;
@@ -101,13 +99,13 @@ export interface Config {
   widgets: {
     collections: CollectionsWidget;
   };
-  user: Admin;
+  user: User;
   jobs: {
     tasks: unknown;
     workflows: unknown;
   };
 }
-export interface AdminAuthOperations {
+export interface UserAuthOperations {
   forgotPassword: {
     email: string;
     password: string;
@@ -124,33 +122,6 @@ export interface AdminAuthOperations {
     email: string;
     password: string;
   };
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "admin".
- */
-export interface Admin {
-  id: number;
-  firstName?: string | null;
-  lastName?: string | null;
-  updatedAt: string;
-  createdAt: string;
-  email: string;
-  resetPasswordToken?: string | null;
-  resetPasswordExpiration?: string | null;
-  salt?: string | null;
-  hash?: string | null;
-  loginAttempts?: number | null;
-  lockUntil?: string | null;
-  sessions?:
-    | {
-        id: string;
-        createdAt?: string | null;
-        expiresAt: string;
-      }[]
-    | null;
-  password?: string | null;
-  collection: 'admin';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -318,11 +289,26 @@ export interface Service {
  */
 export interface User {
   id: number;
-  email: string;
   firstName?: string | null;
   lastName?: string | null;
   updatedAt: string;
   createdAt: string;
+  email: string;
+  resetPasswordToken?: string | null;
+  resetPasswordExpiration?: string | null;
+  salt?: string | null;
+  hash?: string | null;
+  loginAttempts?: number | null;
+  lockUntil?: string | null;
+  sessions?:
+    | {
+        id: string;
+        createdAt?: string | null;
+        expiresAt: string;
+      }[]
+    | null;
+  password?: string | null;
+  collection: 'users';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -349,10 +335,6 @@ export interface PayloadLockedDocument {
   id: number;
   document?:
     | ({
-        relationTo: 'admin';
-        value: number | Admin;
-      } | null)
-    | ({
         relationTo: 'insights';
         value: number | Insight;
       } | null)
@@ -374,8 +356,8 @@ export interface PayloadLockedDocument {
       } | null);
   globalSlug?: string | null;
   user: {
-    relationTo: 'admin';
-    value: number | Admin;
+    relationTo: 'users';
+    value: number | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -387,8 +369,8 @@ export interface PayloadLockedDocument {
 export interface PayloadPreference {
   id: number;
   user: {
-    relationTo: 'admin';
-    value: number | Admin;
+    relationTo: 'users';
+    value: number | User;
   };
   key?: string | null;
   value?:
@@ -413,30 +395,6 @@ export interface PayloadMigration {
   batch?: number | null;
   updatedAt: string;
   createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "admin_select".
- */
-export interface AdminSelect<T extends boolean = true> {
-  firstName?: T;
-  lastName?: T;
-  updatedAt?: T;
-  createdAt?: T;
-  email?: T;
-  resetPasswordToken?: T;
-  resetPasswordExpiration?: T;
-  salt?: T;
-  hash?: T;
-  loginAttempts?: T;
-  lockUntil?: T;
-  sessions?:
-    | T
-    | {
-        id?: T;
-        createdAt?: T;
-        expiresAt?: T;
-      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -497,11 +455,24 @@ export interface ServicesSelect<T extends boolean = true> {
  * via the `definition` "users_select".
  */
 export interface UsersSelect<T extends boolean = true> {
-  email?: T;
   firstName?: T;
   lastName?: T;
   updatedAt?: T;
   createdAt?: T;
+  email?: T;
+  resetPasswordToken?: T;
+  resetPasswordExpiration?: T;
+  salt?: T;
+  hash?: T;
+  loginAttempts?: T;
+  lockUntil?: T;
+  sessions?:
+    | T
+    | {
+        id?: T;
+        createdAt?: T;
+        expiresAt?: T;
+      };
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
