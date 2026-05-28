@@ -46,7 +46,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
 
     const heroInsight = allArticles[0]
 
-    const initialArticles = allArticles.slice(ARTICLES_PER_PAGE)
+    const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE)
 
     const uniqueFilters = Array.from(
       new Set(allArticles.map((a: typeof allArticles[0]) => a.category))
@@ -65,18 +65,18 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
       readTime: heroInsight?.readTime || "",
       likes: heroInsight?.likes || 0,
       badge: {
-        label: "Featured",
+        label: heroInsight?.likes && heroInsight.likes > 0 ? "Most Liked" : "Featured Analysis",
         color: "tertiary-fixed",
-        icon: "lightbulb"
+        icon: heroInsight?.likes && heroInsight.likes > 0 ? "favorite" : "lightbulb"
       },
       image: {
         alt: heroInsight?.thumbnail ? "Featured Article" : "",
         url: heroInsight?.thumbnail || ""
       },
-      slug: heroInsight?.slug ?{
+      slug: heroInsight?.slug ? {
         url: `/insights/${heroInsight?.slug}`,
         label: "Read Full Article"
-      }:  undefined
+      } : undefined
     }
 
     const ctaData = {

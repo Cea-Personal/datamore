@@ -8,6 +8,9 @@ export const Media: CollectionConfig = {
   admin: {
     useAsTitle: 'filename',
   },
+  access: {
+    read: () => true
+  },
   fields: [
     {
       name: 'alt',

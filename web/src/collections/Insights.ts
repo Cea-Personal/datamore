@@ -10,6 +10,12 @@ export const Insights : CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    read: () => true,
+    create: ({ req }) => req.user != null,
+    update: ({ req }) => req.user != null,
+    delete: ({ req }) => req.user != null,
+  },
   fields: [
     {
       name: 'title',
@@ -21,7 +27,6 @@ export const Insights : CollectionConfig = {
       type: 'text',
       unique: true,
       required: true,
-      virtual: true,
       admin: {
         readOnly: true,
       },

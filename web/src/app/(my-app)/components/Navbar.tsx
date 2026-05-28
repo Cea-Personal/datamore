@@ -32,7 +32,7 @@ export default function Navbar() {
           <img alt="Datamore Logo" className="h-8 w-auto" src="/logo.svg" />
           <span className="-ml-0.5 text-headline-md text font-bold" style={{fontSize: '2rem'}}>atamore</span>
         </Link>
-<div className="hidden md:flex gap-gutter items-center">
+        <div className="hidden md:flex gap-gutter items-center">
           <div 
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -114,13 +114,13 @@ export default function Navbar() {
                 {item.href === '/services' && (
                   <div className="ml-4 mt-2 space-y-2">
                     {serviceItems.map((service) => (
-<Link
-                          key={service.href}
-                          href={service.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="block text-body-lg text-on-surface-variant hover:underline decoration-2 underline-offset-4"
-                        >
-                          {service.label}
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        onClick={() => setMobileOpen(false)}
+                        className="block text-body-lg text-on-surface-variant hover:underline decoration-2 underline-offset-4"
+                      >
+                        {service.label}
                       </Link>
                     ))}
                   </div>

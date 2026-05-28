@@ -10,6 +10,9 @@ export const SuccessStories : CollectionConfig = {
   admin: {
     useAsTitle: 'title',
   },
+  access: {
+    read: () => true
+  },
   fields: [
     {
       name: 'title',

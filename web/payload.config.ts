@@ -10,6 +10,7 @@ import { SuccessStories } from './src/collections/SuccessStories'
 import { Services } from './src/collections/Services'
 import { Users } from './src/collections/Users'
 import { Media } from './src/collections/Media'
+import { Admins } from './src/collections/Admins'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 const filename = fileURLToPath(import.meta.url)
@@ -19,12 +20,12 @@ const dirnameValue = dirname(filename)
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3000',
   admin: {
-    user: Users.slug,
+    user: Admins.slug,
     importMap: {
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Insights, SuccessStories, Services, Users, Media],
+  collections: [Insights, SuccessStories, Services, Users, Media, Admins],
   editor: lexicalEditor(),
   secret: 'payload-123',
   typescript: {
