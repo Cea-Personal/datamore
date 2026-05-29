@@ -111,73 +111,42 @@
       }
     ]
   },
-  "industries": {
-    "title": "Industries We Empower",
-    "subtitle": "Tailored data solutions for sectors demanding precision and reliability.",
-    "tags": [
-      "Fintech",
-      "SMEs",
-      "NGOs",
-      "Retail"
-    ],
-    "cards": [
-      {
-        "title": "Fintech",
-        "description": "Real-time analytics, fraud detection, and financial data infrastructure",
-        "image": {
-          "alt": "Fintech analytics dashboard",
-          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAWqZaonCLxqW8HDP73qic3L45P5GQDglHsJbGklN902z1aM0xJ2t16mSj0U_elMI_wuhfZTpb6X8CohCXx6wBSstgyzKtVcuhy6ZZfgaKf5lExNeVkGLtEMgjIrxcqo4LV75hmKO8aboCHuRaGRw4ta8PQzf8haJhtGBUYLaLgI5iIQ__srKgoIepHr-2xalLIlPwF5KAw7BUPtAA0Ekwu9V6j1Zfn-ebKp8_9AH3rnzbumxNqcQG5T3SpQFrIWFMgf6nw1gFnwGYV"
-        }
-      },
-      {
-        "title": "NGOs",
-        "description": "Impact measurement, automated reporting, and data-driven resource allocation.",
-        "image": {
-          "alt": "NGO team using data maps",
-          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuDf3iq_Oj8f7P7u27OXJ-0D1MuUaMUUcFKZ9l-o7WF4tim5PuXY7iqjsVzSvjxi9-PwbCbFWBzgQDoDg3vF342jndFyfuNQLPdikdRjuoi5y2DUe0P1ZK8gMI3_7_WMni7ilBpnGa1QpiTwJ6iBHknOAyTuHyOt7V8qNB1jgNrX4vjyQiQlmvVbf34BzuDpfYCeu08X719cNnQexDLO6_hJPvOp82yLaNnxosuw5KXb0oZ9N_3XYUIvj4uPTJCQiFTVdqCg8laEH3v0"
-        }
-      },
-      {
-        "title": "Retail",
-        "description": "Customer analytics, inventory optimization, and sales performance tracking.",
-        "image": {
-          "alt": "Automated warehouse data",
-          "url": "https://lh3.googleusercontent.com/aida-public/aida-public/AB6AXuAWqZaonCLxqW8HDP73qic3L45P5GQDglHsJbGklN902z1aM0xJ2t16mSj0U_elMI_wuhfZTpb6X8CohCXx6wBSstgyzKtVcuhy6ZZfgaKf5lExNeVkGLtEMgjIrxcqo4LV75hmKO8aboG1"
-        }
-      },
-      {
-        "title": "SMEs",
-        "description": "Scalable engineering and analytics for rapid business expansion.",
-        "image": {
-          "alt": "SME data dashboard",
-          "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuAuPVEkP1c9VMXU4aUtxHcVdDaDn7Al3UEMnhd-cFWvzzMGXXFdb63tWtiOJOOkSR88ptc9YrEfB28Y-3sRP4Pj8H_hX5CNT_jnG4EgPJXCH2-onRqMPpsIV5nAcspaKBavQaJwTeoA1t1zYktaO6j012ymTUEe8ehBXjp-1tyW06RnNHUSGTNf0tFeMO6dp1dHbqkGiqJiqQB-KRJCzMChWmToTPqEvkbP2JeK8MGdDwzl8o0A4rN5JV792eRYWzSixZ-nTBOqas5a"
-        }
-      }
-    ]
-  },
   "industriesEmpower": {
-    "title": "Our Expertise",
-    "subtitle": "Specialized data solutions across key industry sectors.",
+    "title": "Industries We Empower",
+    "subtitle": "Delivering intelligent data systems, AI automation, and scalable analytics solutions across key industries.",
     "industries": [
       {
         "label": "Fintech",
-        "icon": "account_balance"
+        "icon": "account_balance",
+        "description": "Build secure and scalable financial data systems, automate reporting workflows, and unlock real-time analytics for smarter financial decisions."
       },
       {
         "label": "NGOs",
-        "icon": "volunteer_activism"
+        "icon": "Volunteer_activism",
+        "description": "Empower impact-driven organizations with transparent reporting, donor intelligence, and measurable program analytics."
       },
       {
         "label": "Retail",
-        "icon": "shopping_cart"
+        "icon": "shopping_cart",
+        "description": "Optimize inventory, customer insights, and operational efficiency using intelligent data infrastructure and automation."
       },
       {
         "label": "SMEs",
-        "icon": "business_center"
+        "icon": "business_center",
+        "description": "Help growing businesses scale operations with affordable AI solutions, modern analytics, and workflow automation."
+  
       },
       {
         "label": "Healthcare",
-        "icon": "health_and_safety"
+        "icon": "cardiology",
+        "description": "Improve patient outcomes and operational visibility through modern healthcare analytics and intelligent reporting systems."
+  
+      },
+      {
+        "label": "Logistics",
+        "icon": "delivery_truck_speed",
+        "description": "Enhance supply chain visibility, predictive planning, and delivery optimization with real-time data systems."
+      
       }
     ]
   },
