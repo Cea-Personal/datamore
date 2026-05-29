@@ -25,8 +25,20 @@ export default function ContactHero() {
                 </div>
                 <div>
                   <p className="text-caption text-outline">Email us at</p>
-                  <p className="text-body-md font-semibold">partnerships@datamore.ai</p>
+                  <p className="text-body-md font-semibold">partnerships@datamore.org</p>
                 </div>
+              </div>
+              <h3> Follow Us</h3>
+              <div className="flex items-center gap-6 mt-4">
+                
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-on-primary-container/90 hover:text-secondary transition-colors">
+                  {/* <span className="material-symbols-outlined">facebook</span> */}
+                  <span className="text-body-md">Facebook</span>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-on-primary-container/90 hover:text-secondary transition-colors">
+                  {/* <span className="material-symbols-outlined">linkedin</span> */}
+                  <span className="text-body-md">LinkedIn</span>
+                </a>
               </div>
               
               {/* Address & Map */}

@@ -14,10 +14,11 @@ const navItems = [
 
 const serviceItems = [
   { href: '/services/data-engineering', label: 'Data Engineering' },
+  { href: '/services/software-development', label: 'Software Development' },
   { href: '/services/bi', label: 'BI Analytics' },
   { href: '/services/ai-llm-automation', label: 'AI Automation' },
   { href: '/services/data-strategy', label: 'Data Strategy' },
-  { href: '/services/managed-data-services', label: 'Managed Data Services' },
+  { href: '/services/managed-data-services', label: 'Managed Data Services' }
 ]
 
 export default function Navbar() {

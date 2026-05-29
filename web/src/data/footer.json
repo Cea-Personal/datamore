@@ -1,0 +1,37 @@
+{ "servicelinks": [
+
+  { "href": "/services/data-engineering", "label": "Data Engineering" },
+
+  { "href": "/services/software-development", "label": "Software Development" },
+
+  { "href": "/services/bi", "label": "BI Analytics" },
+
+  { "href": "/services/ai-llm-automation", "label": "AI Automation" },
+
+  { "href": "/services/data-strategy", "label": "Data Strategy" },
+
+  { "href": "/services/managed-data-services", "label": "Managed Data Services" }
+
+],
+
+"companyLinks": [
+
+  { "href": "/success-stories", "label": "Success Stories" },
+
+  { "href": "/insights", "label": "Insights" },
+
+  { "href": "/careers", "label": "Careers" },
+
+  { "href": "/contact", "label": "Contact Us" }
+
+],
+
+
+"legalLinks": [
+
+  { "href": "/privacy", "label": "Privacy" },
+
+  { "href": "/terms", "label": "Terms of Use" }
+],
+"socialIcons": ["public", "terminal", "monitoring"]
+}

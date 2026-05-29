@@ -35,14 +35,12 @@ export default function Hexagon({
           inset-0
           transition-all
           duration-500
-          ${isActive
-            ? 'text-tertiary-fixed-dim'
-            : 'bg-white'}
         `}
         style={{
           clipPath: hexagon,
+          backgroundColor: isActive ? 'var(--color-secondary)': 'var(--color-tertiary-fixed-dim)',
           filter: isActive
-            ? 'drop-shadow(0 0 25px rgba(244,179,33,0.45))'
+            ? 'drop-shadow(0 0 25px rgba(0, 88, 190, 0.45))'
             : 'drop-shadow(0 10px 25px rgba(0,0,0,0.55))',
         }}
 
@@ -51,22 +49,21 @@ export default function Hexagon({
       {/* INNER DARK HEX */}
 
       <div
-        className="absolute inset-[4px] bg-[#0B0F19]"
-        style={{clipPath: hexagon,}}/>
+        className="absolute inset-[4px]"
+        style={{clipPath: hexagon, backgroundColor: isActive ? 'var(--color-on-surface)' : 'var(--color-surface)'}}/>
 
       {/* INNER THIN BORDER */}
 
       <div
-        className="absolute inset-[10px] border border-white/15"
+        className="absolute inset-[10px] border border-outline-variant/10"
         style={{clipPath: hexagon,}}
-
       />
 
       {/* ACTIVE GLOW */}
 
       {isActive && (
         <div
-          className="absolute inset-[12px] bg-[#F4B321]/10 blur-xl"
+          className="absolute inset-[12px] bg-secondary/10 blur-xl"
           style={{clipPath: hexagon,}}
         />
       )}
@@ -82,8 +79,9 @@ export default function Hexagon({
             transition-all
             duration-500
             ${isActive
-              ? 'text-[#FFD369] text-[72px]'
-              : 'text-[#F4B321] text-[64px]'}
+              ? 'text-white text-[72px]'
+              : 'text-tertiary-fixed-dim text-[64px]'
+              }
           `}
           style={{transform:  'scale(3.0)'}}
         >

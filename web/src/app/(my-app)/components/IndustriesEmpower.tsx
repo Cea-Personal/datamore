@@ -97,19 +97,20 @@ export default function IndustriesEmpower({
                       rounded-full
                       transition-all
                       duration-500
+                      hidden lg:block
                       ${isActive
-                        ? 'bg-[#F4B321] shadow-[0_0_20px_rgba(244,179,33,0.8)]'
+                        ? 'bg-secondary shadow-[0_0_20px_rgba(0,88,190,0.8)]'
                         : 'bg-gray-600'}
                     `}
                   />
 
-                  {/* DASHED LINE */}
+{/* DASHED LINE */}
 
-                  <div className="absolute top-[20px] left-[-200px] w-[180px] border-t-[3px] border-dashed border-gray-600"    />
+                    <div className={`absolute top-[20px] left-[-200px] w-[180px] border-t-[3px] border-dashed transition-all duration-500 hidden lg:block ${isActive ? 'border-secondary' : 'border-gray-600'}`}    />
 
                   {/* TITLE */}
 
-                  <h3
+<h3
                     className={`
                       font-bold
                       tracking-wide
@@ -117,16 +118,16 @@ export default function IndustriesEmpower({
                       duration-500
 
                       ${isActive
-                        ? 'text-[#F4B321] text-[42px]'
-                        : 'text-gray-300 text-[34px]'}
+                        ? 'text-secondary text-[42px]'
+                        : 'text-tertiary-fixed-dim text-[34px]'}
                     `}
-                  >
-                    {industry.label}
-                  </h3>
+                    >
+                      {industry.label}
+                    </h3>
 
                   {/* DESCRIPTION */}
 
-                  <p
+<p
                     className={`
                       mt-2
                       leading-8
@@ -135,12 +136,12 @@ export default function IndustriesEmpower({
                       max-w-[620px]
 
                       ${isActive
-                        ? 'text-white text-[18px]'
-                        : 'text-gray-500 text-[17px]'}
+                        ? 'text-black text-[18px]'
+                        : 'text-on-surface-variant text-[17px]'}
                     `}
-                  >
-                    {industry.description}
-                  </p>
+                    >
+                      {industry.description}
+                    </p>
                 </div>
               )
             })}
