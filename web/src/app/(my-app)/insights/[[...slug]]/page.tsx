@@ -4,7 +4,7 @@ import InsightDetail from '@/(my-app)/components/InsightDetail'
 import type { InsightData } from '@/(my-app)/types/insight'
 // import { insightFiles, InsightsData, LoadedInsights} from '@data/insights/index'
 import { getPayloadClient } from '@/(payload)/payload-client'
-import type { Insight } from './payload-types'
+import type { Insight } from '../../../../../payload-types'
 
 const ARTICLES_PER_PAGE = 4
 
