@@ -146,7 +146,7 @@ export default function InsightDetail({
                           <div className="w-full h-2 bg-surface-variant rounded-full overflow-hidden">
                             <div
                               className="h-full bg-gradient-to-r from-tertiary-fixed-dim to-secondary rounded-full"
-                              style={{ width: item.value.includes('%') ? item.value : '0%' }}
+                              style={{ width: item?.value?.includes('%') ? item.value : '0%' }}
                             ></div>
                           </div>
                         </div>
