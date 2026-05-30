@@ -1,29 +1,32 @@
 // src/types/insight.ts
 
+import { Media } from "@payload-types"
+
 export interface AuthorInfo {
   name: string
   title: string
   date: string
-  imageUrl?: string
+  imageUrl?: string | null
 }
 
 export interface HeroImage {
-  alt: string
-  url: string
+  alt: string | null | undefined
+  url: string | null | undefined
 }
 
 export interface ROIData {
-  label: string
-  value: string
-  color?: string
+  label?: string  | null
+  value?: string  | null
+  color?: string  | null
+  id?: string | null
 }
 
 export interface Section {
-  type: 'text' | 'heading' | 'roi-chart' | 'image'
+  type: 'text' | 'heading' | 'chart' | 'image'
   content: string
-  title?: string
-  data?: ROIData[]
-  variant?: string
+  title?: string | null
+  data?: ROIData[] | null
+  variant?: string | null 
   image?: {
     alt: string
     url: string
@@ -56,7 +59,7 @@ export interface InsightData {
   author: AuthorInfo
   heroImage: HeroImage
   sections: Section[]
-  socialShare?: boolean
+  socialShare?: boolean | null | undefined
   relatedArticles?: RelatedArticle[]
   cta?: CTA
   likes?: number
@@ -64,7 +67,7 @@ export interface InsightData {
 
 export interface Article {
   slug: string
-  thumbnail: string
+  thumbnail: string | number | Media
   category: string
   date: string
   readTime: string
@@ -72,3 +75,4 @@ export interface Article {
   description: string
   likes?: number
 }
+  

@@ -9,8 +9,8 @@ interface HeroData {
     icon?: string
   }
   image: {
-    alt: string
-    url: string
+    alt: string | null | undefined
+    url: string | null | undefined
   }
   slug?:{
     url : string

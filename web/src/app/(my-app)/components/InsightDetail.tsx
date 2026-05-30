@@ -88,8 +88,8 @@ export default function InsightDetail({
           <div className="lg:col-span-5 relative">
             <div className="rounded-xl overflow-hidden ambient-shadow h-[400px]">
               <Image
-                alt={heroImage.alt}
-                src={heroImage.url}
+                alt={typeof heroImage.alt === 'object' && heroImage.alt ? heroImage.alt : (typeof heroImage.alt === 'string' ? heroImage.alt : '')}
+                src={heroImage.url && typeof heroImage.url === 'object' ? heroImage.url : (typeof heroImage.url === 'string' ? heroImage.url : '')}
                 className="w-full h-full object-cover"
                 width={800}
                 unoptimized

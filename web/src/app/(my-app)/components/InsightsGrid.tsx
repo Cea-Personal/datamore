@@ -1,8 +1,10 @@
+import { Media } from '@payload-types'
+import Image from 'next/image'
 import Link from 'next/link'
 
 interface Article {
   slug: string
-  thumbnail: string
+  thumbnail: string | number | Media
   category: string
   date: string
   readTime: string
@@ -20,9 +22,9 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
           className="flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow interactive-shadow transition-all group border border-outline-variant/30"
         >
           <div className="h-48 overflow-hidden relative">
-            <img
+            <Image
               alt={`Thumbnail for ${article.title}`}
-              src={article.thumbnail}
+              src={typeof article.thumbnail === 'object' && article.thumbnail.url ? article.thumbnail.url : (typeof article.thumbnail === 'string' ? article.thumbnail : '')}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-4 left-4">
