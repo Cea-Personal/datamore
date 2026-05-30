@@ -61,7 +61,7 @@ export default function IndustriesEmpower({
           </div>
 
 
-          <div className="w-full max-w-[700px] mt-10">
+          <div className="w-full max-w-[700px] mt-10 lg:block">
 
             {data.industries.map((industry, index) => {
               const isActive = activeIndustry === industry.label
@@ -97,7 +97,6 @@ export default function IndustriesEmpower({
                       rounded-full
                       transition-all
                       duration-500
-                      hidden lg:block
                       ${isActive
                         ? 'bg-secondary shadow-[0_0_20px_rgba(0,88,190,0.8)]'
                         : 'bg-gray-600'}
@@ -106,20 +105,20 @@ export default function IndustriesEmpower({
 
 {/* DASHED LINE */}
 
-                    <div className={`absolute top-[20px] left-[-200px] w-[180px] border-t-[3px] border-dashed transition-all duration-500 hidden lg:block ${isActive ? 'border-secondary' : 'border-gray-600'}`}    />
+                    <div className={`absolute top-[20px] left-[-200px] max-w-container-max md:w-[180px] border-t-[3px] border-dashed transition-all duration-500 hidden lg:block ${isActive ? 'border-secondary' : 'border-gray-600'}`}    />
 
                   {/* TITLE */}
 
-<h3
+                  <h3
                     className={`
                       font-bold
                       tracking-wide
                       transition-all
                       duration-500
 
-                      ${isActive
-                        ? 'text-secondary text-[42px]'
-                        : 'text-tertiary-fixed-dim text-[34px]'}
+                      ${isActive 
+                        ? 'text-secondary text-[34px] md:text-[42px]'
+                        : 'text-secondary md:text-tertiary-fixed-dim text-[34px]'}
                     `}
                     >
                       {industry.label}
@@ -127,7 +126,7 @@ export default function IndustriesEmpower({
 
                   {/* DESCRIPTION */}
 
-<p
+                  <p
                     className={`
                       mt-2
                       leading-8
@@ -136,8 +135,8 @@ export default function IndustriesEmpower({
                       max-w-[620px]
 
                       ${isActive
-                        ? 'text-black text-[18px]'
-                        : 'text-on-surface-variant text-[17px]'}
+                        ? 'text-black text-[17px] md:text-[18px]'
+                        : 'text-black md:text-on-surface-variant text-[17px]'}
                     `}
                     >
                       {industry.description}

@@ -79,7 +79,7 @@ export default function Hexagon({
             transition-all
             duration-500
             ${isActive
-              ? 'text-white text-[72px]'
+              ? 'text-on-secondary text-[72px]'
               : 'text-tertiary-fixed-dim text-[64px]'
               }
           `}
