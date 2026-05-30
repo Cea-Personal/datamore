@@ -179,18 +179,18 @@ export interface Insight {
   author?: {
     name?: string | null;
     title?: string | null;
-    image?: (string | number | null) | Media;
+    image?: (number | null) | Media;
   };
   heroImage?: {
-    image?: (string | number | null) | Media;
+    image?: (number | null) | Media;
   };
   sections?:
     | {
-        type: 'text' | 'heading' | 'chart' | 'image';
+        type: 'text' | 'heading' | 'Chart' | 'image';
         content?: string | null;
         title?: string | null;
         variant?: string | null;
-        image?: (string | number | null) | Media;
+        image?: (number | null) | Media;
         data?:
           | {
               label?: string | null;

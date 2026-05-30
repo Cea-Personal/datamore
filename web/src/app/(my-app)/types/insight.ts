@@ -22,7 +22,7 @@ export interface ROIData {
 }
 
 export interface Section {
-  type: 'text' | 'heading' | 'chart' | 'image'
+  type: 'text' | 'heading' | 'Chart' | 'image'
   content: string
   title?: string | null
   data?: ROIData[] | null
