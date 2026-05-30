@@ -15,8 +15,8 @@ const categoryLabelMap: Record<string, string> = {
   'data-engineering': 'Data Engineering',
   'data-strategy': 'Data Strategy',
   'managed-data': 'Managed Data Services',
-  'technology': 'Technology',
-  'industry': 'Industry',
+  'case-studies': 'Case Studies',
+  'software-development': 'Software Development',
 }
 
 export default async function InsightsPage({ params }: { params: Promise<{ slug?: string[] }> }) {
@@ -35,7 +35,7 @@ export default async function InsightsPage({ params }: { params: Promise<{ slug?
       .sort((a: Insight, b: Insight) => (b.likes || 0) - (a.likes || 0))
       .map((insight: Insight) => ({
       slug: insight.slug,
-      thumbnail: insight.heroImage?.image?.url || insight.image?.url || '',
+      thumbnail: insight.heroImage?.image||'',
       category: categoryLabelMap[insight.category] || insight.category,
       date: insight.publishedDate || '',
       readTime: insight.readTime || '',
