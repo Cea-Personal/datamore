@@ -126,7 +126,7 @@ export default function InsightDetail({
                     {section.content}
                   </h2>
                 );
-              case 'roi-chart':
+              case 'Chart':
                 return (
                   <div key={index} className="my-12 p-8 bg-surface-container-low rounded-xl border border-outline-variant ambient-shadow">
                     <div className="flex items-center justify-between mb-8">
