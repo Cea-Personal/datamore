@@ -32,6 +32,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "src/app/(payload)/payload-client.js"  ],
+, "src/app/_(payload)/payload-client.js"  ],
   "exclude": ["node_modules"]
 }

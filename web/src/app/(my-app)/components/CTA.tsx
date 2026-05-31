@@ -18,9 +18,6 @@ export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData })
               <Link href={"/contact"} className="glassy-button text-on-primary px-10 py-4 rounded-lg text-label-md active:scale-95 transition-transform">
                 Book a Session
               </Link>
-              <Link href={"/success-stories"} className="border border-outline-variant hover:border-secondary transition-colors text-primary px-10 py-4 rounded-lg text-label-md">
-                View Success Stories
-              </Link>
         </div>
       </div>
     </section>

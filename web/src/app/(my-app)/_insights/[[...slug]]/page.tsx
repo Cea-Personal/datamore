@@ -1,6 +1,6 @@
 import InsightsHero from '@/(my-app)/components/PageHero'
-import InsightsClient from '@/(my-app)/components/InsightsClient'
-import InsightDetail from '@/(my-app)/components/InsightDetail'
+import InsightsClient from '@/(my-app)/components/_InsightsClient'
+import InsightDetail from '@/(my-app)/components/_InsightDetail'
 import { getAllInsightsFromPayload, getInsightBySlugFromPayload, mapInsightToCard, getHeroData, ctaData, getInsightData} from '@data/insights/index'
 import type { Insight } from '@payload-types'
 

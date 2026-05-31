@@ -7,18 +7,20 @@ import { useState } from 'react'
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/services', label: 'Services' },
-  { href: '/success-stories', label: 'Success Stories' },
-  { href: '/insights', label: 'Insights' },
-  { href: '/careers', label: 'Careers' },
+  { href: '/success-stories/case-study', label: 'Success Story' },
+  // { href: '/success-stories', label: 'Success Stories' },
+  // { href: '/insights', label: 'Insights' },
+  // { href: '/careers', label: 'Careers' },
 ]
 
 const serviceItems = [
-  { href: '/services/data-engineering', label: 'Data Engineering' },
-  { href: '/services/software-development', label: 'Software Development' },
-  { href: '/services/bi', label: 'BI Analytics' },
-  { href: '/services/ai-llm-automation', label: 'AI Automation' },
-  { href: '/services/data-strategy', label: 'Data Strategy' },
-  { href: '/services/managed-data-services', label: 'Managed Data Services' }
+  { href: '/services/data-foundations', label: 'Data Foundations' },
+  // { href: '/services/software-development', label: 'Software Development' },
+  { href: '/services/bi-analytics', label: 'BI Analytics' },
+  { href: '/services/ai-automation', label: 'AI Automation' },
+  { href: '/services/system-integration', label: 'System Integration' },
+  // { href: '/services/data-strategy', label: 'Data Strategy' },
+  // { href: '/services/managed-data-services', label: 'Managed Data Services' }
 ]
 
 export default function Navbar() {

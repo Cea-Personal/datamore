@@ -1,6 +1,6 @@
 import { Article, InsightData, RelatedArticle, Section} from '@/(my-app)/types/insight';
 import { getFirstTwoSentences } from '..';
-import { getPayloadClient } from '@/(payload)/payload-client'
+import { getPayloadClient } from '@/_(payload)/payload-client'
 import { Insight} from '@payload-types'
 
 export const insightFiles = {

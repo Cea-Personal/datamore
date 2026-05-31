@@ -1,6 +1,6 @@
 // app/careers/positions/page.tsx
 import CareersData from '@data/careers.json'
-import CareersTalentPool from '@/(my-app)/components/CareersTalentPool'
+import CareersTalentPool from '@/(my-app)/components/_CareersTalentPool'
 import type { ReactNode } from 'react'
 
 interface Position {

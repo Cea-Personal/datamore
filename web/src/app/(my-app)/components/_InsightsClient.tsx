@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import InsightsFilter from '@/(my-app)/components/InsightsFilter'
-import InsightsGrid from '@/(my-app)/components/InsightsGrid'
-import InsightsSidebar from '@/(my-app)/components/InsightsSidebar'
+import InsightsFilter from '@/(my-app)/components/_InsightsFilter'
+import InsightsGrid from '@/(my-app)/components/_InsightsGrid'
+import InsightsSidebar from '@/(my-app)/components/_InsightsSidebar'
 import GlobalCTA from '@/(my-app)/components/CTA'
 import type { Article } from '@/(my-app)/types/insight'
 

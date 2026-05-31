@@ -1,157 +1,138 @@
 {
   "hero": {
-    "title": "More Value <br> From <span class=\"text-secondary\"> Your Data</span>",
-    "subtitle": "Datamore helps organizations build intelligent data systems, automate operations, and unlock AI-driven business growth.",
+    "title": "Turn Your Data Into <br><span class=\"text-secondary\">Automated Decisions</span>",
+    "subtitle": "We help growing organizations design and build data systems that automate reporting, improve decision-making, and power AI-driven operations.",
     "buttons": [
       {
-        "label": "Talk to an Expert",
+        "label": "Book a Strategy Call",
         "variant": "primary",
         "url": "/contact"
       },
       {
-        "label": "Explore Services",
+        "label": "See How We Work",
         "variant": "secondary",
         "url": "/services"
       }
     ],
     "image": {
-      "alt": "Tech agency staff members using tablet to optimize AI performance",
+      "alt": "Team collaborating on data dashboards and AI systems",
       "url": "/hero_image.png"
     },
     "badge": {
-      "label": "Data Consulting",
-      "caption": "Strategy • Engineering • Analytics",
+      "label": "Data & AI Engineering",
+      "caption": "Pipelines • Automation • Analytics",
       "icon": "analytics"
     }
   },
+
   "whatWeDo": {
-    "title": "What We Do",
+    "title": "How We Help You Grow",
+    "subtitle": "We design end-to-end data systems that turn raw information into automated insights and actions.",
     "cards": [
       {
         "icon": "database",
-        "title": "Data Engineering",
-        "description": "Building robust, scalable pipelines that ensure your data is clean, secure, and ready for analysis.",
+        "title": "Data Foundations",
+        "description": "We build clean, scalable data pipelines that unify your systems and make your data reliable and usable.",
         "url": "/services/data-engineering"
       },
       {
-        "icon": "code",
-        "title": "Software Development",
-        "description": "Custom software solutions that integrate seamlessly with your data infrastructure and enhance operational efficiency.",
-        "url": "/services/software-development"
+        "icon": "insights",
+        "title": "Analytics & BI",
+        "description": "We turn your data into clear dashboards and metrics that help teams make faster, better decisions.",
+        "url": "/services/analytics-bi"
       },
       {
         "icon": "smart_toy",
         "title": "AI Automation",
-        "description": "Leveraging machine learning to automate complex reporting and predict future market trends.",
-        "url": "/services/ai-llm-automation"
+        "description": "We automate reporting, workflows, and business processes using AI and modern LLM systems.",
+        "url": "/services/ai-automation"
       },
       {
-        "icon": "insights",
-        "title": "BI Analytics",
-        "description": "Transforming raw numbers into intuitive dashboards and strategic insights that drive business growth.",
-        "url": "/services/bi"
-      },
-      {
-        "icon": "Psychology",
-        "title": "Data Strategy",
-        "description": "Aligning your data initiatives with business goals to create a roadmap for long-term success.",
-        "url": "/services/data-strategy"
-      },
-      {
-        "icon": "security",
-        "title": "Managed Data Services",
-        "description": "Implementing policies and technologies to ensure data privacy, compliance, and ethical use.",
-        "url": "/services/data-governance"
+        "icon": "settings",
+        "title": "System Integration",
+        "description": "We connect your tools, platforms, and data systems into one seamless, automated ecosystem.",
+        "url": "/services/integration"
       }
     ]
   },
+
   "howWeDoIt": {
-    "title": "How We Do It",
+    "title": "How We Deliver Results",
     "steps": [
       {
         "number": "1",
-        "title": "Discovery",
-        "description": "We audit your current data landscape and define strategic technical objectives."
+        "title": "Understand",
+        "description": "We analyze your current systems, workflows, and data challenges to identify high-impact opportunities."
       },
       {
         "number": "2",
-        "title": "Architecture",
-        "description": "Designing custom, scalable infrastructure tailored to your organisation requirements."
+        "title": "Design",
+        "description": "We architect a scalable data and AI system tailored to your business goals."
       },
       {
         "number": "3",
-        "title": "Implementation",
-        "description": "Agile deployment of self-healing pipelines, models and automation workflows with continuous testing and validation."
+        "title": "Build",
+        "description": "We implement pipelines, dashboards, and automation systems using modern engineering practices."
       },
       {
         "number": "4",
-        "title": "Optimization",
-        "description": "Finetuning AI models, RAG systems and scaling data access across your organization."
+        "title": "Optimize",
+        "description": "We continuously improve performance, automation depth, and decision accuracy over time."
       }
     ]
   },
+
   "impact": {
     "title": "The Datamore Impact",
     "metrics": [
       {
         "value": "40%",
-        "label": "Reduction in Ops Costs"
-      },
-      {
-        "value": "200+",
-        "label": "Automated Reports"
+        "label": "Lower Operational Costs"
       },
       {
         "value": "3–5x",
-        "label": "Faster reporting workflows"
+        "label": "Faster Decision Cycles"
+      },
+      {
+        "value": "200+",
+        "label": "Automated Reports Delivered"
       },
       {
         "value": "99.9%",
-        "label": "Data pipeline reliability"
+        "label": "Data System Reliability"
       }
     ]
   },
+
   "industriesEmpower": {
-    "title": "Industries We Empower",
-    "subtitle": "Delivering intelligent data systems, AI automation, and scalable analytics solutions across key industries.",
+    "title": "Built for Data-Heavy Teams",
+    "subtitle": "We work with organizations that rely on data to operate, scale, and make decisions.",
     "industries": [
       {
         "label": "Fintech",
         "icon": "account_balance",
-        "description": "Build secure and scalable financial data systems, automate reporting workflows, and unlock real-time analytics for smarter financial decisions."
+        "description": "Automate financial reporting, improve visibility, and unlock real-time decision systems."
       },
       {
-        "label": "NGOs",
-        "icon": "Volunteer_activism",
-        "description": "Empower impact-driven organizations with transparent reporting, donor intelligence, and measurable program analytics."
-      },
-      {
-        "label": "Retail",
+        "label": "Retail & E-commerce",
         "icon": "shopping_cart",
-        "description": "Optimize inventory, customer insights, and operational efficiency using intelligent data infrastructure and automation."
-      },
-      {
-        "label": "SMEs",
-        "icon": "business_center",
-        "description": "Help growing businesses scale operations with affordable AI solutions, modern analytics, and workflow automation."
-  
-      },
-      {
-        "label": "Healthcare",
-        "icon": "cardiology",
-        "description": "Improve patient outcomes and operational visibility through modern healthcare analytics and intelligent reporting systems."
-  
+        "description": "Optimize inventory, customer behavior analysis, and sales forecasting through data systems."
       },
       {
         "label": "Logistics",
         "icon": "delivery_truck_speed",
-        "description": "Enhance supply chain visibility, predictive planning, and delivery optimization with real-time data systems."
-      
+        "description": "Improve supply chain visibility and operational efficiency with real-time analytics."
+      },
+      {
+        "label": "SMEs",
+        "icon": "business_center",
+        "description": "Help growing businesses modernize reporting, automate workflows, and scale with data."
       }
     ]
   },
+
   "cta": {
-    "title": "Ready to scale your impact with data?",
-    "subtitle": "Join forward-thinking organizations using intelligence to drive growth."
+    "title": "Ready to automate how your business uses data?",
+    "subtitle": "Let’s build a system that turns your data into decisions, not dashboards."
   }
 }

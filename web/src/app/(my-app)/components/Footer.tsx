@@ -101,54 +101,6 @@ export default function Footer() {
 
           </div>
 
-          {/* Subscribe */}
-
-          <div className="md:col-span-3">
-
-            <FooterSection title="Stay Updated">
-
-              {subscribed ? (
-
-                <p className="text-body-md text-tertiary-fixed font-label-md">
-
-                  Thanks for subscribing!
-
-                </p>
-
-              ) : (
-
-                <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-2">
-
-                  <input
-
-                    className="bg-white/5 border border-white/20 rounded-lg px-4 py-3 flex-grow text-white placeholder-white/40"
-
-                    placeholder="Email address"
-
-                    type="email"
-
-                    value={email}
-
-                    onChange={(e) => setEmail(e.target.value)}
-
-                    required
-
-                  />
-
-                  <button className="bg-secondary text-white px-6 py-3 rounded-lg text-label-md">
-
-                    Join
-
-                  </button>
-
-                </form>
-
-              )}
-
-            </FooterSection>
-
-          </div>
-
         </div>
 
         {/* Bottom */}

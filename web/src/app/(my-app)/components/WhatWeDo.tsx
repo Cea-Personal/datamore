@@ -18,7 +18,7 @@ export default function WhatWeDo({ data }: { data: WhatWeDoData }) {
         <h2 className="text-headline-lg text-headline-lg text-primary mb-4">{data.title}</h2>
         <div className="w-20 h-1 bg-secondary mx-auto rounded-full"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter max-w-4xl mx-auto">
         {data.cards.map((card, index) => (
           <div
             key={index}

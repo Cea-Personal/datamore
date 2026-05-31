@@ -1,8 +1,8 @@
 // app/careers/page.tsx
 import CareersData from '@data/careers.json'
 import CareersHero from '@/(my-app)/components/PageHero'
-import CareersValues from '@/(my-app)/components/CareersValues'
-import CareersWhyJoin from '@/(my-app)/components/CareersWhyJoin'
+import CareersValues from '@/(my-app)/components/_CareersValues'
+import CareersWhyJoin from '@/(my-app)/components/_CareersWhyJoin'
 import Link from 'next/link'
 
 export default function CareersPage() {
