@@ -29,7 +29,6 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
   
   return (
     <section className={`relative overflow-hidden min-h-[70vh] pt-20 pb-32 px-margin-mobile md:px-margin-desktop ${hasBackgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''}`}
-      style={hasBackgroundImage ? { backgroundImage: `url(${data.backgroundImage.url})` } : {}}
     >
       {hasBackgroundImage && (
         <div className="absolute inset-0 bg-white/80" />
