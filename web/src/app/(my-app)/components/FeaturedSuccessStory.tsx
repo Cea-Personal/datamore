@@ -20,7 +20,7 @@ export default function FeaturedSuccessStory({ data }: { data: FeaturedSuccessSt
     <section className="px-margin-mobile md:px-margin-desktop py-24 max-w-container-max mx-auto">
       <div className="bg-surface-container-lowest rounded-3xl ambient-shadow overflow-hidden border border-surface-container flex flex-col md:flex-row">
         <div className="md:w-1/2 p-8 md:p-16 flex flex-col justify-center">
-          <span className="text-label-md text-secondary uppercase tracking-widest mb-4">Featured Success Story</span>
+          <span className="text-label-lg text-secondary uppercase tracking-widest mb-4">Featured Success Story</span>
           <h3 className="text-headline-lg text-primary mb-6">{data.title}</h3>
           <p className="text-body-md text-on-surface-variant mb-8">
             {data.summary}
@@ -40,7 +40,7 @@ export default function FeaturedSuccessStory({ data }: { data: FeaturedSuccessSt
           </div>
           <Link
             href={`/success-stories/${data.slug}`}
-            className="flex items-center gap-2 text-label-md text-primary group w-fit"
+            className="flex items-center gap-2 text-label-lg text-primary group w-fit"
           >
              Read Full Story
             <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>

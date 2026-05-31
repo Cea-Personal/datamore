@@ -38,8 +38,8 @@ export default function Hero({ data }: { data: HeroData }) {
                   key={index}
                   href={button.url}
                   className={button.variant === 'primary'
-                     ? 'glassy-button text-on-primary px-8 py-4 rounded-lg text-label-md'
-                    : 'border border-outline-variant hover:border-secondary transition-colors text-primary px-8 py-4 rounded-lg text-label-md'}
+                     ? 'glassy-button text-on-primary px-8 py-4 rounded-lg text-label-lg'
+                    : 'border border-outline-variant hover:border-secondary transition-colors text-primary px-8 py-4 rounded-lg text-label-lg'}
                 >
                   {button.label}
                 </Link>

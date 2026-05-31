@@ -12,6 +12,10 @@ interface HeroData {
     alt: string | null | undefined
     url: string | null | undefined
   }
+  backgroundImage?: {
+    url: string | null | undefined
+    alt?: string
+  }
   slug?:{
     url : string
     label: string
@@ -21,8 +25,15 @@ interface HeroData {
 }
 
 export default function ServicePageHero({ data }: { data: HeroData }) {
+  const hasBackgroundImage = data.backgroundImage?.url
+  
   return (
-    <section className="relative overflow-hidden min-h-[70vh] pt-20 pb-32 px-margin-mobile md:px-margin-desktop">
+    <section className={`relative overflow-hidden min-h-[70vh] pt-20 pb-32 px-margin-mobile md:px-margin-desktop ${hasBackgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''}`}
+      style={hasBackgroundImage ? { backgroundImage: `url(${data.backgroundImage.url})` } : {}}
+    >
+      {hasBackgroundImage && (
+        <div className="absolute inset-0 bg-white/80" />
+      )}
       <div className="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
         <div className="lg:col-span-10 lg:col-start-2 z-10 text-center">
           {data.badge && (

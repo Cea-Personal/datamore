@@ -50,7 +50,7 @@ export default function Hexagon({
 
       <div
         className="absolute inset-[4px]"
-        style={{clipPath: hexagon, backgroundColor: isActive ? 'var(--color-on-surface)' : 'var(--color-surface)'}}/>
+        style={{clipPath: hexagon, backgroundColor: isActive ? 'var(--color-on-surface)' : 'var(--color-on-surface-variant)'}}/>
 
       {/* INNER THIN BORDER */}
 

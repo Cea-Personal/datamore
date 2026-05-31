@@ -113,13 +113,13 @@ export const getHeroData = (heroInsight: Article) => ({
       readTime: heroInsight?.readTime || "",
       likes: heroInsight?.likes || 0,
       badge: {
-        label: heroInsight?.likes && heroInsight.likes > 0 ? "Most Liked" : "Featured Analysis",
+        label: heroInsight?.likes && heroInsight?.likes > 0 ? "Most Liked" : "Featured Analysis",
         color: "tertiary-fixed",
-        icon: heroInsight?.likes && heroInsight.likes > 0 ? "favorite" : "lightbulb"
+        icon: heroInsight?.likes && heroInsight?.likes > 0 ? "favorite" : "lightbulb"
       },
       image: {
-        alt: typeof (heroInsight.thumbnail) === "object" ? heroInsight.thumbnail.alt : "",
-        url: typeof (heroInsight.thumbnail) === "object" ? heroInsight.thumbnail.url : "",
+        alt: typeof (heroInsight?.thumbnail) === "object" ? heroInsight?.thumbnail.alt : "",
+        url: typeof (heroInsight?.thumbnail) === "object" ? heroInsight?.thumbnail.url : "",
       },
       slug: heroInsight?.slug ? {
         url: `/insights/${heroInsight?.slug}`,
@@ -133,7 +133,7 @@ export const ctaData = {
 
 
 export function getInsightData(insightDoc: Insight): InsightData {
-    const sections : Section[] = insightDoc.sections?.map(section => {
+    const sections : Section[] = insightDoc?.sections?.map(section => {
       const imageData = section.image
         ? (typeof section.image === 'object' && section.image.url
             ? { alt: section.image.alt || "", url: section.image.url }
@@ -151,28 +151,28 @@ export function getInsightData(insightDoc: Insight): InsightData {
     }) ?? [];
 
   return ({
-    id: insightDoc.id,
-    title: insightDoc.title,
+    id: insightDoc?.id,
+    title: insightDoc?.title,
     author: {
-      name: insightDoc.author?.name || "Datamore Team",
-      title: insightDoc.author?.title || "",
-      date: insightDoc.publishedDate || "",
-      imageUrl: typeof (insightDoc.author?.image) === "object" ?  insightDoc.author?.image?.url : ""
+      name: insightDoc?.author?.name || "Datamore Team",
+      title: insightDoc?.author?.title || "",
+      date: insightDoc?.publishedDate || "",
+      imageUrl: typeof (insightDoc?.author?.image) === "object" ?  insightDoc?.author?.image?.url : ""
     },
     heroImage: {
-      alt: typeof (insightDoc.heroImage?.image) === "object" ? insightDoc.heroImage.image?.alt : "",
-      url: typeof (insightDoc.heroImage?.image) === "object" ? insightDoc.heroImage.image?.url : "",
+      alt: typeof (insightDoc?.heroImage?.image) === "object" ? insightDoc?.heroImage.image?.alt : "",
+      url: typeof (insightDoc?.heroImage?.image) === "object" ? insightDoc?.heroImage.image?.url : "",
     },
     sections,
-    socialShare: insightDoc.socialShare,
-    relatedArticles: insightDoc.relatedArticles?.map(article => ({
-      title: article.title || "",
-      readTime: article.readTime || "",
-      imageUrl: article.imageUrl || ""
+    socialShare: insightDoc?.socialShare,
+    relatedArticles: insightDoc?.relatedArticles?.map(article => ({
+      title: article?.title || "",
+      readTime: article?.readTime || "",
+      imageUrl: article?.imageUrl || ""
     })),
     cta: {
-      title: insightDoc.cta?.title || "Ready to scale your impact with data?",
-      subtitle: insightDoc.cta?.subtitle || "Partner with Datamore to transform your organization through technical excellence and strategic AI innovation."
+      title: insightDoc?.cta?.title || "Ready to scale your impact with data?",
+      subtitle: insightDoc?.cta?.subtitle || "Partner with Datamore to transform your organization through technical excellence and strategic AI innovation."
     },
-    likes: insightDoc.likes || 0,
+    likes: insightDoc?.likes || 0,
   })}
