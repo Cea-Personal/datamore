@@ -7,6 +7,8 @@ interface Industry {
   label: string
   icon: string
   description: string
+  left: string
+  width: string
 }
 
 interface IndustriesEmpowerData {
@@ -61,7 +63,7 @@ export default function IndustriesEmpower({
           </div>
 
 
-          <div className="w-full max-w-[700px] mt-10 lg:block">
+          <div className="w-full max-w-[700px] lg:block">
 
             {data.industries.map((industry, index) => {
               const isActive = activeIndustry === industry.label
@@ -74,6 +76,7 @@ export default function IndustriesEmpower({
                   className={`
                     group
                     relative
+                    top-[-60px]
                     pl-10
                     mb-2
                     transition-all
@@ -105,7 +108,8 @@ export default function IndustriesEmpower({
 
 {/* DASHED LINE */}
 
-                    <div className={`absolute top-[20px] left-[-200px] max-w-container-max md:w-[180px] border-t-[3px] border-dashed transition-all duration-500 hidden lg:block ${isActive ? 'border-secondary' : 'border-gray-600'}`}    />
+                    <div className={`absolute top-[20px]  max-w-container-max  border-t-[3px] border-dashed transition-all duration-500 hidden lg:block ${isActive ? 'border-secondary' : 'border-gray-600'}`} 
+                    style={{ left: `${industry.left}px`, width: `${industry.width}px` }} />
 
                   {/* TITLE */}
 
@@ -128,7 +132,6 @@ export default function IndustriesEmpower({
 
                   <p
                     className={`
-                      mt-2
                       leading-8
                       transition-all
                       duration-500

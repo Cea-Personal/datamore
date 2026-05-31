@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "title": "Turn Data Into <br><span class=\"text-secondary\"> Better Decisions.</span>",
+    "subtitle": "We design reporting and analytics systems that give teams real-time visibility into operations, performance, and growth opportunities.",
+    "badge": {
+      "label": "Analytics & Business Intelligence",
+      "caption": "dashboards • reporting • insights",
+      "icon": "insights"
+    },
+    "image": {
+      "alt": "Business intelligence dashboard",
+      "url": "/analytics-hero.png"
+    }
+},
+
+"capabilities": [
+{
+"icon": "dashboard",
+"title": "Executive Dashboards",
+"description": "Custom dashboards that bring together critical business metrics into a single source of truth.",
+"features": [
+"KPI Tracking",
+"Operational Monitoring",
+"Real-time Reporting"
+]
+},
+{
+"icon": "bar_chart",
+"title": "Business Reporting",
+"description": "Automated reporting systems that eliminate manual spreadsheets and improve reporting accuracy.",
+"features": [
+"Scheduled Reports","Automated Distribution","Data Validation"]
+},
+{
+"icon": "query_stats",
+"title": "Performance Analytics",
+"description": "Identify trends, bottlenecks, and opportunities through structured analysis of operational data.",
+"features": ["Trend Analysis","Cohort Analysis","Forecasting Support"]
+},
+{
+"icon": "analytics",
+"title": "Self-Service Analytics",
+"description": "Enable teams to explore and analyze data independently without technical bottlenecks.",
+"features": [
+"Semantic Layers",
+"Business Metrics Catalog",
+"Data Exploration"
+]
+}
+],
+
+"process": [
+{
+"title": "Discovery",
+"description": "Identify reporting challenges, business questions, and decision-making requirements."
+},
+{
+"title": "Data Assessment",
+"description": "Review available data sources and establish reliable metrics definitions."
+},
+{
+"title": "Dashboard Development",
+"description": "Build and validate dashboards with stakeholders through iterative feedback."
+},
+{
+"title": "Adoption & Optimization",
+"description": "Train teams and continuously improve reporting based on business needs."
+}
+],
+
+"tools": [
+"Power BI",
+"Looker Studio",
+"Metabase",
+"Tableau",
+"PostgreSQL",
+"BigQuery",
+"Microsoft Excel"
+],
+
+"impact": {
+"title": "Expected Outcomes",
+"metrics": [
+{
+"value": "80%",
+"label": "Less Manual Reporting",
+"description": "Reduce time spent preparing recurring reports."
+},
+{
+"value": "3x",
+"label": "Faster Access to Insights",
+"description": "Business teams get answers faster with centralized dashboards."
+},
+{
+"value": "100%",
+"label": "Single Source of Truth",
+"description": "Consistent metrics across departments."
+}
+]
+},
+
+"cta": {
+"title": "Ready to make data-driven decisions?",
+"subtitle": "Let's build analytics systems that help your team focus on action instead of spreadsheets."
+}}

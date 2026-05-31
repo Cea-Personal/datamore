@@ -1,95 +1,130 @@
 {
   "hero": {
-    "title": "Architecting solutions<br>for <span class=\"text-secondary\">modern businesses</span>",
-    "subtitle": "We help organizations build and operate complete data systems that unify infrastructure, enable automation, support analytics, and guide long-term data strategy.",
+    "title": "Building data systems<br>for <span class=\"text-secondary\">smarter operations</span>",
+    "subtitle": "We design and implement modern data and AI systems that automate reporting, improve decision-making, and help organizations scale with confidence.",
     "image": {
-      "alt": "Technical Infrastructure",
-      "url": "https://lh3.googleusercontent.com/aida-public/AB6AXuA0tm_Lz2ykagfyg8nCywLPwyGsZf9CKBw6dK0AprsV1j4StB_hfkDy1lxD5bWx0OdBLPlWrohdFCDe_CYlamv3BYRef_lXPoJv4sN53GML8NuDiHhPxuiqSfKT5n53bCQbI0ot2_ak2Cf7UmN8rJ3QMuJw-Sz0SKWa36lTXa5_9tHfNFcJ3dDZKUzknSoip8xKDFjP9wqOUujmzb2zSc27u9yK9cT7UFJXk72Ut6FiQP2t8vr8WFqCAH_kvV94wkiFUMF3XyTPNY2F"
+      "alt": "Data and AI systems architecture",
+      "url": "/services-hero.png"
     },
     "badge": {
-      "label": "Enterprise Solutions",
-      "icon": "automation"
+      "label": "Data & AI Engineering",
+      "icon": "analytics"
     }
   },
+
   "impact": {
     "title": "The Datamore Impact",
     "metrics": [
-      { "value": "99.9%", "label": "Pipeline Uptime", "description": "Redundant architectures and automated self-healing clusters." },
-      { "value": "60%", "label": "Reduction in ETL Latency", "description": "Proprietary partitioning logic and optimized compute allocation." },
-      { "value": "45%", "label": "Cloud Cost Optimization", "description": "Aggressive resource monitoring and spot instance orchestration." }
+      {
+        "value": "40%",
+        "label": "Lower Operational Costs",
+        "description": "Through workflow automation and reduced manual reporting."
+      },
+      {
+        "value": "3–5x",
+        "label": "Faster Decision Cycles",
+        "description": "Real-time visibility into critical business metrics."
+      },
+      {
+        "value": "99.9%",
+        "label": "System Reliability",
+        "description": "Robust data infrastructure built for scale and resilience."
+      }
     ]
   },
+
   "categories": [
     {
-      "title": "Data Engineering & Infrastructure",
-      "category": "foundational",
+      "title": "Data Foundations",
+      "category": "foundation",
       "icon": "database",
-      "description": "Building resilient pipelines and cloud-native architectures that handle petabyte-scale loads. We turn fragmented silos into unified, high-performance engines.",
+      "description": "We build reliable data infrastructure that centralizes information, eliminates silos, and creates a trusted foundation for analytics and AI.",
       "features": [
-        "ETL/ELT Architecture",
-        "Cloud Migration",
-        "CI/CD for Data tools and pipelines",
-        "Data Lakehouse / Warehouse Design",
-        "Data Modelling & Visualisation",
-        "Batch & Stream Processing"
+        "Data Pipelines",
+        "ETL & ELT Development",
+        "Cloud Data Platforms",
+        "Data Warehousing",
+        "Lakehouse Architecture",
+        "Data Platforms",
+        "Data Modeling",
+        "Data Governance & Security"
       ],
       "link": "/services/data-engineering",
-      "explore": "Explore Data Engineering"
+      "explore": "Explore Data Foundations"
     },
+
     {
-      "title": "Business Intelligence & Analytics",
-      "category": "intelligence",
+      "title": "Analytics & Business Intelligence",
+      "category": "analytics",
       "icon": "insights",
-      "description": "Transforming raw metrics into strategic narratives. We deploy customized dashboards that provide 'at-a-glance' operational truth.",
+      "description": "Transform operational data into actionable insights through dashboards, reporting systems, and decision-support analytics.",
       "features": [
-        "Predictive Modeling",
-        "Executive Reporting"
+        "Executive Dashboards",
+        "Business Reporting",
+        "KPI Monitoring",
+        "Self-Service Analytics",
+        "Data Visualization",
+        "Performance Tracking"
       ],
-      "link": "/services/bi",
-      "explore": "Explore BI & Analytics"
+      "link": "/services/analytics-bi",
+      "explore": "Explore Analytics & BI"
     },
+
     {
       "title": "AI Automation",
-      "category": "innovation",
-      "icon": "psychology",
-      "description": "Deploying private, secure Large Language Models tailored to your institutional knowledge and regulatory requirements.",
+      "category": "automation",
+      "icon": "smart_toy",
+      "description": "Automate repetitive processes, accelerate workflows, and unlock organizational knowledge using AI-powered systems.",
       "features": [
-        "Custom RAG Pipelines",
-        "Agentic Workflows",
-        "Automated Compliance"
+        "LLM Applications",
+        "RAG Systems",
+        "Workflow Automation",
+        "AI Assistants",
+        "Document Processing",
+        "Agentic Workflows"
       ],
-      "link": "/services/ai-llm-automation",
+      "link": "/services/ai-automation",
       "explore": "Explore AI Automation"
     },
+
     {
-      "title": "Data Strategy & Advisory",
-      "category": "strategy",
-      "icon": "strategy",
-      "description": "Aligning technical debt with long-term capital goals through rigorous audit and roadmapping.",
+      "title": "System Integration",
+      "category": "integration",
+      "icon": "settings",
+      "description": "Connect business applications, data sources, and operational tools into a seamless ecosystem that scales with your organization.",
       "features": [
-        "Data Governance",
-        "Data Architecture Roadmapping",
-        "ROI Mapping",
-        "Capability Maturity",
-        "Regulatory Advisory"
+        "API Integrations",
+        "ERP & CRM Integration",
+        "Workflow Orchestration",
+        "Custom Internal Tools",
+        "Automation Infrastructure",
+        "Cross-System Data Sync"
       ],
-      "link": "/services/data-strategy",
-      "explore": "Explore Strategy"
-    },
-    {
-      "title": "Managed Data Services",
-      "category": "managed",
-      "icon": "support_agent",
-      "description": "Technical oversight. We manage the complexity so your internal teams can focus on core innovation.",
-      "features": [
-        "Dedicated Support Squads"
-      ],
-      "link": "/services/managed-data-services",
-      "explore": "Explore Managed Services"
+      "link": "/services/integration",
+      "explore": "Explore System Integration"
     }
   ],
-    "cta": {
-      "title": "Ready to scale your impact with data?",
-      "subtitle": "Schedule a technical discovery session with our lead architects today."
-    }
+
+  "approach": {
+    "title": "Every Engagement Includes",
+    "items": [
+      {
+        "title": "Data Strategy",
+        "description": "Technology decisions aligned with business outcomes and long-term growth."
+      },
+      {
+        "title": "Architecture Design",
+        "description": "Scalable systems built with security, governance, and maintainability in mind."
+      },
+      {
+        "title": "Ongoing Support",
+        "description": "Training, monitoring, optimization, and operational guidance after deployment."
+      }
+    ]
+  },
+
+  "cta": {
+    "title": "Ready to turn your data into decisions?",
+    "subtitle": "Book a discovery session and identify the highest-impact opportunities for automation, analytics, and growth."
+  }
 }

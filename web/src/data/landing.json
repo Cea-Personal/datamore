@@ -111,22 +111,37 @@
       {
         "label": "Fintech",
         "icon": "account_balance",
-        "description": "Automate financial reporting, improve visibility, and unlock real-time decision systems."
+        "description": "Automate financial reporting, improve visibility, and unlock real-time decision systems.",
+        "left": "-380",
+        "width": "360"
       },
       {
         "label": "Retail & E-commerce",
         "icon": "shopping_cart",
-        "description": "Optimize inventory, customer behavior analysis, and sales forecasting through data systems."
+        "description": "Optimize inventory, customer behavior analysis, and sales forecasting through data systems.",
+        "left": "-200",
+        "width": "180"
       },
       {
         "label": "Logistics",
         "icon": "delivery_truck_speed",
-        "description": "Improve supply chain visibility and operational efficiency with real-time analytics."
+        "description": "Improve supply chain visibility and operational efficiency with real-time analytics.",
+        "left": "-360",
+        "width": "340"
       },
       {
         "label": "SMEs",
         "icon": "business_center",
-        "description": "Help growing businesses modernize reporting, automate workflows, and scale with data."
+        "description": "Help growing businesses modernize reporting, automate workflows, and scale with data.",
+        "left": "-200",
+        "width": "180"
+      },
+      {
+        "label": "Nonprofits",
+        "icon": "volunteer_activism",
+        "description": "Support data-driven decision-making for impactful social initiatives.",
+        "left": "-380",
+        "width": "360"
       }
     ]
   },

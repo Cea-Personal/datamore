@@ -1,0 +1,150 @@
+{
+  "hero": {
+    "title": "Build a Reliable Foundation for <br><span class=\"text-secondary\">Data-Driven Growth.</span>",
+    "subtitle": "We design and implement modern data platforms that centralize information, improve data quality, and create the foundation for analytics, automation, and AI initiatives.",
+    "badge": {
+      "label": "Data Foundations",
+      "caption": "pipelines • warehousing • cloud infrastructure",
+      "icon": "database"
+    },
+    "image": {
+      "alt": "Modern data architecture visualization",
+      "url": "/data-foundations-hero.png"
+    }
+  },
+
+  "capabilities": [
+    {
+      "icon": "sync_alt",
+      "title": "Data Pipelines",
+      "description": "Build reliable pipelines that move data from operational systems into centralized analytics environments.",
+      "features": [
+        "Batch & Streaming Pipelines",
+        "ETL & ELT Development",
+        "Automated Data Ingestion",
+        "Data Quality Validation"
+      ]
+    },
+    {
+      "icon": "warehouse",
+      "title": "Data Warehousing",
+      "description": "Design scalable warehouses and lakehouses optimized for reporting, analytics, and AI workloads.",
+      "features": [
+
+        "Data Governance & Security",
+        "Data Monitoring & Alerting",
+        "Performance & Cost Optimization",
+        "Data Access & Permissions"
+     
+      ]
+    },
+    {
+      "icon": "account_tree",
+      "title": "Data Modelling",
+      "description": "Create clean and maintainable data models that improve reporting accuracy and consistency.",
+      "features": [
+        "Dimensional Modelling",
+        "Data Vault Modelling",
+        "Semantic Layers",
+        "Data Cataloging"
+      ]
+    },
+    {
+      "icon": "shield",
+      "title": "Data Architecture",
+      "description": "Design the optimal data platform architecture to meet your business needs and growth plans.",
+      "features": [
+        "Data Mesh Design",
+        "Medallion Architecture",
+        "Data Fabric Architecture",
+        "Lakehouse Architecture"
+      ]
+    },
+    {
+      "icon": "cloud",
+      "title": "Cloud Data Platforms",
+      "description": "Deploy modern cloud-native infrastructure that scales with business growth.",
+      "features": [
+        "AWS",
+        "Azure",
+        "Google Cloud",
+        "BYO Cloud Solutions"
+      ]
+    },
+    {
+      "icon": "build",
+      "title": "CI/CD for Data",
+      "description": "Implement modern engineering practices for data systems to improve reliability and accelerate delivery.",
+      "features": [
+        "Version Control",
+        "Automated Testing",
+        "Deployment Pipelines",
+        "Infrastructure as Code"
+      ]
+    }
+  ],
+
+  "process": [
+    {
+      "title": "Discovery",
+      "description": "Understand existing systems, reporting needs, and data challenges."
+    },
+    {
+      "title": "Architecture Design",
+      "description": "Design the optimal data platform and integration architecture."
+    },
+    {
+      "title": "Implementation",
+      "description": "Build pipelines, warehouses, and data models using modern engineering practices."
+    },
+    {
+      "title": "Monitoring & Optimization",
+      "description": "Establish monitoring, validation, and ongoing performance improvements."
+    }
+  ],
+
+  "tools": [
+    "PostgreSQL",
+    "BigQuery",
+    "Snowflake",
+    "Airbyte",
+    "Minio",
+    "Databricks",
+    "DBT",
+    "Apache Airflow",
+    "Docker",
+    "Kubernetes",
+    "AWS",
+    "Azure",
+    "GitHub Actions",
+    "Terraform",
+    "Datahub",
+    "And More ..."
+  ],
+
+  "impact": {
+    "title": "Business Impact",
+    "metrics": [
+      {
+        "value": "99.9%",
+        "label": "Data Availability",
+        "description": "Reliable infrastructure designed for continuous operations."
+      },
+      {
+        "value": "70%",
+        "label": "Less Manual Data Preparation",
+        "description": "Automated data movement and transformation workflows."
+      },
+      {
+        "value": "3x",
+        "label": "Faster Analytics Delivery",
+        "description": "Enable teams to access trusted data quickly."
+      }
+    ]
+  },
+
+  "cta": {
+    "title": "Ready to build a modern data platform?",
+    "subtitle": "Create the foundation needed for analytics, automation, and AI."
+  }
+}

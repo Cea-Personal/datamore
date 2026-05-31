@@ -18,7 +18,7 @@ const serviceItems = [
   // { href: '/services/software-development', label: 'Software Development' },
   { href: '/services/bi-analytics', label: 'BI Analytics' },
   { href: '/services/ai-automation', label: 'AI Automation' },
-  { href: '/services/system-integration', label: 'System Integration' },
+  { href: '/services/systems-integration', label: 'System Integration' },
   // { href: '/services/data-strategy', label: 'Data Strategy' },
   // { href: '/services/managed-data-services', label: 'Managed Data Services' }
 ]
@@ -75,10 +75,10 @@ export default function Navbar() {
               </Link>
             </div>
           ))}
+          <Link href="/contact" className="glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
+            Book session
+          </Link>
         </div>
-        <Link href="/contact" className="hidden md:flex glassy-button text-on-primary px-6 py-3 rounded-lg text-label-md active:scale-95 transition-transform">
-          Book
-        </Link>
         
         <button 
           className="md:hidden flex items-center justify-center w-10 h-10 text-primary"
@@ -135,7 +135,7 @@ export default function Navbar() {
               onClick={() => setMobileOpen(false)}
               className="block text-headline-md text-secondary hover:underline decoration-2 underline-offset-4"
             >
-              Book
+              Book session
             </Link>
           </div>
         </div>

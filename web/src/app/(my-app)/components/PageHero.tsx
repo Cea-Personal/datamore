@@ -42,7 +42,7 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
                 <span className="material-symbols-outlined text-[18px]" style={{fontVariationSettings: "'FILL' 1"}}>{data.badge.icon}</span>
               )}
               <span className="font-label-md text-label-md uppercase tracking-wider">{data.badge.label}</span>
-              <span className="text-on-surface-variant text-caption">{data.readTime} min read</span>
+              <span className="text-on-surface-variant text-caption">{data.readTime}</span>
               {data.likes !== undefined && data.likes > 0 && (
                 <span className="flex items-center gap-1 text-on-surface-variant text-caption">
                   <span className="material-symbols-outlined text-[16px]">favorite</span>
@@ -51,11 +51,13 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
               )}
             </div>
           )}
+          <div>
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 text-center" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 mx-auto text-left">
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 px-10 mx-auto text-left">
             {data.subtitle}
           </p>
+          </div>
           {data.slug && (
             <Link href={data.slug.url} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60 mx-auto">
               {data.slug.label}
