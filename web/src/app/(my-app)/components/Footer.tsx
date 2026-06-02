@@ -24,7 +24,7 @@ export default function Footer() {
     <footer className="bg-primary-container text-on-primary-container border-t border-outline-variant">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pt-20 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-16">
-          <div className="md:col-span-3 md:col-start-2">
+          <div className="md:col-span-3 md:col-start-3">
             <Link href="/" className="flex items-center mb-6">
               <img src="/logo.svg" className="h-6 w-auto brightness-0 invert opacity-90" />
               <span className="-ml-0.5 text-headline-md font-bold text-white">

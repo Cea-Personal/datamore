@@ -99,3 +99,13 @@
 .pb-margin-mobile   { padding-bottom: var(--margin-mobile);  }
 .gap-gutter         { gap:  var(--gutter); }
 .max-w-container-max{ max-width: var(--container-max); }
+
+/* Animations */
+@keyframes slide-infinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-50%)); }
+}
+.animate-slide-infinite {
+  display: flex;
+  animation: slide-infinite 30s linear infinite;
+}

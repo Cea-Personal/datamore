@@ -25,7 +25,7 @@ export default function ContactHero() {
                 </div>
                 <div>
                   <p className="text-caption text-outline">Email us at</p>
-                  <p className="text-body-md font-semibold">partnerships@datamore.org</p>
+                  <p className="text-body-md font-semibold">contact@datamore.org</p>
                 </div>
               </div>
               <h3> Follow Us</h3>
