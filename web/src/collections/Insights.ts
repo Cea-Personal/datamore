@@ -1,6 +1,5 @@
-import type { CollectionConfig } from 'payload'
+import { APIError, type CollectionConfig } from 'payload'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import { APIError } from 'payload';
 
 export const Insights : CollectionConfig = {
   slug: 'insights',
@@ -13,26 +12,27 @@ export const Insights : CollectionConfig = {
   },
   access: {
     read: () => true,
-    create: ({ req }) => {
-      if (!req.user) {
-        throw new APIError('You must be logged in to create this resource.', 401);
-      }
-      return true;
-    },
-    update: ({ req }) => {
-      if (!req.user) {
-        throw new APIError('You must be logged in to update this resource.', 401);
-      }
-      return true;
-    },
-    delete: ({ req }) => {
-      if (!req.user) {
-        throw new APIError('You must be logged in to delete this resource.', 401);
-      }
-      return true;
-    },
-  
+    create: ({ req }) => req.user != null,
+    update: ({ req }) => req.user != null,
+    delete: ({ req }) => req.user != null,
   },
+  hooks: {
+    beforeOperation: [
+      ({ args, operation }) => {
+        // We only care about mutation operations
+        if (['create', 'update', 'delete'].includes(operation)) {
+          const req = args.req;
+          
+          // Cleanly throw an explicit 401 to the client API
+          if (!req || !req.user) {
+            throw new APIError('You must be logged in to modify this resource.', 401)
+          }
+        }
+        return args
+      }
+    ]
+  }
+,
   fields: [
     {
       name: 'title',
