@@ -1,5 +1,6 @@
 import type { CollectionConfig } from 'payload'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { APIError } from 'payload';
 
 export const Insights : CollectionConfig = {
   slug: 'insights',
@@ -12,9 +13,25 @@ export const Insights : CollectionConfig = {
   },
   access: {
     read: () => true,
-    create: ({ req }) => req.user != null,
-    update: ({ req }) => req.user != null,
-    delete: ({ req }) => req.user != null,
+    create: ({ req }) => {
+      if (!req.user) {
+        throw new APIError('You must be logged in to create this resource.', 401);
+      }
+      return true;
+    },
+    update: ({ req }) => {
+      if (!req.user) {
+        throw new APIError('You must be logged in to update this resource.', 401);
+      }
+      return true;
+    },
+    delete: ({ req }) => {
+      if (!req.user) {
+        throw new APIError('You must be logged in to delete this resource.', 401);
+      }
+      return true;
+    },
+  
   },
   fields: [
     {
