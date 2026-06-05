@@ -74,6 +74,7 @@ export interface Config {
     users: User;
     media: Media;
     admins: Admin;
+    topics: Topic;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -87,6 +88,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     admins: AdminsSelect<false> | AdminsSelect<true>;
+    topics: TopicsSelect<false> | TopicsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -412,6 +414,62 @@ export interface Admin {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "topics".
+ */
+export interface Topic {
+  id: number;
+  title: string;
+  problem: string;
+  angle: string;
+  audience?: ('sme-founder' | 'startup-founder' | 'operations-manager' | 'business-analyst' | 'executive')[] | null;
+  contentType?:
+    | ('thought-leadership' | 'case-study' | 'tutorial' | 'industry-insight' | 'opinion' | 'build-in-public')[]
+    | null;
+  cta?: string | null;
+  scores?: {
+    authority?: number | null;
+    leadGeneration?: number | null;
+    evergreen?: number | null;
+    youtubePotential?: number | null;
+    overallScore?: number | null;
+  };
+  distributionTier?: ('tier-1' | 'tier-2' | 'tier-3' | 'tier-4') | null;
+  recommendedPlatforms?:
+    | (
+        | 'linkedin'
+        | 'facebook'
+        | 'insights'
+        | 'youtube'
+        | 'instagram'
+        | 'tiktok'
+        | 'youtube-shorts'
+        | 'instagram-reels'
+      )[]
+    | null;
+  contentPriority?: ('low' | 'medium' | 'high' | 'flagship') | null;
+  aiRecommendations?: {
+    reasoning?: string | null;
+    youtubeMode?: ('faceless' | 'presenter' | 'screen-recording') | null;
+    estimatedLeadPotential?: number | null;
+  };
+  status: 'generated' | 'selected' | 'rejected' | 'content-created';
+  approvedForContentGeneration?: boolean | null;
+  topicHash?: string | null;
+  generatedBy?: ('ai' | 'human') | null;
+  rawAIOutput?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -457,6 +515,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'admins';
         value: number | Admin;
+      } | null)
+    | ({
+        relationTo: 'topics';
+        value: number | Topic;
       } | null);
   globalSlug?: string | null;
   user:
@@ -677,6 +739,44 @@ export interface AdminsSelect<T extends boolean = true> {
         createdAt?: T;
         expiresAt?: T;
       };
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "topics_select".
+ */
+export interface TopicsSelect<T extends boolean = true> {
+  title?: T;
+  problem?: T;
+  angle?: T;
+  audience?: T;
+  contentType?: T;
+  cta?: T;
+  scores?:
+    | T
+    | {
+        authority?: T;
+        leadGeneration?: T;
+        evergreen?: T;
+        youtubePotential?: T;
+        overallScore?: T;
+      };
+  distributionTier?: T;
+  recommendedPlatforms?: T;
+  contentPriority?: T;
+  aiRecommendations?:
+    | T
+    | {
+        reasoning?: T;
+        youtubeMode?: T;
+        estimatedLeadPotential?: T;
+      };
+  status?: T;
+  approvedForContentGeneration?: T;
+  topicHash?: T;
+  generatedBy?: T;
+  rawAIOutput?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

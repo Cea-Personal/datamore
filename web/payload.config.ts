@@ -11,6 +11,7 @@ import { Services } from './src/collections/Services'
 import { Users } from './src/collections/Users'
 import { Media } from './src/collections/Media'
 import { Admins } from './src/collections/Admins'
+import { Topics } from './src/collections/Topics'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 const filename = fileURLToPath(import.meta.url)
@@ -25,7 +26,7 @@ export default buildConfig({
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Insights, SuccessStories, Services, Users, Media, Admins],
+  collections: [Insights, SuccessStories, Services, Users, Media, Admins, Topics],
   editor: lexicalEditor(),
   secret: 'payload-123',
   typescript: {

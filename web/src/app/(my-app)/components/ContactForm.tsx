@@ -1,4 +1,3 @@
-// src/components/ContactForm.tsx
 'use client'
 import { useState } from 'react'
 import ContactBadges from './ContactBadges'
@@ -11,9 +10,31 @@ export default function ContactForm() {
     title: '',
     message: ''
   })
+  const [touched, setTouched] = useState({
+    name: false,
+    email: false,
+    organization: false,
+    title: false,
+    message: false
+  })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState('')
+
+  const isValidEmail = (email: string) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+
+  const isFormValid = () => {
+    return (
+      formData.name.trim() !== '' &&
+      formData.email.trim() !== '' &&
+      isValidEmail(formData.email) &&
+      formData.organization.trim() !== '' &&
+      formData.title.trim() !== '' &&
+      formData.message.trim() !== ''
+    )
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -43,6 +64,7 @@ export default function ContactForm() {
       if (response.ok) {
         setSubmitted(true)
         setFormData({ name: '', email: '', title: '', organization: '', message: '' })
+        setTouched({ name: false, email: false, organization: false, title: false, message: false })
       } else {
         const errorText = await response.text()
         console.error('EmailJS error:', errorText)
@@ -62,7 +84,7 @@ export default function ContactForm() {
         <div className="space-y-2">
           <h2 className="text-headline-lg text-secondary">Message Sent!</h2>
           <p className="text-body-md text-on-surface-variant">
-            Thank you for reaching out. We'll get back to you within 24 hours.
+            Thank you for reaching out. We&apos;ll get back to you within 24 hours.
           </p>
         </div>
         <ContactBadges />
@@ -82,57 +104,81 @@ export default function ContactForm() {
         <div className="flex flex-col gap-2">
           <label className="text-label-md text-on-surface">Full Name</label>
           <input 
-            className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" 
+            className={`w-full px-4 py-3 bg-transparent border rounded-lg focus:ring-2 focus:ring-secondary/20 outline-none transition-all placeholder:text-outline/50 ${touched.name && formData.name.trim() === '' ? 'border-error' : 'border-outline-variant focus:border-secondary'}`} 
             placeholder="John Doe" 
             type="text" 
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            onBlur={() => setTouched({ ...touched, name: true })}
             required
           />
+          {touched.name && formData.name.trim() === '' && (
+            <span className="text-caption text-error">Full name is required</span>
+          )}
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-label-md text-on-surface">Work Email</label>
           <input 
-            className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" 
+            className={`w-full px-4 py-3 bg-transparent border rounded-lg focus:ring-2 focus:ring-secondary/20 outline-none transition-all placeholder:text-outline/50 ${touched.email && (!formData.email.trim() || !isValidEmail(formData.email)) ? 'border-error' : 'border-outline-variant focus:border-secondary'}`} 
             placeholder="john@organization.com" 
             type="email" 
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onBlur={() => setTouched({ ...touched, email: true })}
             required
           />
+          {touched.email && !formData.email.trim() ? (
+            <span className="text-caption text-error">Email is required</span>
+          ) : (
+            touched.email && formData.email && !isValidEmail(formData.email) && (
+              <span className="text-caption text-error">Please enter a valid email address</span>
+            )
+          )}
         </div>
         <div className="md:col-span-2 flex flex-col gap-2">
           <label className="text-label-md text-on-surface">Organization</label>
           <input 
-            className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" 
+            className={`w-full px-4 py-3 bg-transparent border rounded-lg focus:ring-2 focus:ring-secondary/20 outline-none transition-all placeholder:text-outline/50 ${touched.organization && formData.organization.trim() === '' ? 'border-error' : 'border-outline-variant focus:border-secondary'}`} 
             placeholder="Company Name" 
             type="text" 
             value={formData.organization}
             onChange={(e) => setFormData({ ...formData, organization: e.target.value })}
+            onBlur={() => setTouched({ ...touched, organization: true })}
             required
           />
+          {touched.organization && formData.organization.trim() === '' && (
+            <span className="text-caption text-error">Organization is required</span>
+          )}
         </div>
-         <div className="md:col-span-2 flex flex-col gap-2">
+        <div className="md:col-span-2 flex flex-col gap-2">
           <label className="text-label-md text-on-surface">Title</label>
           <textarea 
-            className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" 
-            placeholder="Whats' your request?" 
+            className={`w-full px-4 py-3 bg-transparent border rounded-lg focus:ring-2 focus:ring-secondary/20 outline-none transition-all placeholder:text-outline/50 ${touched.title && formData.title.trim() === '' ? 'border-error' : 'border-outline-variant focus:border-secondary'}`} 
+            placeholder="What&apos;s your request?" 
             rows={1}
             value={formData.title}
             onChange={(e) => setFormData({ ...formData, title: e.target.value })}
+            onBlur={() => setTouched({ ...touched, title: true })}
             required
           />
+          {touched.title && formData.title.trim() === '' && (
+            <span className="text-caption text-error">Title is required</span>
+          )}
         </div>
         <div className="md:col-span-2 flex flex-col gap-2">
           <label className="text-label-md text-on-surface">How can we help?</label>
           <textarea 
-            className="w-full px-4 py-3 bg-transparent border border-outline-variant rounded-lg focus:ring-2 focus:ring-secondary/20 focus:border-secondary outline-none transition-all placeholder:text-outline/50" 
+            className={`w-full px-4 py-3 bg-transparent border rounded-lg focus:ring-2 focus:ring-secondary/20 outline-none transition-all placeholder:text-outline/50 ${touched.message && formData.message.trim() === '' ? 'border-error' : 'border-outline-variant focus:border-secondary'}`} 
             placeholder="Briefly describe your data challenges or project goals..." 
             rows={4}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+            onBlur={() => setTouched({ ...touched, message: true })}
             required
           />
+          {touched.message && formData.message.trim() === '' && (
+            <span className="text-caption text-error">Message is required</span>
+          )}
         </div>
         {error && (
           <div className="md:col-span-2 text-error">
@@ -143,7 +189,7 @@ export default function ContactForm() {
           <button 
             className="w-full btn-gradient text-on-primary py-4 rounded-lg text-label-md shadow-premium shadow-interactive active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-50" 
             type="submit"
-            disabled={isSubmitting}
+            disabled={isSubmitting || !isFormValid()}
           >
             {isSubmitting ? 'Sending...' : 'Send Message'}
             <span className="material-symbols-outlined">send</span>
