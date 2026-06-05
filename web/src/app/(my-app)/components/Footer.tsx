@@ -55,11 +55,7 @@ export default function Footer() {
           <span className="text-body-md text-on-primary-container/70">
             © 2024 Datamore. All rights reserved.
           </span>
-          <div className="flex gap-6">
-            {FooterData.socialIcons.map((icon) => (
-              <SocialIcon key={icon} name={icon} />
-            ))}
-          </div>
+          <SocialIcon />
         </div>
       </div>
     </footer>

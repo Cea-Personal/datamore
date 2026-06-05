@@ -58,7 +58,7 @@ export const Users : CollectionConfig = {
             const req = args.req;
             
             // Cleanly throw an explicit 401 to the client API
-            if (!req || !req.user) {
+            if (!req || !req.body) {
               throw new APIError('Bad Request:- No User Payload', 400)
             }
           }
