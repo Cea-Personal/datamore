@@ -21,8 +21,8 @@ export const Topics: CollectionConfig = {
 
   access: {
     read: () => true,
-    create: ({ req }) => req.user != null,
-    update: ({ req }) => req.user != null,
+    create: ({ req }) => Boolean(req.user),
+    update: ({ req }) => Boolean(req.user),
   },
 
   fields: [
