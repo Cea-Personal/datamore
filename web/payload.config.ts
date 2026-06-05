@@ -28,7 +28,7 @@ export default buildConfig({
   },
   collections: [Insights, SuccessStories, Services, Users, Media, Admins, Topics],
   editor: lexicalEditor(),
-  secret: 'payload-123',
+  secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
     outputFile: join(dirnameValue, 'payload-types.ts'),
   },
