@@ -23,6 +23,7 @@ export const Topics: CollectionConfig = {
     read: () => true,
     create: ({ req }) => Boolean(req.user),
     update: ({ req }) => Boolean(req.user),
+    delete: ({ req }) => Boolean(req.user),
   },
 
   fields: [
@@ -44,64 +45,16 @@ export const Topics: CollectionConfig = {
       required: true,
     },
 
-    {
-      name: 'audience',
-      type: 'select',
-      hasMany: true,
-      options: [
-        {
-          label: 'SME Founder',
-          value: 'sme-founder',
-        },
-        {
-          label: 'Startup Founder',
-          value: 'startup-founder',
-        },
-        {
-          label: 'Operations Manager',
-          value: 'operations-manager',
-        },
-        {
-          label: 'Business Analyst',
-          value: 'business-analyst',
-        },
-        {
-          label: 'Executive',
-          value: 'executive',
-        },
-      ],
+    {   name: 'audience',
+        type: 'json',
+        
     },
 
     {
       name: 'contentType',
-      type: 'select',
-      hasMany: true,
-      options: [
-        {
-          label: 'Thought Leadership',
-          value: 'thought-leadership',
-        },
-        {
-          label: 'Case Study',
-          value: 'case-study',
-        },
-        {
-          label: 'Tutorial',
-          value: 'tutorial',
-        },
-        {
-          label: 'Industry Insight',
-          value: 'industry-insight',
-        },
-        {
-          label: 'Opinion',
-          value: 'opinion',
-        },
-        {
-          label: 'Build In Public',
-          value: 'build-in-public',
-        },
-      ],
+      type: 'json',
+
+
     },
 
     {
@@ -148,90 +101,18 @@ export const Topics: CollectionConfig = {
 
     {
       name: 'distributionTier',
-      type: 'select',
-      defaultValue: 'tier-2',
-      options: [
-        {
-          label: 'Tier 1 - Social',
-          value: 'tier-1',
-        },
-        {
-          label: 'Tier 2 - Authority',
-          value: 'tier-2',
-        },
-        {
-          label: 'Tier 3 - Authority + Insights',
-          value: 'tier-3',
-        },
-        {
-          label: 'Tier 4 - Full Funnel',
-          value: 'tier-4',
-        },
-      ],
+      type: 'text',
     },
 
     {
       name: 'recommendedPlatforms',
-      type: 'select',
-      hasMany: true,
-      options: [
-        {
-          label: 'LinkedIn',
-          value: 'linkedin',
-        },
-        {
-          label: 'Facebook',
-          value: 'facebook',
-        },
-        {
-          label: 'Insights',
-          value: 'insights',
-        },
-        {
-          label: 'YouTube',
-          value: 'youtube',
-        },
-        {
-          label: 'Instagram',
-          value: 'instagram',
-        },
-        {
-          label: 'TikTok',
-          value: 'tiktok',
-        },
-        {
-          label: 'YouTube Shorts',
-          value: 'youtube-shorts',
-        },
-        {
-          label: 'Instagram Reels',
-          value: 'instagram-reels',
-        },
-      ],
+      type: 'json',
+     
     },
 
     {
       name: 'contentPriority',
-      type: 'select',
-      defaultValue: 'medium',
-      options: [
-        {
-          label: 'Low',
-          value: 'low',
-        },
-        {
-          label: 'Medium',
-          value: 'medium',
-        },
-        {
-          label: 'High',
-          value: 'high',
-        },
-        {
-          label: 'Flagship',
-          value: 'flagship',
-        },
-      ],
+      type: 'text'
     },
 
     {
@@ -244,21 +125,7 @@ export const Topics: CollectionConfig = {
         },
         {
           name: 'youtubeMode',
-          type: 'select',
-          options: [
-            {
-              label: 'Faceless',
-              value: 'faceless',
-            },
-            {
-              label: 'Presenter',
-              value: 'presenter',
-            },
-            {
-              label: 'Screen Recording',
-              value: 'screen-recording',
-            },
-          ],
+          type: 'text'
         },
         {
           name: 'estimatedLeadPotential',

@@ -377,9 +377,23 @@ export interface Topic {
   title: string;
   problem: string;
   angle: string;
-  audience?: ('sme-founder' | 'startup-founder' | 'operations-manager' | 'business-analyst' | 'executive')[] | null;
+  audience?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
   contentType?:
-    | ('thought-leadership' | 'case-study' | 'tutorial' | 'industry-insight' | 'opinion' | 'build-in-public')[]
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
     | null;
   cta?: string | null;
   scores?: {
@@ -389,23 +403,20 @@ export interface Topic {
     youtubePotential?: number | null;
     overallScore?: number | null;
   };
-  distributionTier?: ('tier-1' | 'tier-2' | 'tier-3' | 'tier-4') | null;
+  distributionTier?: string | null;
   recommendedPlatforms?:
-    | (
-        | 'linkedin'
-        | 'facebook'
-        | 'insights'
-        | 'youtube'
-        | 'instagram'
-        | 'tiktok'
-        | 'youtube-shorts'
-        | 'instagram-reels'
-      )[]
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
     | null;
-  contentPriority?: ('low' | 'medium' | 'high' | 'flagship') | null;
+  contentPriority?: string | null;
   aiRecommendations?: {
     reasoning?: string | null;
-    youtubeMode?: ('faceless' | 'presenter' | 'screen-recording') | null;
+    youtubeMode?: string | null;
     estimatedLeadPotential?: number | null;
   };
   status: 'generated' | 'selected' | 'rejected' | 'content-created';
