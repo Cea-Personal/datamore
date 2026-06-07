@@ -37,7 +37,8 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
-    }
+    },
+    schemaName: process.env.PAYLOAD_SCHEMA || 'public',
   }),
   sharp
   // upload: {

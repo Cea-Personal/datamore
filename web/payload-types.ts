@@ -419,7 +419,7 @@ export interface Topic {
     youtubeMode?: string | null;
     estimatedLeadPotential?: number | null;
   };
-  status: 'generated' | 'selected' | 'rejected' | 'content-created';
+  status: 'generated' | 'approved' | 'rejected' | 'content-created';
   topicHash?: string | null;
   generatedBy?: ('ai' | 'human') | null;
   rawAIOutput?:
