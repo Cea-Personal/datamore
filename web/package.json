@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "npx payload migrate && next dev",
-    "build": "npx payload migrate:create && npx payload migrate && next build",
+    "build": "next build",
     "start":  "next start",
     "lint": "eslint"
   },
