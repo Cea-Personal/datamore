@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx payload migrate && next dev",
     "build": "npx payload migrate:create && next build",
-    "start": "npx payload migrate && next start",
+    "start": "npx payload migrate &&  rm -rf ./src/migrations/ && next start",
     "lint": "eslint"
   },
   "dependencies": {
