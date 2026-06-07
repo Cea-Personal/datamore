@@ -38,7 +38,7 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URL || '',
     },
-    schemaName: process.env.PAYLOAD_SCHEMA || 'public',
+    schemaName: process.env.PAYLOAD_SCHEMA || '',
   }),
   sharp
   // upload: {
