@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "npx payload migrate && next dev",
-    "build": "npx payload migrate:create && next build",
-    "start": "npx payload migrate &&  rm -rf ./src/migrations/ && next start",
+    "build": "npx payload migrate:create && npx payload migrate &&  rm -rf ./src/migrations/ && next build",
+    "start":  "next start",
     "lint": "eslint"
   },
   "dependencies": {
