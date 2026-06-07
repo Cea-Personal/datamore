@@ -14,12 +14,13 @@ export const handleStatusWebhook: CollectionAfterChangeHook = async ({ doc, prev
     // 3. Trigger webhook only if one of the approval conditions is met
     if (isNewlyApprovedOnCreate || isNewlyApprovedOnUpdate) {
       const webhookUrl = process.env.APPROVAL_WEBHOOK_URL || '';
-      
+      const webhookSecret = process.env.WEBHOOK_SECRET || '';
+
       await fetch(webhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer Base64Encoded(${process.env.WEBHOOK_SECRET})`, // Optional: Add a secret for verification
+          'Authorization': `Bearer ${btoa(webhookSecret)}`, // Optional: Add a secret for verification
         },
         body: JSON.stringify({
           event: 'document.approved',
