@@ -420,7 +420,6 @@ export interface Topic {
     estimatedLeadPotential?: number | null;
   };
   status: 'generated' | 'selected' | 'rejected' | 'content-created';
-  approvedForContentGeneration?: boolean | null;
   topicHash?: string | null;
   generatedBy?: ('ai' | 'human') | null;
   rawAIOutput?:
@@ -704,7 +703,6 @@ export interface TopicsSelect<T extends boolean = true> {
         estimatedLeadPotential?: T;
       };
   status?: T;
-  approvedForContentGeneration?: T;
   topicHash?: T;
   generatedBy?: T;
   rawAIOutput?: T;

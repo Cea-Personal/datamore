@@ -1,5 +1,5 @@
-import type { CollectionConfig } from 'payload'
-
+import type { CollectionConfig} from 'payload'
+import { handleStatusWebhook } from './hooks'
 export const Topics: CollectionConfig = {
   slug: 'topics',
 
@@ -25,7 +25,9 @@ export const Topics: CollectionConfig = {
     update: ({ req }) => Boolean(req.user),
     delete: ({ req }) => Boolean(req.user),
   },
-
+hooks: {
+        afterChange: [handleStatusWebhook],
+    },
   fields: [
     {
       name: 'title',
@@ -141,14 +143,15 @@ export const Topics: CollectionConfig = {
       type: 'select',
       defaultValue: 'generated',
       required: true,
+  
       options: [
         {
           label: 'Generated',
           value: 'generated',
         },
         {
-          label: 'Selected',
-          value: 'selected',
+          label: 'Approved',
+          value: 'approved',
         },
         {
           label: 'Rejected',
@@ -159,12 +162,6 @@ export const Topics: CollectionConfig = {
           value: 'content-created',
         },
       ],
-    },
-
-    {
-      name: 'approvedForContentGeneration',
-      type: 'checkbox',
-      defaultValue: false,
     },
 
     {
