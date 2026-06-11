@@ -23,8 +23,8 @@ export const handleStatusWebhook: CollectionAfterChangeHook = async ({ doc, prev
           'Authorization': `Bearer ${btoa(webhookSecret)}`, // Optional: Add a secret for verification
         },
         body: JSON.stringify({
-          event: 'document.approved',
-          collection: 'your-collection-slug',
+          event: 'topics.approved',
+          collection: 'topics',
           documentId: doc.id,
           data: doc, // Sends the fully approved document
         }),

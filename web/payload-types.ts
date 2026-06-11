@@ -73,6 +73,10 @@ export interface Config {
     users: User;
     media: Media;
     topics: Topic;
+    publications: Publication;
+    'content-pipeline': ContentPipeline;
+    'content-variants': ContentVariant;
+    knowledge: Knowledge;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -86,6 +90,10 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     topics: TopicsSelect<false> | TopicsSelect<true>;
+    publications: PublicationsSelect<false> | PublicationsSelect<true>;
+    'content-pipeline': ContentPipelineSelect<false> | ContentPipelineSelect<true>;
+    'content-variants': ContentVariantsSelect<false> | ContentVariantsSelect<true>;
+    knowledge: KnowledgeSelect<false> | KnowledgeSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -436,6 +444,144 @@ export interface Topic {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications".
+ */
+export interface Publication {
+  id: number;
+  title: string;
+  content: number | ContentPipeline;
+  platform: 'linkedin' | 'facebook' | 'insights' | 'youtube' | 'instagram' | 'tiktok';
+  externalId?: string | null;
+  publishedUrl?: string | null;
+  publishedAt?: string | null;
+  status?: ('scheduled' | 'published' | 'failed') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-pipeline".
+ */
+export interface ContentPipeline {
+  id: number;
+  title: string;
+  topic: number | Topic;
+  status?:
+    | (
+        | 'draft'
+        | 'awaiting-content-approval'
+        | 'content-approved'
+        | 'awaiting-distribution-approval'
+        | 'distribution-approved'
+        | 'published'
+        | 'rejected'
+      )
+    | null;
+  coreMessage?: string | null;
+  insightsArticle?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  youtubeScript?: string | null;
+  youtubeTitle?: string | null;
+  youtubeDescription?: string | null;
+  thumbnailIdeas?:
+    | {
+        idea?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  approvalNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-variants".
+ */
+export interface ContentVariant {
+  id: number;
+  title: string;
+  content: number | ContentPipeline;
+  platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube-short';
+  contentBody?: string | null;
+  version?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge".
+ */
+export interface Knowledge {
+  id: number;
+  title: string;
+  documentType:
+    | 'project'
+    | 'case-study'
+    | 'meeting-notes'
+    | 'proposal'
+    | 'architecture'
+    | 'lesson-learned'
+    | 'faq'
+    | 'service';
+  entryMethod?: ('manual' | 'document') | null;
+  sourceDocument?: (number | null) | Media;
+  industry?: string | null;
+  services?:
+    | (
+        | 'ai-automation'
+        | 'llm-engineering'
+        | 'workflow-automation'
+        | 'data-engineering'
+        | 'business-intelligence'
+        | 'system-integration'
+      )[]
+    | null;
+  problem?: string | null;
+  solution?: string | null;
+  outcomes?:
+    | {
+        outcome?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  content?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  summary?: string | null;
+  tags?: string[] | null;
+  contentGenerationValue?: number | null;
+  approvedForContentGeneration?: boolean | null;
+  processingStatus?: ('pending' | 'processed' | 'failed') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -481,6 +627,22 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'topics';
         value: number | Topic;
+      } | null)
+    | ({
+        relationTo: 'publications';
+        value: number | Publication;
+      } | null)
+    | ({
+        relationTo: 'content-pipeline';
+        value: number | ContentPipeline;
+      } | null)
+    | ({
+        relationTo: 'content-variants';
+        value: number | ContentVariant;
+      } | null)
+    | ({
+        relationTo: 'knowledge';
+        value: number | Knowledge;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -706,6 +868,85 @@ export interface TopicsSelect<T extends boolean = true> {
   topicHash?: T;
   generatedBy?: T;
   rawAIOutput?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "publications_select".
+ */
+export interface PublicationsSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
+  platform?: T;
+  externalId?: T;
+  publishedUrl?: T;
+  publishedAt?: T;
+  status?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-pipeline_select".
+ */
+export interface ContentPipelineSelect<T extends boolean = true> {
+  title?: T;
+  topic?: T;
+  status?: T;
+  coreMessage?: T;
+  insightsArticle?: T;
+  youtubeScript?: T;
+  youtubeTitle?: T;
+  youtubeDescription?: T;
+  thumbnailIdeas?:
+    | T
+    | {
+        idea?: T;
+        id?: T;
+      };
+  approvalNotes?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "content-variants_select".
+ */
+export interface ContentVariantsSelect<T extends boolean = true> {
+  title?: T;
+  content?: T;
+  platform?: T;
+  contentBody?: T;
+  version?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "knowledge_select".
+ */
+export interface KnowledgeSelect<T extends boolean = true> {
+  title?: T;
+  documentType?: T;
+  entryMethod?: T;
+  sourceDocument?: T;
+  industry?: T;
+  services?: T;
+  problem?: T;
+  solution?: T;
+  outcomes?:
+    | T
+    | {
+        outcome?: T;
+        id?: T;
+      };
+  content?: T;
+  summary?: T;
+  tags?: T;
+  contentGenerationValue?: T;
+  approvedForContentGeneration?: T;
+  processingStatus?: T;
   updatedAt?: T;
   createdAt?: T;
 }
