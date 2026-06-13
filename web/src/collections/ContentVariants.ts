@@ -50,8 +50,8 @@ export const ContentVariants: CollectionConfig = {
           value: 'tiktok',
         },
         {
-          label: 'YouTube Short',
-          value: 'youtube-short',
+          label: 'YouTube',
+          value: 'youtube',
         },
       ],
     },
