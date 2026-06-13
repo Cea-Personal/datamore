@@ -73,7 +73,7 @@ export const ContentPipeline: CollectionConfig = {
 
     {
       name: 'insightsArticle',
-      type: 'richText',
+      type: 'textarea',
     },
 
     {
