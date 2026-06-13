@@ -53,6 +53,10 @@ export const ContentVariants: CollectionConfig = {
           label: 'YouTube',
           value: 'youtube',
         },
+           {
+          label: 'YouTube-Short',
+          value: 'youtube-short',
+        },
       ],
     },
 

@@ -500,7 +500,7 @@ export interface ContentVariant {
   id: number;
   title: string;
   content: number | ContentPipeline;
-  platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube';
+  platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube' | 'youtube-short';
   contentBody?: string | null;
   version?: number | null;
   updatedAt: string;
