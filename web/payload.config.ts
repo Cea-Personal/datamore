@@ -16,6 +16,7 @@ import { ContentPipeline} from './src/collections/ContentPipeline'
 import { ContentVariants} from './src/collections/ContentVariants'
 import { Knowledge } from './src/collections/Knowledge'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { DistributionPlans } from './src/collections/DistributionPlans'
 
 const filename = fileURLToPath(import.meta.url)
 const dirnameValue = dirname(filename)
@@ -29,7 +30,7 @@ export default buildConfig({
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, ContentVariants, Knowledge],
+  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, ContentVariants, Knowledge, DistributionPlans],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
