@@ -5,6 +5,7 @@ export const handleStatusWebhook = (options: {
   event: string;
   collection: string;
   approvalStatus: string;
+  relatedCollectionsfieldName?: string[]
   relatedCollections?: CollectionSlug[];
 }): CollectionAfterChangeHook => {
   return async ({ doc, previousDoc, operation, req }) => {
@@ -35,11 +36,11 @@ export const handleStatusWebhook = (options: {
         const webhookUrl = options.webhookurl;
         const webhookSecret = process.env.WEBHOOK_SECRET || "";
         const relatedData = options.relatedCollections?.map(
-          async (collection: CollectionSlug) => {
+          async (collection: CollectionSlug, index) => {
             const results = await req.payload.find({
               collection,
               where: {
-                pipeline: {
+                [options.relatedCollectionsfieldName?.[index] || 'id']: {
                   equals: doc.id,
                 },
               },

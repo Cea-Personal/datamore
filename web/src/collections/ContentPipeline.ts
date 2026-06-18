@@ -27,6 +27,7 @@ export const ContentPipeline: CollectionConfig = {
         collection: "content-pipeline",
         approvalStatus: "content-approved",
         relatedCollections: ["content-variants"],
+        relatedCollectionsfieldName: ["content"],
       })
 
     ],
