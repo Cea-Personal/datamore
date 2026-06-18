@@ -19,7 +19,7 @@ export const ContentPipeline: CollectionConfig = {
   hooks: {
     afterChange: [
       handleStatusWebhook({
-        webhookurl: process.env.CONTENT_PIPELINE_WEBHOOK_URL || "",
+        webhookurl: process.env.CONTENT_WEBHOOK_URL || "",
         event: "content-approved",
         collection: "content-pipeline",
         approvalStatus: "content-approved",
