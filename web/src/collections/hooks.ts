@@ -8,6 +8,17 @@ export const handleStatusWebhook = (options: {
   relatedCollections?: CollectionSlug[];
 }): CollectionAfterChangeHook => {
   return async ({ doc, previousDoc, operation, req }) => {
+     req.payload.logger.info(
+
+      `Previous: ${previousDoc?.status}`
+
+    )
+
+    req.payload.logger.info(
+
+      `Current: ${doc.status}`
+
+    )
     try {
       // 1. Guard against new creations that are already approved (if applicable)
       const isNewlyApprovedOnCreate =
