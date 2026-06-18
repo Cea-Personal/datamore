@@ -466,17 +466,7 @@ export interface ContentPipeline {
   id: number;
   title: string;
   topic: number | Topic;
-  status?:
-    | (
-        | 'draft'
-        | 'awaiting-content-approval'
-        | 'content-approved'
-        | 'awaiting-distribution-approval'
-        | 'distribution-approved'
-        | 'published'
-        | 'rejected'
-      )
-    | null;
+  status?: ('draft' | 'content-approved' | 'distribution-approved' | 'published' | 'rejected') | null;
   coreMessage?: string | null;
   insightsArticle?: string | null;
   youtubeScript?: string | null;
