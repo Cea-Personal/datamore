@@ -60,7 +60,7 @@ export const DistributionPlans: CollectionConfig = {
         },
         {
           label: 'Distribution Approved',
-          value: 'approved',
+          value: 'distribution-approved',
         },
         {
           label: 'Rejected',
