@@ -1,7 +1,13 @@
-import { CollectionAfterChangeHook } from 'payload';
+import { Collection, CollectionAfterChangeHook, CollectionSlug} from 'payload';
 
-export const handleStatusWebhook: CollectionAfterChangeHook = async ({ doc, previousDoc, operation, req }) => {
-  try {
+export const handleStatusWebhook = 
+(options: { 
+  webhookurl: string; 
+  event: string; 
+  collection: string, 
+  relatedCollections?: CollectionSlug[] }): CollectionAfterChangeHook => {
+  return async ({ doc, previousDoc, operation, req }) => {
+    try {
     // 1. Guard against new creations that are already approved (if applicable)
     const isNewlyApprovedOnCreate = operation === 'create' && doc.status === 'approved';
 
@@ -13,8 +19,27 @@ export const handleStatusWebhook: CollectionAfterChangeHook = async ({ doc, prev
 
     // 3. Trigger webhook only if one of the approval conditions is met
     if (isNewlyApprovedOnCreate || isNewlyApprovedOnUpdate) {
-      const webhookUrl = process.env.APPROVAL_WEBHOOK_URL || '';
+      const webhookUrl = options.webhookurl;
       const webhookSecret = process.env.WEBHOOK_SECRET || '';
+      const relatedData = options.relatedCollections?.map(async (collection: CollectionSlug) => {
+        const results = await req.payload.find({
+          collection,
+          where: {
+            pipeline: {
+              equals: doc.id,
+            },
+          },
+          depth: 0, // Keeps it lightweight unless you need nested fields populated
+          req, // Crucial for passing down transaction/locale context
+        })
+        return results?.docs || {}
+      });
+
+      const relatedDataResolved = await Promise.all(relatedData || []);
+      doc.related = relatedDataResolved;
+        
+
+
 
       await fetch(webhookUrl, {
         method: 'POST',
@@ -23,19 +48,19 @@ export const handleStatusWebhook: CollectionAfterChangeHook = async ({ doc, prev
           'Authorization': `Bearer ${btoa(webhookSecret)}`, // Optional: Add a secret for verification
         },
         body: JSON.stringify({
-          event: 'topics.approved',
-          collection: 'topics',
+          event: options.event,
+          collection: options.collection,
           documentId: doc.id,
           data: doc, // Sends the fully approved document
-        }),
+        })
       });
-      
-      req.payload.logger.info(`Approval webhook sent for document ${doc.id}`);
+       req.payload.logger.info(`webhook sent for document ${doc.id}`);
+  } 
+}
+catch (error) {
+      req.payload.logger.error(error, 'Failed to trigger webhook:');
     }
-  } catch (error) {
-    req.payload.logger.error(error, 'Failed to trigger approval webhook:');
-  }
 
   // Always return the doc in an afterChange hook
   return doc;
-};
+}};

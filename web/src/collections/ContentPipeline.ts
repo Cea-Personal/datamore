@@ -1,4 +1,5 @@
 import type { CollectionConfig } from 'payload'
+import { handleStatusWebhook } from './hooks'
 
 export const ContentPipeline: CollectionConfig = {
   slug: 'content-pipeline',
@@ -15,6 +16,9 @@ export const ContentPipeline: CollectionConfig = {
   access: {
     read: () => true,
   },
+  hooks: {
+          afterChange: [handleStatusWebhook({ webhookurl: process.env.CONTENT_PIPELINE_WEBHOOK_URL || '', event: 'content-approved', collection: 'content-pipeline', relatedCollections: ['content-variants'] })],
+      },
 
   fields: [
     {
@@ -40,16 +44,8 @@ export const ContentPipeline: CollectionConfig = {
           value: 'draft',
         },
         {
-          label: 'Awaiting Content Approval',
-          value: 'awaiting-content-approval',
-        },
-        {
           label: 'Content Approved',
           value: 'content-approved',
-        },
-        {
-          label: 'Awaiting Distribution Approval',
-          value: 'awaiting-distribution-approval',
         },
         {
           label: 'Distribution Approved',

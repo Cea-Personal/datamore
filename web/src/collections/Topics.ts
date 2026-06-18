@@ -26,7 +26,7 @@ export const Topics: CollectionConfig = {
     delete: ({ req }) => Boolean(req.user),
   },
 hooks: {
-        afterChange: [handleStatusWebhook],
+        afterChange: [handleStatusWebhook({ webhookurl: process.env.TOPICS_WEBHOOK_URL || '', event: 'topic-approved', collection: 'topics' })],
     },
   fields: [
     {
