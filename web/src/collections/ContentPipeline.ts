@@ -1,109 +1,124 @@
-import type { CollectionConfig } from 'payload'
-import { handleStatusWebhook } from './hooks'
+import type { CollectionConfig } from "payload";
+import { handleStatusWebhook } from "./hooks";
 
 export const ContentPipeline: CollectionConfig = {
-  slug: 'content-pipeline',
+  slug: "content-pipeline",
 
   labels: {
-    singular: 'Content',
-    plural: 'Content',
+    singular: "Content",
+    plural: "Content",
   },
 
   admin: {
-    useAsTitle: 'title',
+    useAsTitle: "title",
   },
 
   access: {
     read: () => true,
   },
   hooks: {
-          afterChange: [
-            handleStatusWebhook({ webhookurl: process.env.CONTENT_PIPELINE_WEBHOOK_URL || '', event: 'content-approved', collection: 'content-pipeline', approvalStatus: 'content-approved', relatedCollections: ['content-variants'] })],
-      },
+    afterChange: [
+      handleStatusWebhook({
+        webhookurl: process.env.CONTENT_PIPELINE_WEBHOOK_URL || "",
+        event: "content-approved",
+        collection: "content-pipeline",
+        approvalStatus: "content-approved",
+        relatedCollections: ["content-variants"],
+      }),
+      handleStatusWebhook({
+        webhookurl: process.env.DISTRIBUTION_WEBHOOK_URL || "",
+        event: "distribution-approved",
+        collection: "content-pipeline",
+        approvalStatus: "distribution-approved",
+        relatedCollections: ["content-variants"],
+      }),
+
+    ],
+  },
 
   fields: [
     {
-      name: 'title',
-      type: 'text',
+      name: "title",
+      type: "text",
       required: true,
     },
 
     {
-      name: 'topic',
-      type: 'relationship',
-      relationTo: 'topics',
+      name: "topic",
+      type: "relationship",
+      relationTo: "topics",
       required: true,
     },
 
     {
-      name: 'status',
-      type: 'select',
-      defaultValue: 'draft',
+      name: "status",
+      type: "select",
+      defaultValue: "draft",
       options: [
         {
-          label: 'Draft',
-          value: 'draft',
+          label: "Draft",
+          value: "draft",
         },
         {
-          label: 'Content Approved',
-          value: 'content-approved',
+          label: "Content Approved",
+          value: "content-approved",
         },
         {
-          label: 'Distribution Approved',
-          value: 'distribution-approved',
+          label: "Distribution Approved",
+          value: "distribution-approved",
         },
         {
-          label: 'Published',
-          value: 'published',
+          label: "Published",
+          value: "published",
         },
         {
-          label: 'Rejected',
-          value: 'rejected',
+          label: "Rejected",
+          value: "rejected",
         },
       ],
     },
 
     {
-      name: 'coreMessage',
-      type: 'textarea',
+      name: "coreMessage",
+      type: "textarea",
     },
 
     {
-      name: 'insightsArticle',
-      type: 'textarea',
+      name: "insightsArticle",
+      type: "textarea",
     },
 
     {
-      name: 'youtubeScript',
-      type: 'textarea',
+      name: "youtubeScript",
+      type: "textarea",
     },
 
     {
-      name: 'youtubeTitle',
-      type: 'text',
+      name: "youtubeTitle",
+      type: "text",
     },
 
     {
-      name: 'youtubeDescription',
-      type: 'textarea',
+      name: "youtubeDescription",
+      type: "textarea",
     },
 
     {
-      name: 'thumbnailIdeas',
-      type: 'array',
+      name: "thumbnailIdeas",
+      type: "array",
       fields: [
         {
-          name: 'idea',
-          type: 'text',
+          name: "idea",
+          type: "text",
         },
       ],
     },
 
     {
-      name: 'approvalNotes',
-      type: 'textarea',
+      name: "approvalNotes",
+      type: "textarea",
     },
   ],
 
   timestamps: true,
-}
+};
