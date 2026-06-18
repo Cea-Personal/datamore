@@ -5,17 +5,18 @@ export const handleStatusWebhook =
   webhookurl: string; 
   event: string; 
   collection: string, 
+  approvalStatus: string,
   relatedCollections?: CollectionSlug[] }): CollectionAfterChangeHook => {
   return async ({ doc, previousDoc, operation, req }) => {
     try {
     // 1. Guard against new creations that are already approved (if applicable)
-    const isNewlyApprovedOnCreate = operation === 'create' && doc.status === 'approved';
+    const isNewlyApprovedOnCreate = operation === 'create' && doc.status === options.approvalStatus;
 
     // 2. Guard against updates where it changed from false (or undefined) to true
     const isNewlyApprovedOnUpdate = 
       operation === 'update' && 
-      doc.status === 'approved' && 
-      (!previousDoc || previousDoc.status !== 'approved');
+      doc.status === options.approvalStatus && 
+      (!previousDoc || previousDoc.status !== options.approvalStatus);
 
     // 3. Trigger webhook only if one of the approval conditions is met
     if (isNewlyApprovedOnCreate || isNewlyApprovedOnUpdate) {
