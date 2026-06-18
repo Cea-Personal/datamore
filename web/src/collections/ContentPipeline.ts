@@ -27,14 +27,7 @@ export const ContentPipeline: CollectionConfig = {
         collection: "content-pipeline",
         approvalStatus: "content-approved",
         relatedCollections: ["content-variants"],
-      }),
-      handleStatusWebhook({
-        webhookurl: process.env.DISTRIBUTION_WEBHOOK_URL || "",
-        event: "distribution-approved",
-        collection: "content-pipeline",
-        approvalStatus: "distribution-approved",
-        relatedCollections: ["content-variants"],
-      }),
+      })
 
     ],
   },
