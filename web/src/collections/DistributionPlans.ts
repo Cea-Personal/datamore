@@ -164,6 +164,14 @@ export const DistributionPlans: CollectionConfig = {
               label: 'TikTok',
               value: 'tiktok',
             },
+            {
+                label: 'YouTube Shorts',
+                value: 'youtube-shorts',
+              },
+              {
+                label: 'Instagram Reels',
+                value: 'instagram-reels',
+              },
           ],
         },
 

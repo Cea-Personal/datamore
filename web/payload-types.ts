@@ -77,6 +77,7 @@ export interface Config {
     'content-pipeline': ContentPipeline;
     'content-variants': ContentVariant;
     knowledge: Knowledge;
+    'distribution-plans': DistributionPlan;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -94,6 +95,7 @@ export interface Config {
     'content-pipeline': ContentPipelineSelect<false> | ContentPipelineSelect<true>;
     'content-variants': ContentVariantsSelect<false> | ContentVariantsSelect<true>;
     knowledge: KnowledgeSelect<false> | KnowledgeSelect<true>;
+    'distribution-plans': DistributionPlansSelect<false> | DistributionPlansSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -558,6 +560,75 @@ export interface Knowledge {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "distribution-plans".
+ */
+export interface DistributionPlan {
+  id: number;
+  title: string;
+  topic: number | Topic;
+  content: number | ContentPipeline;
+  status?: ('pending-approval' | 'distribution-approved' | 'rejected') | null;
+  primaryAsset?: ('insights' | 'youtube' | 'linkedin' | 'facebook') | null;
+  recommendedPlatforms?:
+    | (
+        | 'linkedin'
+        | 'facebook'
+        | 'insights'
+        | 'youtube'
+        | 'instagram'
+        | 'tiktok'
+        | 'youtube-shorts'
+        | 'instagram-reels'
+      )[]
+    | null;
+  publishingOrder?:
+    | {
+        platform?:
+          | (
+              | 'insights'
+              | 'youtube'
+              | 'linkedin'
+              | 'facebook'
+              | 'instagram'
+              | 'tiktok'
+              | 'youtube-shorts'
+              | 'instagram-reels'
+            )
+          | null;
+        priority?: number | null;
+        recommendedDelayHours?: number | null;
+        id?: string | null;
+      }[]
+    | null;
+  crossPromotionPlan?:
+    | {
+        sourcePlatform?: string | null;
+        targetPlatform?: string | null;
+        objective?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  ctaStrategy?: {
+    linkedin?: string | null;
+    facebook?: string | null;
+    insights?: string | null;
+    youtube?: string | null;
+    instagram?: string | null;
+    tiktok?: string | null;
+  };
+  scores?: {
+    authority?: number | null;
+    leadGeneration?: number | null;
+    engagement?: number | null;
+    repurposing?: number | null;
+  };
+  reasoning?: string | null;
+  distributionNotes?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -619,6 +690,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'knowledge';
         value: number | Knowledge;
+      } | null)
+    | ({
+        relationTo: 'distribution-plans';
+        value: number | DistributionPlan;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -923,6 +998,56 @@ export interface KnowledgeSelect<T extends boolean = true> {
   contentGenerationValue?: T;
   approvedForContentGeneration?: T;
   processingStatus?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "distribution-plans_select".
+ */
+export interface DistributionPlansSelect<T extends boolean = true> {
+  title?: T;
+  topic?: T;
+  content?: T;
+  status?: T;
+  primaryAsset?: T;
+  recommendedPlatforms?: T;
+  publishingOrder?:
+    | T
+    | {
+        platform?: T;
+        priority?: T;
+        recommendedDelayHours?: T;
+        id?: T;
+      };
+  crossPromotionPlan?:
+    | T
+    | {
+        sourcePlatform?: T;
+        targetPlatform?: T;
+        objective?: T;
+        id?: T;
+      };
+  ctaStrategy?:
+    | T
+    | {
+        linkedin?: T;
+        facebook?: T;
+        insights?: T;
+        youtube?: T;
+        instagram?: T;
+        tiktok?: T;
+      };
+  scores?:
+    | T
+    | {
+        authority?: T;
+        leadGeneration?: T;
+        engagement?: T;
+        repurposing?: T;
+      };
+  reasoning?: T;
+  distributionNotes?: T;
   updatedAt?: T;
   createdAt?: T;
 }
