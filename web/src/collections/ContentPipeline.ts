@@ -81,6 +81,10 @@ export const ContentPipeline: CollectionConfig = {
           required: true,
           options: [
             {
+              label: "Insights",
+              value: "insights",
+            },
+            {
               label: "LinkedIn",
               value: "linkedin",
             },
