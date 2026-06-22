@@ -75,7 +75,6 @@ export interface Config {
     topics: Topic;
     publications: Publication;
     'content-pipeline': ContentPipeline;
-    'content-variants': ContentVariant;
     knowledge: Knowledge;
     'distribution-plans': DistributionPlan;
     'payload-kv': PayloadKv;
@@ -93,7 +92,6 @@ export interface Config {
     topics: TopicsSelect<false> | TopicsSelect<true>;
     publications: PublicationsSelect<false> | PublicationsSelect<true>;
     'content-pipeline': ContentPipelineSelect<false> | ContentPipelineSelect<true>;
-    'content-variants': ContentVariantsSelect<false> | ContentVariantsSelect<true>;
     knowledge: KnowledgeSelect<false> | KnowledgeSelect<true>;
     'distribution-plans': DistributionPlansSelect<false> | DistributionPlansSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -466,35 +464,23 @@ export interface Publication {
  */
 export interface ContentPipeline {
   id: number;
-  title: string;
   topic: number | Topic;
   status?: ('draft' | 'content-approved' | 'distribution-approved' | 'published' | 'rejected') | null;
   coreMessage?: string | null;
-  insightsArticle?: string | null;
-  youtubeScript?: string | null;
-  youtubeTitle?: string | null;
-  youtubeDescription?: string | null;
-  thumbnailIdeas?:
+  content?:
     | {
-        idea?: string | null;
+        platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube' | 'youtube-short';
+        contentBody?: string | null;
+        thumbnailIdeas?:
+          | {
+              idea?: string | null;
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
   approvalNotes?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "content-variants".
- */
-export interface ContentVariant {
-  id: number;
-  title: string;
-  content: number | ContentPipeline;
-  platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube' | 'youtube-short';
-  contentBody?: string | null;
-  version?: number | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -682,10 +668,6 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'content-pipeline';
         value: number | ContentPipeline;
-      } | null)
-    | ({
-        relationTo: 'content-variants';
-        value: number | ContentVariant;
       } | null)
     | ({
         relationTo: 'knowledge';
@@ -942,34 +924,23 @@ export interface PublicationsSelect<T extends boolean = true> {
  * via the `definition` "content-pipeline_select".
  */
 export interface ContentPipelineSelect<T extends boolean = true> {
-  title?: T;
   topic?: T;
   status?: T;
   coreMessage?: T;
-  insightsArticle?: T;
-  youtubeScript?: T;
-  youtubeTitle?: T;
-  youtubeDescription?: T;
-  thumbnailIdeas?:
+  content?:
     | T
     | {
-        idea?: T;
+        platform?: T;
+        contentBody?: T;
+        thumbnailIdeas?:
+          | T
+          | {
+              idea?: T;
+              id?: T;
+            };
         id?: T;
       };
   approvalNotes?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "content-variants_select".
- */
-export interface ContentVariantsSelect<T extends boolean = true> {
-  title?: T;
-  content?: T;
-  platform?: T;
-  contentBody?: T;
-  version?: T;
   updatedAt?: T;
   createdAt?: T;
 }
