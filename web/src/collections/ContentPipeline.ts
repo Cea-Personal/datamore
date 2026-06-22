@@ -10,7 +10,7 @@ export const ContentPipeline: CollectionConfig = {
   },
 
   admin: {
-    useAsTitle: "topic",
+    useAsTitle: "title",
   },
 
   access: {
@@ -33,8 +33,7 @@ export const ContentPipeline: CollectionConfig = {
   fields: [
      {
       name: 'title',
-      type: 'text',
-      required: true,
+      type: 'text',    
     },
     {
       name: "topic",

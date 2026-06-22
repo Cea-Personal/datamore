@@ -464,6 +464,7 @@ export interface Publication {
  */
 export interface ContentPipeline {
   id: number;
+  title?: string | null;
   topic: number | Topic;
   status?: ('draft' | 'content-approved' | 'distribution-approved' | 'published' | 'rejected') | null;
   coreMessage?: string | null;
@@ -924,6 +925,7 @@ export interface PublicationsSelect<T extends boolean = true> {
  * via the `definition` "content-pipeline_select".
  */
 export interface ContentPipelineSelect<T extends boolean = true> {
+  title?: T;
   topic?: T;
   status?: T;
   coreMessage?: T;
