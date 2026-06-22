@@ -126,6 +126,10 @@ export const ContentPipeline: CollectionConfig = {
               name: "idea",
               type: "text",
             },
+            {
+              name: "imageUrl",
+              type: "text",
+            },
           ],
         },
       ],
