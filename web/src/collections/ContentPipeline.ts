@@ -31,6 +31,11 @@ export const ContentPipeline: CollectionConfig = {
   },
 
   fields: [
+     {
+      name: 'title',
+      type: 'text',
+      required: true,
+    },
     {
       name: "topic",
       type: "relationship",

@@ -469,7 +469,7 @@ export interface ContentPipeline {
   coreMessage?: string | null;
   content?:
     | {
-        platform: 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube' | 'youtube-short';
+        platform: 'insights' | 'linkedin' | 'facebook' | 'instagram' | 'tiktok' | 'youtube' | 'youtube-short';
         contentBody?: string | null;
         thumbnailIdeas?:
           | {
