@@ -1,5 +1,5 @@
 import type { CollectionConfig } from 'payload'
-import { handleStatusWebhook } from './hooks'
+import { handleAfterReadHook, handleStatusWebhook } from './hooks'
 
 export const DistributionPlans: CollectionConfig = {
   slug: 'distribution-plans',
@@ -22,10 +22,9 @@ export const DistributionPlans: CollectionConfig = {
           webhookurl: process.env.DISTRIBUTION_WEBHOOK_URL || "",
           event: "distribution-approved",
           collection: "distribution-plans",
-          approvalStatus: "distribution-approved",
+          approvalStatus: "distribution-approved"
         })
-  
-      ],
+      ]
     },
 
   fields: [

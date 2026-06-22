@@ -1,14 +1,13 @@
-import { Collection, CollectionAfterChangeHook, CollectionSlug } from "payload";
+import { Collection, CollectionAfterChangeHook, CollectionAfterReadHook, CollectionSlug } from "payload";
 
 export const handleStatusWebhook = (options: {
   webhookurl: string;
   event: string;
   collection: string;
   approvalStatus: string;
-  relatedCollectionsfieldName?: string[]
-  relatedCollections?: CollectionSlug[];
+
 }): CollectionAfterChangeHook => {
-  return async ({ doc, previousDoc, operation, req }) => {
+  return async ({ doc, previousDoc, operation, req, collection }) => {
      req.payload.logger.info(
 
       `Previous: ${previousDoc?.status}`
@@ -35,7 +34,38 @@ export const handleStatusWebhook = (options: {
       if (isNewlyApprovedOnCreate || isNewlyApprovedOnUpdate) {
         const webhookUrl = options.webhookurl;
         const webhookSecret = process.env.WEBHOOK_SECRET || "";
-        const relatedData = options.relatedCollections?.map(
+    
+        await fetch(webhookUrl, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${btoa(webhookSecret)}`, // Optional: Add a secret for verification
+          },
+          body: JSON.stringify({
+            event: options.event,
+            collection: options.collection,
+            documentId: doc.id,
+            data: doc, // Sends the fully approved document
+          }),
+        });
+        req.payload.logger.info(`webhook sent for document ${collection.slug} ${doc.id}`);
+      }
+    } catch (error) {
+      req.payload.logger.error(error, "Failed to trigger webhook:");
+    }
+
+    // Always return the doc in an afterChange hook
+    return doc;
+  };
+};
+
+export const handleAfterReadHook = (options: {
+  relatedCollections?: CollectionSlug[];
+  relatedCollectionsfieldName?: string[];
+}): CollectionAfterReadHook => {
+  return async ({ doc, req, collection }) => {
+    try {
+      const relatedData = options.relatedCollections?.map(
           async (collection: CollectionSlug, index) => {
             const results = await req.payload.find({
               collection,
@@ -53,27 +83,8 @@ export const handleStatusWebhook = (options: {
 
         const relatedDataResolved = await Promise.all(relatedData || []);
         doc.related = relatedDataResolved;
-
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${btoa(webhookSecret)}`, // Optional: Add a secret for verification
-          },
-          body: JSON.stringify({
-            event: options.event,
-            collection: options.collection,
-            documentId: doc.id,
-            data: doc, // Sends the fully approved document
-          }),
-        });
-        req.payload.logger.info(`webhook sent for document ${doc.id}`);
-      }
-    } catch (error) {
-      req.payload.logger.error(error, "Failed to trigger webhook:");
     }
-
-    // Always return the doc in an afterChange hook
-    return doc;
-  };
-};
+    catch (error) {
+      req.payload.logger.error(error, `Failed to handle after read for collection ${collection.slug}`);
+    }}
+  }

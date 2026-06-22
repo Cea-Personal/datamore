@@ -1,5 +1,5 @@
 import type { CollectionConfig } from "payload";
-import { handleStatusWebhook } from "./hooks";
+import { handleAfterReadHook, handleStatusWebhook } from "./hooks";
 
 export const ContentPipeline: CollectionConfig = {
   slug: "content-pipeline",
@@ -25,12 +25,15 @@ export const ContentPipeline: CollectionConfig = {
         webhookurl: process.env.CONTENT_WEBHOOK_URL || "",
         event: "content-approved",
         collection: "content-pipeline",
-        approvalStatus: "content-approved",
-        relatedCollections: ["content-variants"],
-        relatedCollectionsfieldName: ["content"],
+        approvalStatus: "content-approved"
       })
-
     ],
+    afterRead: [
+      handleAfterReadHook({
+        relatedCollections: ["content-variants"],
+        relatedCollectionsfieldName: ["content"]
+      })
+    ]
   },
 
   fields: [
