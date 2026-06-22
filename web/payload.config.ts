@@ -13,7 +13,6 @@ import { Media } from './src/collections/Media'
 import { Topics } from './src/collections/Topics'
 import { Publications } from './src/collections/Publications'
 import { ContentPipeline} from './src/collections/ContentPipeline'
-import { ContentVariants} from './src/collections/ContentVariants'
 import { Knowledge } from './src/collections/Knowledge'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { DistributionPlans } from './src/collections/DistributionPlans'
@@ -30,7 +29,7 @@ export default buildConfig({
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, ContentVariants, Knowledge, DistributionPlans],
+  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, Knowledge, DistributionPlans],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

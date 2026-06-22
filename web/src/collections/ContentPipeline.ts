@@ -10,7 +10,7 @@ export const ContentPipeline: CollectionConfig = {
   },
 
   admin: {
-    useAsTitle: "title",
+    useAsTitle: "topic",
   },
 
   access: {
@@ -25,24 +25,12 @@ export const ContentPipeline: CollectionConfig = {
         webhookurl: process.env.CONTENT_WEBHOOK_URL || "",
         event: "content-approved",
         collection: "content-pipeline",
-        approvalStatus: "content-approved"
-      })
+        approvalStatus: "content-approved",
+      }),
     ],
-    afterRead: [
-      handleAfterReadHook({
-        relatedCollections: ["content-variants"],
-        relatedCollectionsfieldName: ["content"]
-      })
-    ]
   },
 
   fields: [
-    {
-      name: "title",
-      type: "text",
-      required: true,
-    },
-
     {
       name: "topic",
       type: "relationship",
@@ -84,36 +72,56 @@ export const ContentPipeline: CollectionConfig = {
     },
 
     {
-      name: "insightsArticle",
-      type: "textarea",
-    },
-
-    {
-      name: "youtubeScript",
-      type: "textarea",
-    },
-
-    {
-      name: "youtubeTitle",
-      type: "text",
-    },
-
-    {
-      name: "youtubeDescription",
-      type: "textarea",
-    },
-
-    {
-      name: "thumbnailIdeas",
+      name: "content",
       type: "array",
       fields: [
         {
-          name: "idea",
-          type: "text",
+          name: "platform",
+          type: "select",
+          required: true,
+          options: [
+            {
+              label: "LinkedIn",
+              value: "linkedin",
+            },
+            {
+              label: "Facebook",
+              value: "facebook",
+            },
+            {
+              label: "Instagram",
+              value: "instagram",
+            },
+            {
+              label: "TikTok",
+              value: "tiktok",
+            },
+            {
+              label: "YouTube",
+              value: "youtube",
+            },
+            {
+              label: "YouTube-Short",
+              value: "youtube-short",
+            },
+          ],
+        },
+        {
+          name: "contentBody",
+          type: "textarea",
+        },
+        {
+          name: "thumbnailIdeas",
+          type: "array",
+          fields: [
+            {
+              name: "idea",
+              type: "text",
+            },
+          ],
         },
       ],
     },
-
     {
       name: "approvalNotes",
       type: "textarea",
