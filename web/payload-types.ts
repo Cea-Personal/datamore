@@ -475,7 +475,7 @@ export interface ContentPipeline {
         thumbnailIdeas?:
           | {
               idea?: string | null;
-              imageUrl?: string | null;
+              image?: (number | null) | Media;
               id?: string | null;
             }[]
           | null;
@@ -939,7 +939,7 @@ export interface ContentPipelineSelect<T extends boolean = true> {
           | T
           | {
               idea?: T;
-              imageUrl?: T;
+              image?: T;
               id?: T;
             };
         id?: T;

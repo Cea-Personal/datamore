@@ -1,5 +1,5 @@
 import type { CollectionConfig } from "payload";
-import { handleAfterReadHook, handleStatusWebhook } from "./hooks";
+import {handleStatusWebhook } from "./hooks";
 
 export const ContentPipeline: CollectionConfig = {
   slug: "content-pipeline",
@@ -127,8 +127,9 @@ export const ContentPipeline: CollectionConfig = {
               type: "text",
             },
             {
-              name: "imageUrl",
-              type: "text",
+              name: "image",
+              type: "upload",
+              relationTo: "media",
             },
           ],
         },
