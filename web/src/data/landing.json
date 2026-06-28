@@ -33,13 +33,13 @@
         "icon": "database",
         "title": "Data Foundations",
         "description": "We build clean, scalable data pipelines that unify your systems and make your data reliable and usable.",
-        "url": "/services/data-engineering"
+        "url": "/services/data-foundations"
       },
       {
         "icon": "insights",
         "title": "Analytics & BI",
         "description": "We turn your data into clear dashboards and metrics that help teams make faster, better decisions.",
-        "url": "/services/analytics-bi"
+        "url": "/services/bi-analytics"
       },
       {
         "icon": "smart_toy",
@@ -51,7 +51,7 @@
         "icon": "settings",
         "title": "System Integration",
         "description": "We connect your tools, platforms, and data systems into one seamless, automated ecosystem.",
-        "url": "/services/integration"
+        "url": "/services/systems-integration"
       }
     ]
   },
