@@ -30,7 +30,7 @@ export default buildConfig({
       baseDir: path.resolve(dirnameValue),
     },
   },
-  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, Knowledge, DistributionPlans],
+  collections: [Insights, SuccessStories, Services, Users, Media, Topics, Publications, ContentPipeline, Knowledge,DistributionPlans],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
