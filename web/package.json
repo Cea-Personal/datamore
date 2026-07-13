@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npx payload migrate && next dev",
     "build": "next build",
-    "start":  "next start",
+    "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
@@ -14,6 +14,7 @@
     "@payloadcms/next": "^3.85.0",
     "@payloadcms/richtext-lexical": "^3.85.0",
     "@payloadcms/storage-s3": "^3.85.0",
+    "@payloadcms/storage-vercel-blob": "^3.85.0",
     "@supabase/ssr": "^0.10.3",
     "@supabase/supabase-js": "^2.106.2",
     "next": "16.2.6",

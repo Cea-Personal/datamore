@@ -16,6 +16,7 @@ import { ContentPipeline} from './src/collections/ContentPipeline'
 import { Knowledge } from './src/collections/Knowledge'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 import { DistributionPlans } from './src/collections/DistributionPlans'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 
 const filename = fileURLToPath(import.meta.url)
 const dirnameValue = dirname(filename)
@@ -44,7 +45,22 @@ export default buildConfig({
     },
     schemaName: process.env.PAYLOAD_SCHEMA || '',
   }),
-  sharp
+  sharp,
+  plugins: [
+
+    vercelBlobStorage({
+
+      collections: {
+
+        media: true,
+
+      },
+
+      token: process.env.BLOB_READ_WRITE_TOKEN,
+
+    }),
+
+  ],
   // upload: {
   //   storage: s3Storage({
   //     bucket: process.env.S3_BUCKET || 'datamore-media',

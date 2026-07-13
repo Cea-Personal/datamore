@@ -140,25 +140,5 @@ export const Knowledge: CollectionConfig = {
       type: 'checkbox',
       defaultValue: true,
     },
-
-    {
-      name: 'processingStatus',
-      type: 'select',
-      defaultValue: 'pending',
-      options: [
-        {
-          label: 'Pending',
-          value: 'pending',
-        },
-        {
-          label: 'Processed',
-          value: 'processed',
-        },
-        {
-          label: 'Failed',
-          value: 'failed',
-        },
-      ],
-    },
   ],
 }
