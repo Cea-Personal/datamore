@@ -9,7 +9,7 @@ export function FooterLinkList({ links }: { links: any[] }) {
         <li key={link.href}>
           <Link
             href={link.href}
-            className="text-body-md text-on-primary-container/90 hover:text-secondary transition-all"
+            className="text-body-md text-white/80 hover:text-white transition-all"
           >
             {link.label}
           </Link>

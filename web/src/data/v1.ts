@@ -1,4 +1,7 @@
 // Public V1 content. Original service, story and article sources remain in place.
+// Temporarily hide secondary pages; keep their content ready to restore later.
+export const secondaryPagesVisible = false
+
 export const assessmentCTA = {
   title: 'Start with the problem. Find the next step.',
   subtitle: 'A free Data & AI Assessment to understand your business, review the bottleneck, and decide whether a small diagnostic or implementation makes sense.',

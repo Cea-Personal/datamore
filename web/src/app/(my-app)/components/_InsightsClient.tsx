@@ -57,6 +57,7 @@ export default function InsightsClient({
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
           <div className="lg:col-span-8">
             <InsightsGrid data={displayArticles} />
+            {displayArticles.length === 0 && <p role="status" className="text-body-lg text-on-surface-variant py-8">No insights match your search. Try another topic or select All Insights.</p>}
             {hasMore && (
               <div className="mt-12 text-center">
                 <button

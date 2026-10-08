@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 import CTA from '../components/CTA'
 import PageHero from '../components/PageHero'
-import { assessmentCTA } from '@data/v1'
+import { assessmentCTA, secondaryPagesVisible } from '@data/v1'
 
 export const metadata: Metadata = { title: 'About | Datamore', description: 'Why Datamore exists and how we approach focused data and AI projects.' }
 
 export default function AboutPage() {
+  if (!secondaryPagesVisible) notFound()
   return (
     <>
       <PageHero data={{ title: 'Technology that makes everyday work easier', subtitle: 'Datamore is a technology consultancy helping growing organizations turn scattered data and repetitive processes into reliable analytics and AI-powered workflows.', badge: { label: 'About Datamore' }, image: { alt: '', url: '' } }} />

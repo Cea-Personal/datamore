@@ -58,7 +58,7 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
           </p>
           </div>
           {data.slug && (
-            <Link href={data.slug.url} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md flex items-center gap-2 interactive-shadow transition-all group w-60 mx-auto">
+            <Link href={data.slug.url} className="bg-secondary text-on-secondary px-6 py-3 rounded-lg text-label-md inline-flex items-center justify-center gap-2 interactive-shadow transition-all group max-w-full mx-auto">
               {data.slug.label}
               <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">arrow_forward</span>
             </Link>

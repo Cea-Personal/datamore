@@ -1,5 +1,7 @@
 # Datamore V1 audit — 8 October 2026
 
+Follow-up decision: temporarily HIDE Insights (listing and all details) and About from navigation, footer and public access. Preserve their page implementations and data. The inventory below records the original pre-change audit; current visibility is controlled by `secondaryPagesVisible` in `src/data/v1.ts`.
+
 Completed before application edits. Scope: local public Next.js application, bundled content, CMS schemas and conversion components. Live CMS content and client records have not been verified. The owner agreed to hide unverified evidence and retain scenarios only as hypothetical examples.
 
 ## A–B. Existing page inventory and classification
@@ -240,3 +242,57 @@ Next.js 16, React 19, Tailwind tokens, Payload admin/schema/collections, Postgre
 Begin a 60–90 day freeze after release. Accept changes only for P0 security/correctness, P1 broken conversion, P2 misleading information or P3 repeated prospect friction. Backlog speculative additions. Track visitor/solution/work views, CTA/contact starts and successful submissions using any existing analytics mechanism; record meetings, proposals, won/lost and revenue manually in the existing sales tracker. No new tracker or analytics dependency is warranted here.
 
 Remaining owner evidence tasks: supply verified founder credentials/location and genuine portfolio repository/demo links before publishing proof; review live CMS records before adding them to the public list. Test real email delivery using the configured provider before release, without sending unsolicited test mail.
+
+## Complete bundled metric index (supplement to evidence audit)
+
+All values below are UNVERIFIED and excluded from V1 public rendering. This includes availability and duration claims, not only percentages.
+
+| Source | Field | Claimed metric | Value | Chart fill |
+| --- | --- | --- | --- | --- |
+| `src/data/landing.json` | `.impact.metrics[0]` | Lower Operational Costs | 40% | — |
+| `src/data/landing.json` | `.impact.metrics[1]` | Faster Decision Cycles | 3–5x | — |
+| `src/data/landing.json` | `.impact.metrics[2]` | Automated Reports Delivered | 200+ | — |
+| `src/data/landing.json` | `.impact.metrics[3]` | Data System Reliability | 99.9% | — |
+| `src/data/services/ai-automation.json` | `.impact.metrics[0]` | Less Manual Work | 50% | — |
+| `src/data/services/ai-automation.json` | `.impact.metrics[1]` | Knowledge Access | 24/7 | — |
+| `src/data/services/ai-automation.json` | `.impact.metrics[2]` | Faster Information Retrieval | 5x | — |
+| `src/data/services/bi-analytics.json` | `.impact.metrics[0]` | Less Manual Reporting | 80% | — |
+| `src/data/services/bi-analytics.json` | `.impact.metrics[1]` | Faster Access to Insights | 3x | — |
+| `src/data/services/bi-analytics.json` | `.impact.metrics[2]` | Single Source of Truth | 100% | — |
+| `src/data/services/data-foundation.json` | `.impact.metrics[0]` | Data Availability | 99.9% | — |
+| `src/data/services/data-foundation.json` | `.impact.metrics[1]` | Less Manual Data Preparation | 70% | — |
+| `src/data/services/data-foundation.json` | `.impact.metrics[2]` | Faster Analytics Delivery | 3x | — |
+| `src/data/services/services.json` | `.impact.metrics[0]` | Lower Operational Costs | 40% | — |
+| `src/data/services/services.json` | `.impact.metrics[1]` | Faster Decision Cycles | 3–5x | — |
+| `src/data/services/services.json` | `.impact.metrics[2]` | System Reliability | 99.9% | — |
+| `src/data/services/systems-integration.json` | `.impact.metrics[0]` | Less Manual Data Entry | 80% | — |
+| `src/data/services/systems-integration.json` | `.impact.metrics[1]` | Operational Efficiency | 2x | — |
+| `src/data/services/systems-integration.json` | `.impact.metrics[2]` | Connected Processes | 100% | — |
+| `src/data/success-stories/data-driven-philanthropy-impact.json` | `.metrics[0]` | Resource Efficiency Increase | 30% | — |
+| `src/data/success-stories/data-driven-philanthropy-impact.json` | `.technicalSpotlight.metrics[0]` | Countries Covered | 45 | 90 |
+| `src/data/success-stories/data-driven-philanthropy-impact.json` | `.technicalSpotlight.metrics[1]` | Data Points | 2.5M+ | 95 |
+| `src/data/success-stories/enterprise-knowledge-retrieval.json` | `.metrics[0]` | Discovery Phase Automation | 65% | — |
+| `src/data/success-stories/enterprise-knowledge-retrieval.json` | `.technicalSpotlight.metrics[0]` | Accuracy | 94% | 94 |
+| `src/data/success-stories/enterprise-knowledge-retrieval.json` | `.technicalSpotlight.metrics[1]` | Time Saved | 80% | 80 |
+| `src/data/success-stories/fixing-broken-reporting-for-ecommerce-company.json` | `.metrics[0]` | Reduction in Stockouts | 32% | — |
+| `src/data/success-stories/fixing-broken-reporting-for-ecommerce-company.json` | `.metrics[1]` | Faster Reporting Cycles | 70% | — |
+| `src/data/success-stories/fixing-broken-reporting-for-ecommerce-company.json` | `.technicalSpotlight.metrics[0]` | Data Sources Integrated | 12+ | 85 |
+| `src/data/success-stories/fixing-broken-reporting-for-ecommerce-company.json` | `.technicalSpotlight.metrics[1]` | Forecast Accuracy Improvement | 27% | 78 |
+| `src/data/success-stories/scaling-data-maturity-for-growth.json` | `.metrics[0]` | Implementation Time | 90 days | — |
+| `src/data/success-stories/scaling-data-maturity-for-growth.json` | `.technicalSpotlight.metrics[0]` | Implementation | 90 days | 100 |
+| `src/data/success-stories/scaling-data-maturity-for-growth.json` | `.technicalSpotlight.metrics[1]` | Data Freshness | <1hr | 95 |
+| `src/data/success-stories/supply-chain-predictive-modeling.json` | `.metrics[0]` | Stockout Reduction | 22% | — |
+| `src/data/success-stories/supply-chain-predictive-modeling.json` | `.technicalSpotlight.metrics[0]` | Forecast Accuracy | 95% | 95 |
+| `src/data/success-stories/supply-chain-predictive-modeling.json` | `.technicalSpotlight.metrics[1]` | Processing Speed | <5min | 90 |
+
+### Bundled article identities
+
+These author identities/titles are UNVERIFIED and excluded from the revised guides.
+
+- `ai-driven-fraud-detection-strategies`: Robert Kim — Security Solutions Lead
+- `ethics-and-transparency-in-financial-llms`: Maria Rodriguez — AI Ethics Lead
+- `modernizing-legacy-data-for-global-banks`: James Liu — Cloud Solutions Architect
+- `optimizing-data-pipelines-for-high-frequency-trading`: Sarah Chen — Lead Data Engineer
+- `scaling-ngo-impact-with-data-strategy`: Dr. Ahmed Khan — Data Strategy Director
+- `the-future-of-ai-automation-in-enterprise-fintech`: David Ross — Head of Engineering
+- `the-rise-of-semantic-layers-in-bi`: Lisa Park — BI Solutions Architect

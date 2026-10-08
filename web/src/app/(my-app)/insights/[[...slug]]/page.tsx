@@ -4,11 +4,12 @@ import InsightsClient from '@/(my-app)/components/_InsightsClient'
 import InsightDetail from '@/(my-app)/components/_InsightDetail'
 import { getInsightBySlugFromPayload, mapInsightToCard, getInsightData } from '@data/insights/index'
 import { practicalInsightCards, practicalInsightDetail, reviewedCMSInsightSlugs } from '@data/public-insights'
-import { assessmentCTA } from '@data/v1'
+import { assessmentCTA, secondaryPagesVisible } from '@data/v1'
 
 const categoryLabels: Record<string, string> = { 'ai-ml': 'AI Automation', bi: 'Data & Analytics', 'data-engineering': 'Data & Analytics', 'data-strategy': 'Data & Analytics' }
 
 export default async function InsightsPage({ params }: { params: Promise<{ slug?: string[] }> }) {
+  if (!secondaryPagesVisible) notFound()
   const { slug } = await params
   if (slug && slug.length !== 1) notFound()
   if (!slug?.length) {

@@ -38,9 +38,9 @@ export default function PrivacyPage() {
         </section>
         
         <section>
-          <h2 className="text-headline-lg text-primary mb-4">4. Data Security</h2>
+          <h2 className="text-headline-lg text-primary mb-4">4. Contact Information</h2>
           <p>
-            We use contact information to respond to business enquiries. Access to contact information is limited to responding to business enquiries.
+            We use contact information to review your enquiry and respond to you.
           </p>
         </section>
         

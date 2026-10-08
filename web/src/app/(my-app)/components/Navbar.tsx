@@ -2,13 +2,16 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { secondaryPagesVisible } from '@data/v1'
 
 const navItems = [
   { href: '/', label: 'Home' },
   { href: '/solutions', label: 'Solutions' },
   { href: '/work', label: 'Work' },
-  { href: '/insights', label: 'Insights' },
-  { href: '/about', label: 'About' },
+  ...(secondaryPagesVisible ? [
+    { href: '/insights', label: 'Insights' },
+    { href: '/about', label: 'About' },
+  ] : []),
 ]
 const solutionItems = [
   { href: '/solutions/data-analytics', label: 'Data & Analytics' },

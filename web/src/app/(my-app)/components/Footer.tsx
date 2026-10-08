@@ -3,6 +3,7 @@ import { FooterSection } from './FooterSection'
 import { FooterLinkList } from './FooterLinkList'
 import { SocialIcon } from './SocialIcons'
 import FooterData from '@data/footer.json'
+import { secondaryPagesVisible } from '@data/v1'
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
           </div>
           <div className="md:col-span-2 md:col-start-8">
             <FooterSection title="Company">
-              <FooterLinkList links={FooterData.companyLinks} />
+              <FooterLinkList links={FooterData.companyLinks.filter(link => secondaryPagesVisible || !['/insights', '/about'].includes(link.href))} />
             </FooterSection>
           </div>
           <div className="md:col-span-2 md:col-start-10">
