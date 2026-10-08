@@ -24,7 +24,10 @@ export default function InsightsGrid({ data }: { data: Article[] }) {
           <div className="h-48 overflow-hidden relative">
             <Image
               alt={`Thumbnail for ${article.title}`}
-              src={typeof article.thumbnail === 'object' && article.thumbnail.url ? article.thumbnail.url : (typeof article.thumbnail === 'string' ? article.thumbnail : '')}
+              src={typeof article.thumbnail === 'object' && article.thumbnail.url ? article.thumbnail.url : (typeof article.thumbnail === 'string' && article.thumbnail ? article.thumbnail : '/hero_image.png')}
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              unoptimized
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
             <div className="absolute top-4 left-4">

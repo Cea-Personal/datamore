@@ -1,5 +1,5 @@
 // src/components/ServicePageHero.tsx
-import Link from 'next/dist/client/link'
+import Link from 'next/link'
 
 interface HeroData {
   title: string
@@ -28,7 +28,7 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
   const hasBackgroundImage = data.backgroundImage?.url
   
   return (
-    <section className={`relative overflow-hidden min-h-[70vh] pt-20 pb-32 px-margin-mobile md:px-margin-desktop ${hasBackgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''}`}
+    <section className={`relative overflow-hidden py-16 md:py-24 px-margin-mobile md:px-margin-desktop ${hasBackgroundImage ? 'bg-cover bg-center bg-no-repeat' : ''}`}
     >
       {hasBackgroundImage && (
         <div className="absolute inset-0 bg-white/80" />
@@ -53,7 +53,7 @@ export default function ServicePageHero({ data }: { data: HeroData }) {
           <div>
           <h1 className="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 text-center" dangerouslySetInnerHTML={{ __html: data.title }}>
           </h1>
-          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10 px-10 mx-auto text-left">
+          <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 mx-auto">
             {data.subtitle}
           </p>
           </div>

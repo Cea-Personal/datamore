@@ -40,7 +40,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-headline-lg text-primary mb-4">4. Data Security</h2>
           <p>
-            We implement industry-standard security measures to protect your data. This includes encryption, access controls, and regular security audits.
+            We use contact information to respond to business enquiries. Access to contact information is limited to responding to business enquiries.
           </p>
         </section>
         
@@ -58,8 +58,8 @@ export default function PrivacyPage() {
           <h2 className="text-headline-lg text-primary mb-4">6. Contact Us</h2>
           <p>
             If you have questions about this Privacy Policy, please contact us at{' '}
-            <a href="mailto:privacy@datamore.ai" className="text-secondary hover:underline">
-              privacy@datamore.ai
+            <a href="mailto:contact@datamore.org" className="text-secondary hover:underline">
+              contact@datamore.org
             </a>
           </p>
         </section>

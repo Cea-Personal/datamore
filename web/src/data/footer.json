@@ -1,26 +1,17 @@
-{ "servicelinks": [
-
-  { "href": "/services/data-foundations", "label": "Data Foundations" },
-  { "href": "/services/bi-analytics", "label": "BI Analytics" },
-  { "href": "/services/ai-automation", "label": "AI Automation" },
-  { "href": "/services/system-integration", "label": "System Integration" }
-
-
-],
-
-"companyLinks": [
-
-  { "href": "/success-stories/case-study", "label": "Success Story" },
-  { "href": "/contact", "label": "Contact Us" }
-
-],
-
-
-"legalLinks": [
-
-  { "href": "/privacy", "label": "Privacy" },
-
-  { "href": "/terms", "label": "Terms of Use" }
-],
-"socialIcons": ["public", "terminal", "monitoring"]
+{
+  "servicelinks": [
+    { "href": "/solutions/data-analytics", "label": "Data & Analytics" },
+    { "href": "/solutions/ai-automation", "label": "AI Automation" }
+  ],
+  "companyLinks": [
+    { "href": "/work", "label": "Work" },
+    { "href": "/insights", "label": "Insights" },
+    { "href": "/about", "label": "About" },
+    { "href": "/contact", "label": "Free Data & AI Assessment" }
+  ],
+  "legalLinks": [
+    { "href": "/privacy", "label": "Privacy" },
+    { "href": "/terms", "label": "Terms of Use" }
+  ],
+  "socialIcons": ["public", "terminal", "monitoring"]
 }

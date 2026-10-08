@@ -22,7 +22,7 @@ export default function WhatWeDo({ data }: { data: WhatWeDoData }) {
         {data.cards.map((card, index) => (
           <div
             key={index}
-            className={`bg-white p-8 rounded-xl ambient-shadow border border-surface-container-low interactive-shadow transition-all group ${index === 1 ? 'md:scale-105 z-10 bg-surface-container-lowest' : ''}`}
+            className="bg-white p-8 rounded-xl ambient-shadow border border-surface-container-low interactive-shadow transition-all group"
           >
             <div className="w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center mb-6 text-secondary">
               <span className="material-symbols-outlined">{card.icon}</span>
@@ -35,7 +35,7 @@ export default function WhatWeDo({ data }: { data: WhatWeDoData }) {
               href={card.url}
               className="text-secondary text-label-md flex items-center gap-2 group-hover:gap-4 transition-all"
             >
-              Learn more
+              Explore {card.title}
               <span className="material-symbols-outlined text-sm">arrow_forward</span>
             </Link>
           </div>

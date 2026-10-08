@@ -21,8 +21,8 @@ const lora = Lora({
 })
 
 export const metadata: Metadata = {
-  title: 'Datamore',
-  description: 'Empowering decision-makers with rigorous data engineering and strategic AI automation.',
+  title: 'Datamore | Data & Analytics and AI Automation',
+  description: 'Datamore helps growing organizations turn scattered data and repetitive processes into reliable analytics and AI-powered workflows.',
 }
 
 export default function RootLayout({
@@ -39,8 +39,9 @@ export default function RootLayout({
          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
        </head>
       <body className="bg-background text-on-background font-body-md overflow-x-hidden">
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
       </body>
     </html>

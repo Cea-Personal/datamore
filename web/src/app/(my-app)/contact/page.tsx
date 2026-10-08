@@ -1,15 +1,8 @@
-// web/app/contact/page.tsx
+import type { Metadata } from 'next'
 import ContactHero from '@/(my-app)/components/ContactHero'
-import ReadyToScaleCTA from '@/(my-app)/components/CTA'
+
+export const metadata: Metadata = { title: 'Free Data & AI Assessment | Datamore', description: 'Tell us about your business and the data or workflow problem you want to solve.' }
 
 export default function ContactPage() {
-  return (
-    <>
-      <ContactHero />
-      <ReadyToScaleCTA data={{
-        title: "Ready to Scale Your AI Ambitions?",
-        subtitle: "Our team of senior engineers and AI strategists are ready to help you navigate the complexities of enterprise-grade automation. Let's build the future together."
-      }} />
-    </>
-  )
+  return <ContactHero />
 }

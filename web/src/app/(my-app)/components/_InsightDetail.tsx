@@ -16,20 +16,10 @@ export default function InsightDetail({
   cta,
   likes: initialLikes = 0
 }: InsightData) {
-  const [email, setEmail] = useState('')
-  const [subscribed, setSubscribed] = useState(false)
   const [likes, setLikes] = useState(initialLikes)
 
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (email) {
-      console.log('Subscribing email:', email)
-      setSubscribed(true)
-      setEmail('')
-    }
-  }
-
   const handleLike = async () => {
+    if (id === undefined) return
     try {
       const response = await fetch(`/api/insights/${id}/like`, {
         method: 'POST',
@@ -52,7 +42,7 @@ export default function InsightDetail({
             <nav className="mb-6 flex items-center space-x-2 text-on-surface-variant opacity-70">
               <span className="text-caption font-caption">Insights</span>
               <span className="material-symbols-outlined text-[16px]">chevron_right</span>
-              <span className="text-caption font-caption">Artificial Intelligence</span>
+              <span className="text-caption font-caption">Practical guidance</span>
             </nav>
             <h1 className="text-display-lg-mobile md:text-display-lg text-on-surface mb-8 leading-tight" dangerouslySetInnerHTML={{ __html: title }}>
             </h1>
@@ -73,23 +63,23 @@ export default function InsightDetail({
               <div>
                 <p className="text-label-md text-on-surface">{author.name}</p>
                 <p className="text-caption text-on-surface-variant">
-                  {author.title} • {author.date.split('T')[0]}
+                  {author.title}{author.date ? ` · ${author.date.split('T')[0]}` : ''}
                 </p>
               </div>
             </div>
-            <button
+            {id !== undefined && <button
               onClick={handleLike}
               className="flex items-center space-x-2 mt-4 px-4 py-2 bg-surface-container text-on-surface rounded-lg hover:bg-secondary/20 transition-colors"
             >
               <span className="material-symbols-outlined text-[20px]">favorite</span>
               <span className="text-label-md">{likes} likes</span>
-            </button>
+            </button>}
           </div>
           <div className="lg:col-span-5 relative">
             <div className="rounded-xl overflow-hidden ambient-shadow h-[400px]">
               <Image
                 alt={typeof heroImage.alt === 'object' && heroImage.alt ? heroImage.alt : (typeof heroImage.alt === 'string' ? heroImage.alt : '')}
-                src={heroImage.url && typeof heroImage.url === 'object' ? heroImage.url : (typeof heroImage.url === 'string' ? heroImage.url : '')}
+                src={heroImage.url || '/hero_image.png'}
                 className="w-full h-full object-cover"
                 width={800}
                 unoptimized
@@ -152,11 +142,6 @@ export default function InsightDetail({
                         </div>
                       ))}
                     </div>
-                    {section.data && section.data.length > 0 && (
-                      <p className="mt-8 text-caption text-on-surface-variant italic">
-                        Source: Datamore Internal Benchmark Study 2024. Data represents average performance gains across 12 enterprise fintech deployments.
-                      </p>
-                    )}
                   </div>
                 );
               case 'image':
@@ -180,7 +165,7 @@ export default function InsightDetail({
              <div className="flex items-center space-x-4 pt-12 border-t border-outline-variant">
                <span className="text-label-md text-on-surface">Share Article:</span>
                <button 
-                 onClick={() => navigator.share({ title: document.title, url: window.location.href })}
+                 onClick={() => { if (navigator.share) void navigator.share({ title: document.title, url: window.location.href }).catch(() => {}); else void navigator.clipboard?.writeText(window.location.href) }}
                  className="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center hover:bg-secondary hover:text-on-secondary transition-all active:scale-95"
                  title="Share this article"
                >
@@ -206,30 +191,6 @@ export default function InsightDetail({
 
 {/* Sidebar */}
           <aside className="lg:col-span-4 space-y-12">
-            {/* Subscribe Widget */}
-            <div className="bg-primary-container text-on-primary-fixed p-8 rounded-xl ambient-shadow glass-edge">
-              <span className="material-symbols-outlined text-tertiary-fixed-dim mb-4">mail</span>
-              <h4 className="text-headline-md text-on-secondary-container mb-2">Weekly Insights</h4>
-              <p className="text-body-md text-on-primary-container mb-6">Stay ahead of the curve with our technical breakdown of AI trends in fintech.</p>
-              {subscribed ? (
-                <p className="text-body-md text-tertiary-fixed font-label-md">Thanks for subscribing!</p>
-              ) : (
-                <form onSubmit={handleSubscribe} className="space-y-4">
-                  <input
-                    className="w-full bg-transparent border border-on-primary-container rounded-lg px-4 py-3 text-on-primary-fixed placeholder:opacity-50 focus:ring-2 focus:ring-tertiary-cyan focus:outline-none transition-all"
-                    placeholder="Email address"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <button type="submit" className="w-full bg-secondary text-on-secondary py-3 rounded-lg text-label-md hover:bg-secondary-fixed-dim hover:text-on-secondary-fixed transition-colors">
-                    Subscribe Now
-                  </button>
-                </form>
-              )}
-            </div>
-            
             {/* Related Articles */}
             {relatedArticles.length > 0 && (
               <>

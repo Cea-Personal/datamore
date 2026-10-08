@@ -16,7 +16,7 @@ export default function ReadyToScaleCTA({ data }: { data: ReadyToScaleCTAData })
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href={"/contact"} className="glassy-button text-on-primary px-10 py-4 rounded-lg text-label-md active:scale-95 transition-transform">
-                Book a Session
+                Free Data &amp; AI Assessment
               </Link>
         </div>
       </div>

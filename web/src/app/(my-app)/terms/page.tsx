@@ -20,7 +20,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-headline-lg text-primary mb-4">2. Services</h2>
           <p>
-            Datamore provides data engineering and AI automation services to enterprise clients. We reserve the right to modify or discontinue services at any time.
+            Datamore provides data and analytics and AI automation services to growing organizations. We reserve the right to modify or discontinue services at any time.
           </p>
         </section>
         
@@ -60,8 +60,8 @@ export default function TermsPage() {
           <h2 className="text-headline-lg text-primary mb-4">7. Contact</h2>
           <p>
             For questions about these terms, contact us at{' '}
-            <a href="mailto:legal@datamore.ai" className="text-secondary hover:underline">
-              legal@datamore.ai
+            <a href="mailto:contact@datamore.org" className="text-secondary hover:underline">
+              contact@datamore.org
             </a>
           </p>
         </section>

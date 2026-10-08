@@ -1,87 +1,71 @@
 {
   "hero": {
-    "title": "Turn Your Data Into <br><span class=\"text-secondary\">Automated Decisions</span>",
-    "subtitle": "We help growing organizations design and build data systems that automate reporting, improve decision-making, and power AI-driven operations.",
+    "title": "Reliable data.<br><span class=\"text-secondary\">Less repetitive work.</span>",
+    "subtitle": "Datamore helps growing organizations turn scattered data and repetitive business processes into reliable analytics and AI-powered workflows.",
     "buttons": [
       {
-        "label": "Book a Strategy Call",
+        "label": "Free Data & AI Assessment",
         "variant": "primary",
         "url": "/contact"
       },
       {
-        "label": "See How We Work",
+        "label": "Explore our approach",
         "variant": "secondary",
-        "url": "/services"
+        "url": "/work"
       }
     ],
     "image": {
-      "alt": "Team collaborating on data dashboards and AI systems",
+      "alt": "Illustration of data dashboards and connected business workflows",
       "url": "/hero_image.png"
     },
     "badge": {
-      "label": "Data & AI Engineering",
-      "caption": "Pipelines • Automation • Analytics",
+      "label": "Data & Analytics · AI Automation",
+      "caption": "Clarity for your business. Time for your team.",
       "icon": "analytics"
     }
   },
-
   "whatWeDo": {
-    "title": "How We Help You Grow",
-    "subtitle": "We design end-to-end data systems that turn raw information into automated insights and actions.",
+    "title": "Two ways to move your business forward",
     "cards": [
       {
-        "icon": "database",
-        "title": "Data Foundations",
-        "description": "We build clean, scalable data pipelines that unify your systems and make your data reliable and usable.",
-        "url": "/services/data-foundations"
-      },
-      {
         "icon": "insights",
-        "title": "Analytics & BI",
-        "description": "We turn your data into clear dashboards and metrics that help teams make faster, better decisions.",
-        "url": "/services/bi-analytics"
+        "title": "Data & Analytics",
+        "description": "Bring scattered data together, replace manual reporting, and get a reliable view of customers, sales and operations.",
+        "url": "/solutions/data-analytics"
       },
       {
         "icon": "smart_toy",
         "title": "AI Automation",
-        "description": "We automate reporting, workflows, and business processes using AI and modern LLM systems.",
-        "url": "/services/ai-automation"
-      },
-      {
-        "icon": "settings",
-        "title": "System Integration",
-        "description": "We connect your tools, platforms, and data systems into one seamless, automated ecosystem.",
-        "url": "/services/systems-integration"
+        "description": "Reduce repetitive knowledge and operational work with AI-assisted workflows and human review where it matters.",
+        "url": "/solutions/ai-automation"
       }
     ]
   },
-
   "howWeDoIt": {
-    "title": "How We Deliver Results",
+    "title": "Start small. Build what is useful.",
     "steps": [
       {
         "number": "1",
         "title": "Understand",
-        "description": "We analyze your current systems, workflows, and data challenges to identify high-impact opportunities."
+        "description": "Start with a free assessment of your business problem and current process."
       },
       {
         "number": "2",
-        "title": "Design",
-        "description": "We architect a scalable data and AI system tailored to your business goals."
+        "title": "Diagnose",
+        "description": "If useful, agree on a small audit or diagnostic with a clear recommendation."
       },
       {
         "number": "3",
-        "title": "Build",
-        "description": "We implement pipelines, dashboards, and automation systems using modern engineering practices."
+        "title": "Implement",
+        "description": "Deliver a focused pipeline, report or workflow and measure it against the starting point."
       },
       {
         "number": "4",
-        "title": "Optimize",
-        "description": "We continuously improve performance, automation depth, and decision accuracy over time."
+        "title": "Support",
+        "description": "Expand only when the first step proves useful. Add ongoing support where needed."
       }
     ]
   },
-
   "impact": {
     "title": "The Datamore Impact",
     "metrics": [
@@ -103,7 +87,6 @@
       }
     ]
   },
-
   "industriesEmpower": {
     "title": "Built for Data-Heavy Teams",
     "subtitle": "We work with organizations that rely on data to operate, scale, and make decisions.",
@@ -145,9 +128,8 @@
       }
     ]
   },
-
   "cta": {
-    "title": "Ready to automate how your business uses data?",
-    "subtitle": "Let’s build a system that turns your data into decisions, not dashboards."
+    "title": "Start with the problem. Find the next step.",
+    "subtitle": "A free Data & AI Assessment to understand your business, review the bottleneck, and decide whether a small diagnostic or implementation makes sense."
   }
 }

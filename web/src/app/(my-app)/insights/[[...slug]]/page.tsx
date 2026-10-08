@@ -1,82 +1,33 @@
+import { notFound } from 'next/navigation'
 import InsightsHero from '@/(my-app)/components/PageHero'
 import InsightsClient from '@/(my-app)/components/_InsightsClient'
 import InsightDetail from '@/(my-app)/components/_InsightDetail'
-import { getAllInsightsFromPayload, getInsightBySlugFromPayload, mapInsightToCard, getHeroData, ctaData, getInsightData} from '@data/insights/index'
-import type { Insight } from '@payload-types'
+import { getInsightBySlugFromPayload, mapInsightToCard, getInsightData } from '@data/insights/index'
+import { practicalInsightCards, practicalInsightDetail, reviewedCMSInsightSlugs } from '@data/public-insights'
+import { assessmentCTA } from '@data/v1'
 
-const ARTICLES_PER_PAGE = 4
-
-const categoryLabelMap: Record<string, string> = {
-  'ai-ml': 'AI & ML',
-  'bi': 'Business Intelligence',
-  'data-engineering': 'Data Engineering',
-  'data-strategy': 'Data Strategy',
-  'managed-data': 'Managed Data Services',
-  'case-studies': 'Case Studies',
-  'technology': 'Technology',
-  'industry': 'Industry',
-  'software-development': 'Software Development'
-}
+const categoryLabels: Record<string, string> = { 'ai-ml': 'AI Automation', bi: 'Data & Analytics', 'data-engineering': 'Data & Analytics', 'data-strategy': 'Data & Analytics' }
 
 export default async function InsightsPage({ params }: { params: Promise<{ slug?: string[] }> }) {
   const { slug } = await params
-  const insightSlug = slug?.[0]
-
-  if (!insightSlug) {
-    const allInsights = await getAllInsightsFromPayload()
-    const allArticles = allInsights.sort((a: Insight, b: Insight) => (b.likes || 0) - (a.likes || 0))
-      .map((insight: Insight) => mapInsightToCard(insight, categoryLabelMap))
-
-    const initialArticles = allArticles.slice(0, ARTICLES_PER_PAGE)
-    const uniqueFilters: string[] = Array.from(
-      new Set(allArticles.map((a: typeof allArticles[0]) => a.category))
-    )
-    const heroData = getHeroData(allArticles[0])
-
-    const buttons = [
-      { label: "All Insights", variant: "primary" },
-      ...uniqueFilters.map((filter: string) => ({
-        label: categoryLabelMap[filter] || filter,
-        variant: "outline"
-      }))
-    ]
-    
-
+  if (slug && slug.length !== 1) notFound()
+  if (!slug?.length) {
+    const reviewedDocs = await Promise.all(reviewedCMSInsightSlugs.map(getInsightBySlugFromPayload))
+    const allArticles = [...practicalInsightCards(), ...reviewedDocs.filter(doc => doc !== null).map(doc => mapInsightToCard(doc, categoryLabels))]
+    const filters = [...new Set(allArticles.map(article => article.category))]
     return (
       <>
-        <InsightsHero data={heroData} />
-        <InsightsClient 
-          initialArticles={initialArticles} 
-          allArticles={allArticles}
-          filterData={{ buttons }} 
-          ctaData={ctaData} 
-        />
+        <InsightsHero data={{ title: 'Practical data & AI advice', subtitle: 'Start with the business question, understand the process, and choose a useful next step.', badge: { label: 'Insights' }, image: { alt: '', url: '' } }} />
+        <InsightsClient initialArticles={allArticles.slice(0, 4)} allArticles={allArticles} filterData={{ buttons: [{ label: 'All Insights', variant: 'primary' }, ...filters.map(label => ({ label, variant: 'outline' }))] }} ctaData={assessmentCTA} />
       </>
     )
   }
-
+  const insightSlug = slug[0]
+  const practical = practicalInsightDetail(insightSlug)
+  if (practical) return <InsightDetail {...practical} />
+  // The CMS remains intact. Unreviewed records do not enter the buying journey.
+  if (!reviewedCMSInsightSlugs.includes(insightSlug)) notFound()
   const insight = await getInsightBySlugFromPayload(insightSlug)
-
-  if (!insight.docs.length) {
-    return <div>Insight not found</div>
-  }
-
-  const insightDoc = insight.docs[0]
-  const data = getInsightData(insightDoc)
-
-  return (
-    <>
-      <InsightDetail
-        id={data.id}
-        title={data.title}
-        author={data.author}
-        heroImage={data.heroImage}
-        sections={data.sections}
-        socialShare={data.socialShare}
-        relatedArticles={data.relatedArticles}
-        cta={data.cta}
-        likes={data.likes}
-      />
-    </>
-  )
+  if (!insight) notFound()
+  return <InsightDetail {...getInsightData(insight)} />
 }

@@ -14,7 +14,7 @@ export default function ServiceCapabilities({ data }: { data: Capability[] }) {
       <div className="max-w-container-max mx-auto">
         <div className="mb-16">
           <h2 className="font-headline-lg text-headline-lg text-on-surface mb-4">Core Capabilities</h2>
-          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">Precision-engineered frameworks designed to scale with the complexity of global finance and humanitarian sectors.</p>
+          <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">Implementation capabilities selected to fit your business problem, existing systems and project scope.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
           {data.map((capability, index) => {
